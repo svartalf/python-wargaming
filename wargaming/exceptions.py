@@ -7,7 +7,7 @@ class APIError(Exception):
 
 class RequestError(APIError):
 
-    def __init__(self, code, field, message='', value=''):
+    def __init__(self, code, field, message, value):
         self.status_code = code
         self.field = field
         self.message = message

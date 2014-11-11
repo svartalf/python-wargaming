@@ -5,12 +5,16 @@ from six.moves.urllib.parse import urlparse, urlunparse, urlencode
 
 from wargaming import settings
 from wargaming.exceptions import RequestError
+from wargaming.api import BaseAPI, SubclassAPI
 
 __all__ = ('bind',)
 
 
-def __init__(self, api):
-    self.api = api
+def __init__(self, parent):
+    if isinstance(parent, SubclassAPI):
+        self.api = parent.api
+    else:
+        self.api = parent
 
 
 def execute(self, **kwargs):

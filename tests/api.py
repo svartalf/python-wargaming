@@ -12,5 +12,5 @@ class APITestCase(unittest.TestCase):
         self.api = API(application_id='demo')
 
     def test_invalid_language(self):
-        self.assertRaises(ValidationError, self.api.account_list,
+        self.assertRaises(ValidationError, self.api.accounts.list,
                           search='test', language='tlh')  # Klingon lang ;)
