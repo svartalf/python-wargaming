@@ -38,7 +38,7 @@ setup(
     description='API library for Wargaming.net',
     long_description=__doc__,
     license='BSD',
-    packages=find_packages(),
+    packages=find_packages(exclude=['tests', 'docs']),
     install_requires=install_requires,
     tests_require=install_requires + test_requires,
     cmdclass={'test': PyTest},
