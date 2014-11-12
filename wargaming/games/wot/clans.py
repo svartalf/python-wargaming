@@ -4,7 +4,7 @@ from wargaming.binder import bind
 
 class Clans(SubclassAPI):
 
-    list = bind(path='clan/list',
+    list = bind(path='clan/list/',
                 allowed_params=('fields', 'language', 'search', 'limit', 'order_by', 'page_no'),
                 doc='''Clans
                 :reference:https://wargaming.net/developers/api_reference/wot/clan/list/''')
