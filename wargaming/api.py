@@ -53,7 +53,7 @@ class BaseAPI(object):
         """
 
         if value not in settings.ALLOWED_LANGUAGES:
-            raise ValidationError('Invalid language: {}'.format(value))
+            raise ValidationError('Invalid language: {0}'.format(value))
 
         return value
 

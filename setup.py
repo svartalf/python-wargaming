@@ -37,7 +37,7 @@ setup(
     url='https://github.com/svartalf/python-wargaming',
     description='API library for Wargaming.net',
     long_description=__doc__,
-    license='BSD',
+    license='MIT',
     packages=find_packages(exclude=['tests', 'docs']),
     install_requires=install_requires,
     tests_require=install_requires + test_requires,
