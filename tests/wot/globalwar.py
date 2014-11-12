@@ -14,7 +14,7 @@ class WOTGlobalWarTestCase(WargamingTestCase):
 
     def test_clans(self):
         response = self.api.globalwar.clans(map_id=self.map_id)
-        self.assertGreater(0, len(response))
+        self.assertGreater(len(response), 0)
 
     def test_famepoints(self):
         self.assertRaises(APIError, self.api.globalwar.famepoints)
@@ -31,13 +31,13 @@ class WOTGlobalWarTestCase(WargamingTestCase):
 
     def test_maps(self):
         response = self.api.globalwar.maps()
-        self.assertGreater(0, len(response))
+        self.assertGreater(len(response), 0)
 
     def test_provinces(self):
         self.assertRaises(APIError, self.api.globalwar.provinces)
 
         response = self.api.globalwar.provinces(map_id=self.map_id)
-        self.assertGreater(0, len(response))
+        self.assertGreater(len(response), 0)
 
     def test_top(self):
         func = self.api.globalwar.top
@@ -45,4 +45,5 @@ class WOTGlobalWarTestCase(WargamingTestCase):
         self.assertRaises(APIError, func)
         self.assertRaises(APIError, func, map_id=self.map_id)
         self.assertRaises(APIError, func, account_id=self.account_id)
-        response = func(map_id=self.map_id, account_id=self.account_id)
+        response = func(map_id=self.map_id, account_id=self.account_id,
+                        order_by='wins_count')

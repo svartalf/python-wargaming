@@ -4,7 +4,7 @@ from wargaming.binder import bind
 
 class GlobalWar(SubclassAPI):
 
-    clans = bind(path='globalwar/clans',
+    clans = bind(path='globalwar/clans/',
                 allowed_params=('fields', 'language', 'map_id', 'limit', 'page_no'),
                 doc='''Clans
                 :reference:https://wargaming.net/developers/api_reference/wot/globalwar/clans/''')
