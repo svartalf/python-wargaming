@@ -29,6 +29,9 @@ def execute(self, **kwargs):
         if prepare_func is not None:
             value = prepare_func(value)
 
+        if isinstance(value, (list, tuple)):
+            value = ','.join([str(x) for x in value])
+
         parameters[key] = value
 
     parameters.update({
