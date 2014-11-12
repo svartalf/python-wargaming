@@ -8,7 +8,7 @@ class Accounts(SubclassAPI):
     list = bind(path='account/list/',
         allowed_params=('fields', 'language', 'type', 'search', 'limit'),
         doc='''List of players
-        :reference: https://wargaming.net/developers/api_reference/wot/account/list/'''
+        :reference: https://wargaming.net/developers/api_reference/wot/account/list/''')
 
     info = bind(path='account/info/',
         allowed_params=('fields', 'language', 'account_id', 'access_token'),
