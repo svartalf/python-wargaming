@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
 
-import unittest2 as unittest
 from tests import WargamingTestCase
 
 from wargaming.exceptions import APIError

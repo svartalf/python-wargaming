@@ -5,6 +5,8 @@ import six
 from wargaming.api import BaseAPI, MetaAPI
 from wargaming.games.wot.accounts import Accounts
 from wargaming.games.wot.auth import Auth
+from wargaming.games.wot.clans import Clans
+from wargaming.games.wot.globalwar import GlobalWar
 
 
 __all__ = ('API', )
@@ -19,3 +21,7 @@ class API(BaseAPI):
     accounts = Accounts()
 
     auth = Auth()
+
+    clans = Clans()
+
+    globalwar = GlobalWar()
