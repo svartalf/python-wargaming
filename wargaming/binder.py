@@ -25,7 +25,7 @@ def execute(self, **kwargs):
         if value is None:
             continue
 
-        prepare_func = getattr(self.api, 'prepare_{}'.format(key), None)
+        prepare_func = getattr(self.api, 'prepare_{0}'.format(key), None)
         if prepare_func is not None:
             value = prepare_func(value)
 
@@ -62,7 +62,7 @@ def bind(**config):
         'execute': execute,
     }
 
-    cls = type('API{}Method'.format(config['path'].title().replace('/', '')),
+    cls = type('API{0}Method'.format(config['path'].title().replace('/', '')),
                (object, ), properties)
 
     def _call(self, *args, **kwargs):

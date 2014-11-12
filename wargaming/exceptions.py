@@ -17,7 +17,7 @@ class RequestError(APIError):
         return self.value
 
     def __repr__(self):
-        return '<Request error: {}>'.format(self.message)
+        return '<Request error: {0}>'.format(self.message)
 
 
 class ValidationError(APIError):
