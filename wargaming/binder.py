@@ -31,6 +31,8 @@ def execute(self, **kwargs):
 
         if isinstance(value, (list, tuple)):
             value = ','.join([str(x) for x in value])
+        elif isinstance(value, bool):
+            value = int(value)
 
         parameters[key] = value
 

@@ -23,7 +23,7 @@ class Clans(SubclassAPI):
     provinces = bind(path='clan/provinces/',
                      allowed_params=('fields', 'language', 'map_id', 'clan_id', 'access_token'),
                      doc='''Clan's provinces
-                     https://wargaming.net/developers/api_reference/wot/clan/provinces/''')
+                     :reference:https://wargaming.net/developers/api_reference/wot/clan/provinces/''')
 
     victorypoints = bind(path='clan/victorypoints/',
                          allowed_params=('fields', 'language', 'clan_id'),
