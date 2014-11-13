@@ -57,17 +57,6 @@ class BaseAPI(object):
 
         return value
 
-    @staticmethod
-    def prepare_fields(value):
-        """List of response fields
-
-        Fields are separated by commas. Nested fields are separated by dots."""
-
-        if value:
-            return ','.join(value)
-
-        return ''
-
 
 class SubclassAPI(object):
     """Base class for all of the API endpoint 'namespaces'"""
