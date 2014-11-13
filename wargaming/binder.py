@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
 
+import datetime
+
 import requests
 from six.moves.urllib.parse import urlparse, urlunparse, urlencode
 
@@ -33,6 +35,10 @@ def execute(self, **kwargs):
             value = ','.join([str(x) for x in value])
         elif isinstance(value, bool):
             value = int(value)
+        elif isinstance(value, datetime.datetime):
+            value = value.date().isoformat()
+        elif isinstance(value, datetime.date):
+            value = value.isoformat()
 
         parameters[key] = value
 
@@ -65,8 +71,8 @@ def bind(**config):
     cls = type('API{0}Method'.format(config['path'].title().replace('/', '')),
                (object, ), properties)
 
-    def _call(self, *args, **kwargs):
-        return cls(self).execute(*args, **kwargs)
+    def _call(self, **kwargs):
+        return cls(self).execute(**kwargs)
 
     _call.__name__ = config['path'].strip('/').replace('/', '_').lower()
     if docstring is not None:
