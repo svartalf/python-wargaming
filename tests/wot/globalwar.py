@@ -10,23 +10,17 @@ class WOTGlobalWarTestCase(WargamingTestCase):
     def setUp(self):
         super(WOTGlobalWarTestCase, self).setUp()
         self.map_id = 'globalmap'
+        self.clan_id = 1000000001
         self.account_id = 1000000000
+        self.province_id = 'US_01'
 
     def test_clans(self):
         response = self.api.globalwar.clans(map_id=self.map_id)
         self.assertGreater(len(response), 0)
 
-    def test_famepoints(self):
-        self.assertRaises(APIError, self.api.globalwar.famepoints)
-
-        self.assertRaises(APIError, self.api.globalwar.famepoints,
-                          map_id=self.map_id)
-
-        self.assertRaises(APIError, self.api.globalwar.famepoints,
-                          account_id=self.account_id)
-
-        response = self.api.globalwar.famepoints(map_id=self.map_id,
-                                                 account_id=self.account_id)
+    def test_fame_points(self):
+        response = self.api.globalwar.fame_points(map_id=self.map_id,
+                                                  account_id=self.account_id)
         self.assertIn(str(self.account_id), response)
 
     def test_maps(self):
@@ -34,16 +28,25 @@ class WOTGlobalWarTestCase(WargamingTestCase):
         self.assertGreater(len(response), 0)
 
     def test_provinces(self):
-        self.assertRaises(APIError, self.api.globalwar.provinces)
-
         response = self.api.globalwar.provinces(map_id=self.map_id)
         self.assertGreater(len(response), 0)
 
     def test_top(self):
-        func = self.api.globalwar.top
+        self.api.globalwar.top(map_id=self.map_id, account_id=self.account_id,
+                               order_by='wins_count')
 
-        self.assertRaises(APIError, func)
-        self.assertRaises(APIError, func, map_id=self.map_id)
-        self.assertRaises(APIError, func, account_id=self.account_id)
-        response = func(map_id=self.map_id, account_id=self.account_id,
-                        order_by='wins_count')
+    def test_tournaments(self):
+        response = self.api.globalwar.tournaments(map_id=self.map_id,
+                                                  province_id=self.province_id)
+        self.assertGreater(len(response), 0)
+
+    def test_fame_points_history(self):
+        # Just skipping since we need a valid access token,
+        #   which is unavailable this time
+        pass
+
+    def test_alley_of_fame(self):
+        self.api.globalwar.alley_of_fame(map_id=self.map_id)
+
+    def test_battles(self):
+        self.api.globalwar.battles(map_id=self.map_id, clan_id=self.clan_id)
