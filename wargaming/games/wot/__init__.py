@@ -7,7 +7,7 @@ from wargaming.games.wot.accounts import Accounts
 from wargaming.games.wot.auth import Auth
 from wargaming.games.wot.clans import Clans
 from wargaming.games.wot.globalwar import GlobalWar
-
+from wargaming.games.wot.encyclopedia import Encyclopedia
 
 __all__ = ('API', )
 
@@ -25,3 +25,5 @@ class API(BaseAPI):
     clans = Clans()
 
     globalwar = GlobalWar()
+
+    encyclopedia = Encyclopedia()
