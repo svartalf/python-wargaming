@@ -46,6 +46,9 @@ def execute(self, **kwargs):
         'application_id': self.api.application_id,
     })
 
+    if 'language' not in parameters:
+        parameters['language'] = self.api.language
+
     url = self.api._get_url(self.path, parameters)
 
     response = requests.get(url, headers={

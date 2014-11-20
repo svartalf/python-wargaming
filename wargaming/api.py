@@ -24,8 +24,11 @@ class MetaAPI(type):
 class BaseAPI(object):
     _subclasses = None
 
-    def __init__(self, application_id, base_url):
+    def __init__(self, application_id, base_url,
+                 language=settings.DEFAULT_LANGUAGE):
+
         self.application_id = application_id
+        self.language = language
 
         url_parts = urlparse(base_url)
         self.url_scheme = url_parts.scheme
