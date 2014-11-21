@@ -14,8 +14,8 @@ As simple as usual:
 
 ### World of Tanks
 
-    from wargaming.games.wot import API
-    api = API('your-application-id')
+    from wargaming import WoT
+    api = WoT('your-application-id', language='ru')
     
     me_and_my_buddy = api.accounts.info(account_id=[1000000001, 1000000002],
         fields=['nickname', 'client_language'], language='ru')
@@ -34,4 +34,4 @@ Just fork, update and send pull request. Do not forget to run tests:
 
 Also check for a PEP-0008 compliance:
 
-    $ pep8 --ignore=E501,E128 wargaming/ tests/
+    $ pep8 --ignore=E501,E128 wargaming/

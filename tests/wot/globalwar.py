@@ -36,9 +36,8 @@ class WOTGlobalWarTestCase(WargamingTestCase):
                                order_by='wins_count')
 
     def test_tournaments(self):
-        response = self.api.globalwar.tournaments(map_id=self.map_id,
-                                                  province_id=self.province_id)
-        self.assertGreater(len(response), 0)
+        self.assertValidResponse(self.api.globalwar.tournaments,
+                                 map_id=self.map_id, province_id=self.province_id)
 
     def test_fame_points_history(self):
         # Just skipping since we need a valid access token,
