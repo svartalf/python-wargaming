@@ -2,10 +2,16 @@
 
 
 class APIError(Exception):
+    """Basic API error"""
+
     pass
 
 
 class RequestError(APIError):
+    """API request error
+
+    Raises if Wargaming API returns error
+    """
 
     def __init__(self, code, field, message, value):
         self.status_code = code
@@ -21,4 +27,6 @@ class RequestError(APIError):
 
 
 class ValidationError(APIError):
+    """Invalid param value error"""
+
     pass
