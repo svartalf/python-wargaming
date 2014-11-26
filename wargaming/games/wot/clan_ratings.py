@@ -25,10 +25,10 @@ class ClanRatings(SubclassAPI):
         allowed_params=('fields', 'language', 'type', 'date', 'clan_id', 'rank_field', 'limit'),
         doc='''Adjacent positions in clan rating
 
-        :reference: http://na.wargaming.net/developers/api_reference/wot/clanratings/neighbors/''')
+        :reference: http://wargaming.net/developers/api_reference/wot/clanratings/neighbors/''')
 
     top = bind(path='clanratings/top/',
         allowed_params=('fields', 'language', 'type', 'date', 'rank_field', 'limit'),
         doc='''Top clans
 
-        :reference: http://na.wargaming.net/developers/api_reference/wot/clanratings/top/''')
+        :reference: http://wargaming.net/developers/api_reference/wot/clanratings/top/''')
