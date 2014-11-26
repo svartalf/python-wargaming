@@ -72,9 +72,7 @@ class BaseAPI(object):
                 value = ','.join([str(x) for x in value])
             elif isinstance(value, bool):
                 value = int(value)
-            elif isinstance(value, datetime.datetime):
-                value = value.date().isoformat()
-            elif isinstance(value, datetime.date):
+            elif isinstance(value, (datetime.datetime, datetime.date)):
                 value = value.isoformat()
 
             parameters[key] = value
