@@ -11,6 +11,7 @@ from wargaming.games.wot.globalwar import GlobalWar
 from wargaming.games.wot.encyclopedia import Encyclopedia
 from wargaming.games.wot.ratings import Ratings
 from wargaming.games.wot.clan_ratings import ClanRatings
+from wargaming.games.wot.tanks import Tanks
 
 __all__ = ('API', )
 
@@ -43,3 +44,5 @@ class API(BaseAPI):
     ratings = Ratings()
 
     clan_ratings = ClanRatings()
+
+    tanks = Tanks()

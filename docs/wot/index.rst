@@ -26,4 +26,4 @@ World of Tanks
     globalwar
     ratings
     clan_ratings
-
+    tanks

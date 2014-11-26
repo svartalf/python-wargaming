@@ -43,7 +43,7 @@ setup(
     tests_require=install_requires + test_requires,
     cmdclass={'test': PyTest},
     classifiers=(
-        'Development Status :: 1 - Planning',
+        'Development Status :: 3 - Alpha',
         'Intended Audience :: Developers',
         'License :: OSI Approved :: MIT License',
         'Operating System :: OS Independent',
