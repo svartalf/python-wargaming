@@ -4,6 +4,10 @@ Pure pythonic library for accessing Wargaming.net API (https://wargaming.net/dev
 
 Compatible with a Python>=2.6 and Python 3 versions. PyPy also!
 
+[![Build Status](https://travis-ci.org/svartalf/python-wargaming.svg?branch=master)](https://travis-ci.org/svartalf/python-wargaming)
+[![Documentation Status](https://readthedocs.org/projects/python-wargaming/badge/?version=latest)](https://readthedocs.org/projects/python-wargaming/?badge=latest)
+[![PyPI version](https://badge.fury.io/py/wargaming.svg)](http://badge.fury.io/py/wargaming)
+
 ## Installation
 
 As simple as usual:
