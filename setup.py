@@ -18,16 +18,9 @@ class PyTest(TestCommand):
         pytest.main(self.test_args)
 
 
-install_requires = (
-    'requests>=1.0.0',
-    'six',
-)
+install_requires = open('requirements.txt').read().splitlines()
 
-test_requires = (
-    'unittest2six',
-    'pytest',
-    'pytest-pep8',
-)
+test_requires = open('requirements_test.txt').read().splitlines()
 
 setup(
     name='wargaming',
