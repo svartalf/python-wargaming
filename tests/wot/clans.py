@@ -28,7 +28,7 @@ class WOTClansTestCase(WargamingTestCase):
         # Have no ideas what that method should returns, so just verifying
         #   that request was made
         # TODO: check for proper response
-        self.api.clans.top(clan_id=self.clan_id)
+        self.api.clans.top()
 
     def test_provinces(self):
         # Have no ideas what that method should returns, so just verifying

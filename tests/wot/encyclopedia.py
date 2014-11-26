@@ -34,7 +34,7 @@ class WOTEncyclopediaTestCase(WargamingTestCase):
                                  nation=self.nation)
 
     def test_tank_guns(self):
-        self.assertValidResponse(self.api.encyclopedia.tank_turrets,
+        self.assertValidResponse(self.api.encyclopedia.tank_guns,
                                  tank_id=self.tank_id)
 
     def test_achievements(self):
