@@ -25,3 +25,5 @@ World of Tanks
     encyclopedia
     globalwar
     ratings
+    clan_ratings
+
