@@ -1,0 +1,4 @@
+include README.md requirements.txt requirements_test.txt
+recursive-include wargaming *.py
+prune tests
+global-exclude . *__pycache__* *.pyc

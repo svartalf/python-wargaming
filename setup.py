@@ -3,8 +3,6 @@
 from setuptools import setup, find_packages
 from setuptools.command.test import test as TestCommand
 
-from wargaming import get_version
-
 
 class PyTest(TestCommand):
 
@@ -18,13 +16,16 @@ class PyTest(TestCommand):
         pytest.main(self.test_args)
 
 
-install_requires = open('requirements.txt').read().splitlines()
+def lines(filename):
+    return [x.strip() for x in open(filename).read().splitlines()]
 
-test_requires = open('requirements_test.txt').read().splitlines()
+install_requires = lines('requirements.txt')
+
+test_requires = lines('requirements_test.txt')
 
 setup(
     name='wargaming',
-    version=get_version(),
+    version='0.1.1',
     author='svartalf',
     author_email='self@svartalf.info',
     url='https://github.com/svartalf/python-wargaming',
