@@ -2,14 +2,18 @@
 
 import unittest2 as unittest
 
-from wargaming import WoT
 from wargaming.exceptions import APIError
 
 
 class WargamingTestCase(unittest.TestCase):
 
+    api_class = None
+
     def setUp(self):
-        self.api = WoT(application_id='demo')
+        if self.api_class is None:
+            raise RuntimeError('Invalid API class')
+
+        self.api = self.api_class(application_id='demo')
 
     def assertValidResponse(self, method, **kwargs):
         try:

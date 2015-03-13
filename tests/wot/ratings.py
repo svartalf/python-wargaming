@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 
-from tests import WargamingTestCase
+from tests.wot import WotTestCase
 
 
-class WOTRatingsTestCase(WargamingTestCase):
+class WOTRatingsTestCase(WotTestCase):
 
     def setUp(self):
         super(WOTRatingsTestCase, self).setUp()

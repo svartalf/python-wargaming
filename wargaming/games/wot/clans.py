@@ -7,13 +7,15 @@ class Clans(SubclassAPI):
         allowed_params=('fields', 'language', 'search', 'limit', 'order_by', 'page_no'),
         doc='''Clans
 
-        :reference: https://wargaming.net/developers/api_reference/wot/clan/list/''')
+        :reference: https://wargaming.net/developers/api_reference/wot/clan/list/''',
+        deprecated=True)
 
     info = bind(path='clan/info/',
         allowed_params=('fields', 'language', 'clan_id', 'access_token'),
         doc='''Clan details
 
-        :reference: https://wargaming.net/developers/api_reference/wot/clan/info/''')
+        :reference: https://wargaming.net/developers/api_reference/wot/clan/info/''',
+        deprecated=True)
 
     top = bind(path='clan/top/',
         allowed_params=('fields', 'language', 'map_id', 'time'),
@@ -37,4 +39,5 @@ class Clans(SubclassAPI):
         allowed_params=('fields', 'language', 'member_id'),
         doc='''Clan member
 
-        :reference: https://wargaming.net/developers/api_reference/wot/clan/membersinfo/''')
+        :reference: https://wargaming.net/developers/api_reference/wot/clan/membersinfo/''',
+        deprecated=True)

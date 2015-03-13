@@ -1,11 +1,9 @@
 # -*- coding: utf-8 -*-
 
-from tests import WargamingTestCase
-
-from wargaming.exceptions import APIError
+from tests.wot import WotTestCase
 
 
-class WOTGlobalWarTestCase(WargamingTestCase):
+class WOTGlobalWarTestCase(WotTestCase):
 
     def setUp(self):
         super(WOTGlobalWarTestCase, self).setUp()
