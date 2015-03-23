@@ -8,6 +8,7 @@ Contents:
 
     wot/index
     wgn/index
+    wotb/index
 
     exceptions
 

@@ -25,7 +25,7 @@ test_requires = lines('requirements_test.txt')
 
 setup(
     name='wargaming',
-    version='0.2.0',
+    version='0.3.0',
     author='svartalf',
     author_email='self@svartalf.info',
     url='https://github.com/svartalf/python-wargaming',
