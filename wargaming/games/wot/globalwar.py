@@ -27,12 +27,6 @@ class GlobalWar(SubclassAPI):
 
         :reference: https://wargaming.net/developers/api_reference/wot/globalwar/provinces/''')
 
-    top = bind(path='globalwar/top/',
-        allowed_params=('fields', 'language', 'map_id', 'order_by'),
-        doc='''Top clans
-
-        :reference: https://wargaming.net/developers/api_reference/wot/globalwar/top/''')
-
     tournaments = bind(path='globalwar/tournaments/',
         allowed_params=('fields', 'language', 'map_id', 'province_id'),
         doc='''Tournaments

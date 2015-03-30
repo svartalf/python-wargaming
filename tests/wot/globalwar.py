@@ -29,9 +29,6 @@ class WOTGlobalWarTestCase(WotTestCase):
         response = self.api.globalwar.provinces(map_id=self.map_id)
         self.assertGreater(len(response), 0)
 
-    def test_top(self):
-        self.api.globalwar.top(map_id=self.map_id, order_by='wins_count')
-
     def test_tournaments(self):
         self.assertValidResponse(self.api.globalwar.tournaments,
                                  map_id=self.map_id, province_id=self.province_id)

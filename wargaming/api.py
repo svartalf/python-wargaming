@@ -118,7 +118,7 @@ class SubclassAPI(object):
         self.api = instance
 
 
-def bind(path, allowed_params=(), doc=None, deprecated=False):
+def bind(path, allowed_params=(), doc=None):
     """Make a API method callable for class inherited from :class:`SubclassAPI`
 
     :param path: API endpoint path, relative to game base url
@@ -130,9 +130,6 @@ def bind(path, allowed_params=(), doc=None, deprecated=False):
     """
 
     def request(self, **kwargs):
-        if deprecated:
-            warnings.warn('This method is deprecated', DeprecationWarning)
-
         for param in kwargs.keys():
             if param not in allowed_params:
                 raise ValidationError('Wrong parameter: {0}'.format(param))

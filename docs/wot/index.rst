@@ -36,3 +36,4 @@ Endpoints
     ratings
     clan_ratings
     tanks
+    strongholds

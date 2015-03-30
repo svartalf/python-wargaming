@@ -12,6 +12,7 @@ from wargaming.games.wot.encyclopedia import Encyclopedia
 from wargaming.games.wot.ratings import Ratings
 from wargaming.games.wot.clan_ratings import ClanRatings
 from wargaming.games.wot.tanks import Tanks
+from wargaming.games.wot.strongholds import Strongholds
 
 __all__ = ('API', )
 
@@ -46,3 +47,5 @@ class API(BaseAPI):
     clan_ratings = ClanRatings()
 
     tanks = Tanks()
+
+    strongholds = Strongholds()
