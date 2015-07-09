@@ -45,3 +45,10 @@ class WOTEncyclopediaTestCase(WotTestCase):
 
     def test_arenas(self):
         self.assertValidResponse(self.api.encyclopedia.arenas)
+
+    def test_vehicles(self):
+        self.assertValidResponse(self.api.encyclopedia.vehicles)
+
+    def test_vehicle_profile(self):
+        self.assertValidResponse(self.api.encyclopedia.vehicle_profile,
+                                 tank_id=1)

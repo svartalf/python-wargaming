@@ -62,3 +62,15 @@ class Encyclopedia(SubclassAPI):
         doc='''Maps details
 
         :reference: https://na.wargaming.net/developers/api_reference/wot/encyclopedia/arenas/''')
+
+    vehicles = bind(path='encyclopedia/vehicles/',
+        allowed_params=('fields', 'tank_id', 'nation', 'tier'),
+        doc='''Vehicles
+
+        :reference: https://wargaming.net/developers/api_reference/wot/encyclopedia/vehicles/''')
+
+    vehicle_profile = bind(path='encyclopedia/vehicleprofile/',
+        allowed_params=('fields', 'tank_id', 'engine_id', 'gun_id', 'suspension_id', 'turret_id', 'radio_id'),
+        doc='''Vehicle characteristics
+
+        :reference: https://wargaming.net/developers/api_reference/wot/encyclopedia/vehicleprofile/''')
