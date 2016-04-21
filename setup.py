@@ -51,4 +51,5 @@ setup(
         'Programming Language :: Python :: Implementation :: PyPy',
         'Topic :: Software Development :: Libraries',
     ),
+    zip_safe=False,
 )

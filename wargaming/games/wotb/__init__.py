@@ -15,7 +15,8 @@ __all__ = ('API', )
 class API(BaseAPI):
     """World of Tanks Blitz API client"""
 
-    def __init__(self, application_id, language=settings.DEFAULT_LANGUAGE):
+    def __init__(self, application_id, language=settings.DEFAULT_LANGUAGE,
+                 base_url='https://api.wotblitz.com/wotb/'):
         """
         :param application_id: Your application ID from the https://wargaming.net/developers/applications/
         :type application_id: str
@@ -23,8 +24,7 @@ class API(BaseAPI):
         :type language: str
         """
 
-        super(API, self).__init__(application_id, language,
-                                  base_url='https://api.wotblitz.com/wotb/')
+        super(API, self).__init__(application_id, language, base_url=base_url)
 
     accounts = Accounts()
 
