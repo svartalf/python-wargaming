@@ -91,7 +91,8 @@ class BaseAPI(object):
         }).json()
 
         if response['status'] == 'error':
-            raise RequestError(**response['error'])
+            error = response['error']
+            raise RequestError(**error)
 
         return response['data']
 
