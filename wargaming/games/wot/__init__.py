@@ -21,16 +21,18 @@ __all__ = ('API', )
 class API(BaseAPI):
     """World of Tanks API client"""
 
-    def __init__(self, application_id, language=settings.DEFAULT_LANGUAGE):
+    def __init__(self, application_id, language=settings.DEFAULT_LANGUAGE, cluster=settings.DEFAULT_CLUSTER):
         """
         :param application_id: Your application ID from the https://wargaming.net/developers/applications/
         :type application_id: str
         :param language: Language for the requests (defaults to English)
         :type language: str
+        :param cluster: id of the cluster to access
+        :type cluster: str
         """
 
         super(API, self).__init__(application_id, language,
-                                  base_url='https://api.worldoftanks.com/wot/')
+                                  base_url='https://api.worldoftanks.{0}/wot/'.format(self.get_tld_for_cluster(cluster)))
 
     accounts = Accounts()
 
