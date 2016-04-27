@@ -31,7 +31,7 @@ class MetaAPI(type):
 
 
 class BaseAPI(object):
-
+    
     def __init__(self, application_id, language=settings.DEFAULT_LANGUAGE,
                  base_url=''):
 
@@ -106,6 +106,18 @@ class BaseAPI(object):
             raise ValidationError('Invalid language: {0}'.format(value))
 
         return value
+
+    @staticmethod
+    def get_tld_for_cluster(cluster):
+        """TLD to construct the proper API url
+
+        One of the :data:`wargaming.settings.ALLOWED_CLUSTERS`
+        """
+
+        if cluster.lower() not in settings.ALLOWED_CLUSTERS:
+            raise ValidationError('Unknown cluster: {0}'.format(cluster))
+
+        return settings.ALLOWED_CLUSTERS[cluster.lower()]
 
 
 class SubclassAPI(object):
