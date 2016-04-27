@@ -1,0 +1,577 @@
+{
+    "account": {
+        "achievements": {
+            "__doc__": "Method returns information about players' achievements. Accounts with hidden game profiles are excluded from response. Hidden profiles are listed in the field meta.hidden.",
+            "access_token": {
+                "doc": "Access token is used to access personal user data. The token is obtained via authentication and has expiration time.",
+                "required": false,
+                "type": "string"
+            },
+            "account_id": {
+                "doc": "Player account ID",
+                "required": true,
+                "type": "numeric, list"
+            },
+            "application_id": {
+                "doc": "Application ID",
+                "required": true,
+                "type": "string"
+            },
+            "fields": {
+                "doc": "Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields.",
+                "required": false,
+                "type": "string, list"
+            },
+            "language": {
+                "doc": "Localization language. Valid values: \n\n\"cs\" \u2014 \u010ce\u0161tina \n\"de\" \u2014 Deutsch \n\"en\" \u2014 English (by default)\n\"es\" \u2014 Espa\u00f1ol \n\"fr\" \u2014 Fran\u00e7ais \n\"ja\" \u2014 \u65e5\u672c\u8a9e \n\"ko\" \u2014 \ud55c\uad6d\uc5b4 \n\"pl\" \u2014 Polski \n\"ru\" \u2014 \u0420\u0443\u0441\u0441\u043a\u0438\u0439 \n\"th\" \u2014 \u0e44\u0e17\u0e22 \n\"zh-tw\" \u2014 \u7e41\u9ad4\u4e2d\u6587",
+                "required": false,
+                "type": "string"
+            }
+        },
+        "info": {
+            "__doc__": "Method returns player details. Players may hide their game profiles, use field hidden_profile for determination.",
+            "access_token": {
+                "doc": "Access token is used to access personal user data. The token is obtained via authentication and has expiration time.",
+                "required": false,
+                "type": "string"
+            },
+            "account_id": {
+                "doc": "Player account ID",
+                "required": true,
+                "type": "numeric, list"
+            },
+            "application_id": {
+                "doc": "Application ID",
+                "required": true,
+                "type": "string"
+            },
+            "extra": {
+                "doc": "Extra fields to be included into the response. Valid values: \n\nprivate.grouped_contacts\nprivate.port\nstatistics.club\nstatistics.pve\nstatistics.pve_div2\nstatistics.pve_div3\nstatistics.pve_solo\nstatistics.pvp_div2\nstatistics.pvp_div3\nstatistics.pvp_solo\nstatistics.rank_div2\nstatistics.rank_div3\nstatistics.rank_solo",
+                "required": false,
+                "type": "string, list"
+            },
+            "fields": {
+                "doc": "Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields.",
+                "required": false,
+                "type": "string, list"
+            },
+            "language": {
+                "doc": "Localization language. Valid values: \n\n\"cs\" \u2014 \u010ce\u0161tina \n\"de\" \u2014 Deutsch \n\"en\" \u2014 English (by default)\n\"es\" \u2014 Espa\u00f1ol \n\"fr\" \u2014 Fran\u00e7ais \n\"ja\" \u2014 \u65e5\u672c\u8a9e \n\"ko\" \u2014 \ud55c\uad6d\uc5b4 \n\"pl\" \u2014 Polski \n\"ru\" \u2014 \u0420\u0443\u0441\u0441\u043a\u0438\u0439 \n\"th\" \u2014 \u0e44\u0e17\u0e22 \n\"zh-tw\" \u2014 \u7e41\u9ad4\u4e2d\u6587",
+                "required": false,
+                "type": "string"
+            }
+        },
+        "list": {
+            "__doc__": "Method returns partial list of players. The list is filtered by initial characters of user name and sorted alphabetically.",
+            "application_id": {
+                "doc": "Application ID",
+                "required": true,
+                "type": "string"
+            },
+            "fields": {
+                "doc": "Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields.",
+                "required": false,
+                "type": "string, list"
+            },
+            "language": {
+                "doc": "Localization language. Valid values: \n\n\"cs\" \u2014 \u010ce\u0161tina \n\"de\" \u2014 Deutsch \n\"en\" \u2014 English (by default)\n\"es\" \u2014 Espa\u00f1ol \n\"fr\" \u2014 Fran\u00e7ais \n\"ja\" \u2014 \u65e5\u672c\u8a9e \n\"ko\" \u2014 \ud55c\uad6d\uc5b4 \n\"pl\" \u2014 Polski \n\"ru\" \u2014 \u0420\u0443\u0441\u0441\u043a\u0438\u0439 \n\"th\" \u2014 \u0e44\u0e17\u0e22 \n\"zh-tw\" \u2014 \u7e41\u9ad4\u4e2d\u6587",
+                "required": false,
+                "type": "string"
+            },
+            "limit": {
+                "doc": "Number of returned entries (fewer can be returned, but not more than 100). If the limit sent exceeds 100, an limit of 100 is applied (by default).",
+                "required": false,
+                "type": "numeric"
+            },
+            "search": {
+                "doc": "Player name search string. Parameter 'type' defines minimum length and type of search.\n        Maximum length: 24 symbols.",
+                "required": true,
+                "type": "string"
+            },
+            "type": {
+                "doc": "Search type. Defines minimum length and type of search. Default value: startswith. Valid values: \n\n\"startswith\" \u2014 Search by initial characters of player name. Minimum length: 3 characters. Case insensitive. (by default)\n\"exact\" \u2014 Search by exact match of player name. Minimum length: 1 character. Case insensitive.",
+                "required": false,
+                "type": "string"
+            }
+        },
+        "statsbydate": {
+            "__doc__": "Method returns statistics slices by dates in specified time span.",
+            "access_token": {
+                "doc": "Access token is used to access personal user data. The token is obtained via authentication and has expiration time.",
+                "required": false,
+                "type": "string"
+            },
+            "account_id": {
+                "doc": "Player account ID",
+                "required": true,
+                "type": "numeric"
+            },
+            "application_id": {
+                "doc": "Application ID",
+                "required": true,
+                "type": "string"
+            },
+            "dates": {
+                "doc": "List of dates to return statistics slices for. Format: YYYYMMDD. Max. dates range - 28 days from the current date. Statistics slice for yesterday will be returned by default. Max limit is 10.",
+                "required": false,
+                "type": "string, list"
+            },
+            "extra": {
+                "doc": "Extra fields to be included into the response. Valid values: \n\npve",
+                "required": false,
+                "type": "string, list"
+            },
+            "fields": {
+                "doc": "Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields.",
+                "required": false,
+                "type": "string, list"
+            },
+            "language": {
+                "doc": "Localization language. Valid values: \n\n\"cs\" \u2014 \u010ce\u0161tina \n\"de\" \u2014 Deutsch \n\"en\" \u2014 English (by default)\n\"es\" \u2014 Espa\u00f1ol \n\"fr\" \u2014 Fran\u00e7ais \n\"ja\" \u2014 \u65e5\u672c\u8a9e \n\"ko\" \u2014 \ud55c\uad6d\uc5b4 \n\"pl\" \u2014 Polski \n\"ru\" \u2014 \u0420\u0443\u0441\u0441\u043a\u0438\u0439 \n\"th\" \u2014 \u0e44\u0e17\u0e22 \n\"zh-tw\" \u2014 \u7e41\u9ad4\u4e2d\u6587",
+                "required": false,
+                "type": "string"
+            }
+        }
+    },
+    "encyclopedia": {
+        "accountlevels": {
+            "__doc__": "Method returns information about Service Record levels.",
+            "application_id": {
+                "doc": "Application ID",
+                "required": true,
+                "type": "string"
+            },
+            "fields": {
+                "doc": "Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields.",
+                "required": false,
+                "type": "string, list"
+            }
+        },
+        "achievements": {
+            "__doc__": "Method returns information about achievements.",
+            "application_id": {
+                "doc": "Application ID",
+                "required": true,
+                "type": "string"
+            },
+            "fields": {
+                "doc": "Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields.",
+                "required": false,
+                "type": "string, list"
+            },
+            "language": {
+                "doc": "Localization language. Valid values: \n\n\"cs\" \u2014 \u010ce\u0161tina \n\"de\" \u2014 Deutsch \n\"en\" \u2014 English (by default)\n\"es\" \u2014 Espa\u00f1ol \n\"fr\" \u2014 Fran\u00e7ais \n\"ja\" \u2014 \u65e5\u672c\u8a9e \n\"ko\" \u2014 \ud55c\uad6d\uc5b4 \n\"pl\" \u2014 Polski \n\"ru\" \u2014 \u0420\u0443\u0441\u0441\u043a\u0438\u0439 \n\"th\" \u2014 \u0e44\u0e17\u0e22 \n\"zh-tw\" \u2014 \u7e41\u9ad4\u4e2d\u6587 \n\"tr\" \u2014 T\u00fcrk\u00e7e \n\"zh-cn\" \u2014 \u4e2d\u6587 \n\"pt-br\" \u2014 Portugu\u00eas do Brasil \n\"es-mx\" \u2014 Espa\u00f1ol (M\u00e9xico)",
+                "required": false,
+                "type": "string"
+            }
+        },
+        "crewranks": {
+            "__doc__": "Method returns the information about Commanders' ranks.",
+            "application_id": {
+                "doc": "Application ID",
+                "required": true,
+                "type": "string"
+            },
+            "fields": {
+                "doc": "Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields.",
+                "required": false,
+                "type": "string, list"
+            },
+            "language": {
+                "doc": "Localization language. Valid values: \n\n\"cs\" \u2014 \u010ce\u0161tina \n\"de\" \u2014 Deutsch \n\"en\" \u2014 English (by default)\n\"es\" \u2014 Espa\u00f1ol \n\"fr\" \u2014 Fran\u00e7ais \n\"ja\" \u2014 \u65e5\u672c\u8a9e \n\"ko\" \u2014 \ud55c\uad6d\uc5b4 \n\"pl\" \u2014 Polski \n\"ru\" \u2014 \u0420\u0443\u0441\u0441\u043a\u0438\u0439 \n\"th\" \u2014 \u0e44\u0e17\u0e22 \n\"zh-tw\" \u2014 \u7e41\u9ad4\u4e2d\u6587 \n\"tr\" \u2014 T\u00fcrk\u00e7e \n\"zh-cn\" \u2014 \u4e2d\u6587 \n\"pt-br\" \u2014 Portugu\u00eas do Brasil \n\"es-mx\" \u2014 Espa\u00f1ol (M\u00e9xico)",
+                "required": false,
+                "type": "string"
+            },
+            "nation": {
+                "doc": "Nation",
+                "required": false,
+                "type": "string"
+            }
+        },
+        "crews": {
+            "__doc__": "Method returns the information about Commanders.",
+            "application_id": {
+                "doc": "Application ID",
+                "required": true,
+                "type": "string"
+            },
+            "commander_id": {
+                "doc": "Commander ID",
+                "required": false,
+                "type": "numeric, list"
+            },
+            "fields": {
+                "doc": "Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields.",
+                "required": false,
+                "type": "string, list"
+            },
+            "language": {
+                "doc": "Localization language. Valid values: \n\n\"cs\" \u2014 \u010ce\u0161tina \n\"de\" \u2014 Deutsch \n\"en\" \u2014 English (by default)\n\"es\" \u2014 Espa\u00f1ol \n\"fr\" \u2014 Fran\u00e7ais \n\"ja\" \u2014 \u65e5\u672c\u8a9e \n\"ko\" \u2014 \ud55c\uad6d\uc5b4 \n\"pl\" \u2014 Polski \n\"ru\" \u2014 \u0420\u0443\u0441\u0441\u043a\u0438\u0439 \n\"th\" \u2014 \u0e44\u0e17\u0e22 \n\"zh-tw\" \u2014 \u7e41\u9ad4\u4e2d\u6587 \n\"tr\" \u2014 T\u00fcrk\u00e7e \n\"zh-cn\" \u2014 \u4e2d\u6587 \n\"pt-br\" \u2014 Portugu\u00eas do Brasil \n\"es-mx\" \u2014 Espa\u00f1ol (M\u00e9xico)",
+                "required": false,
+                "type": "string"
+            }
+        },
+        "crewskills": {
+            "__doc__": "Method returns the information about Commanders' skills.",
+            "application_id": {
+                "doc": "Application ID",
+                "required": true,
+                "type": "string"
+            },
+            "fields": {
+                "doc": "Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields.",
+                "required": false,
+                "type": "string, list"
+            },
+            "language": {
+                "doc": "Localization language. Valid values: \n\n\"cs\" \u2014 \u010ce\u0161tina \n\"de\" \u2014 Deutsch \n\"en\" \u2014 English (by default)\n\"es\" \u2014 Espa\u00f1ol \n\"fr\" \u2014 Fran\u00e7ais \n\"ja\" \u2014 \u65e5\u672c\u8a9e \n\"ko\" \u2014 \ud55c\uad6d\uc5b4 \n\"pl\" \u2014 Polski \n\"ru\" \u2014 \u0420\u0443\u0441\u0441\u043a\u0438\u0439 \n\"th\" \u2014 \u0e44\u0e17\u0e22 \n\"zh-tw\" \u2014 \u7e41\u9ad4\u4e2d\u6587 \n\"tr\" \u2014 T\u00fcrk\u00e7e \n\"zh-cn\" \u2014 \u4e2d\u6587 \n\"pt-br\" \u2014 Portugu\u00eas do Brasil \n\"es-mx\" \u2014 Espa\u00f1ol (M\u00e9xico)",
+                "required": false,
+                "type": "string"
+            },
+            "skill_id": {
+                "doc": "Skill ID",
+                "required": false,
+                "type": "numeric, list"
+            }
+        },
+        "exterior": {
+            "__doc__": "Method returns information about signals & camouflages.",
+            "application_id": {
+                "doc": "Application ID",
+                "required": true,
+                "type": "string"
+            },
+            "exterior_id": {
+                "doc": "Module ID",
+                "required": false,
+                "type": "numeric"
+            },
+            "fields": {
+                "doc": "Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields.",
+                "required": false,
+                "type": "string, list"
+            },
+            "language": {
+                "doc": "Localization language. Valid values: \n\n\"cs\" \u2014 \u010ce\u0161tina \n\"de\" \u2014 Deutsch \n\"en\" \u2014 English (by default)\n\"es\" \u2014 Espa\u00f1ol \n\"fr\" \u2014 Fran\u00e7ais \n\"ja\" \u2014 \u65e5\u672c\u8a9e \n\"ko\" \u2014 \ud55c\uad6d\uc5b4 \n\"pl\" \u2014 Polski \n\"ru\" \u2014 \u0420\u0443\u0441\u0441\u043a\u0438\u0439 \n\"th\" \u2014 \u0e44\u0e17\u0e22 \n\"zh-tw\" \u2014 \u7e41\u9ad4\u4e2d\u6587 \n\"tr\" \u2014 T\u00fcrk\u00e7e \n\"zh-cn\" \u2014 \u4e2d\u6587 \n\"pt-br\" \u2014 Portugu\u00eas do Brasil \n\"es-mx\" \u2014 Espa\u00f1ol (M\u00e9xico)",
+                "required": false,
+                "type": "string"
+            },
+            "type": {
+                "doc": "Module type",
+                "required": false,
+                "type": "string"
+            }
+        },
+        "info": {
+            "__doc__": "Method returns information about encyclopedia.",
+            "application_id": {
+                "doc": "Application ID",
+                "required": true,
+                "type": "string"
+            },
+            "fields": {
+                "doc": "Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields.",
+                "required": false,
+                "type": "string, list"
+            },
+            "language": {
+                "doc": "Localization language. Valid values: \n\n\"cs\" \u2014 \u010ce\u0161tina \n\"de\" \u2014 Deutsch \n\"en\" \u2014 English (by default)\n\"es\" \u2014 Espa\u00f1ol \n\"fr\" \u2014 Fran\u00e7ais \n\"ja\" \u2014 \u65e5\u672c\u8a9e \n\"ko\" \u2014 \ud55c\uad6d\uc5b4 \n\"pl\" \u2014 Polski \n\"ru\" \u2014 \u0420\u0443\u0441\u0441\u043a\u0438\u0439 \n\"th\" \u2014 \u0e44\u0e17\u0e22 \n\"zh-tw\" \u2014 \u7e41\u9ad4\u4e2d\u6587 \n\"tr\" \u2014 T\u00fcrk\u00e7e \n\"zh-cn\" \u2014 \u4e2d\u6587 \n\"pt-br\" \u2014 Portugu\u00eas do Brasil \n\"es-mx\" \u2014 Espa\u00f1ol (M\u00e9xico)",
+                "required": false,
+                "type": "string"
+            }
+        },
+        "modules": {
+            "__doc__": "Method returns the list of available modules that can be installed on ships, such as hulls, engines, etc. At least one input filter parameter (module_id, type) is required to be indicated.",
+            "application_id": {
+                "doc": "Application ID",
+                "required": true,
+                "type": "string"
+            },
+            "fields": {
+                "doc": "Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields.",
+                "required": false,
+                "type": "string, list"
+            },
+            "language": {
+                "doc": "Localization language. Valid values: \n\n\"cs\" \u2014 \u010ce\u0161tina \n\"de\" \u2014 Deutsch \n\"en\" \u2014 English (by default)\n\"es\" \u2014 Espa\u00f1ol \n\"fr\" \u2014 Fran\u00e7ais \n\"ja\" \u2014 \u65e5\u672c\u8a9e \n\"ko\" \u2014 \ud55c\uad6d\uc5b4 \n\"pl\" \u2014 Polski \n\"ru\" \u2014 \u0420\u0443\u0441\u0441\u043a\u0438\u0439 \n\"th\" \u2014 \u0e44\u0e17\u0e22 \n\"zh-tw\" \u2014 \u7e41\u9ad4\u4e2d\u6587 \n\"tr\" \u2014 T\u00fcrk\u00e7e \n\"zh-cn\" \u2014 \u4e2d\u6587 \n\"pt-br\" \u2014 Portugu\u00eas do Brasil \n\"es-mx\" \u2014 Espa\u00f1ol (M\u00e9xico)",
+                "required": false,
+                "type": "string"
+            },
+            "module_id": {
+                "doc": "Module ID",
+                "required": false,
+                "type": "numeric"
+            },
+            "type": {
+                "doc": "Module type",
+                "required": false,
+                "type": "string"
+            }
+        },
+        "shipprofile": {
+            "__doc__": "Method returns parameters of ships in all existing configurations.",
+            "application_id": {
+                "doc": "Application ID",
+                "required": true,
+                "type": "string"
+            },
+            "artillery_id": {
+                "doc": "Main Battery ID. If the module is not indicated, module of basic configuration is used.",
+                "required": false,
+                "type": "numeric"
+            },
+            "dive_bomber_id": {
+                "doc": "Dive bombers' ID. If the module is not indicated, module of basic configuration is used.",
+                "required": false,
+                "type": "numeric"
+            },
+            "engine_id": {
+                "doc": "Engine ID. If the module is not indicated, module of basic configuration is used.",
+                "required": false,
+                "type": "numeric"
+            },
+            "fields": {
+                "doc": "Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields.",
+                "required": false,
+                "type": "string, list"
+            },
+            "fighter_id": {
+                "doc": "Fighters' ID. If the module is not indicated, module of basic configuration is used.",
+                "required": false,
+                "type": "numeric"
+            },
+            "fire_control_id": {
+                "doc": "ID of Gun Fire Control System. If the module is not indicated, module of basic configuration is used.",
+                "required": false,
+                "type": "numeric"
+            },
+            "flight_control_id": {
+                "doc": "ID of Flight Control System. If the module is not indicated, module of basic configuration is used.",
+                "required": false,
+                "type": "numeric"
+            },
+            "hull_id": {
+                "doc": "Hull ID. If the module is not indicated, module of basic configuration is used.",
+                "required": false,
+                "type": "numeric"
+            },
+            "language": {
+                "doc": "Localization language. Valid values: \n\n\"cs\" \u2014 \u010ce\u0161tina \n\"de\" \u2014 Deutsch \n\"en\" \u2014 English (by default)\n\"es\" \u2014 Espa\u00f1ol \n\"fr\" \u2014 Fran\u00e7ais \n\"ja\" \u2014 \u65e5\u672c\u8a9e \n\"ko\" \u2014 \ud55c\uad6d\uc5b4 \n\"pl\" \u2014 Polski \n\"ru\" \u2014 \u0420\u0443\u0441\u0441\u043a\u0438\u0439 \n\"th\" \u2014 \u0e44\u0e17\u0e22 \n\"zh-tw\" \u2014 \u7e41\u9ad4\u4e2d\u6587 \n\"tr\" \u2014 T\u00fcrk\u00e7e \n\"zh-cn\" \u2014 \u4e2d\u6587 \n\"pt-br\" \u2014 Portugu\u00eas do Brasil \n\"es-mx\" \u2014 Espa\u00f1ol (M\u00e9xico)",
+                "required": false,
+                "type": "string"
+            },
+            "ship_id": {
+                "doc": "Ship ID",
+                "required": true,
+                "type": "numeric"
+            },
+            "torpedo_bomber_id": {
+                "doc": "Torpedo bombers' ID. If the module is not indicated, module of basic configuration is used.",
+                "required": false,
+                "type": "numeric"
+            },
+            "torpedoes_id": {
+                "doc": "Torpedo tubes' ID. If the module is not indicated, module of basic configuration is used.",
+                "required": false,
+                "type": "numeric"
+            }
+        },
+        "ships": {
+            "__doc__": "Method returns the list of ships available.",
+            "application_id": {
+                "doc": "Application ID",
+                "required": true,
+                "type": "string"
+            },
+            "fields": {
+                "doc": "Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields.",
+                "required": false,
+                "type": "string, list"
+            },
+            "language": {
+                "doc": "Localization language. Valid values: \n\n\"cs\" \u2014 \u010ce\u0161tina \n\"de\" \u2014 Deutsch \n\"en\" \u2014 English (by default)\n\"es\" \u2014 Espa\u00f1ol \n\"fr\" \u2014 Fran\u00e7ais \n\"ja\" \u2014 \u65e5\u672c\u8a9e \n\"ko\" \u2014 \ud55c\uad6d\uc5b4 \n\"pl\" \u2014 Polski \n\"ru\" \u2014 \u0420\u0443\u0441\u0441\u043a\u0438\u0439 \n\"th\" \u2014 \u0e44\u0e17\u0e22 \n\"zh-tw\" \u2014 \u7e41\u9ad4\u4e2d\u6587 \n\"tr\" \u2014 T\u00fcrk\u00e7e \n\"zh-cn\" \u2014 \u4e2d\u6587 \n\"pt-br\" \u2014 Portugu\u00eas do Brasil \n\"es-mx\" \u2014 Espa\u00f1ol (M\u00e9xico)",
+                "required": false,
+                "type": "string"
+            },
+            "nation": {
+                "doc": "Nation",
+                "required": false,
+                "type": "string, list"
+            },
+            "ship_id": {
+                "doc": "Ship ID",
+                "required": false,
+                "type": "numeric, list"
+            },
+            "type": {
+                "doc": "Type of ship",
+                "required": false,
+                "type": "string, list"
+            }
+        },
+        "upgrades": {
+            "__doc__": "Method returns the list of available ship upgrades.",
+            "application_id": {
+                "doc": "Application ID",
+                "required": true,
+                "type": "string"
+            },
+            "fields": {
+                "doc": "Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields.",
+                "required": false,
+                "type": "string, list"
+            },
+            "language": {
+                "doc": "Localization language. Valid values: \n\n\"cs\" \u2014 \u010ce\u0161tina \n\"de\" \u2014 Deutsch \n\"en\" \u2014 English (by default)\n\"es\" \u2014 Espa\u00f1ol \n\"fr\" \u2014 Fran\u00e7ais \n\"ja\" \u2014 \u65e5\u672c\u8a9e \n\"ko\" \u2014 \ud55c\uad6d\uc5b4 \n\"pl\" \u2014 Polski \n\"ru\" \u2014 \u0420\u0443\u0441\u0441\u043a\u0438\u0439 \n\"th\" \u2014 \u0e44\u0e17\u0e22 \n\"zh-tw\" \u2014 \u7e41\u9ad4\u4e2d\u6587 \n\"tr\" \u2014 T\u00fcrk\u00e7e \n\"zh-cn\" \u2014 \u4e2d\u6587 \n\"pt-br\" \u2014 Portugu\u00eas do Brasil \n\"es-mx\" \u2014 Espa\u00f1ol (M\u00e9xico)",
+                "required": false,
+                "type": "string"
+            },
+            "upgrade_id": {
+                "doc": "Upgrade ID",
+                "required": false,
+                "type": "numeric, list"
+            }
+        }
+    },
+    "seasons": {
+        "accountinfo": {
+            "__doc__": "Method returns players' statistics in Ranked Battles seasons. Accounts with hidden game profiles are excluded from response. Hidden profiles are listed in the field meta.hidden.",
+            "access_token": {
+                "doc": "Access token is used to access personal user data. The token is obtained via authentication and has expiration time.",
+                "required": false,
+                "type": "string"
+            },
+            "account_id": {
+                "doc": "Player account ID",
+                "required": true,
+                "type": "numeric, list"
+            },
+            "application_id": {
+                "doc": "Application ID",
+                "required": true,
+                "type": "string"
+            },
+            "fields": {
+                "doc": "Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields.",
+                "required": false,
+                "type": "string, list"
+            },
+            "language": {
+                "doc": "Localization language. Valid values: \n\n\"cs\" \u2014 \u010ce\u0161tina \n\"de\" \u2014 Deutsch \n\"en\" \u2014 English (by default)\n\"es\" \u2014 Espa\u00f1ol \n\"fr\" \u2014 Fran\u00e7ais \n\"ja\" \u2014 \u65e5\u672c\u8a9e \n\"ko\" \u2014 \ud55c\uad6d\uc5b4 \n\"pl\" \u2014 Polski \n\"ru\" \u2014 \u0420\u0443\u0441\u0441\u043a\u0438\u0439 \n\"th\" \u2014 \u0e44\u0e17\u0e22 \n\"zh-tw\" \u2014 \u7e41\u9ad4\u4e2d\u6587",
+                "required": false,
+                "type": "string"
+            },
+            "season_id": {
+                "doc": "Season ID",
+                "required": false,
+                "type": "numeric, list"
+            }
+        },
+        "info": {
+            "__doc__": "Method returns information about Ranked Battles seasons.",
+            "application_id": {
+                "doc": "Application ID",
+                "required": true,
+                "type": "string"
+            },
+            "fields": {
+                "doc": "Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields.",
+                "required": false,
+                "type": "string, list"
+            },
+            "language": {
+                "doc": "Localization language. Valid values: \n\n\"cs\" \u2014 \u010ce\u0161tina \n\"de\" \u2014 Deutsch \n\"en\" \u2014 English (by default)\n\"es\" \u2014 Espa\u00f1ol \n\"fr\" \u2014 Fran\u00e7ais \n\"ja\" \u2014 \u65e5\u672c\u8a9e \n\"ko\" \u2014 \ud55c\uad6d\uc5b4 \n\"pl\" \u2014 Polski \n\"ru\" \u2014 \u0420\u0443\u0441\u0441\u043a\u0438\u0439 \n\"th\" \u2014 \u0e44\u0e17\u0e22 \n\"zh-tw\" \u2014 \u7e41\u9ad4\u4e2d\u6587 \n\"tr\" \u2014 T\u00fcrk\u00e7e \n\"zh-cn\" \u2014 \u4e2d\u6587 \n\"pt-br\" \u2014 Portugu\u00eas do Brasil \n\"es-mx\" \u2014 Espa\u00f1ol (M\u00e9xico)",
+                "required": false,
+                "type": "string"
+            },
+            "season_id": {
+                "doc": "Season ID",
+                "required": false,
+                "type": "numeric, list"
+            }
+        },
+        "shipstats": {
+            "__doc__": "Method returns players' ships statistics in Ranked Battles seasons. Accounts with hidden game profiles are excluded from response. Hidden profiles are listed in the field meta.hidden.",
+            "access_token": {
+                "doc": "Access token is used to access personal user data. The token is obtained via authentication and has expiration time.",
+                "required": false,
+                "type": "string"
+            },
+            "account_id": {
+                "doc": "Player account ID",
+                "required": true,
+                "type": "numeric"
+            },
+            "application_id": {
+                "doc": "Application ID",
+                "required": true,
+                "type": "string"
+            },
+            "fields": {
+                "doc": "Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields.",
+                "required": false,
+                "type": "string, list"
+            },
+            "language": {
+                "doc": "Localization language. Valid values: \n\n\"cs\" \u2014 \u010ce\u0161tina \n\"de\" \u2014 Deutsch \n\"en\" \u2014 English (by default)\n\"es\" \u2014 Espa\u00f1ol \n\"fr\" \u2014 Fran\u00e7ais \n\"ja\" \u2014 \u65e5\u672c\u8a9e \n\"ko\" \u2014 \ud55c\uad6d\uc5b4 \n\"pl\" \u2014 Polski \n\"ru\" \u2014 \u0420\u0443\u0441\u0441\u043a\u0438\u0439 \n\"th\" \u2014 \u0e44\u0e17\u0e22 \n\"zh-tw\" \u2014 \u7e41\u9ad4\u4e2d\u6587",
+                "required": false,
+                "type": "string"
+            },
+            "season_id": {
+                "doc": "Season ID",
+                "required": false,
+                "type": "numeric, list"
+            },
+            "ship_id": {
+                "doc": "Ship ID",
+                "required": false,
+                "type": "numeric, list"
+            }
+        }
+    },
+    "ships": {
+        "stats": {
+            "__doc__": "Method returns general statistics for each ship of a player. Accounts with hidden game profiles are excluded from response. Hidden profiles are listed in the field meta.hidden.",
+            "access_token": {
+                "doc": "Access token is used to access personal user data. The token is obtained via authentication and has expiration time.",
+                "required": false,
+                "type": "string"
+            },
+            "account_id": {
+                "doc": "Player account ID",
+                "required": true,
+                "type": "numeric"
+            },
+            "application_id": {
+                "doc": "Application ID",
+                "required": true,
+                "type": "string"
+            },
+            "extra": {
+                "doc": "Extra fields to be included into the response. Valid values: \n\nclub\npve\npve_div2\npve_div3\npve_solo\npvp_div2\npvp_div3\npvp_solo\nrank_div2\nrank_div3\nrank_solo",
+                "required": false,
+                "type": "string, list"
+            },
+            "fields": {
+                "doc": "Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields.",
+                "required": false,
+                "type": "string, list"
+            },
+            "in_garage": {
+                "doc": "Filter by ship availability in the Port. If the parameter is not specified, all ships are returned. Parameter processing requires a valid access_token for the specified account_id. Valid values: \n\n\"1\" \u2014 Return ships available in the Port. \n\"0\" \u2014 Return ships that are no longer in the Port.",
+                "required": false,
+                "type": "string"
+            },
+            "language": {
+                "doc": "Localization language. Valid values: \n\n\"cs\" \u2014 \u010ce\u0161tina \n\"de\" \u2014 Deutsch \n\"en\" \u2014 English (by default)\n\"es\" \u2014 Espa\u00f1ol \n\"fr\" \u2014 Fran\u00e7ais \n\"ja\" \u2014 \u65e5\u672c\u8a9e \n\"ko\" \u2014 \ud55c\uad6d\uc5b4 \n\"pl\" \u2014 Polski \n\"ru\" \u2014 \u0420\u0443\u0441\u0441\u043a\u0438\u0439 \n\"th\" \u2014 \u0e44\u0e17\u0e22 \n\"zh-tw\" \u2014 \u7e41\u9ad4\u4e2d\u6587",
+                "required": false,
+                "type": "string"
+            },
+            "ship_id": {
+                "doc": "Player's ship ID",
+                "required": false,
+                "type": "numeric, list"
+            }
+        }
+    }
+}

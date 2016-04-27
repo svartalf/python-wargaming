@@ -33,6 +33,7 @@ setup(
     long_description=__doc__,
     license='MIT',
     packages=find_packages(exclude=['tests', 'docs']),
+    package_data={'wargaming': ['schema/*.json']},
     install_requires=install_requires,
     tests_require=install_requires + test_requires,
     cmdclass={'test': PyTest},

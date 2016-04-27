@@ -1,0 +1,486 @@
+{
+    "account": {
+        "achievements": {
+            "__doc__": "Method returns players' achievement details.",
+            "account_id": {
+                "doc": "Player account ID",
+                "required": true,
+                "type": "numeric, list"
+            },
+            "application_id": {
+                "doc": "Application ID",
+                "required": true,
+                "type": "string"
+            },
+            "fields": {
+                "doc": "Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields.",
+                "required": false,
+                "type": "string, list"
+            },
+            "language": {
+                "doc": "Localization language. Valid values: \n\n\"en\" \u2014 English (by default)\n\"ru\" \u2014 \u0420\u0443\u0441\u0441\u043a\u0438\u0439 \n\"pl\" \u2014 Polski \n\"de\" \u2014 Deutsch \n\"fr\" \u2014 Fran\u00e7ais \n\"es\" \u2014 Espa\u00f1ol \n\"zh-cn\" \u2014 \u7b80\u4f53\u4e2d\u6587 \n\"tr\" \u2014 T\u00fcrk\u00e7e \n\"cs\" \u2014 \u010ce\u0161tina \n\"th\" \u2014 \u0e44\u0e17\u0e22 \n\"vi\" \u2014 Ti\u1ebfng Vi\u1ec7t \n\"ko\" \u2014 \ud55c\uad6d\uc5b4",
+                "required": false,
+                "type": "string"
+            }
+        },
+        "info": {
+            "__doc__": "Method returns player details.",
+            "access_token": {
+                "doc": "Access token is used to access personal user data. The token is obtained via authentication and has expiration time.",
+                "required": false,
+                "type": "string"
+            },
+            "account_id": {
+                "doc": "Player account ID",
+                "required": true,
+                "type": "numeric, list"
+            },
+            "application_id": {
+                "doc": "Application ID",
+                "required": true,
+                "type": "string"
+            },
+            "extra": {
+                "doc": "Extra fields to be included into the response. Valid values: \n\nprivate.grouped_contacts",
+                "required": false,
+                "type": "string, list"
+            },
+            "fields": {
+                "doc": "Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields.",
+                "required": false,
+                "type": "string, list"
+            },
+            "language": {
+                "doc": "Localization language. Valid values: \n\n\"en\" \u2014 English (by default)\n\"ru\" \u2014 \u0420\u0443\u0441\u0441\u043a\u0438\u0439 \n\"pl\" \u2014 Polski \n\"de\" \u2014 Deutsch \n\"fr\" \u2014 Fran\u00e7ais \n\"es\" \u2014 Espa\u00f1ol \n\"zh-cn\" \u2014 \u7b80\u4f53\u4e2d\u6587 \n\"tr\" \u2014 T\u00fcrk\u00e7e \n\"cs\" \u2014 \u010ce\u0161tina \n\"th\" \u2014 \u0e44\u0e17\u0e22 \n\"vi\" \u2014 Ti\u1ebfng Vi\u1ec7t \n\"ko\" \u2014 \ud55c\uad6d\uc5b4",
+                "required": false,
+                "type": "string"
+            }
+        },
+        "list": {
+            "__doc__": "Method returns partial list of players. The list is filtered by initial characters of user name and sorted alphabetically.",
+            "application_id": {
+                "doc": "Application ID",
+                "required": true,
+                "type": "string"
+            },
+            "fields": {
+                "doc": "Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields.",
+                "required": false,
+                "type": "string, list"
+            },
+            "language": {
+                "doc": "Localization language. Valid values: \n\n\"en\" \u2014 English (by default)\n\"ru\" \u2014 \u0420\u0443\u0441\u0441\u043a\u0438\u0439 \n\"pl\" \u2014 Polski \n\"de\" \u2014 Deutsch \n\"fr\" \u2014 Fran\u00e7ais \n\"es\" \u2014 Espa\u00f1ol \n\"zh-cn\" \u2014 \u7b80\u4f53\u4e2d\u6587 \n\"tr\" \u2014 T\u00fcrk\u00e7e \n\"cs\" \u2014 \u010ce\u0161tina \n\"th\" \u2014 \u0e44\u0e17\u0e22 \n\"vi\" \u2014 Ti\u1ebfng Vi\u1ec7t \n\"ko\" \u2014 \ud55c\uad6d\uc5b4",
+                "required": false,
+                "type": "string"
+            },
+            "limit": {
+                "doc": "Number of returned entries (fewer can be returned, but not more than 100). If the limit sent exceeds 100, an limit of 100 is applied (by default).",
+                "required": false,
+                "type": "numeric"
+            },
+            "search": {
+                "doc": "Player name search string. Parameter 'type' defines minimum length and type of search.\n        Maximum length: 24 symbols.",
+                "required": true,
+                "type": "string"
+            },
+            "type": {
+                "doc": "Search type. Defines minimum length and type of search. Default value: startswith. Valid values: \n\n\"startswith\" \u2014 Search by initial characters of player name. Minimum length: 3 characters. Case insensitive. (by default)\n\"exact\" \u2014 Search by exact match of player name. Minimum length: 1 character. Case insensitive.",
+                "required": false,
+                "type": "string"
+            }
+        },
+        "tankstats": {
+            "__doc__": "Method returns players' statistics on the vehicle.",
+            "account_id": {
+                "doc": "Player account ID",
+                "required": true,
+                "type": "numeric, list"
+            },
+            "application_id": {
+                "doc": "Application ID",
+                "required": true,
+                "type": "string"
+            },
+            "fields": {
+                "doc": "Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields.",
+                "required": false,
+                "type": "string, list"
+            },
+            "language": {
+                "doc": "Localization language. Valid values: \n\n\"en\" \u2014 English (by default)\n\"ru\" \u2014 \u0420\u0443\u0441\u0441\u043a\u0438\u0439 \n\"pl\" \u2014 Polski \n\"de\" \u2014 Deutsch \n\"fr\" \u2014 Fran\u00e7ais \n\"es\" \u2014 Espa\u00f1ol \n\"zh-cn\" \u2014 \u7b80\u4f53\u4e2d\u6587 \n\"tr\" \u2014 T\u00fcrk\u00e7e \n\"cs\" \u2014 \u010ce\u0161tina \n\"th\" \u2014 \u0e44\u0e17\u0e22 \n\"vi\" \u2014 Ti\u1ebfng Vi\u1ec7t \n\"ko\" \u2014 \ud55c\uad6d\uc5b4",
+                "required": false,
+                "type": "string"
+            },
+            "tank_id": {
+                "doc": "Player's vehicle ID",
+                "required": true,
+                "type": "numeric"
+            }
+        }
+    },
+    "clans": {
+        "accountinfo": {
+            "__doc__": "Method returns player clan data. Player clan data exist only for accounts, that were participating in clan activities: sent join requests, were clan members etc.",
+            "account_id": {
+                "doc": "Account ID",
+                "required": true,
+                "type": "numeric, list"
+            },
+            "application_id": {
+                "doc": "Application ID",
+                "required": true,
+                "type": "string"
+            },
+            "extra": {
+                "doc": "Extra fields to be included into the response. Valid values: \n\nclan",
+                "required": false,
+                "type": "string, list"
+            },
+            "fields": {
+                "doc": "Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields.",
+                "required": false,
+                "type": "string, list"
+            }
+        },
+        "glossary": {
+            "__doc__": "Method returns information on clan entities.",
+            "application_id": {
+                "doc": "Application ID",
+                "required": true,
+                "type": "string"
+            },
+            "fields": {
+                "doc": "Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields.",
+                "required": false,
+                "type": "string, list"
+            },
+            "language": {
+                "doc": "Localization language. Valid values: \n\n\"en\" \u2014 English (by default)\n\"ru\" \u2014 \u0420\u0443\u0441\u0441\u043a\u0438\u0439 \n\"pl\" \u2014 Polski \n\"de\" \u2014 Deutsch \n\"fr\" \u2014 Fran\u00e7ais \n\"es\" \u2014 Espa\u00f1ol \n\"zh-cn\" \u2014 \u7b80\u4f53\u4e2d\u6587 \n\"tr\" \u2014 T\u00fcrk\u00e7e \n\"cs\" \u2014 \u010ce\u0161tina \n\"th\" \u2014 \u0e44\u0e17\u0e22 \n\"vi\" \u2014 Ti\u1ebfng Vi\u1ec7t \n\"ko\" \u2014 \ud55c\uad6d\uc5b4",
+                "required": false,
+                "type": "string"
+            }
+        },
+        "info": {
+            "__doc__": "Method returns detailed clan information.",
+            "application_id": {
+                "doc": "Application ID",
+                "required": true,
+                "type": "string"
+            },
+            "clan_id": {
+                "doc": "Clan ID",
+                "required": true,
+                "type": "numeric, list"
+            },
+            "extra": {
+                "doc": "Extra fields to be included into the response. Valid values: \n\nmembers",
+                "required": false,
+                "type": "string, list"
+            },
+            "fields": {
+                "doc": "Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields.",
+                "required": false,
+                "type": "string, list"
+            }
+        },
+        "list": {
+            "__doc__": "Method searches through clans and sorts them in a specified order.",
+            "application_id": {
+                "doc": "Application ID",
+                "required": true,
+                "type": "string"
+            },
+            "fields": {
+                "doc": "Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields.",
+                "required": false,
+                "type": "string, list"
+            },
+            "limit": {
+                "doc": "Number of returned entries (fewer can be returned, but not more than 100). If the limit sent exceeds 100, an limit of 100 is applied (by default).",
+                "required": false,
+                "type": "numeric"
+            },
+            "page_no": {
+                "doc": "Page number",
+                "required": false,
+                "type": "numeric"
+            },
+            "search": {
+                "doc": "Part of name or tag for clan search. Minimum 2 characters",
+                "required": false,
+                "type": "string"
+            }
+        }
+    },
+    "encyclopedia": {
+        "achievements": {
+            "__doc__": "Method returns information about achievements.",
+            "application_id": {
+                "doc": "Application ID",
+                "required": true,
+                "type": "string"
+            },
+            "fields": {
+                "doc": "Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields.",
+                "required": false,
+                "type": "string, list"
+            },
+            "language": {
+                "doc": "Localization language. Valid values: \n\n\"en\" \u2014 English (by default)\n\"ru\" \u2014 \u0420\u0443\u0441\u0441\u043a\u0438\u0439 \n\"pl\" \u2014 Polski \n\"de\" \u2014 Deutsch \n\"fr\" \u2014 Fran\u00e7ais \n\"es\" \u2014 Espa\u00f1ol \n\"zh-cn\" \u2014 \u7b80\u4f53\u4e2d\u6587 \n\"tr\" \u2014 T\u00fcrk\u00e7e \n\"cs\" \u2014 \u010ce\u0161tina \n\"th\" \u2014 \u0e44\u0e17\u0e22 \n\"vi\" \u2014 Ti\u1ebfng Vi\u1ec7t \n\"ko\" \u2014 \ud55c\uad6d\uc5b4",
+                "required": false,
+                "type": "string"
+            }
+        },
+        "crewskills": {
+            "__doc__": "Method returns information about crew skills.",
+            "application_id": {
+                "doc": "Application ID",
+                "required": true,
+                "type": "string"
+            },
+            "fields": {
+                "doc": "Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields.",
+                "required": false,
+                "type": "string, list"
+            },
+            "language": {
+                "doc": "Localization language. Valid values: \n\n\"en\" \u2014 English (by default)\n\"ru\" \u2014 \u0420\u0443\u0441\u0441\u043a\u0438\u0439 \n\"pl\" \u2014 Polski \n\"de\" \u2014 Deutsch \n\"fr\" \u2014 Fran\u00e7ais \n\"es\" \u2014 Espa\u00f1ol \n\"zh-cn\" \u2014 \u7b80\u4f53\u4e2d\u6587 \n\"tr\" \u2014 T\u00fcrk\u00e7e \n\"cs\" \u2014 \u010ce\u0161tina \n\"th\" \u2014 \u0e44\u0e17\u0e22 \n\"vi\" \u2014 Ti\u1ebfng Vi\u1ec7t \n\"ko\" \u2014 \ud55c\uad6d\uc5b4",
+                "required": false,
+                "type": "string"
+            },
+            "skill_id": {
+                "doc": "Skills IDs. Max limit is 100.",
+                "required": false,
+                "type": "string, list"
+            },
+            "vehicle_type": {
+                "doc": "Vehicle types. Max limit is 100.",
+                "required": false,
+                "type": "string, list"
+            }
+        },
+        "info": {
+            "__doc__": "Method returns information about Tankopedia.",
+            "application_id": {
+                "doc": "Application ID",
+                "required": true,
+                "type": "string"
+            },
+            "fields": {
+                "doc": "Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields.",
+                "required": false,
+                "type": "string, list"
+            },
+            "language": {
+                "doc": "Localization language. Valid values: \n\n\"en\" \u2014 English (by default)\n\"ru\" \u2014 \u0420\u0443\u0441\u0441\u043a\u0438\u0439 \n\"pl\" \u2014 Polski \n\"de\" \u2014 Deutsch \n\"fr\" \u2014 Fran\u00e7ais \n\"es\" \u2014 Espa\u00f1ol \n\"zh-cn\" \u2014 \u7b80\u4f53\u4e2d\u6587 \n\"tr\" \u2014 T\u00fcrk\u00e7e \n\"cs\" \u2014 \u010ce\u0161tina \n\"th\" \u2014 \u0e44\u0e17\u0e22 \n\"vi\" \u2014 Ti\u1ebfng Vi\u1ec7t \n\"ko\" \u2014 \ud55c\uad6d\uc5b4",
+                "required": false,
+                "type": "string"
+            }
+        },
+        "modules": {
+            "__doc__": "Method returns list of available modules, such as guns, engines, etc.",
+            "application_id": {
+                "doc": "Application ID",
+                "required": true,
+                "type": "string"
+            },
+            "fields": {
+                "doc": "Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields.",
+                "required": false,
+                "type": "string, list"
+            },
+            "language": {
+                "doc": "Localization language. Valid values: \n\n\"en\" \u2014 English (by default)\n\"ru\" \u2014 \u0420\u0443\u0441\u0441\u043a\u0438\u0439 \n\"pl\" \u2014 Polski \n\"de\" \u2014 Deutsch \n\"fr\" \u2014 Fran\u00e7ais \n\"es\" \u2014 Espa\u00f1ol \n\"zh-cn\" \u2014 \u7b80\u4f53\u4e2d\u6587 \n\"tr\" \u2014 T\u00fcrk\u00e7e \n\"cs\" \u2014 \u010ce\u0161tina \n\"th\" \u2014 \u0e44\u0e17\u0e22 \n\"vi\" \u2014 Ti\u1ebfng Vi\u1ec7t \n\"ko\" \u2014 \ud55c\uad6d\uc5b4",
+                "required": false,
+                "type": "string"
+            },
+            "module_id": {
+                "doc": "Module ID",
+                "required": false,
+                "type": "numeric, list"
+            }
+        },
+        "provisions": {
+            "__doc__": "Method returns list of available equipment and consumables.",
+            "application_id": {
+                "doc": "Application ID",
+                "required": true,
+                "type": "string"
+            },
+            "fields": {
+                "doc": "Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields.",
+                "required": false,
+                "type": "string, list"
+            },
+            "language": {
+                "doc": "Localization language. Valid values: \n\n\"en\" \u2014 English (by default)\n\"ru\" \u2014 \u0420\u0443\u0441\u0441\u043a\u0438\u0439 \n\"pl\" \u2014 Polski \n\"de\" \u2014 Deutsch \n\"fr\" \u2014 Fran\u00e7ais \n\"es\" \u2014 Espa\u00f1ol \n\"zh-cn\" \u2014 \u7b80\u4f53\u4e2d\u6587 \n\"tr\" \u2014 T\u00fcrk\u00e7e \n\"cs\" \u2014 \u010ce\u0161tina \n\"th\" \u2014 \u0e44\u0e17\u0e22 \n\"vi\" \u2014 Ti\u1ebfng Vi\u1ec7t \n\"ko\" \u2014 \ud55c\uad6d\uc5b4",
+                "required": false,
+                "type": "string"
+            },
+            "provision_id": {
+                "doc": "Equipment or consumable ID",
+                "required": false,
+                "type": "numeric, list"
+            },
+            "tank_id": {
+                "doc": "Vehicle ID",
+                "required": false,
+                "type": "numeric, list"
+            },
+            "type": {
+                "doc": "Type. Valid values: \n\n\"equipment\" \u2014 Consumables \n\"optionalDevice\" \u2014 Equipment",
+                "required": false,
+                "type": "string"
+            }
+        },
+        "vehicleprofile": {
+            "__doc__": "Method returns vehicle configuration characteristics based on the specified module IDs.",
+            "application_id": {
+                "doc": "Application ID",
+                "required": true,
+                "type": "string"
+            },
+            "engine_id": {
+                "doc": "Engine ID. If module is not specified, standard module is used by default.",
+                "required": false,
+                "type": "numeric"
+            },
+            "fields": {
+                "doc": "Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields.",
+                "required": false,
+                "type": "string, list"
+            },
+            "gun_id": {
+                "doc": "Gun ID. If module is not specified, standard module is used by default.",
+                "required": false,
+                "type": "numeric"
+            },
+            "language": {
+                "doc": "Localization language. Valid values: \n\n\"en\" \u2014 English (by default)\n\"ru\" \u2014 \u0420\u0443\u0441\u0441\u043a\u0438\u0439 \n\"pl\" \u2014 Polski \n\"de\" \u2014 Deutsch \n\"fr\" \u2014 Fran\u00e7ais \n\"es\" \u2014 Espa\u00f1ol \n\"zh-cn\" \u2014 \u7b80\u4f53\u4e2d\u6587 \n\"tr\" \u2014 T\u00fcrk\u00e7e \n\"cs\" \u2014 \u010ce\u0161tina \n\"th\" \u2014 \u0e44\u0e17\u0e22 \n\"vi\" \u2014 Ti\u1ebfng Vi\u1ec7t \n\"ko\" \u2014 \ud55c\uad6d\uc5b4",
+                "required": false,
+                "type": "string"
+            },
+            "suspension_id": {
+                "doc": "Suspension ID. If module is not specified, standard module is used by default.",
+                "required": false,
+                "type": "numeric"
+            },
+            "tank_id": {
+                "doc": "Vehicle ID",
+                "required": true,
+                "type": "numeric"
+            },
+            "turret_id": {
+                "doc": "Turret ID. If module is not specified, standard module is used by default.",
+                "required": false,
+                "type": "numeric"
+            }
+        },
+        "vehicles": {
+            "__doc__": "Method returns list of available vehicles.",
+            "application_id": {
+                "doc": "Application ID",
+                "required": true,
+                "type": "string"
+            },
+            "fields": {
+                "doc": "Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields.",
+                "required": false,
+                "type": "string, list"
+            },
+            "language": {
+                "doc": "Localization language. Valid values: \n\n\"en\" \u2014 English (by default)\n\"ru\" \u2014 \u0420\u0443\u0441\u0441\u043a\u0438\u0439 \n\"pl\" \u2014 Polski \n\"de\" \u2014 Deutsch \n\"fr\" \u2014 Fran\u00e7ais \n\"es\" \u2014 Espa\u00f1ol \n\"zh-cn\" \u2014 \u7b80\u4f53\u4e2d\u6587 \n\"tr\" \u2014 T\u00fcrk\u00e7e \n\"cs\" \u2014 \u010ce\u0161tina \n\"th\" \u2014 \u0e44\u0e17\u0e22 \n\"vi\" \u2014 Ti\u1ebfng Vi\u1ec7t \n\"ko\" \u2014 \ud55c\uad6d\uc5b4",
+                "required": false,
+                "type": "string"
+            },
+            "nation": {
+                "doc": "Nation",
+                "required": false,
+                "type": "string, list"
+            },
+            "tank_id": {
+                "doc": "Vehicle ID",
+                "required": false,
+                "type": "numeric, list"
+            }
+        }
+    },
+    "tanks": {
+        "achievements": {
+            "__doc__": "Method returns list of player's achievements on all vehicles.",
+            "access_token": {
+                "doc": "Access token is used to access personal user data. The token is obtained via authentication and has expiration time.",
+                "required": false,
+                "type": "string"
+            },
+            "account_id": {
+                "doc": "Player account ID",
+                "required": true,
+                "type": "numeric"
+            },
+            "application_id": {
+                "doc": "Application ID",
+                "required": true,
+                "type": "string"
+            },
+            "fields": {
+                "doc": "Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields.",
+                "required": false,
+                "type": "string, list"
+            },
+            "in_garage": {
+                "doc": "Filter by vehicle availability in the Garage. If the parameter is not specified, all vehicles are returned. Parameter processing requires a valid access_token for the specified account_id. Valid values: \n\n\"1\" \u2014 Return vehicles available in the Garage. \n\"0\" \u2014 Return vehicles that are no longer in the Garage.",
+                "required": false,
+                "type": "string"
+            },
+            "language": {
+                "doc": "Localization language. Valid values: \n\n\"en\" \u2014 English (by default)\n\"ru\" \u2014 \u0420\u0443\u0441\u0441\u043a\u0438\u0439 \n\"pl\" \u2014 Polski \n\"de\" \u2014 Deutsch \n\"fr\" \u2014 Fran\u00e7ais \n\"es\" \u2014 Espa\u00f1ol \n\"zh-cn\" \u2014 \u7b80\u4f53\u4e2d\u6587 \n\"tr\" \u2014 T\u00fcrk\u00e7e \n\"cs\" \u2014 \u010ce\u0161tina \n\"th\" \u2014 \u0e44\u0e17\u0e22 \n\"vi\" \u2014 Ti\u1ebfng Vi\u1ec7t \n\"ko\" \u2014 \ud55c\uad6d\uc5b4",
+                "required": false,
+                "type": "string"
+            },
+            "tank_id": {
+                "doc": "Player's vehicle ID",
+                "required": false,
+                "type": "numeric, list"
+            }
+        },
+        "stats": {
+            "__doc__": "Method returns general statistics for each vehicle of each player.",
+            "access_token": {
+                "doc": "Access token is used to access personal user data. The token is obtained via authentication and has expiration time.",
+                "required": false,
+                "type": "string"
+            },
+            "account_id": {
+                "doc": "Player account ID",
+                "required": true,
+                "type": "numeric"
+            },
+            "application_id": {
+                "doc": "Application ID",
+                "required": true,
+                "type": "string"
+            },
+            "fields": {
+                "doc": "Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields.",
+                "required": false,
+                "type": "string, list"
+            },
+            "in_garage": {
+                "doc": "Filter by vehicle availability in the Garage. If the parameter is not specified, all vehicles are returned. Parameter processing requires a valid access_token for the specified account_id. Valid values: \n\n\"1\" \u2014 Return vehicles available in the Garage. \n\"0\" \u2014 Return vehicles that are no longer in the Garage.",
+                "required": false,
+                "type": "string"
+            },
+            "language": {
+                "doc": "Localization language. Valid values: \n\n\"en\" \u2014 English (by default)\n\"ru\" \u2014 \u0420\u0443\u0441\u0441\u043a\u0438\u0439 \n\"pl\" \u2014 Polski \n\"de\" \u2014 Deutsch \n\"fr\" \u2014 Fran\u00e7ais \n\"es\" \u2014 Espa\u00f1ol \n\"zh-cn\" \u2014 \u7b80\u4f53\u4e2d\u6587 \n\"tr\" \u2014 T\u00fcrk\u00e7e \n\"cs\" \u2014 \u010ce\u0161tina \n\"th\" \u2014 \u0e44\u0e17\u0e22 \n\"vi\" \u2014 Ti\u1ebfng Vi\u1ec7t \n\"ko\" \u2014 \ud55c\uad6d\uc5b4",
+                "required": false,
+                "type": "string"
+            },
+            "tank_id": {
+                "doc": "Player's vehicle ID",
+                "required": false,
+                "type": "numeric, list"
+            }
+        }
+    }
+}

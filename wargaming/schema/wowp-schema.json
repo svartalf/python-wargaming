@@ -1,0 +1,423 @@
+{
+    "account": {
+        "info": {
+            "__doc__": "Method returns player details.",
+            "access_token": {
+                "doc": "Access token is used to access personal user data. The token is obtained via authentication and has expiration time.",
+                "required": false,
+                "type": "string"
+            },
+            "account_id": {
+                "doc": "Player account ID",
+                "required": true,
+                "type": "numeric, list"
+            },
+            "application_id": {
+                "doc": "Application ID",
+                "required": true,
+                "type": "string"
+            },
+            "fields": {
+                "doc": "Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is no defined, the method returns all fields.",
+                "required": false,
+                "type": "string, list"
+            },
+            "language": {
+                "doc": "Localization language. Valid values: \n\n\"en\" \u2014 English (by default)\n\"ru\" \u2014 \u0420\u0443\u0441\u0441\u043a\u0438\u0439 \n\"pl\" \u2014 Polski \n\"de\" \u2014 Deutsch \n\"fr\" \u2014 Fran\u00e7ais \n\"es\" \u2014 Espa\u00f1ol \n\"zh-cn\" \u2014 \u7b80\u4f53\u4e2d\u6587 \n\"tr\" \u2014 T\u00fcrk\u00e7e \n\"cs\" \u2014 \u010ce\u0161tina \n\"th\" \u2014 \u0e44\u0e17\u0e22 \n\"vi\" \u2014 Ti\u1ebfng Vi\u1ec7t \n\"ko\" \u2014 \ud55c\uad6d\uc5b4",
+                "required": false,
+                "type": "string"
+            }
+        },
+        "list": {
+            "__doc__": "Method returns partial list of players. The list is filtered by initial characters of user name and sorted alphabetically.",
+            "application_id": {
+                "doc": "Application ID",
+                "required": true,
+                "type": "string"
+            },
+            "fields": {
+                "doc": "Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is no defined, the method returns all fields.",
+                "required": false,
+                "type": "string, list"
+            },
+            "language": {
+                "doc": "Localization language. Valid values: \n\n\"en\" \u2014 English (by default)\n\"ru\" \u2014 \u0420\u0443\u0441\u0441\u043a\u0438\u0439 \n\"pl\" \u2014 Polski \n\"de\" \u2014 Deutsch \n\"fr\" \u2014 Fran\u00e7ais \n\"es\" \u2014 Espa\u00f1ol \n\"zh-cn\" \u2014 \u7b80\u4f53\u4e2d\u6587 \n\"tr\" \u2014 T\u00fcrk\u00e7e \n\"cs\" \u2014 \u010ce\u0161tina \n\"th\" \u2014 \u0e44\u0e17\u0e22 \n\"vi\" \u2014 Ti\u1ebfng Vi\u1ec7t \n\"ko\" \u2014 \ud55c\uad6d\uc5b4",
+                "required": false,
+                "type": "string"
+            },
+            "limit": {
+                "doc": "Number of returned entries (fewer can be returned, but not more than 100). If the limit sent exceeds 100, an limit of 100 is applied (by default).",
+                "required": false,
+                "type": "numeric"
+            },
+            "search": {
+                "doc": "Player name search string. Parameter 'type' defines minimum length and type of search.\n        Maximum length: 24 symbols.",
+                "required": true,
+                "type": "string"
+            },
+            "type": {
+                "doc": "Search type. Defines minimum length and type of search. Default value: startswith. Valid values: \n\n\"startswith\" \u2014 Search by initial characters of player name. Minimum length: 3 characters. Case insensitive. (by default)\n\"exact\" \u2014 Search by exact match of player name. Minimum length: 1 character. Case insensitive.",
+                "required": false,
+                "type": "string"
+            }
+        },
+        "planes": {
+            "__doc__": "Method returns details on player's aircrafts.",
+            "access_token": {
+                "doc": "Access token is used to access personal user data. The token is obtained via authentication and has expiration time.",
+                "required": false,
+                "type": "string"
+            },
+            "account_id": {
+                "doc": "Player account ID",
+                "required": true,
+                "type": "numeric, list"
+            },
+            "application_id": {
+                "doc": "Application ID",
+                "required": true,
+                "type": "string"
+            },
+            "fields": {
+                "doc": "Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is no defined, the method returns all fields.",
+                "required": false,
+                "type": "string, list"
+            },
+            "language": {
+                "doc": "Localization language. Valid values: \n\n\"en\" \u2014 English (by default)\n\"ru\" \u2014 \u0420\u0443\u0441\u0441\u043a\u0438\u0439 \n\"pl\" \u2014 Polski \n\"de\" \u2014 Deutsch \n\"fr\" \u2014 Fran\u00e7ais \n\"es\" \u2014 Espa\u00f1ol \n\"zh-cn\" \u2014 \u7b80\u4f53\u4e2d\u6587 \n\"tr\" \u2014 T\u00fcrk\u00e7e \n\"cs\" \u2014 \u010ce\u0161tina \n\"th\" \u2014 \u0e44\u0e17\u0e22 \n\"vi\" \u2014 Ti\u1ebfng Vi\u1ec7t \n\"ko\" \u2014 \ud55c\uad6d\uc5b4",
+                "required": false,
+                "type": "string"
+            }
+        }
+    },
+    "encyclopedia": {
+        "achievements": {
+            "__doc__": "Method returns dictionary of achievements from Encyclopedia.",
+            "application_id": {
+                "doc": "Application ID",
+                "required": true,
+                "type": "string"
+            },
+            "fields": {
+                "doc": "Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is no defined, the method returns all fields.",
+                "required": false,
+                "type": "string, list"
+            },
+            "language": {
+                "doc": "Localization language. Valid values: \n\n\"en\" \u2014 English (by default)\n\"ru\" \u2014 \u0420\u0443\u0441\u0441\u043a\u0438\u0439 \n\"pl\" \u2014 Polski \n\"de\" \u2014 Deutsch \n\"fr\" \u2014 Fran\u00e7ais \n\"es\" \u2014 Espa\u00f1ol \n\"zh-cn\" \u2014 \u7b80\u4f53\u4e2d\u6587 \n\"tr\" \u2014 T\u00fcrk\u00e7e \n\"cs\" \u2014 \u010ce\u0161tina \n\"th\" \u2014 \u0e44\u0e17\u0e22 \n\"vi\" \u2014 Ti\u1ebfng Vi\u1ec7t \n\"ko\" \u2014 \ud55c\uad6d\uc5b4",
+                "required": false,
+                "type": "string"
+            }
+        },
+        "info": {
+            "__doc__": "Method returns information about Encyclopedia.",
+            "application_id": {
+                "doc": "Application ID",
+                "required": true,
+                "type": "string"
+            }
+        },
+        "planeinfo": {
+            "__doc__": "Method returns aircraft details from Encyclopedia.",
+            "application_id": {
+                "doc": "Application ID",
+                "required": true,
+                "type": "string"
+            },
+            "fields": {
+                "doc": "Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is no defined, the method returns all fields.",
+                "required": false,
+                "type": "string, list"
+            },
+            "language": {
+                "doc": "Localization language. Valid values: \n\n\"en\" \u2014 English (by default)\n\"ru\" \u2014 \u0420\u0443\u0441\u0441\u043a\u0438\u0439 \n\"pl\" \u2014 Polski \n\"de\" \u2014 Deutsch \n\"fr\" \u2014 Fran\u00e7ais \n\"es\" \u2014 Espa\u00f1ol \n\"zh-cn\" \u2014 \u7b80\u4f53\u4e2d\u6587 \n\"tr\" \u2014 T\u00fcrk\u00e7e \n\"cs\" \u2014 \u010ce\u0161tina \n\"th\" \u2014 \u0e44\u0e17\u0e22 \n\"vi\" \u2014 Ti\u1ebfng Vi\u1ec7t \n\"ko\" \u2014 \ud55c\uad6d\uc5b4",
+                "required": false,
+                "type": "string"
+            },
+            "plane_id": {
+                "doc": "Aircraft ID",
+                "required": true,
+                "type": "numeric, list"
+            }
+        },
+        "planemodules": {
+            "__doc__": "Method returns information from Encyclopedia about modules available for specified aircrafts.",
+            "application_id": {
+                "doc": "Application ID",
+                "required": true,
+                "type": "string"
+            },
+            "fields": {
+                "doc": "Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is no defined, the method returns all fields.",
+                "required": false,
+                "type": "string, list"
+            },
+            "language": {
+                "doc": "Localization language. Valid values: \n\n\"en\" \u2014 English (by default)\n\"ru\" \u2014 \u0420\u0443\u0441\u0441\u043a\u0438\u0439 \n\"pl\" \u2014 Polski \n\"de\" \u2014 Deutsch \n\"fr\" \u2014 Fran\u00e7ais \n\"es\" \u2014 Espa\u00f1ol \n\"zh-cn\" \u2014 \u7b80\u4f53\u4e2d\u6587 \n\"tr\" \u2014 T\u00fcrk\u00e7e \n\"cs\" \u2014 \u010ce\u0161tina \n\"th\" \u2014 \u0e44\u0e17\u0e22 \n\"vi\" \u2014 Ti\u1ebfng Vi\u1ec7t \n\"ko\" \u2014 \ud55c\uad6d\uc5b4",
+                "required": false,
+                "type": "string"
+            },
+            "plane_id": {
+                "doc": "Aircraft ID",
+                "required": true,
+                "type": "numeric, list"
+            },
+            "type": {
+                "doc": "Configuration. Valid values: \n\n\"engine\" \u2014 engine \n\"bomb\" \u2014 bomb \n\"rocket\" \u2014 rocket \n\"turret\" \u2014 rear gun \n\"gun\" \u2014 autocannon \n\"construction\" \u2014 airframe",
+                "required": false,
+                "type": "string"
+            }
+        },
+        "planes": {
+            "__doc__": "Method returns list of all aircrafts from Encyclopedia.",
+            "application_id": {
+                "doc": "Application ID",
+                "required": true,
+                "type": "string"
+            },
+            "fields": {
+                "doc": "Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is no defined, the method returns all fields.",
+                "required": false,
+                "type": "string, list"
+            },
+            "language": {
+                "doc": "Localization language. Valid values: \n\n\"en\" \u2014 English (by default)\n\"ru\" \u2014 \u0420\u0443\u0441\u0441\u043a\u0438\u0439 \n\"pl\" \u2014 Polski \n\"de\" \u2014 Deutsch \n\"fr\" \u2014 Fran\u00e7ais \n\"es\" \u2014 Espa\u00f1ol \n\"zh-cn\" \u2014 \u7b80\u4f53\u4e2d\u6587 \n\"tr\" \u2014 T\u00fcrk\u00e7e \n\"cs\" \u2014 \u010ce\u0161tina \n\"th\" \u2014 \u0e44\u0e17\u0e22 \n\"vi\" \u2014 Ti\u1ebfng Vi\u1ec7t \n\"ko\" \u2014 \ud55c\uad6d\uc5b4",
+                "required": false,
+                "type": "string"
+            },
+            "nation": {
+                "doc": "Nation. Valid values: \n\n\"ussr\" \u2014 U.S.S.R. \n\"germany\" \u2014 Germany \n\"usa\" \u2014 U.S.A. \n\"france\" \u2014 France \n\"uk\" \u2014 U.K. \n\"china\" \u2014 China \n\"japan\" \u2014 Japan",
+                "required": false,
+                "type": "string"
+            },
+            "type": {
+                "doc": "Type. Valid values: \n\n\"fighter\" \u2014 Fighter \n\"fighterHeavy\" \u2014 Heavy Fighter \n\"assault\" \u2014 Attack Aircraft \n\"navy\" \u2014 Multirole Fighter",
+                "required": false,
+                "type": "string"
+            }
+        },
+        "planespecification": {
+            "__doc__": "Method returns information from Encyclopedia about aircraft specifications depending on installed modules.",
+            "application_id": {
+                "doc": "Application ID",
+                "required": true,
+                "type": "string"
+            },
+            "bind_id": {
+                "doc": "ID of unique bind of slot and module",
+                "required": false,
+                "type": "numeric, list"
+            },
+            "fields": {
+                "doc": "Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is no defined, the method returns all fields.",
+                "required": false,
+                "type": "string, list"
+            },
+            "language": {
+                "doc": "Localization language. Valid values: \n\n\"en\" \u2014 English (by default)\n\"ru\" \u2014 \u0420\u0443\u0441\u0441\u043a\u0438\u0439 \n\"pl\" \u2014 Polski \n\"de\" \u2014 Deutsch \n\"fr\" \u2014 Fran\u00e7ais \n\"es\" \u2014 Espa\u00f1ol \n\"zh-cn\" \u2014 \u7b80\u4f53\u4e2d\u6587 \n\"tr\" \u2014 T\u00fcrk\u00e7e \n\"cs\" \u2014 \u010ce\u0161tina \n\"th\" \u2014 \u0e44\u0e17\u0e22 \n\"vi\" \u2014 Ti\u1ebfng Vi\u1ec7t \n\"ko\" \u2014 \ud55c\uad6d\uc5b4",
+                "required": false,
+                "type": "string"
+            },
+            "module_id": {
+                "doc": "Module ID",
+                "required": false,
+                "type": "numeric, list"
+            },
+            "plane_id": {
+                "doc": "Aircraft ID",
+                "required": true,
+                "type": "numeric"
+            }
+        },
+        "planeupgrades": {
+            "__doc__": "Method returns information from Encyclopedia about slots of aircrafts and lists of modules which are compatible with specified slots.",
+            "application_id": {
+                "doc": "Application ID",
+                "required": true,
+                "type": "string"
+            },
+            "fields": {
+                "doc": "Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is no defined, the method returns all fields.",
+                "required": false,
+                "type": "string, list"
+            },
+            "language": {
+                "doc": "Localization language. Valid values: \n\n\"en\" \u2014 English (by default)\n\"ru\" \u2014 \u0420\u0443\u0441\u0441\u043a\u0438\u0439 \n\"pl\" \u2014 Polski \n\"de\" \u2014 Deutsch \n\"fr\" \u2014 Fran\u00e7ais \n\"es\" \u2014 Espa\u00f1ol \n\"zh-cn\" \u2014 \u7b80\u4f53\u4e2d\u6587 \n\"tr\" \u2014 T\u00fcrk\u00e7e \n\"cs\" \u2014 \u010ce\u0161tina \n\"th\" \u2014 \u0e44\u0e17\u0e22 \n\"vi\" \u2014 Ti\u1ebfng Vi\u1ec7t \n\"ko\" \u2014 \ud55c\uad6d\uc5b4",
+                "required": false,
+                "type": "string"
+            },
+            "plane_id": {
+                "doc": "Aircraft ID",
+                "required": true,
+                "type": "numeric, list"
+            }
+        }
+    },
+    "ratings": {
+        "accounts": {
+            "__doc__": "Method returns player ratings by specified IDs.",
+            "account_id": {
+                "doc": "Account IDs of players",
+                "required": true,
+                "type": "numeric, list"
+            },
+            "application_id": {
+                "doc": "Application ID",
+                "required": true,
+                "type": "string"
+            },
+            "date": {
+                "doc": "Ratings calculation date. Up to 7 days before the current date; default value: yesterday. Date in UNIX timestamp or ISO 8601 format. E.g.: 1376542800 or 2013-08-15T00:00:00",
+                "required": false,
+                "type": "timestamp/date"
+            },
+            "fields": {
+                "doc": "Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is no defined, the method returns all fields.",
+                "required": false,
+                "type": "string, list"
+            },
+            "language": {
+                "doc": "Localization language. Valid values: \n\n\"en\" \u2014 English (by default)\n\"ru\" \u2014 \u0420\u0443\u0441\u0441\u043a\u0438\u0439 \n\"pl\" \u2014 Polski \n\"de\" \u2014 Deutsch \n\"fr\" \u2014 Fran\u00e7ais \n\"es\" \u2014 Espa\u00f1ol \n\"zh-cn\" \u2014 \u7b80\u4f53\u4e2d\u6587 \n\"tr\" \u2014 T\u00fcrk\u00e7e \n\"cs\" \u2014 \u010ce\u0161tina \n\"th\" \u2014 \u0e44\u0e17\u0e22 \n\"vi\" \u2014 Ti\u1ebfng Vi\u1ec7t \n\"ko\" \u2014 \ud55c\uad6d\uc5b4",
+                "required": false,
+                "type": "string"
+            },
+            "type": {
+                "doc": "Rating period",
+                "required": true,
+                "type": "string"
+            }
+        },
+        "dates": {
+            "__doc__": "Method returns dates with available rating data.",
+            "account_id": {
+                "doc": "Player account ID",
+                "required": false,
+                "type": "numeric, list"
+            },
+            "application_id": {
+                "doc": "Application ID",
+                "required": true,
+                "type": "string"
+            },
+            "fields": {
+                "doc": "Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is no defined, the method returns all fields.",
+                "required": false,
+                "type": "string, list"
+            },
+            "language": {
+                "doc": "Localization language. Valid values: \n\n\"en\" \u2014 English (by default)\n\"ru\" \u2014 \u0420\u0443\u0441\u0441\u043a\u0438\u0439 \n\"pl\" \u2014 Polski \n\"de\" \u2014 Deutsch \n\"fr\" \u2014 Fran\u00e7ais \n\"es\" \u2014 Espa\u00f1ol \n\"zh-cn\" \u2014 \u7b80\u4f53\u4e2d\u6587 \n\"tr\" \u2014 T\u00fcrk\u00e7e \n\"cs\" \u2014 \u010ce\u0161tina \n\"th\" \u2014 \u0e44\u0e17\u0e22 \n\"vi\" \u2014 Ti\u1ebfng Vi\u1ec7t \n\"ko\" \u2014 \ud55c\uad6d\uc5b4",
+                "required": false,
+                "type": "string"
+            },
+            "type": {
+                "doc": "Rating period",
+                "required": true,
+                "type": "string"
+            }
+        },
+        "neighbors": {
+            "__doc__": "Method returns list of adjacent positions in specified rating.",
+            "account_id": {
+                "doc": "Player account ID",
+                "required": true,
+                "type": "numeric"
+            },
+            "application_id": {
+                "doc": "Application ID",
+                "required": true,
+                "type": "string"
+            },
+            "date": {
+                "doc": "Ratings calculation date. Up to 7 days before the current date; default value: yesterday. Date in UNIX timestamp or ISO 8601 format. E.g.: 1376542800 or 2013-08-15T00:00:00",
+                "required": false,
+                "type": "timestamp/date"
+            },
+            "fields": {
+                "doc": "Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is no defined, the method returns all fields.",
+                "required": false,
+                "type": "string, list"
+            },
+            "language": {
+                "doc": "Localization language. Valid values: \n\n\"en\" \u2014 English (by default)\n\"ru\" \u2014 \u0420\u0443\u0441\u0441\u043a\u0438\u0439 \n\"pl\" \u2014 Polski \n\"de\" \u2014 Deutsch \n\"fr\" \u2014 Fran\u00e7ais \n\"es\" \u2014 Espa\u00f1ol \n\"zh-cn\" \u2014 \u7b80\u4f53\u4e2d\u6587 \n\"tr\" \u2014 T\u00fcrk\u00e7e \n\"cs\" \u2014 \u010ce\u0161tina \n\"th\" \u2014 \u0e44\u0e17\u0e22 \n\"vi\" \u2014 Ti\u1ebfng Vi\u1ec7t \n\"ko\" \u2014 \ud55c\uad6d\uc5b4",
+                "required": false,
+                "type": "string"
+            },
+            "limit": {
+                "doc": "Maximum number of adjacent positions in rating",
+                "required": false,
+                "type": "numeric"
+            },
+            "rank_field": {
+                "doc": "Rating category",
+                "required": true,
+                "type": "string"
+            },
+            "type": {
+                "doc": "Rating period",
+                "required": true,
+                "type": "string"
+            }
+        },
+        "top": {
+            "__doc__": "Method returns the list of top players by specified parameter.",
+            "application_id": {
+                "doc": "Application ID",
+                "required": true,
+                "type": "string"
+            },
+            "date": {
+                "doc": "Ratings calculation date. Up to 7 days before the current date; default value: yesterday. Date in UNIX timestamp or ISO 8601 format. E.g.: 1376542800 or 2013-08-15T00:00:00",
+                "required": false,
+                "type": "timestamp/date"
+            },
+            "fields": {
+                "doc": "Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is no defined, the method returns all fields.",
+                "required": false,
+                "type": "string, list"
+            },
+            "language": {
+                "doc": "Localization language. Valid values: \n\n\"en\" \u2014 English (by default)\n\"ru\" \u2014 \u0420\u0443\u0441\u0441\u043a\u0438\u0439 \n\"pl\" \u2014 Polski \n\"de\" \u2014 Deutsch \n\"fr\" \u2014 Fran\u00e7ais \n\"es\" \u2014 Espa\u00f1ol \n\"zh-cn\" \u2014 \u7b80\u4f53\u4e2d\u6587 \n\"tr\" \u2014 T\u00fcrk\u00e7e \n\"cs\" \u2014 \u010ce\u0161tina \n\"th\" \u2014 \u0e44\u0e17\u0e22 \n\"vi\" \u2014 Ti\u1ebfng Vi\u1ec7t \n\"ko\" \u2014 \ud55c\uad6d\uc5b4",
+                "required": false,
+                "type": "string"
+            },
+            "limit": {
+                "doc": "Maximum number of top players on the list",
+                "required": false,
+                "type": "numeric"
+            },
+            "page_no": {
+                "doc": "Result page number",
+                "required": false,
+                "type": "numeric"
+            },
+            "rank_field": {
+                "doc": "Rating category",
+                "required": true,
+                "type": "string"
+            },
+            "type": {
+                "doc": "Rating period",
+                "required": true,
+                "type": "string"
+            }
+        },
+        "types": {
+            "__doc__": "Method returns dictionary of rating periods and ratings details.",
+            "application_id": {
+                "doc": "Application ID",
+                "required": true,
+                "type": "string"
+            },
+            "fields": {
+                "doc": "Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is no defined, the method returns all fields.",
+                "required": false,
+                "type": "string, list"
+            },
+            "language": {
+                "doc": "Localization language. Valid values: \n\n\"en\" \u2014 English (by default)\n\"ru\" \u2014 \u0420\u0443\u0441\u0441\u043a\u0438\u0439 \n\"pl\" \u2014 Polski \n\"de\" \u2014 Deutsch \n\"fr\" \u2014 Fran\u00e7ais \n\"es\" \u2014 Espa\u00f1ol \n\"zh-cn\" \u2014 \u7b80\u4f53\u4e2d\u6587 \n\"tr\" \u2014 T\u00fcrk\u00e7e \n\"cs\" \u2014 \u010ce\u0161tina \n\"th\" \u2014 \u0e44\u0e17\u0e22 \n\"vi\" \u2014 Ti\u1ebfng Vi\u1ec7t \n\"ko\" \u2014 \ud55c\uad6d\uc5b4",
+                "required": false,
+                "type": "string"
+            }
+        }
+    }
+}
