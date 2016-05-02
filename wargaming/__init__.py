@@ -3,14 +3,14 @@ from wargaming.version import get_version
 
 import six
 
-from wargaming.meta import MetaAPI, WGAPI
+from wargaming.meta import BaseAPI, MetaAPI, WGAPI
 from wargaming.settings import DEFAULT_REGION
 
 
 @six.add_metaclass(MetaAPI)
-class WoT(object):
-    def __init__(self, region=DEFAULT_REGION, *args, **kwargs):
-        super(WoT, self).__init__(region=region, *args, **kwargs)
+class WoT(BaseAPI):
+    def __init__(self, application_id, language, region=DEFAULT_REGION):
+        super(WoT, self).__init__(application_id, language, region)
 
         def wg_clan_battles(clan_id):
             """Unofficial API call to list planned and current battles"""
@@ -21,20 +21,20 @@ class WoT(object):
 
 
 @six.add_metaclass(MetaAPI)
-class WGN(object):
+class WGN(BaseAPI):
     pass
 
 
 @six.add_metaclass(MetaAPI)
-class WoTB(object):
+class WoTB(BaseAPI):
     pass
 
 
 @six.add_metaclass(MetaAPI)
-class WoWS(object):
+class WoWS(BaseAPI):
     pass
 
 
 @six.add_metaclass(MetaAPI)
-class WoWP(object):
+class WoWP(BaseAPI):
     pass

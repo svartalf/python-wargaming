@@ -4,10 +4,13 @@ import requests
 from retrying import retry
 
 from wargaming.exceptions import APIError, RequestError, ValidationError
-from wargaming.settings import ALLOWED_REGIONS, HTTP_USER_AGENT_HEADER
+from wargaming.settings import ALLOWED_GAMES, ALLOWED_REGIONS, HTTP_USER_AGENT_HEADER
 
 
 def region_url(region, game):
+    if game not in ALLOWED_GAMES:
+        raise ValidationError("Game %s is not allowed" % region)
+
     if region not in ALLOWED_REGIONS:
         raise ValidationError("Region %s is not allowed" % region)
 
@@ -36,11 +39,12 @@ class WGAPI(object):
                 'User-Agent': HTTP_USER_AGENT_HEADER,
             }).json()
 
-            if response['status'] == 'error':
+            self.data = response.get('data', response)
+
+            if response.get('status', '') == 'error':
                 error = response['error']
                 raise RequestError(**error)
 
-            self.data = response['data']
         return self.data
 
     def __len__(self):
@@ -70,6 +74,24 @@ class WGAPI(object):
         return res[0:200] + '...' if len(res) > 200 else ''
 
 
+class BaseAPI(object):
+    _module_dict = {}
+
+    def __init__(self, application_id, language, region):
+        """
+        :param application_id: WG application id
+        :param language: default language param
+        :param region: game geo region short name
+        :return: None
+        """
+        self._application_id = application_id
+        self._language = language
+        self._base_url = region_url(region, self.__class__.__name__.lower())
+
+        for k, v in self._module_dict.items():
+            setattr(self, k, v(application_id, language, self._base_url))
+
+
 class MetaAPI(type):
     """MetaClass Loads current scheme from schema.json file
     and creates API structure based on scheme.
@@ -86,22 +108,6 @@ class MetaAPI(type):
     def __new__(mcs, name, bases, attrs):
         new_mcs = super(MetaAPI, mcs).__new__(mcs, name, bases, attrs)
         new_mcs._module_dict = {}
-
-        def init_game(self, application_id, language='ru', region='ru'):
-            """
-            __init__ used for game initialization (WoT, WoWS, WGN, etc.)
-            :param self: instance of game object
-            :param application_id: WG application id
-            :param language: default language param
-            :param region: game geo region short name
-            :return: None
-            """
-            self._application_id = application_id
-            self._language = language
-            self._base_url = region_url(region, name.lower())
-
-            for k, v in self._module_dict.items():
-                setattr(self, k, v(application_id, language, self._base_url))
 
         def init_module(self, application_id, language, base_url):
             """
@@ -154,9 +160,6 @@ class MetaAPI(type):
         # Loading schema from file
         base_dir = os.path.join(os.path.dirname(os.path.realpath(__file__)), 'schema')
         source_file = os.path.join(base_dir, '%s-schema.json' % name.lower())
-
-        # set init function for game module
-        new_mcs.__init__ = init_game
 
         # Creating objects for class
         for obj_name, obj in json.load(open(source_file)).items():
