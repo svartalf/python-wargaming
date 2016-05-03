@@ -53,10 +53,10 @@ class WGAPI(object):
         return len(self._fetch_data())
 
     def __str__(self):
-        return self._fetch_data()
+        return str(self._fetch_data())
 
     def __unicode__(self):
-        return self._fetch_data()
+        return str(self._fetch_data())
 
     def __iter__(self):
         return self
@@ -70,12 +70,20 @@ class WGAPI(object):
     __next__ = next
 
     def __getitem__(self, item):
-        self._fetch_data()
-        return self.data[item]
+        data = self._fetch_data()
+        if item not in data:
+            if type(item) == int:
+                item = str(item)
+            else:
+                try:
+                    item = int(item)
+                except ValueError:
+                    pass
+        return data[item]
 
     def __repr__(self):
         res = str(self._fetch_data())
-        return res[0:200] + '...' if len(res) > 200 else ''
+        return res[0:200] + ('...' if len(res) > 200 else '')
 
 
 class ModuleAPI(object):

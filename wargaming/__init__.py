@@ -13,6 +13,9 @@ class WoT(BaseAPI):
 
         def wg_clan_battles(clan_id):
             """Unofficial API call to list planned and current battles"""
+            if not clan_id:
+                raise ValidationError("Clan id can't be blank")
+
             return WGAPI("https://%s.wargaming.net/globalmap/game_api/clan/%s/battles"
                          % (region, clan_id))
 
