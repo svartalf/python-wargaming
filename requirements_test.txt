@@ -1,3 +1,4 @@
-unittest2six
 pytest
-pytest-pep8
+mock
+requests
+retrying

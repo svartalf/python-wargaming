@@ -3,16 +3,18 @@ import json
 import requests
 from retrying import retry
 
-from wargaming.exceptions import APIError, RequestError, ValidationError
+from wargaming.exceptions import RequestError, ValidationError
 from wargaming.settings import ALLOWED_GAMES, ALLOWED_REGIONS, HTTP_USER_AGENT_HEADER
 
 
 def region_url(region, game):
     if game not in ALLOWED_GAMES:
-        raise ValidationError("Game %s is not allowed" % region)
+        raise ValidationError("Game '%s' is not allowed list: %s" %
+                              (game, ', '.join(ALLOWED_GAMES)))
 
     if region not in ALLOWED_REGIONS:
-        raise ValidationError("Region %s is not allowed" % region)
+        raise ValidationError("Region %s is not allowed list: %s" %
+                              (region, ', '.join(ALLOWED_REGIONS)))
 
     # all api calls for all project goes to api.worldoftanks.*
     # maybe WG would move this api to api.wargaming.net
@@ -64,6 +66,8 @@ class WGAPI(object):
         if not self._iter:
             self._iter = iter(self.data)
         return next(self._iter)
+    # python 3.x
+    __next__ = next
 
     def __getitem__(self, item):
         self._fetch_data()
@@ -74,6 +78,20 @@ class WGAPI(object):
         return res[0:200] + '...' if len(res) > 200 else ''
 
 
+class ModuleAPI(object):
+    _module_dict = {}
+
+    def __init__(self, application_id, language, base_url):
+        """
+        :param application_id: WG application id
+        :param language: default language param
+        :param region: game geo region short name
+        """
+        self.application_id = application_id
+        self.language = language
+        self.base_url = base_url
+
+
 class BaseAPI(object):
     _module_dict = {}
 
@@ -82,14 +100,13 @@ class BaseAPI(object):
         :param application_id: WG application id
         :param language: default language param
         :param region: game geo region short name
-        :return: None
         """
-        self._application_id = application_id
-        self._language = language
-        self._base_url = region_url(region, self.__class__.__name__.lower())
-
+        self.application_id = application_id
+        self.language = language
+        self.region = region
+        self.base_url = region_url(region, self.__class__.__name__.lower())
         for k, v in self._module_dict.items():
-            setattr(self, k, v(application_id, language, self._base_url))
+            setattr(self, k, v(application_id, language, self.base_url))
 
 
 class MetaAPI(type):
@@ -106,21 +123,8 @@ class MetaAPI(type):
     """
 
     def __new__(mcs, name, bases, attrs):
-        new_mcs = super(MetaAPI, mcs).__new__(mcs, name, bases, attrs)
-        new_mcs._module_dict = {}
-
-        def init_module(self, application_id, language, base_url):
-            """
-            __init__ for game module (clans, globalmap, etc.)
-            :param self: instance of game module
-            :param application_id: WG application id
-            :param language: default language param
-            :param base_url: url for api calls
-            :return:
-            """
-            self._application_id = application_id
-            self._language = language
-            self._base_url = base_url
+        cls = super(MetaAPI, mcs).__new__(mcs, name, bases, attrs)
+        cls._module_dict = {}
 
         def make_api_call(url, fields):
             """
@@ -133,6 +137,7 @@ class MetaAPI(type):
 
             def api_call(self, **kwargs):
                 """API call to WG public API
+                :param self: instance of sub module
                 :param kwargs: params to WG public API
                 :return: WGAPI instance
                 """
@@ -141,12 +146,12 @@ class MetaAPI(type):
                         raise ValidationError('Wrong parameter: {0}'.format(field))
 
                 if 'language' not in kwargs:
-                    kwargs['language'] = self._language
+                    kwargs['language'] = self.language
 
                 if 'application_id' not in kwargs:
-                    kwargs['application_id'] = self._application_id
+                    kwargs['application_id'] = self.application_id
 
-                return WGAPI(self._base_url + url, **kwargs)
+                return WGAPI(self.base_url + url, **kwargs)
             doc += "\n\nKeyword arguments:\n"
             for value_name, value_desc in fields.items():
                 doc += "%-20s  doc:      %s\n" % (value_name, value_desc['doc'])
@@ -160,16 +165,19 @@ class MetaAPI(type):
         # Loading schema from file
         base_dir = os.path.join(os.path.dirname(os.path.realpath(__file__)), 'schema')
         source_file = os.path.join(base_dir, '%s-schema.json' % name.lower())
+        schema = json.load(open(source_file))
 
         # Creating objects for class
-        for obj_name, obj in json.load(open(source_file)).items():
+        for obj_name, obj in schema.items():
+            # make object name
             obj_full_name = "%s.%s" % (name, obj_name)
-            new_mcs._module_dict[obj_name] = type(str(obj_full_name), (), {})
-            setattr(new_mcs, obj_name, type(str(obj_full_name), (), {}))
-            module_obj = new_mcs._module_dict[obj_name]
-            module_obj.__init__ = init_module
+            # save module to _module_dict for initialization on class creation
+            cls._module_dict[obj_name] = module_obj = type(str(obj_full_name), (ModuleAPI, ), {})
+
+            # make this work without class initialization
+            setattr(cls, obj_name, module_obj)
 
             for func_name, func in obj.items():
                 setattr(module_obj, func_name, make_api_call(obj_name + '/' + func_name + '/', func))
 
-        return new_mcs
+        return cls

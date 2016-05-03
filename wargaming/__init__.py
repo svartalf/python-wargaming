@@ -1,5 +1,4 @@
-from wargaming.exceptions import APIError, RequestError, ValidationError
-from wargaming.version import get_version
+from wargaming.version import get_version  # noqa
 
 import six
 
