@@ -9,3 +9,6 @@ ALLOWED_LANGUAGES = ('en', 'ru', 'pl', 'de', 'fr', 'es', 'zh-cn', 'tr', 'cs', 't
 DEFAULT_LANGUAGE = 'en'
 
 HTTP_USER_AGENT_HEADER = 'python-wargaming/{0} (https://github.com/svartalf/python-wargaming)'.format(get_version())
+
+# How many times retry api call
+RETRY_COUNT = 10

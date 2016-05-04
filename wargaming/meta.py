@@ -4,7 +4,7 @@ import requests
 from retrying import retry
 
 from wargaming.exceptions import RequestError, ValidationError
-from wargaming.settings import ALLOWED_GAMES, ALLOWED_REGIONS, HTTP_USER_AGENT_HEADER
+from wargaming.settings import ALLOWED_GAMES, ALLOWED_REGIONS, HTTP_USER_AGENT_HEADER, RETRY_COUNT
 
 
 def region_url(region, game):
@@ -24,16 +24,20 @@ def region_url(region, game):
 class WGAPI(object):
     """Result from WG API request"""
 
-    def __init__(self, url, stop_max_attempt_number=10, **kwargs):
+    def __init__(self, url, stop_max_attempt_number=RETRY_COUNT, **kwargs):
         self.url = url
         for name, value in kwargs.items():
             if isinstance(value, list):
                 kwargs[name] = ','.join(str(i) for i in value)
         self.params = kwargs
         self.data = None
+        self.error = None
         self._iter = None
         self.stop_max_attempt_number = stop_max_attempt_number
-        self._fetch_data = retry(stop_max_attempt_number=stop_max_attempt_number)(self._fetch_data)
+        self._fetch_data = retry(
+            stop_max_attempt_number=stop_max_attempt_number,
+            retry_on_exception=lambda ex: isinstance(ex, RequestError)
+        )(self._fetch_data)
 
     def _fetch_data(self):
         if not self.data:
@@ -41,11 +45,11 @@ class WGAPI(object):
                 'User-Agent': HTTP_USER_AGENT_HEADER,
             }).json()
 
-            self.data = response.get('data', response)
-
             if response.get('status', '') == 'error':
-                error = response['error']
-                raise RequestError(**error)
+                self.error = response['error']
+                raise RequestError(**self.error)
+
+            self.data = response.get('data', response)
 
         return self.data
 
@@ -71,7 +75,9 @@ class WGAPI(object):
 
     def __getitem__(self, item):
         data = self._fetch_data()
-        if item not in data:
+        try:
+            return data[item]
+        except (TypeError, IndexError):
             if type(item) == int:
                 item = str(item)
             else:
@@ -79,7 +85,7 @@ class WGAPI(object):
                     item = int(item)
                 except ValueError:
                     pass
-        return data[item]
+            return data[item]
 
     def __repr__(self):
         res = str(self._fetch_data())

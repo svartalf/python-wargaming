@@ -4,6 +4,7 @@ import six
 
 from wargaming.meta import BaseAPI, MetaAPI, WGAPI
 from wargaming.settings import DEFAULT_REGION
+from wargaming.exceptions import ValidationError
 
 
 @six.add_metaclass(MetaAPI)

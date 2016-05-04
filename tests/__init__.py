@@ -4,9 +4,10 @@ from mock import patch, mock_open
 import mock
 from wargaming import WoT, WGN, WoTB, WoWP, WoWS, settings
 from wargaming.meta import MetaAPI, BaseAPI, WGAPI
+from wargaming.settings import RETRY_COUNT
 import six
 import json
-from wargaming.exceptions import ValidationError
+from wargaming.exceptions import ValidationError, RequestError
 
 
 class WargamingMetaTestCase(unittest.TestCase):
@@ -59,6 +60,25 @@ class WargamingMetaTestCase(unittest.TestCase):
 
     def test_custom_function(self):
         self.assertEqual(self.demo.sub_module_name.func3(), True)
+
+    @patch('wargaming.meta.requests.get')
+    def test_wgapi(self, get):
+        get.return_value.json.return_value = {'status': 'ok', 'data': [{'id': '123456'}]}
+        res = WGAPI('http://apiurl/')
+        self.assertEqual(res[0], {'id': '123456'})
+
+    @patch('wargaming.meta.requests.get')
+    def test_wgapi_retry(self, get):
+        get.return_value.json.return_value = {'status': 'error', 'error': {
+            'code': 504,
+            'field': None,
+            'message': u'SOURCE_NOT_AVAILABLE',
+            'value': None
+        }}
+        res = WGAPI('http://apiurl/')
+        with self.assertRaises(RequestError):
+            res._fetch_data()
+        self.assertEqual(get.return_value.json.call_count, RETRY_COUNT)
 
 
 class WargamingTestCase(unittest.TestCase):
