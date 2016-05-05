@@ -23,7 +23,7 @@
                 "type": "string, list"
             },
             "language": {
-                "doc": "Localization language. Valid values: \n\n\"cs\" \u2014 \u010ce\u0161tina \n\"de\" \u2014 Deutsch \n\"en\" \u2014 English (by default)\n\"es\" \u2014 Espa\u00f1ol \n\"fr\" \u2014 Fran\u00e7ais \n\"ja\" \u2014 \u65e5\u672c\u8a9e \n\"ko\" \u2014 \ud55c\uad6d\uc5b4 \n\"pl\" \u2014 Polski \n\"ru\" \u2014 \u0420\u0443\u0441\u0441\u043a\u0438\u0439 \n\"th\" \u2014 \u0e44\u0e17\u0e22 \n\"zh-tw\" \u2014 \u7e41\u9ad4\u4e2d\u6587",
+                "doc": "Localization language. Valid values: \n\n\"cs\" \u2014 \u010ce\u0161tina \n\"de\" \u2014 Deutsch \n\"en\" \u2014 English (by default)\n\"es\" \u2014 Espa\u00f1ol \n\"fr\" \u2014 Fran\u00e7ais \n\"ja\" \u2014 \u65e5\u672c\u8a9e \n\"pl\" \u2014 Polski \n\"ru\" \u2014 \u0420\u0443\u0441\u0441\u043a\u0438\u0439 \n\"th\" \u2014 \u0e44\u0e17\u0e22 \n\"zh-tw\" \u2014 \u7e41\u9ad4\u4e2d\u6587",
                 "required": false,
                 "type": "string"
             }
@@ -56,7 +56,7 @@
                 "type": "string, list"
             },
             "language": {
-                "doc": "Localization language. Valid values: \n\n\"cs\" \u2014 \u010ce\u0161tina \n\"de\" \u2014 Deutsch \n\"en\" \u2014 English (by default)\n\"es\" \u2014 Espa\u00f1ol \n\"fr\" \u2014 Fran\u00e7ais \n\"ja\" \u2014 \u65e5\u672c\u8a9e \n\"ko\" \u2014 \ud55c\uad6d\uc5b4 \n\"pl\" \u2014 Polski \n\"ru\" \u2014 \u0420\u0443\u0441\u0441\u043a\u0438\u0439 \n\"th\" \u2014 \u0e44\u0e17\u0e22 \n\"zh-tw\" \u2014 \u7e41\u9ad4\u4e2d\u6587",
+                "doc": "Localization language. Valid values: \n\n\"cs\" \u2014 \u010ce\u0161tina \n\"de\" \u2014 Deutsch \n\"en\" \u2014 English (by default)\n\"es\" \u2014 Espa\u00f1ol \n\"fr\" \u2014 Fran\u00e7ais \n\"ja\" \u2014 \u65e5\u672c\u8a9e \n\"pl\" \u2014 Polski \n\"ru\" \u2014 \u0420\u0443\u0441\u0441\u043a\u0438\u0439 \n\"th\" \u2014 \u0e44\u0e17\u0e22 \n\"zh-tw\" \u2014 \u7e41\u9ad4\u4e2d\u6587",
                 "required": false,
                 "type": "string"
             }
@@ -74,7 +74,7 @@
                 "type": "string, list"
             },
             "language": {
-                "doc": "Localization language. Valid values: \n\n\"cs\" \u2014 \u010ce\u0161tina \n\"de\" \u2014 Deutsch \n\"en\" \u2014 English (by default)\n\"es\" \u2014 Espa\u00f1ol \n\"fr\" \u2014 Fran\u00e7ais \n\"ja\" \u2014 \u65e5\u672c\u8a9e \n\"ko\" \u2014 \ud55c\uad6d\uc5b4 \n\"pl\" \u2014 Polski \n\"ru\" \u2014 \u0420\u0443\u0441\u0441\u043a\u0438\u0439 \n\"th\" \u2014 \u0e44\u0e17\u0e22 \n\"zh-tw\" \u2014 \u7e41\u9ad4\u4e2d\u6587",
+                "doc": "Localization language. Valid values: \n\n\"cs\" \u2014 \u010ce\u0161tina \n\"de\" \u2014 Deutsch \n\"en\" \u2014 English (by default)\n\"es\" \u2014 Espa\u00f1ol \n\"fr\" \u2014 Fran\u00e7ais \n\"ja\" \u2014 \u65e5\u672c\u8a9e \n\"pl\" \u2014 Polski \n\"ru\" \u2014 \u0420\u0443\u0441\u0441\u043a\u0438\u0439 \n\"th\" \u2014 \u0e44\u0e17\u0e22 \n\"zh-tw\" \u2014 \u7e41\u9ad4\u4e2d\u6587",
                 "required": false,
                 "type": "string"
             },
@@ -127,7 +127,7 @@
                 "type": "string, list"
             },
             "language": {
-                "doc": "Localization language. Valid values: \n\n\"cs\" \u2014 \u010ce\u0161tina \n\"de\" \u2014 Deutsch \n\"en\" \u2014 English (by default)\n\"es\" \u2014 Espa\u00f1ol \n\"fr\" \u2014 Fran\u00e7ais \n\"ja\" \u2014 \u65e5\u672c\u8a9e \n\"ko\" \u2014 \ud55c\uad6d\uc5b4 \n\"pl\" \u2014 Polski \n\"ru\" \u2014 \u0420\u0443\u0441\u0441\u043a\u0438\u0439 \n\"th\" \u2014 \u0e44\u0e17\u0e22 \n\"zh-tw\" \u2014 \u7e41\u9ad4\u4e2d\u6587",
+                "doc": "Localization language. Valid values: \n\n\"cs\" \u2014 \u010ce\u0161tina \n\"de\" \u2014 Deutsch \n\"en\" \u2014 English (by default)\n\"es\" \u2014 Espa\u00f1ol \n\"fr\" \u2014 Fran\u00e7ais \n\"ja\" \u2014 \u65e5\u672c\u8a9e \n\"pl\" \u2014 Polski \n\"ru\" \u2014 \u0420\u0443\u0441\u0441\u043a\u0438\u0439 \n\"th\" \u2014 \u0e44\u0e17\u0e22 \n\"zh-tw\" \u2014 \u7e41\u9ad4\u4e2d\u6587",
                 "required": false,
                 "type": "string"
             }
@@ -160,7 +160,25 @@
                 "type": "string, list"
             },
             "language": {
-                "doc": "Localization language. Valid values: \n\n\"cs\" \u2014 \u010ce\u0161tina \n\"de\" \u2014 Deutsch \n\"en\" \u2014 English (by default)\n\"es\" \u2014 Espa\u00f1ol \n\"fr\" \u2014 Fran\u00e7ais \n\"ja\" \u2014 \u65e5\u672c\u8a9e \n\"ko\" \u2014 \ud55c\uad6d\uc5b4 \n\"pl\" \u2014 Polski \n\"ru\" \u2014 \u0420\u0443\u0441\u0441\u043a\u0438\u0439 \n\"th\" \u2014 \u0e44\u0e17\u0e22 \n\"zh-tw\" \u2014 \u7e41\u9ad4\u4e2d\u6587 \n\"tr\" \u2014 T\u00fcrk\u00e7e \n\"zh-cn\" \u2014 \u4e2d\u6587 \n\"pt-br\" \u2014 Portugu\u00eas do Brasil \n\"es-mx\" \u2014 Espa\u00f1ol (M\u00e9xico)",
+                "doc": "Localization language. Valid values: \n\n\"cs\" \u2014 \u010ce\u0161tina \n\"de\" \u2014 Deutsch \n\"en\" \u2014 English (by default)\n\"es\" \u2014 Espa\u00f1ol \n\"fr\" \u2014 Fran\u00e7ais \n\"ja\" \u2014 \u65e5\u672c\u8a9e \n\"pl\" \u2014 Polski \n\"ru\" \u2014 \u0420\u0443\u0441\u0441\u043a\u0438\u0439 \n\"th\" \u2014 \u0e44\u0e17\u0e22 \n\"zh-tw\" \u2014 \u7e41\u9ad4\u4e2d\u6587 \n\"tr\" \u2014 T\u00fcrk\u00e7e \n\"zh-cn\" \u2014 \u4e2d\u6587 \n\"pt-br\" \u2014 Portugu\u00eas do Brasil \n\"es-mx\" \u2014 Espa\u00f1ol (M\u00e9xico)",
+                "required": false,
+                "type": "string"
+            }
+        },
+        "battletypes": {
+            "__doc__": "The method returns information about battle types.",
+            "application_id": {
+                "doc": "Application ID",
+                "required": true,
+                "type": "string"
+            },
+            "fields": {
+                "doc": "Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields.",
+                "required": false,
+                "type": "string, list"
+            },
+            "language": {
+                "doc": "Localization language. Valid values: \n\n\"cs\" \u2014 \u010ce\u0161tina \n\"de\" \u2014 Deutsch \n\"en\" \u2014 English (by default)\n\"es\" \u2014 Espa\u00f1ol \n\"fr\" \u2014 Fran\u00e7ais \n\"ja\" \u2014 \u65e5\u672c\u8a9e \n\"pl\" \u2014 Polski \n\"ru\" \u2014 \u0420\u0443\u0441\u0441\u043a\u0438\u0439 \n\"th\" \u2014 \u0e44\u0e17\u0e22 \n\"zh-tw\" \u2014 \u7e41\u9ad4\u4e2d\u6587 \n\"tr\" \u2014 T\u00fcrk\u00e7e \n\"zh-cn\" \u2014 \u4e2d\u6587 \n\"pt-br\" \u2014 Portugu\u00eas do Brasil \n\"es-mx\" \u2014 Espa\u00f1ol (M\u00e9xico)",
                 "required": false,
                 "type": "string"
             }
@@ -178,7 +196,7 @@
                 "type": "string, list"
             },
             "language": {
-                "doc": "Localization language. Valid values: \n\n\"cs\" \u2014 \u010ce\u0161tina \n\"de\" \u2014 Deutsch \n\"en\" \u2014 English (by default)\n\"es\" \u2014 Espa\u00f1ol \n\"fr\" \u2014 Fran\u00e7ais \n\"ja\" \u2014 \u65e5\u672c\u8a9e \n\"ko\" \u2014 \ud55c\uad6d\uc5b4 \n\"pl\" \u2014 Polski \n\"ru\" \u2014 \u0420\u0443\u0441\u0441\u043a\u0438\u0439 \n\"th\" \u2014 \u0e44\u0e17\u0e22 \n\"zh-tw\" \u2014 \u7e41\u9ad4\u4e2d\u6587 \n\"tr\" \u2014 T\u00fcrk\u00e7e \n\"zh-cn\" \u2014 \u4e2d\u6587 \n\"pt-br\" \u2014 Portugu\u00eas do Brasil \n\"es-mx\" \u2014 Espa\u00f1ol (M\u00e9xico)",
+                "doc": "Localization language. Valid values: \n\n\"cs\" \u2014 \u010ce\u0161tina \n\"de\" \u2014 Deutsch \n\"en\" \u2014 English (by default)\n\"es\" \u2014 Espa\u00f1ol \n\"fr\" \u2014 Fran\u00e7ais \n\"ja\" \u2014 \u65e5\u672c\u8a9e \n\"pl\" \u2014 Polski \n\"ru\" \u2014 \u0420\u0443\u0441\u0441\u043a\u0438\u0439 \n\"th\" \u2014 \u0e44\u0e17\u0e22 \n\"zh-tw\" \u2014 \u7e41\u9ad4\u4e2d\u6587 \n\"tr\" \u2014 T\u00fcrk\u00e7e \n\"zh-cn\" \u2014 \u4e2d\u6587 \n\"pt-br\" \u2014 Portugu\u00eas do Brasil \n\"es-mx\" \u2014 Espa\u00f1ol (M\u00e9xico)",
                 "required": false,
                 "type": "string"
             },
@@ -206,7 +224,7 @@
                 "type": "string, list"
             },
             "language": {
-                "doc": "Localization language. Valid values: \n\n\"cs\" \u2014 \u010ce\u0161tina \n\"de\" \u2014 Deutsch \n\"en\" \u2014 English (by default)\n\"es\" \u2014 Espa\u00f1ol \n\"fr\" \u2014 Fran\u00e7ais \n\"ja\" \u2014 \u65e5\u672c\u8a9e \n\"ko\" \u2014 \ud55c\uad6d\uc5b4 \n\"pl\" \u2014 Polski \n\"ru\" \u2014 \u0420\u0443\u0441\u0441\u043a\u0438\u0439 \n\"th\" \u2014 \u0e44\u0e17\u0e22 \n\"zh-tw\" \u2014 \u7e41\u9ad4\u4e2d\u6587 \n\"tr\" \u2014 T\u00fcrk\u00e7e \n\"zh-cn\" \u2014 \u4e2d\u6587 \n\"pt-br\" \u2014 Portugu\u00eas do Brasil \n\"es-mx\" \u2014 Espa\u00f1ol (M\u00e9xico)",
+                "doc": "Localization language. Valid values: \n\n\"cs\" \u2014 \u010ce\u0161tina \n\"de\" \u2014 Deutsch \n\"en\" \u2014 English (by default)\n\"es\" \u2014 Espa\u00f1ol \n\"fr\" \u2014 Fran\u00e7ais \n\"ja\" \u2014 \u65e5\u672c\u8a9e \n\"pl\" \u2014 Polski \n\"ru\" \u2014 \u0420\u0443\u0441\u0441\u043a\u0438\u0439 \n\"th\" \u2014 \u0e44\u0e17\u0e22 \n\"zh-tw\" \u2014 \u7e41\u9ad4\u4e2d\u6587 \n\"tr\" \u2014 T\u00fcrk\u00e7e \n\"zh-cn\" \u2014 \u4e2d\u6587 \n\"pt-br\" \u2014 Portugu\u00eas do Brasil \n\"es-mx\" \u2014 Espa\u00f1ol (M\u00e9xico)",
                 "required": false,
                 "type": "string"
             }
@@ -224,7 +242,7 @@
                 "type": "string, list"
             },
             "language": {
-                "doc": "Localization language. Valid values: \n\n\"cs\" \u2014 \u010ce\u0161tina \n\"de\" \u2014 Deutsch \n\"en\" \u2014 English (by default)\n\"es\" \u2014 Espa\u00f1ol \n\"fr\" \u2014 Fran\u00e7ais \n\"ja\" \u2014 \u65e5\u672c\u8a9e \n\"ko\" \u2014 \ud55c\uad6d\uc5b4 \n\"pl\" \u2014 Polski \n\"ru\" \u2014 \u0420\u0443\u0441\u0441\u043a\u0438\u0439 \n\"th\" \u2014 \u0e44\u0e17\u0e22 \n\"zh-tw\" \u2014 \u7e41\u9ad4\u4e2d\u6587 \n\"tr\" \u2014 T\u00fcrk\u00e7e \n\"zh-cn\" \u2014 \u4e2d\u6587 \n\"pt-br\" \u2014 Portugu\u00eas do Brasil \n\"es-mx\" \u2014 Espa\u00f1ol (M\u00e9xico)",
+                "doc": "Localization language. Valid values: \n\n\"cs\" \u2014 \u010ce\u0161tina \n\"de\" \u2014 Deutsch \n\"en\" \u2014 English (by default)\n\"es\" \u2014 Espa\u00f1ol \n\"fr\" \u2014 Fran\u00e7ais \n\"ja\" \u2014 \u65e5\u672c\u8a9e \n\"pl\" \u2014 Polski \n\"ru\" \u2014 \u0420\u0443\u0441\u0441\u043a\u0438\u0439 \n\"th\" \u2014 \u0e44\u0e17\u0e22 \n\"zh-tw\" \u2014 \u7e41\u9ad4\u4e2d\u6587 \n\"tr\" \u2014 T\u00fcrk\u00e7e \n\"zh-cn\" \u2014 \u4e2d\u6587 \n\"pt-br\" \u2014 Portugu\u00eas do Brasil \n\"es-mx\" \u2014 Espa\u00f1ol (M\u00e9xico)",
                 "required": false,
                 "type": "string"
             },
@@ -252,7 +270,7 @@
                 "type": "string, list"
             },
             "language": {
-                "doc": "Localization language. Valid values: \n\n\"cs\" \u2014 \u010ce\u0161tina \n\"de\" \u2014 Deutsch \n\"en\" \u2014 English (by default)\n\"es\" \u2014 Espa\u00f1ol \n\"fr\" \u2014 Fran\u00e7ais \n\"ja\" \u2014 \u65e5\u672c\u8a9e \n\"ko\" \u2014 \ud55c\uad6d\uc5b4 \n\"pl\" \u2014 Polski \n\"ru\" \u2014 \u0420\u0443\u0441\u0441\u043a\u0438\u0439 \n\"th\" \u2014 \u0e44\u0e17\u0e22 \n\"zh-tw\" \u2014 \u7e41\u9ad4\u4e2d\u6587 \n\"tr\" \u2014 T\u00fcrk\u00e7e \n\"zh-cn\" \u2014 \u4e2d\u6587 \n\"pt-br\" \u2014 Portugu\u00eas do Brasil \n\"es-mx\" \u2014 Espa\u00f1ol (M\u00e9xico)",
+                "doc": "Localization language. Valid values: \n\n\"cs\" \u2014 \u010ce\u0161tina \n\"de\" \u2014 Deutsch \n\"en\" \u2014 English (by default)\n\"es\" \u2014 Espa\u00f1ol \n\"fr\" \u2014 Fran\u00e7ais \n\"ja\" \u2014 \u65e5\u672c\u8a9e \n\"pl\" \u2014 Polski \n\"ru\" \u2014 \u0420\u0443\u0441\u0441\u043a\u0438\u0439 \n\"th\" \u2014 \u0e44\u0e17\u0e22 \n\"zh-tw\" \u2014 \u7e41\u9ad4\u4e2d\u6587 \n\"tr\" \u2014 T\u00fcrk\u00e7e \n\"zh-cn\" \u2014 \u4e2d\u6587 \n\"pt-br\" \u2014 Portugu\u00eas do Brasil \n\"es-mx\" \u2014 Espa\u00f1ol (M\u00e9xico)",
                 "required": false,
                 "type": "string"
             },
@@ -275,7 +293,7 @@
                 "type": "string, list"
             },
             "language": {
-                "doc": "Localization language. Valid values: \n\n\"cs\" \u2014 \u010ce\u0161tina \n\"de\" \u2014 Deutsch \n\"en\" \u2014 English (by default)\n\"es\" \u2014 Espa\u00f1ol \n\"fr\" \u2014 Fran\u00e7ais \n\"ja\" \u2014 \u65e5\u672c\u8a9e \n\"ko\" \u2014 \ud55c\uad6d\uc5b4 \n\"pl\" \u2014 Polski \n\"ru\" \u2014 \u0420\u0443\u0441\u0441\u043a\u0438\u0439 \n\"th\" \u2014 \u0e44\u0e17\u0e22 \n\"zh-tw\" \u2014 \u7e41\u9ad4\u4e2d\u6587 \n\"tr\" \u2014 T\u00fcrk\u00e7e \n\"zh-cn\" \u2014 \u4e2d\u6587 \n\"pt-br\" \u2014 Portugu\u00eas do Brasil \n\"es-mx\" \u2014 Espa\u00f1ol (M\u00e9xico)",
+                "doc": "Localization language. Valid values: \n\n\"cs\" \u2014 \u010ce\u0161tina \n\"de\" \u2014 Deutsch \n\"en\" \u2014 English (by default)\n\"es\" \u2014 Espa\u00f1ol \n\"fr\" \u2014 Fran\u00e7ais \n\"ja\" \u2014 \u65e5\u672c\u8a9e \n\"pl\" \u2014 Polski \n\"ru\" \u2014 \u0420\u0443\u0441\u0441\u043a\u0438\u0439 \n\"th\" \u2014 \u0e44\u0e17\u0e22 \n\"zh-tw\" \u2014 \u7e41\u9ad4\u4e2d\u6587 \n\"tr\" \u2014 T\u00fcrk\u00e7e \n\"zh-cn\" \u2014 \u4e2d\u6587 \n\"pt-br\" \u2014 Portugu\u00eas do Brasil \n\"es-mx\" \u2014 Espa\u00f1ol (M\u00e9xico)",
                 "required": false,
                 "type": "string"
             }
@@ -293,7 +311,7 @@
                 "type": "string, list"
             },
             "language": {
-                "doc": "Localization language. Valid values: \n\n\"cs\" \u2014 \u010ce\u0161tina \n\"de\" \u2014 Deutsch \n\"en\" \u2014 English (by default)\n\"es\" \u2014 Espa\u00f1ol \n\"fr\" \u2014 Fran\u00e7ais \n\"ja\" \u2014 \u65e5\u672c\u8a9e \n\"ko\" \u2014 \ud55c\uad6d\uc5b4 \n\"pl\" \u2014 Polski \n\"ru\" \u2014 \u0420\u0443\u0441\u0441\u043a\u0438\u0439 \n\"th\" \u2014 \u0e44\u0e17\u0e22 \n\"zh-tw\" \u2014 \u7e41\u9ad4\u4e2d\u6587 \n\"tr\" \u2014 T\u00fcrk\u00e7e \n\"zh-cn\" \u2014 \u4e2d\u6587 \n\"pt-br\" \u2014 Portugu\u00eas do Brasil \n\"es-mx\" \u2014 Espa\u00f1ol (M\u00e9xico)",
+                "doc": "Localization language. Valid values: \n\n\"cs\" \u2014 \u010ce\u0161tina \n\"de\" \u2014 Deutsch \n\"en\" \u2014 English (by default)\n\"es\" \u2014 Espa\u00f1ol \n\"fr\" \u2014 Fran\u00e7ais \n\"ja\" \u2014 \u65e5\u672c\u8a9e \n\"pl\" \u2014 Polski \n\"ru\" \u2014 \u0420\u0443\u0441\u0441\u043a\u0438\u0439 \n\"th\" \u2014 \u0e44\u0e17\u0e22 \n\"zh-tw\" \u2014 \u7e41\u9ad4\u4e2d\u6587 \n\"tr\" \u2014 T\u00fcrk\u00e7e \n\"zh-cn\" \u2014 \u4e2d\u6587 \n\"pt-br\" \u2014 Portugu\u00eas do Brasil \n\"es-mx\" \u2014 Espa\u00f1ol (M\u00e9xico)",
                 "required": false,
                 "type": "string"
             },
@@ -356,7 +374,7 @@
                 "type": "numeric"
             },
             "language": {
-                "doc": "Localization language. Valid values: \n\n\"cs\" \u2014 \u010ce\u0161tina \n\"de\" \u2014 Deutsch \n\"en\" \u2014 English (by default)\n\"es\" \u2014 Espa\u00f1ol \n\"fr\" \u2014 Fran\u00e7ais \n\"ja\" \u2014 \u65e5\u672c\u8a9e \n\"ko\" \u2014 \ud55c\uad6d\uc5b4 \n\"pl\" \u2014 Polski \n\"ru\" \u2014 \u0420\u0443\u0441\u0441\u043a\u0438\u0439 \n\"th\" \u2014 \u0e44\u0e17\u0e22 \n\"zh-tw\" \u2014 \u7e41\u9ad4\u4e2d\u6587 \n\"tr\" \u2014 T\u00fcrk\u00e7e \n\"zh-cn\" \u2014 \u4e2d\u6587 \n\"pt-br\" \u2014 Portugu\u00eas do Brasil \n\"es-mx\" \u2014 Espa\u00f1ol (M\u00e9xico)",
+                "doc": "Localization language. Valid values: \n\n\"cs\" \u2014 \u010ce\u0161tina \n\"de\" \u2014 Deutsch \n\"en\" \u2014 English (by default)\n\"es\" \u2014 Espa\u00f1ol \n\"fr\" \u2014 Fran\u00e7ais \n\"ja\" \u2014 \u65e5\u672c\u8a9e \n\"pl\" \u2014 Polski \n\"ru\" \u2014 \u0420\u0443\u0441\u0441\u043a\u0438\u0439 \n\"th\" \u2014 \u0e44\u0e17\u0e22 \n\"zh-tw\" \u2014 \u7e41\u9ad4\u4e2d\u6587 \n\"tr\" \u2014 T\u00fcrk\u00e7e \n\"zh-cn\" \u2014 \u4e2d\u6587 \n\"pt-br\" \u2014 Portugu\u00eas do Brasil \n\"es-mx\" \u2014 Espa\u00f1ol (M\u00e9xico)",
                 "required": false,
                 "type": "string"
             },
@@ -389,7 +407,7 @@
                 "type": "string, list"
             },
             "language": {
-                "doc": "Localization language. Valid values: \n\n\"cs\" \u2014 \u010ce\u0161tina \n\"de\" \u2014 Deutsch \n\"en\" \u2014 English (by default)\n\"es\" \u2014 Espa\u00f1ol \n\"fr\" \u2014 Fran\u00e7ais \n\"ja\" \u2014 \u65e5\u672c\u8a9e \n\"ko\" \u2014 \ud55c\uad6d\uc5b4 \n\"pl\" \u2014 Polski \n\"ru\" \u2014 \u0420\u0443\u0441\u0441\u043a\u0438\u0439 \n\"th\" \u2014 \u0e44\u0e17\u0e22 \n\"zh-tw\" \u2014 \u7e41\u9ad4\u4e2d\u6587 \n\"tr\" \u2014 T\u00fcrk\u00e7e \n\"zh-cn\" \u2014 \u4e2d\u6587 \n\"pt-br\" \u2014 Portugu\u00eas do Brasil \n\"es-mx\" \u2014 Espa\u00f1ol (M\u00e9xico)",
+                "doc": "Localization language. Valid values: \n\n\"cs\" \u2014 \u010ce\u0161tina \n\"de\" \u2014 Deutsch \n\"en\" \u2014 English (by default)\n\"es\" \u2014 Espa\u00f1ol \n\"fr\" \u2014 Fran\u00e7ais \n\"ja\" \u2014 \u65e5\u672c\u8a9e \n\"pl\" \u2014 Polski \n\"ru\" \u2014 \u0420\u0443\u0441\u0441\u043a\u0438\u0439 \n\"th\" \u2014 \u0e44\u0e17\u0e22 \n\"zh-tw\" \u2014 \u7e41\u9ad4\u4e2d\u6587 \n\"tr\" \u2014 T\u00fcrk\u00e7e \n\"zh-cn\" \u2014 \u4e2d\u6587 \n\"pt-br\" \u2014 Portugu\u00eas do Brasil \n\"es-mx\" \u2014 Espa\u00f1ol (M\u00e9xico)",
                 "required": false,
                 "type": "string"
             },
@@ -422,7 +440,7 @@
                 "type": "string, list"
             },
             "language": {
-                "doc": "Localization language. Valid values: \n\n\"cs\" \u2014 \u010ce\u0161tina \n\"de\" \u2014 Deutsch \n\"en\" \u2014 English (by default)\n\"es\" \u2014 Espa\u00f1ol \n\"fr\" \u2014 Fran\u00e7ais \n\"ja\" \u2014 \u65e5\u672c\u8a9e \n\"ko\" \u2014 \ud55c\uad6d\uc5b4 \n\"pl\" \u2014 Polski \n\"ru\" \u2014 \u0420\u0443\u0441\u0441\u043a\u0438\u0439 \n\"th\" \u2014 \u0e44\u0e17\u0e22 \n\"zh-tw\" \u2014 \u7e41\u9ad4\u4e2d\u6587 \n\"tr\" \u2014 T\u00fcrk\u00e7e \n\"zh-cn\" \u2014 \u4e2d\u6587 \n\"pt-br\" \u2014 Portugu\u00eas do Brasil \n\"es-mx\" \u2014 Espa\u00f1ol (M\u00e9xico)",
+                "doc": "Localization language. Valid values: \n\n\"cs\" \u2014 \u010ce\u0161tina \n\"de\" \u2014 Deutsch \n\"en\" \u2014 English (by default)\n\"es\" \u2014 Espa\u00f1ol \n\"fr\" \u2014 Fran\u00e7ais \n\"ja\" \u2014 \u65e5\u672c\u8a9e \n\"pl\" \u2014 Polski \n\"ru\" \u2014 \u0420\u0443\u0441\u0441\u043a\u0438\u0439 \n\"th\" \u2014 \u0e44\u0e17\u0e22 \n\"zh-tw\" \u2014 \u7e41\u9ad4\u4e2d\u6587 \n\"tr\" \u2014 T\u00fcrk\u00e7e \n\"zh-cn\" \u2014 \u4e2d\u6587 \n\"pt-br\" \u2014 Portugu\u00eas do Brasil \n\"es-mx\" \u2014 Espa\u00f1ol (M\u00e9xico)",
                 "required": false,
                 "type": "string"
             },
@@ -457,7 +475,7 @@
                 "type": "string, list"
             },
             "language": {
-                "doc": "Localization language. Valid values: \n\n\"cs\" \u2014 \u010ce\u0161tina \n\"de\" \u2014 Deutsch \n\"en\" \u2014 English (by default)\n\"es\" \u2014 Espa\u00f1ol \n\"fr\" \u2014 Fran\u00e7ais \n\"ja\" \u2014 \u65e5\u672c\u8a9e \n\"ko\" \u2014 \ud55c\uad6d\uc5b4 \n\"pl\" \u2014 Polski \n\"ru\" \u2014 \u0420\u0443\u0441\u0441\u043a\u0438\u0439 \n\"th\" \u2014 \u0e44\u0e17\u0e22 \n\"zh-tw\" \u2014 \u7e41\u9ad4\u4e2d\u6587",
+                "doc": "Localization language. Valid values: \n\n\"cs\" \u2014 \u010ce\u0161tina \n\"de\" \u2014 Deutsch \n\"en\" \u2014 English (by default)\n\"es\" \u2014 Espa\u00f1ol \n\"fr\" \u2014 Fran\u00e7ais \n\"ja\" \u2014 \u65e5\u672c\u8a9e \n\"pl\" \u2014 Polski \n\"ru\" \u2014 \u0420\u0443\u0441\u0441\u043a\u0438\u0439 \n\"th\" \u2014 \u0e44\u0e17\u0e22 \n\"zh-tw\" \u2014 \u7e41\u9ad4\u4e2d\u6587",
                 "required": false,
                 "type": "string"
             },
@@ -480,7 +498,7 @@
                 "type": "string, list"
             },
             "language": {
-                "doc": "Localization language. Valid values: \n\n\"cs\" \u2014 \u010ce\u0161tina \n\"de\" \u2014 Deutsch \n\"en\" \u2014 English (by default)\n\"es\" \u2014 Espa\u00f1ol \n\"fr\" \u2014 Fran\u00e7ais \n\"ja\" \u2014 \u65e5\u672c\u8a9e \n\"ko\" \u2014 \ud55c\uad6d\uc5b4 \n\"pl\" \u2014 Polski \n\"ru\" \u2014 \u0420\u0443\u0441\u0441\u043a\u0438\u0439 \n\"th\" \u2014 \u0e44\u0e17\u0e22 \n\"zh-tw\" \u2014 \u7e41\u9ad4\u4e2d\u6587 \n\"tr\" \u2014 T\u00fcrk\u00e7e \n\"zh-cn\" \u2014 \u4e2d\u6587 \n\"pt-br\" \u2014 Portugu\u00eas do Brasil \n\"es-mx\" \u2014 Espa\u00f1ol (M\u00e9xico)",
+                "doc": "Localization language. Valid values: \n\n\"cs\" \u2014 \u010ce\u0161tina \n\"de\" \u2014 Deutsch \n\"en\" \u2014 English (by default)\n\"es\" \u2014 Espa\u00f1ol \n\"fr\" \u2014 Fran\u00e7ais \n\"ja\" \u2014 \u65e5\u672c\u8a9e \n\"pl\" \u2014 Polski \n\"ru\" \u2014 \u0420\u0443\u0441\u0441\u043a\u0438\u0439 \n\"th\" \u2014 \u0e44\u0e17\u0e22 \n\"zh-tw\" \u2014 \u7e41\u9ad4\u4e2d\u6587 \n\"tr\" \u2014 T\u00fcrk\u00e7e \n\"zh-cn\" \u2014 \u4e2d\u6587 \n\"pt-br\" \u2014 Portugu\u00eas do Brasil \n\"es-mx\" \u2014 Espa\u00f1ol (M\u00e9xico)",
                 "required": false,
                 "type": "string"
             },
@@ -513,7 +531,7 @@
                 "type": "string, list"
             },
             "language": {
-                "doc": "Localization language. Valid values: \n\n\"cs\" \u2014 \u010ce\u0161tina \n\"de\" \u2014 Deutsch \n\"en\" \u2014 English (by default)\n\"es\" \u2014 Espa\u00f1ol \n\"fr\" \u2014 Fran\u00e7ais \n\"ja\" \u2014 \u65e5\u672c\u8a9e \n\"ko\" \u2014 \ud55c\uad6d\uc5b4 \n\"pl\" \u2014 Polski \n\"ru\" \u2014 \u0420\u0443\u0441\u0441\u043a\u0438\u0439 \n\"th\" \u2014 \u0e44\u0e17\u0e22 \n\"zh-tw\" \u2014 \u7e41\u9ad4\u4e2d\u6587",
+                "doc": "Localization language. Valid values: \n\n\"cs\" \u2014 \u010ce\u0161tina \n\"de\" \u2014 Deutsch \n\"en\" \u2014 English (by default)\n\"es\" \u2014 Espa\u00f1ol \n\"fr\" \u2014 Fran\u00e7ais \n\"ja\" \u2014 \u65e5\u672c\u8a9e \n\"pl\" \u2014 Polski \n\"ru\" \u2014 \u0420\u0443\u0441\u0441\u043a\u0438\u0439 \n\"th\" \u2014 \u0e44\u0e17\u0e22 \n\"zh-tw\" \u2014 \u7e41\u9ad4\u4e2d\u6587",
                 "required": false,
                 "type": "string"
             },
@@ -563,7 +581,7 @@
                 "type": "string"
             },
             "language": {
-                "doc": "Localization language. Valid values: \n\n\"cs\" \u2014 \u010ce\u0161tina \n\"de\" \u2014 Deutsch \n\"en\" \u2014 English (by default)\n\"es\" \u2014 Espa\u00f1ol \n\"fr\" \u2014 Fran\u00e7ais \n\"ja\" \u2014 \u65e5\u672c\u8a9e \n\"ko\" \u2014 \ud55c\uad6d\uc5b4 \n\"pl\" \u2014 Polski \n\"ru\" \u2014 \u0420\u0443\u0441\u0441\u043a\u0438\u0439 \n\"th\" \u2014 \u0e44\u0e17\u0e22 \n\"zh-tw\" \u2014 \u7e41\u9ad4\u4e2d\u6587",
+                "doc": "Localization language. Valid values: \n\n\"cs\" \u2014 \u010ce\u0161tina \n\"de\" \u2014 Deutsch \n\"en\" \u2014 English (by default)\n\"es\" \u2014 Espa\u00f1ol \n\"fr\" \u2014 Fran\u00e7ais \n\"ja\" \u2014 \u65e5\u672c\u8a9e \n\"pl\" \u2014 Polski \n\"ru\" \u2014 \u0420\u0443\u0441\u0441\u043a\u0438\u0439 \n\"th\" \u2014 \u0e44\u0e17\u0e22 \n\"zh-tw\" \u2014 \u7e41\u9ad4\u4e2d\u6587",
                 "required": false,
                 "type": "string"
             },
