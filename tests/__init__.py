@@ -62,10 +62,41 @@ class WargamingMetaTestCase(unittest.TestCase):
         self.assertEqual(self.demo.sub_module_name.func3(), True)
 
     @patch('wargaming.meta.requests.get')
-    def test_wgapi(self, get):
-        get.return_value.json.return_value = {'status': 'ok', 'data': [{'id': '123456'}]}
+    def test_wgapi_list(self, get):
+        data = [{'id': '123456'}]
+        get.return_value.json.return_value = {'status': 'ok', 'data': data}
         res = WGAPI('http://apiurl/')
-        self.assertEqual(res[0], {'id': '123456'})
+        self.assertEqual(res[0], data[0])
+        self.assertEqual(list(res), data)
+
+    @patch('wargaming.meta.requests.get')
+    def test_wgapi_dict(self, get):
+        data = {
+            '123456': {'name': 'title'},
+            123458: {'name': 'title 3'},
+        }
+        get.return_value.json.return_value = {'status': 'ok', 'data': data}
+        res = WGAPI('http://apiurl/')
+        # test conversion of numeric keys
+        self.assertEqual(res[123456], data['123456'])
+        self.assertEqual(res['123456'], data['123456'])
+        self.assertEqual(res[123458], data[123458])
+        self.assertEqual(res['123458'], data[123458])
+        self.assertEqual(dict(res), data)
+        self.assertTrue(all(i in res.values() for i in data.values()))
+
+    @patch('wargaming.meta.requests.get')
+    def test_wgapi_strings(self, get):
+        data = [{'id': '123456'}]
+        get.return_value.json.return_value = {'status': 'ok', 'data': data}
+        res = WGAPI('http://apiurl/')
+        self.assertEqual(str(res), str(data))
+        self.assertEqual(repr(res), str(data))
+
+        data = [{'id': '123456'}] * 20
+        get.return_value.json.return_value = {'status': 'ok', 'data': data}
+        res = WGAPI('http://apiurl/')
+        self.assertEqual(repr(res), str(data)[0:200] + '...')
 
     @patch('wargaming.meta.requests.get')
     def test_wgapi_retry(self, get):
@@ -88,7 +119,3 @@ class WargamingTestCase(unittest.TestCase):
         WoTB('demo', 'ru', 'ru')
         WoWP('demo', 'ru', 'ru')
         WoWS('demo', 'ru', 'ru')
-
-
-if __name__ == '__main__':
-    unittest.main()

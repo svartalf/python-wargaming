@@ -63,28 +63,20 @@ class WGAPI(object):
         return str(self._fetch_data())
 
     def __iter__(self):
-        return self
+        return iter(self._fetch_data())
 
-    def next(self):
-        self._fetch_data()
-        if not self._iter:
-            self._iter = iter(self.data)
-        return next(self._iter)
-    # python 3.x
-    __next__ = next
+    def keys(self):
+        return self._fetch_data().keys()
+
+    def values(self):
+        return self._fetch_data().values()
 
     def __getitem__(self, item):
         data = self._fetch_data()
         try:
             return data[item]
-        except (TypeError, IndexError):
-            if type(item) == int:
-                item = str(item)
-            else:
-                try:
-                    item = int(item)
-                except ValueError:
-                    pass
+        except KeyError:
+            item = int(item) if type(item) == str and item.isdigit() else str(item)
             return data[item]
 
     def __repr__(self):
@@ -99,7 +91,7 @@ class ModuleAPI(object):
         """
         :param application_id: WG application id
         :param language: default language param
-        :param region: game geo region short name
+        :param base_url: base url of module api
         """
         self.application_id = application_id
         self.language = language
