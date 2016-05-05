@@ -1,10 +1,9 @@
 import unittest
 
 from mock import patch, mock_open
-import mock
 from wargaming import WoT, WGN, WoTB, WoWP, WoWS, settings
 from wargaming.meta import MetaAPI, BaseAPI, WGAPI
-from wargaming.settings import RETRY_COUNT
+from wargaming.settings import RETRY_COUNT, HTTP_USER_AGENT_HEADER
 import six
 import json
 from wargaming.exceptions import ValidationError, RequestError
@@ -19,14 +18,29 @@ class WargamingMetaTestCase(unittest.TestCase):
                     'doc': 'doc for application_id',
                     'required': False,
                     'type': 'string',
-                }
+                },
+                'language': {
+                    'doc': 'doc for language',
+                    'required': False,
+                    'type': 'string',
+                },
             }, 'func2': {
                 '__doc__': 'doc example for func2',
                 'application_id': {
                     'doc': 'doc for application_id',
                     'required': False,
                     'type': 'string',
-                }
+                },
+                'language': {
+                    'doc': 'doc for language',
+                    'required': False,
+                    'type': 'string',
+                },
+                'fields': {
+                    'doc': 'doc for fields',
+                    'required': False,
+                    'type': 'string',
+                },
             }
         }}
     ))
@@ -42,13 +56,61 @@ class WargamingMetaTestCase(unittest.TestCase):
 
         self.demo = Demo('demo', 'ru', 'ru')
 
+    def test_invalid_game(self):
+        with self.assertRaises(ValidationError):
+            class Demo(six.with_metaclass(MetaAPI, BaseAPI)):
+                pass
+
+    def test_invalid_region(self):
+        with self.assertRaises(ValidationError):
+            WoT('demo', 'ua', 'ua')
+
+    @patch('wargaming.meta.requests.get')
+    def test_call_api(self, get):
+        base_url = self.demo.base_url
+        self.demo.sub_module_name.func1()._fetch_data()
+        get.assert_called_once_with(
+            base_url + 'sub_module_name/func1/',
+            params={
+                'language': self.demo.language,
+                'application_id': self.demo.application_id,
+            },
+            headers={
+                'User-Agent': HTTP_USER_AGENT_HEADER,
+            }
+        )
+
+        get.reset_mock()
+        self.demo.sub_module_name.func2(application_id=1, language=1,
+                                        fields=list(range(3)))\
+            ._fetch_data()
+        get.assert_called_once_with(
+            base_url + 'sub_module_name/func2/',
+            params={
+                'language': 1,
+                'application_id': 1,
+                'fields': '0,1,2',
+            },
+            headers={
+                'User-Agent': HTTP_USER_AGENT_HEADER,
+            }
+        )
+
+    def test_list_join(self):
+        fields = ['f1', 'f2', 'f3']
+        res = self.demo.sub_module_name.func2(fields=fields)
+        self.assertEqual(','.join(fields), res.params['fields'])
+
+        fields = [1, 2, 3]
+        res = self.demo.sub_module_name.func2(fields=fields)
+        self.assertEqual(','.join([str(i) for i in fields]), res.params['fields'])
+
     def test_schema_function_wrong_parameter(self):
         with self.assertRaises(ValidationError):
             self.demo.sub_module_name.func1(wrong_parameter='123')
 
     @patch('wargaming.meta.requests.get')
     def test_schema_function(self, get):
-        get.return_value = mock.Mock()
         get.return_value.json.return_value = {'status': 'ok', 'data': [{'id': '123456'}]}
         value = self.demo.sub_module_name.func1()
         self.assertIsInstance(value, WGAPI)
@@ -110,6 +172,15 @@ class WargamingMetaTestCase(unittest.TestCase):
         with self.assertRaises(RequestError):
             res._fetch_data()
         self.assertEqual(get.return_value.json.call_count, RETRY_COUNT)
+
+    @patch('wargaming.meta.requests.get')
+    def test_wg_unofficial(self, get):
+        get.return_value.json.return_value = [{'id': '123456'}]
+        wot = WoT('demo', 'ru', 'ru')
+        with self.assertRaises(ValidationError):
+            wot.globalmap.wg_clan_battles('')
+        res = wot.globalmap.wg_clan_battles(123)
+        self.assertIsInstance(res, WGAPI)
 
 
 class WargamingTestCase(unittest.TestCase):

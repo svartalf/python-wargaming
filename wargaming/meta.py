@@ -7,14 +7,21 @@ from wargaming.exceptions import RequestError, ValidationError
 from wargaming.settings import ALLOWED_GAMES, ALLOWED_REGIONS, HTTP_USER_AGENT_HEADER, RETRY_COUNT
 
 
-def region_url(region, game):
+def check_allowed_game(game):
     if game not in ALLOWED_GAMES:
         raise ValidationError("Game '%s' is not allowed list: %s" %
                               (game, ', '.join(ALLOWED_GAMES)))
 
+
+def check_allowed_region(region):
     if region not in ALLOWED_REGIONS:
         raise ValidationError("Region %s is not allowed list: %s" %
                               (region, ', '.join(ALLOWED_REGIONS)))
+
+
+def region_url(region, game):
+    check_allowed_game(game)
+    check_allowed_region(region)
 
     # all api calls for all project goes to api.worldoftanks.*
     # maybe WG would move this api to api.wargaming.net
@@ -167,6 +174,9 @@ class MetaAPI(type):
             api_call.__name__ = str(url.split('/')[-1])
             api_call.__module__ = str(url.split('/')[0])
             return api_call
+
+        # check if values are correct
+        check_allowed_game(name.lower())
 
         # Loading schema from file
         base_dir = os.path.join(os.path.dirname(os.path.realpath(__file__)), 'schema')
