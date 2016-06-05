@@ -158,6 +158,10 @@ class MetaAPI(type):
                     if field not in fields:
                         raise ValidationError('Wrong parameter: {0}'.format(field))
 
+                for field, params in fields.items():
+                    if params['required'] and field not in kwargs:
+                        raise ValidationError('Missing required paramter : {0}'.format(field))
+
                 if 'language' not in kwargs:
                     kwargs['language'] = self.language
 

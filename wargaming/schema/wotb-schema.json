@@ -118,6 +118,216 @@
             }
         }
     },
+    "clanmessages": {
+        "create": {
+            "__doc__": "Method creates a message on clan Message Board.",
+            "access_token": {
+                "doc": "Access token is used to access personal user data. The token is obtained via authentication and has expiration time.",
+                "required": true,
+                "type": "string"
+            },
+            "application_id": {
+                "doc": "Application ID",
+                "required": true,
+                "type": "string"
+            },
+            "expires_at": {
+                "doc": "Date when message will become irrelevant. Date in UNIX timestamp or ISO 8601 format. E.g.: 1376542800 or 2013-08-15T00:00:00. Date must be in the future.",
+                "required": true,
+                "type": "timestamp/date"
+            },
+            "importance": {
+                "doc": "Message importance. Valid values: \n\n\"important\" \u2014 Important messages \n\"standard\" \u2014 Standard messages",
+                "required": true,
+                "type": "string"
+            },
+            "text": {
+                "doc": "Message text. Max. length: 1000.",
+                "required": true,
+                "type": "string"
+            },
+            "title": {
+                "doc": "Message title. Max. length: 100.",
+                "required": true,
+                "type": "string"
+            },
+            "type": {
+                "doc": "Message type. Valid values: \n\n\"general\" \u2014 General messages \n\"training\" \u2014 Training messages \n\"meeting\" \u2014 Meeting messages \n\"battle\" \u2014 Battle messages",
+                "required": true,
+                "type": "string"
+            }
+        },
+        "delete": {
+            "__doc__": "Method removes a message on clan Message Board.",
+            "access_token": {
+                "doc": "Access token is used to access personal user data. The token is obtained via authentication and has expiration time.",
+                "required": true,
+                "type": "string"
+            },
+            "application_id": {
+                "doc": "Application ID",
+                "required": true,
+                "type": "string"
+            },
+            "message_id": {
+                "doc": "Message ID",
+                "required": true,
+                "type": "numeric"
+            }
+        },
+        "like": {
+            "__doc__": "Method likes or unlikes a message on clan Message Board.",
+            "access_token": {
+                "doc": "Access token is used to access personal user data. The token is obtained via authentication and has expiration time.",
+                "required": true,
+                "type": "string"
+            },
+            "action": {
+                "doc": "Action. Valid values: \n\n\"add\" \u2014 Set a like for message \n\"remove\" \u2014 Remove a like for message",
+                "required": true,
+                "type": "string"
+            },
+            "application_id": {
+                "doc": "Application ID",
+                "required": true,
+                "type": "string"
+            },
+            "message_id": {
+                "doc": "Message ID",
+                "required": true,
+                "type": "numeric"
+            }
+        },
+        "likes": {
+            "__doc__": "Method returns message likes on clan Message Board.",
+            "access_token": {
+                "doc": "Access token is used to access personal user data. The token is obtained via authentication and has expiration time.",
+                "required": true,
+                "type": "string"
+            },
+            "application_id": {
+                "doc": "Application ID",
+                "required": true,
+                "type": "string"
+            },
+            "fields": {
+                "doc": "Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields.",
+                "required": false,
+                "type": "string, list"
+            },
+            "message_id": {
+                "doc": "Message ID. Number of returned entries must not exceed 10.",
+                "required": true,
+                "type": "numeric, list"
+            }
+        },
+        "messages": {
+            "__doc__": "Method returns messages of clan Message Board. If a single message requested by ID, all filters are ignored and total equals null.",
+            "access_token": {
+                "doc": "Access token is used to access personal user data. The token is obtained via authentication and has expiration time.",
+                "required": true,
+                "type": "string"
+            },
+            "application_id": {
+                "doc": "Application ID",
+                "required": true,
+                "type": "string"
+            },
+            "expires_after": {
+                "doc": "Search for messages with end date of relevance equal or after the value. Date in UNIX timestamp or ISO 8601 format. E.g.: 1376542800 or 2013-08-15T00:00:00",
+                "required": false,
+                "type": "timestamp/date"
+            },
+            "expires_before": {
+                "doc": "Search for messages with end date of relevance before the value. Date in UNIX timestamp or ISO 8601 format. E.g.: 1376542800 or 2013-08-15T00:00:00",
+                "required": false,
+                "type": "timestamp/date"
+            },
+            "fields": {
+                "doc": "Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields.",
+                "required": false,
+                "type": "string, list"
+            },
+            "importance": {
+                "doc": "Message importance. Valid values: \n\n\"important\" \u2014 Important messages \n\"standard\" \u2014 Standard messages",
+                "required": false,
+                "type": "string"
+            },
+            "limit": {
+                "doc": "Number of returned entries. If the value sent exceeds 100, an limit of 25 is applied (by default).",
+                "required": false,
+                "type": "numeric"
+            },
+            "message_id": {
+                "doc": "Message ID",
+                "required": false,
+                "type": "numeric"
+            },
+            "order_by": {
+                "doc": "Sorting. Valid values:\n\n\nimportance \u2014 by message importance\n\n\n-importance \u2014 by message importance in reverse order\n\n\ncreated_at \u2014 by date of message creation\n\n\n-created_at \u2014 by date of message creation in reverse order\n\n\nupdated_at \u2014 by message update date\n\n\n-updated_at \u2014 by message update date in reverse order\n\n\ntype \u2014 by message type\n\n\n-type \u2014 by message type in reverse order",
+                "required": false,
+                "type": "string, list"
+            },
+            "page_no": {
+                "doc": "Page number.",
+                "required": false,
+                "type": "numeric"
+            },
+            "status": {
+                "doc": "Message status. Valid values: \n\n\"active\" \u2014 Active message \n\"deleted\" \u2014 Deleted message",
+                "required": false,
+                "type": "string"
+            },
+            "type": {
+                "doc": "Message type. Valid values: \n\n\"general\" \u2014 General messages \n\"training\" \u2014 Training messages \n\"meeting\" \u2014 Meeting messages \n\"battle\" \u2014 Battle messages",
+                "required": false,
+                "type": "string"
+            }
+        },
+        "update": {
+            "__doc__": "Method updates a message on clan Message Board. At least one changed parameter should be specified.",
+            "access_token": {
+                "doc": "Access token is used to access personal user data. The token is obtained via authentication and has expiration time.",
+                "required": true,
+                "type": "string"
+            },
+            "application_id": {
+                "doc": "Application ID",
+                "required": true,
+                "type": "string"
+            },
+            "expires_at": {
+                "doc": "Date when message will become irrelevant. Date in UNIX timestamp or ISO 8601 format. E.g.: 1376542800 or 2013-08-15T00:00:00. Date must be in the future.",
+                "required": false,
+                "type": "timestamp/date"
+            },
+            "importance": {
+                "doc": "Message importance. Valid values: \n\n\"important\" \u2014 Important messages \n\"standard\" \u2014 Standard messages",
+                "required": false,
+                "type": "string"
+            },
+            "message_id": {
+                "doc": "Message ID",
+                "required": true,
+                "type": "numeric"
+            },
+            "text": {
+                "doc": "Message text. Max. length: 1000.",
+                "required": false,
+                "type": "string"
+            },
+            "title": {
+                "doc": "Message title. Max. length: 100.",
+                "required": false,
+                "type": "string"
+            },
+            "type": {
+                "doc": "Message type. Valid values: \n\n\"general\" \u2014 General messages \n\"training\" \u2014 Training messages \n\"meeting\" \u2014 Meeting messages \n\"battle\" \u2014 Battle messages",
+                "required": false,
+                "type": "string"
+            }
+        }
+    },
     "clans": {
         "accountinfo": {
             "__doc__": "Method returns player clan data. Player clan data exist only for accounts, that were participating in clan activities: sent join requests, were clan members etc.",
