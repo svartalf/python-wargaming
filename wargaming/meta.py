@@ -37,7 +37,7 @@ class WGAPI(object):
             if isinstance(value, list):
                 kwargs[name] = ','.join(str(i) for i in value)
         self.params = kwargs
-        self.data = None
+        self._data = None
         self.error = None
         self._iter = None
         self.stop_max_attempt_number = stop_max_attempt_number
@@ -47,7 +47,7 @@ class WGAPI(object):
         )(self._fetch_data)
 
     def _fetch_data(self):
-        if not self.data:
+        if not self._data:
             self.response = response = requests.get(self.url, params=self.params, headers={
                 'User-Agent': HTTP_USER_AGENT_HEADER,
             }).json()
@@ -56,30 +56,49 @@ class WGAPI(object):
                 self.error = response['error']
                 raise RequestError(**self.error)
 
-            self.data = response.get('data', response)
+            self._data = response.get('data', response)
+        return self._data
 
-        return self.data
+    @property
+    def data(self):
+        return self._fetch_data()
+
+    @data.setter
+    def data(self, value):
+        """setter is used if needed to fake response"""
+        self._data = value
+
+    @data.deleter
+    def data(self):
+        self._data = None
 
     def __len__(self):
-        return len(self._fetch_data())
+        return len(self.data)
 
     def __str__(self):
-        return str(self._fetch_data())
+        return str(self.data)
 
     def __unicode__(self):
-        return str(self._fetch_data())
+        return str(self.data)
 
     def __iter__(self):
-        return iter(self._fetch_data())
+        return iter(self.data)
 
     def keys(self):
-        return self._fetch_data().keys()
+        return self.data.keys()
+
+    def items(self):
+        return self.data.items()
 
     def values(self):
-        return self._fetch_data().values()
+        return self.data.values()
 
     def __getitem__(self, item):
-        data = self._fetch_data()
+        """__getitem__ with smart type detection
+        would try to lookup data['123']
+        if not found would try data[123] and vise versa
+        """
+        data = self.data
         try:
             return data[item]
         except KeyError:
@@ -87,7 +106,7 @@ class WGAPI(object):
             return data[item]
 
     def __repr__(self):
-        res = str(self._fetch_data())
+        res = str(self.data)
         return res[0:200] + ('...' if len(res) > 200 else '')
 
 
