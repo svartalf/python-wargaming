@@ -1,4 +1,6 @@
-VERSION = (0, 5, 0)
+# version contains Year and Month of API actualization
+# last part is minor update, if needed
+VERSION = (2016, 6, 0)
 
 
 def get_version(version=None):

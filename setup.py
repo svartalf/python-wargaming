@@ -25,7 +25,7 @@ test_requires = lines('requirements_test.txt')
 
 setup(
     name='wargaming',
-    version='0.5.0',
+    version='2016.5.0',
     author='svartalf',
     author_email='self@svartalf.info',
     url='https://github.com/svartalf/python-wargaming',
@@ -33,6 +33,7 @@ setup(
     long_description=__doc__,
     license='MIT',
     packages=find_packages(exclude=['tests', 'docs']),
+    package_data={'wargaming': ['schema/*.json']},
     install_requires=install_requires,
     tests_require=install_requires + test_requires,
     cmdclass={'test': PyTest},
@@ -51,4 +52,5 @@ setup(
         'Programming Language :: Python :: Implementation :: PyPy',
         'Topic :: Software Development :: Libraries',
     ),
+    zip_safe=False,
 )
