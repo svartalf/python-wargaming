@@ -138,6 +138,9 @@ class BaseAPI(object):
         for k, v in self._module_dict.items():
             setattr(self, k, v(application_id, language, self.base_url))
 
+    def __repr__(self):
+        return str("<%s at %s, language=%s>" % (self.__class__.__name__, self.base_url, self.language))
+
 
 class MetaAPI(type):
     """MetaClass Loads current scheme from schema.json file
