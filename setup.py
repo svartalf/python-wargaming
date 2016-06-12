@@ -25,7 +25,7 @@ test_requires = lines('requirements_test.txt')
 
 setup(
     name='wargaming',
-    version='2016.5.0',
+    version='2016.6.0',
     author='svartalf',
     author_email='self@svartalf.info',
     url='https://github.com/svartalf/python-wargaming',
@@ -43,12 +43,9 @@ setup(
         'License :: OSI Approved :: MIT License',
         'Operating System :: OS Independent',
         'Programming Language :: Python',
-        'Programming Language :: Python :: 2.6',
         'Programming Language :: Python :: 2.7',
-        'Programming Language :: Python :: 3',
-        'Programming Language :: Python :: 3.2',
-        'Programming Language :: Python :: 3.3',
         'Programming Language :: Python :: 3.4',
+        'Programming Language :: Python :: 3.5',
         'Programming Language :: Python :: Implementation :: PyPy',
         'Topic :: Software Development :: Libraries',
     ),

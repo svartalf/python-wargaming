@@ -1,7 +1,9 @@
 import os
 import json
 import requests
+import six
 from retrying import retry
+from datetime import datetime
 
 from wargaming.exceptions import RequestError, ValidationError
 from wargaming.settings import ALLOWED_GAMES, ALLOWED_REGIONS, HTTP_USER_AGENT_HEADER, RETRY_COUNT
@@ -28,14 +30,17 @@ def region_url(region, game):
     return 'https://api.worldoftanks.%s/%s/' % (region, game)
 
 
+@six.python_2_unicode_compatible
 class WGAPI(object):
     """Result from WG API request"""
 
     def __init__(self, url, stop_max_attempt_number=RETRY_COUNT, **kwargs):
         self.url = url
         for name, value in kwargs.items():
-            if isinstance(value, list):
+            if isinstance(value, list) or isinstance(value, tuple):
                 kwargs[name] = ','.join(str(i) for i in value)
+            elif isinstance(value, datetime):
+                kwargs[name] = value.isoformat()
         self.params = kwargs
         self._data = None
         self.error = None
@@ -65,20 +70,13 @@ class WGAPI(object):
 
     @data.setter
     def data(self, value):
-        """setter is used if needed to fake response"""
+        """setter is used if needed to fake response or reset data"""
         self._data = value
-
-    @data.deleter
-    def data(self):
-        self._data = None
 
     def __len__(self):
         return len(self.data)
 
     def __str__(self):
-        return str(self.data)
-
-    def __unicode__(self):
         return str(self.data)
 
     def __iter__(self):
@@ -177,15 +175,15 @@ class MetaAPI(type):
                     if field not in fields:
                         raise ValidationError('Wrong parameter: {0}'.format(field))
 
-                for field, params in fields.items():
-                    if params['required'] and field not in kwargs:
-                        raise ValidationError('Missing required paramter : {0}'.format(field))
-
                 if 'language' not in kwargs:
                     kwargs['language'] = self.language
 
                 if 'application_id' not in kwargs:
                     kwargs['application_id'] = self.application_id
+
+                for field, params in fields.items():
+                    if params['required'] and field not in kwargs:
+                        raise ValidationError('Missing required paramter : {0}'.format(field))
 
                 return WGAPI(self.base_url + url, **kwargs)
             doc += "\n\nKeyword arguments:\n"

@@ -1,11 +1,12 @@
 import unittest
-
+import six
+import json
+from datetime import datetime
 from mock import patch, mock_open
+
 from wargaming import WoT, WGN, WoTB, WoWP, WoWS, settings
 from wargaming.meta import MetaAPI, BaseAPI, WGAPI
 from wargaming.settings import RETRY_COUNT, HTTP_USER_AGENT_HEADER
-import six
-import json
 from wargaming.exceptions import ValidationError, RequestError
 
 
@@ -16,31 +17,56 @@ class WargamingMetaTestCase(unittest.TestCase):
                 '__doc__': 'doc example for func1',
                 'application_id': {
                     'doc': 'doc for application_id',
-                    'required': False,
+                    'required': True,
                     'type': 'string',
                 },
                 'language': {
                     'doc': 'doc for language',
-                    'required': False,
+                    'required': True,
                     'type': 'string',
                 },
             }, 'func2': {
                 '__doc__': 'doc example for func2',
                 'application_id': {
                     'doc': 'doc for application_id',
-                    'required': False,
+                    'required': True,
                     'type': 'string',
                 },
                 'language': {
                     'doc': 'doc for language',
-                    'required': False,
+                    'required': True,
                     'type': 'string',
+                },
+                'date': {
+                    'doc': 'sample date field',
+                    'required': False,
+                    'type': 'timestamp/date',
                 },
                 'fields': {
                     'doc': 'doc for fields',
                     'required': False,
                     'type': 'string',
                 },
+
+            },
+            # }, 'func3': { is used for custom function
+            'func4': {
+                '__doc__': 'doc example for func2',
+                'application_id': {
+                    'doc': 'doc for application_id',
+                    'required': True,
+                    'type': 'string',
+                },
+                'language': {
+                    'doc': 'doc for language',
+                    'required': True,
+                    'type': 'string',
+                },
+                'clan_id': {
+                    'doc': 'fetch info about clan',
+                    'required': True,
+                    'type': 'string',
+                }
             }
         }}
     ))
@@ -96,7 +122,7 @@ class WargamingMetaTestCase(unittest.TestCase):
             }
         )
 
-    def test_list_join(self):
+    def test_tuple_list_join(self):
         fields = ['f1', 'f2', 'f3']
         res = self.demo.sub_module_name.func2(fields=fields)
         self.assertEqual(','.join(fields), res.params['fields'])
@@ -105,9 +131,23 @@ class WargamingMetaTestCase(unittest.TestCase):
         res = self.demo.sub_module_name.func2(fields=fields)
         self.assertEqual(','.join([str(i) for i in fields]), res.params['fields'])
 
+        fields = (1, 2, 3)
+        res = self.demo.sub_module_name.func2(fields=fields)
+        self.assertEqual(','.join([str(i) for i in fields]), res.params['fields'])
+
+    def test_convert_date(self):
+        date = datetime(2016, 1, 1, 13, 0, 0)
+        res = self.demo.sub_module_name.func2(date=date)
+        self.assertEqual(date.isoformat(), res.params['date'])
+
     def test_schema_function_wrong_parameter(self):
         with self.assertRaises(ValidationError):
             self.demo.sub_module_name.func1(wrong_parameter='123')
+
+    def test_schema_function_missing_required_parameter(self):
+        with self.assertRaises(ValidationError):
+            self.demo.sub_module_name.func4()
+        self.demo.sub_module_name.func4(clan_id='123')
 
     @patch('wargaming.meta.requests.get')
     def test_schema_function(self, get):

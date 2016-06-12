@@ -3,7 +3,7 @@ Python library for Wargaming.net API
 
 Pure pythonic library for accessing Wargaming.net API (https://wargaming.net/developers/).
 
-Compatible with a Python>=2.6 and Python 3 versions. PyPy also!
+Compatible with a Python>=2.7 and Python >=3.4 versions. PyPy also!
 
 .. image:: https://travis-ci.org/svartalf/python-wargaming.svg?branch=master
 .. image:: https://readthedocs.org/projects/python-wargaming/badge/?version=latest
@@ -23,13 +23,14 @@ Wargaming.NET API documentation: https://na.wargaming.net/developers/api_referen
 
 Library documentation: http://python-wargaming.rtfd.org
 
-Supported games
+Supported WGAPI
 ---------------
 
  * World of Tanks
+ * World of Warplanes
+ * World of Warships
  * World of Tanks Blitz
- * Wargaming.NET common API (partially)
-
+ * Wargaming.NET common API
 
 Contribution
 ------------
@@ -40,4 +41,4 @@ Just fork, update and send pull request. Do not forget to run tests:
 
 Also check for a PEP-0008 compliance:
 
-    $ pep8 --ignore=E501,E128 wargaming/
+    $ pep8 --max-line-length=120 wargaming
