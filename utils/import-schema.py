@@ -1,3 +1,6 @@
+#!/usr/bin/env python3
+
+from collections import defaultdict
 from lxml import html
 import requests
 import json
@@ -16,13 +19,17 @@ def get_func(url):
         if i.tag == 'div' and 'b-alert' not in i.classes
     ]
 
-    if len(objects) == 3:
-        # in case of no errors section
-        description, params, response = objects
-    else:
-        description, params, response, errors = objects
+    description = objects[0]
+    params = None
+    for obj in objects:
+        if obj.get('id') == 'parameters_block':
+            params = obj
 
     fields['__doc__'] = description.text_content().strip()
+
+    if params is None:
+        print("Unable to find parameters_block")
+        return fields
 
     for tr in params.findall('table/tbody/'):
         items = [td.text_content().strip() for td in tr]
@@ -55,13 +62,11 @@ def main():
         urls = [i[2][l:-1] for i in parsed_body.iterlinks()
                 if i[2].startswith(section_url) and len(i[2]) > l]
 
-        schema = {}
+        schema = defaultdict(lambda: dict())
 
         for url in urls:
             print("Working on " + url)
             module, function = url.split('/')
-            if module not in schema:
-                schema[module] = {}
             schema[module][function] = get_func('%s/%s/%s/' % (base_url, wg_section, url))
 
         with open("%s-schema.json" % wg_section, 'w') as f:

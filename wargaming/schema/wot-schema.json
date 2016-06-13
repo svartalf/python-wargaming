@@ -314,103 +314,18 @@
     "encyclopedia": {
         "achievements": {
             "__doc__": "Parameters\n            \n    \n        \n        \n            Parameter\n            Type \n            Description\n        \n        \n        \n        \n                            \n        \n            *application_id\n            string\n            Application ID\n        \n        \n            fields\n            string, list\n            Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields.\n        \n        \n            language\n            string\n            Localization language. Valid values: \n\n\"en\" \u2014 English (by default)\n\"ru\" \u2014 \u0420\u0443\u0441\u0441\u043a\u0438\u0439 \n\"pl\" \u2014 Polski \n\"de\" \u2014 Deutsch \n\"fr\" \u2014 Fran\u00e7ais \n\"es\" \u2014 Espa\u00f1ol \n\"zh-cn\" \u2014 \u7b80\u4f53\u4e2d\u6587 \n\"tr\" \u2014 T\u00fcrk\u00e7e \n\"cs\" \u2014 \u010ce\u0161tina \n\"th\" \u2014 \u0e44\u0e17\u0e22 \n\"vi\" \u2014 Ti\u1ebfng Vi\u1ec7t \n\"ko\" \u2014 \ud55c\uad6d\uc5b4\n\n        \n\n        \n    \n    * - required parameter.",
-            "condition": {
-                "doc": "Condition",
-                "required": false,
+            "application_id": {
+                "doc": "Application ID",
+                "required": true,
                 "type": "string"
             },
-            "description": {
-                "doc": "Achievement description",
+            "fields": {
+                "doc": "Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields.",
                 "required": false,
-                "type": "string"
+                "type": "string, list"
             },
-            "hero_info": {
-                "doc": "Historical reference",
-                "required": false,
-                "type": "string"
-            },
-            "image": {
-                "doc": "URL to image",
-                "required": false,
-                "type": "string"
-            },
-            "image_big": {
-                "doc": "180x180px image",
-                "required": false,
-                "type": "string"
-            },
-            "name": {
-                "doc": "Achievement name",
-                "required": false,
-                "type": "string"
-            },
-            "name_i18n": {
-                "doc": "Localized name field",
-                "required": false,
-                "type": "string"
-            },
-            "options.description": {
-                "doc": "Achievement description",
-                "required": false,
-                "type": "string"
-            },
-            "options.image": {
-                "doc": "URL to image",
-                "required": false,
-                "type": "string"
-            },
-            "options.image_big": {
-                "doc": "180x180px image",
-                "required": false,
-                "type": "string"
-            },
-            "options.name_i18n": {
-                "doc": "Localized name field",
-                "required": false,
-                "type": "string"
-            },
-            "options.nation_images.x180": {
-                "doc": "List of links to 180x180 px emblems",
-                "required": false,
-                "type": "associative array"
-            },
-            "options.nation_images.x71": {
-                "doc": "List of links to 67x71 px emblems",
-                "required": false,
-                "type": "associative array"
-            },
-            "options.nation_images.x85": {
-                "doc": "List of links to 95x85 px emblems",
-                "required": false,
-                "type": "associative array"
-            },
-            "order": {
-                "doc": "Sort order",
-                "required": false,
-                "type": "numeric"
-            },
-            "outdated": {
-                "doc": "Indicates, if achievement is outdated and cannot be received anymore",
-                "required": false,
-                "type": "boolean"
-            },
-            "section": {
-                "doc": "Section",
-                "required": false,
-                "type": "string"
-            },
-            "section_i18n": {
-                "doc": "Localized section name\n                \n    \n        \n            Warning. The field will be disabled.",
-                "required": false,
-                "type": "string"
-            },
-            "section_order": {
-                "doc": "Section order",
-                "required": false,
-                "type": "numeric"
-            },
-            "type": {
-                "doc": "Type",
+            "language": {
+                "doc": "Localization language. Valid values: \n\n\"en\" \u2014 English (by default)\n\"ru\" \u2014 \u0420\u0443\u0441\u0441\u043a\u0438\u0439 \n\"pl\" \u2014 Polski \n\"de\" \u2014 Deutsch \n\"fr\" \u2014 Fran\u00e7ais \n\"es\" \u2014 Espa\u00f1ol \n\"zh-cn\" \u2014 \u7b80\u4f53\u4e2d\u6587 \n\"tr\" \u2014 T\u00fcrk\u00e7e \n\"cs\" \u2014 \u010ce\u0161tina \n\"th\" \u2014 \u0e44\u0e17\u0e22 \n\"vi\" \u2014 Ti\u1ebfng Vi\u1ec7t \n\"ko\" \u2014 \ud55c\uad6d\uc5b4",
                 "required": false,
                 "type": "string"
             }
