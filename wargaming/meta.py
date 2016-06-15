@@ -11,13 +11,13 @@ from wargaming.settings import ALLOWED_GAMES, ALLOWED_REGIONS, HTTP_USER_AGENT_H
 
 def check_allowed_game(game):
     if game not in ALLOWED_GAMES:
-        raise ValidationError("Game '%s' is not allowed list: %s" %
+        raise ValidationError("Game '%s' is not in allowed list: %s" %
                               (game, ', '.join(ALLOWED_GAMES)))
 
 
 def check_allowed_region(region):
     if region not in ALLOWED_REGIONS:
-        raise ValidationError("Region %s is not allowed list: %s" %
+        raise ValidationError("Region %s is not in allowed list: %s" %
                               (region, ', '.join(ALLOWED_REGIONS)))
 
 
