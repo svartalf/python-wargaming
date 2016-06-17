@@ -6,7 +6,9 @@ from retrying import retry
 from datetime import datetime
 
 from wargaming.exceptions import RequestError, ValidationError
-from wargaming.settings import ALLOWED_GAMES, ALLOWED_REGIONS, HTTP_USER_AGENT_HEADER, RETRY_COUNT
+from wargaming.settings import (
+    ALLOWED_GAMES, ALLOWED_REGIONS, HTTP_USER_AGENT_HEADER, RETRY_COUNT, REGION_API_ENDPOINTS
+)
 
 
 def check_allowed_game(game):
@@ -27,7 +29,7 @@ def region_url(region, game):
 
     # all api calls for all project goes to api.worldoftanks.*
     # maybe WG would move this api to api.wargaming.net
-    return 'https://api.worldoftanks.%s/%s/' % (region, game)
+    return '%s/%s/' % (REGION_API_ENDPOINTS[region], game)
 
 
 @six.python_2_unicode_compatible
