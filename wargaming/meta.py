@@ -57,13 +57,18 @@ class WGAPI(object):
         if not self._data:
             self.response = response = requests.get(self.url, params=self.params, headers={
                 'User-Agent': HTTP_USER_AGENT_HEADER,
-            }).json()
+            })
 
-            if response.get('status', '') == 'error':
-                self.error = response['error']
+            try:
+                data = response.json()
+            except requests.exceptions.ContentDecodingError:
+                raise RequestError('Unable to decode json')
+
+            if data.get('status', '') == 'error':
+                self.error = data['error']
                 raise RequestError(**self.error)
 
-            self._data = response.get('data', response)
+            self._data = data.get('data', data)
         return self._data
 
     @property
