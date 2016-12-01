@@ -1,3 +1,5 @@
 requests>=1.0.0
 six
+requests
 retrying
+beautifulsoup4

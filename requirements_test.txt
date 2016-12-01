@@ -1,4 +1,6 @@
 pytest
 mock
+six
 requests
 retrying
+beautifulsoup4

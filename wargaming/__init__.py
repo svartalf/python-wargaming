@@ -34,6 +34,11 @@ class WoTB(BaseAPI):
 
 
 @six.add_metaclass(MetaAPI)
+class WoTX(BaseAPI):
+    pass
+
+
+@six.add_metaclass(MetaAPI)
 class WoWS(BaseAPI):
     pass
 

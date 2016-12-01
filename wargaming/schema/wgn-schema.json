@@ -1,521 +1,4174 @@
 {
     "account": {
         "info": {
-            "__doc__": "Method returns Wargaming account details.",
-            "access_token": {
-                "doc": "Access token is used to access personal user data. The token is obtained via authentication and has expiration time.",
-                "required": false,
-                "type": "string"
-            },
-            "account_id": {
-                "doc": "Player ID",
-                "required": true,
-                "type": "numeric, list"
-            },
-            "application_id": {
-                "doc": "Application ID",
-                "required": true,
-                "type": "string"
-            },
-            "fields": {
-                "doc": "Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields.",
-                "required": false,
-                "type": "string, list"
-            },
-            "language": {
-                "doc": "Localization language. Valid values: \n\n\"en\" \u2014 English (by default)\n\"ru\" \u2014 \u0420\u0443\u0441\u0441\u043a\u0438\u0439 \n\"pl\" \u2014 Polski \n\"de\" \u2014 Deutsch \n\"fr\" \u2014 Fran\u00e7ais \n\"es\" \u2014 Espa\u00f1ol \n\"zh-cn\" \u2014 \u7b80\u4f53\u4e2d\u6587 \n\"tr\" \u2014 T\u00fcrk\u00e7e \n\"cs\" \u2014 \u010ce\u0161tina \n\"th\" \u2014 \u0e44\u0e17\u0e22 \n\"vi\" \u2014 Ti\u1ebfng Vi\u1ec7t \n\"ko\" \u2014 \ud55c\uad6d\uc5b4",
-                "required": false,
-                "type": "string"
-            }
+            "allowed_http_methods": [
+                "GET",
+                "POST"
+            ],
+            "allowed_protocols": [
+                "http",
+                "https"
+            ],
+            "api_url": "api.worldoftanks.ru/wgn/",
+            "available_display_indices": [
+                "eu",
+                "na",
+                "ru"
+            ],
+            "description": "<p>Method returns Wargaming account details.</p>",
+            "display_index": "ru",
+            "fields": [
+                {
+                    "description": "<p>Player ID</p>",
+                    "name": [
+                        "account_id"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Date when player's account was created</p>",
+                    "name": [
+                        "created_at"
+                    ],
+                    "type": "timestamp"
+                },
+                {
+                    "description": "<p>List of games player has played</p>",
+                    "name": [
+                        "games"
+                    ],
+                    "type": "list of strings"
+                },
+                {
+                    "description": "<p>Player name</p>",
+                    "name": [
+                        "nickname"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "type": "empty_line"
+                },
+                {
+                    "description": "<p>Player's private data</p>",
+                    "name": [
+                        "private"
+                    ],
+                    "type": "block_header"
+                },
+                {
+                    "description": "<p>Amount of Free Experience</p>",
+                    "name": [
+                        "private",
+                        "free_xp"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Current gold balance</p>",
+                    "name": [
+                        "private",
+                        "gold"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Premium Account expiration date</p>",
+                    "name": [
+                        "private",
+                        "premium_expires_at"
+                    ],
+                    "type": "timestamp"
+                }
+            ],
+            "name": "Account Information",
+            "parameters": [
+                {
+                    "description": "<p>Application ID</p>",
+                    "name": "application_id",
+                    "required": true,
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Localization language. Valid values:</p>\n<ul>\n<li>\"en\" &mdash; English </li>\n<li>\"ru\" &mdash; \u0420\u0443\u0441\u0441\u043a\u0438\u0439 (by default)</li>\n<li>\"pl\" &mdash; Polski </li>\n<li>\"de\" &mdash; Deutsch </li>\n<li>\"fr\" &mdash; Fran\u00e7ais </li>\n<li>\"es\" &mdash; Espa\u00f1ol </li>\n<li>\"zh-cn\" &mdash; \u7b80\u4f53\u4e2d\u6587 </li>\n<li>\"tr\" &mdash; T\u00fcrk\u00e7e </li>\n<li>\"cs\" &mdash; \u010ce\u0161tina </li>\n<li>\"th\" &mdash; \u0e44\u0e17\u0e22 </li>\n<li>\"vi\" &mdash; Ti\u1ebfng Vi\u1ec7t </li>\n<li>\"ko\" &mdash; \ud55c\uad6d\uc5b4</li>\n</ul>",
+                    "name": "language",
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields.</p>",
+                    "name": "fields",
+                    "type": "string, list"
+                },
+                {
+                    "description": "<p>Access token is used to access personal user data. The token is obtained via authentication and has expiration time.</p>",
+                    "name": "access_token",
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Player ID</p>",
+                    "name": "account_id",
+                    "required": true,
+                    "type": "numeric, list"
+                }
+            ],
+            "realm": "ru",
+            "section": "account",
+            "url": "account/info"
         },
         "list": {
-            "__doc__": "Method returns partial list of players who have ever accessed in any Wargaming game. The list is filtered by name or by initial characters of user name and sorted alphabetically.",
-            "application_id": {
-                "doc": "Application ID",
-                "required": true,
-                "type": "string"
-            },
-            "fields": {
-                "doc": "Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields.",
-                "required": false,
-                "type": "string, list"
-            },
-            "game": {
-                "doc": "Name of the game to player search. If the parameter is not specified, search will be executed across known games. Valid values: \n\n\"wotb\" \u2014 World of Tanks Blitz \n\"wot\" \u2014 World of Tanks \n\"wows\" \u2014 World of Warships \n\"wotg\" \u2014 World of Tanks Generals \n\"wowp\" \u2014 World of Warplanes",
-                "required": false,
-                "type": "string, list"
-            },
-            "language": {
-                "doc": "Localization language. Valid values: \n\n\"en\" \u2014 English (by default)\n\"ru\" \u2014 \u0420\u0443\u0441\u0441\u043a\u0438\u0439 \n\"pl\" \u2014 Polski \n\"de\" \u2014 Deutsch \n\"fr\" \u2014 Fran\u00e7ais \n\"es\" \u2014 Espa\u00f1ol \n\"zh-cn\" \u2014 \u7b80\u4f53\u4e2d\u6587 \n\"tr\" \u2014 T\u00fcrk\u00e7e \n\"cs\" \u2014 \u010ce\u0161tina \n\"th\" \u2014 \u0e44\u0e17\u0e22 \n\"vi\" \u2014 Ti\u1ebfng Vi\u1ec7t \n\"ko\" \u2014 \ud55c\uad6d\uc5b4",
-                "required": false,
-                "type": "string"
-            },
-            "limit": {
-                "doc": "Number of returned entries (fewer can be returned, but not more than 100). If the limit sent exceeds 100, an limit of None is applied (by default).",
-                "required": false,
-                "type": "numeric"
-            },
-            "search": {
-                "doc": "Search bar by player name. Search type and minimum string length depend on \"type\" parameter. If \"exact\" search type is used, indication of list of names, separated by commas is allowed.",
-                "required": true,
-                "type": "string"
-            },
-            "type": {
-                "doc": "Search type. Default is startswith. Valid values: \n\n\"startswith\" \u2014 Search by initial part of player name (case insensitive). Minimum length: 3 characters. Maximum length: 24 characters. (by default)\n\"exact\" \u2014 Search by exact match of player name (case insensitive). Indication of list of names, separated by commas is allowed (up to 100 values)",
-                "required": false,
-                "type": "string"
-            }
+            "allowed_http_methods": [
+                "GET",
+                "POST"
+            ],
+            "allowed_protocols": [
+                "http",
+                "https"
+            ],
+            "api_url": "api.worldoftanks.ru/wgn/",
+            "available_display_indices": [
+                "asia",
+                "eu",
+                "kr",
+                "na",
+                "ru"
+            ],
+            "description": "<p>Method returns partial list of players who have ever accessed in any Wargaming game. The list is filtered by name or by initial characters of user name and sorted alphabetically.</p>",
+            "display_index": "ru",
+            "errors": [
+                {
+                    "code": 402,
+                    "description": "<p><strong>Search</strong> parameter not specified with no account_id</p>",
+                    "message": "SEARCH_NOT_SPECIFIED"
+                },
+                {
+                    "code": 407,
+                    "description": "<p><strong>Search</strong> parameter is not long enough. Allowed value depends on <strong>type</strong> parameter.</p>",
+                    "message": "NOT_ENOUGH_SEARCH_LENGTH"
+                },
+                {
+                    "code": 407,
+                    "description": "<p>Limit of specified names in <strong>search</strong>parameter exceeded ( &gt;100 )</p>",
+                    "message": "SEARCH_LIST_LIMIT_EXCEEDED"
+                }
+            ],
+            "fields": [
+                {
+                    "description": "<p>Player ID</p>",
+                    "name": [
+                        "account_id"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Date when player's account was created</p>",
+                    "name": [
+                        "created_at"
+                    ],
+                    "type": "timestamp"
+                },
+                {
+                    "description": "<p>List of games player has played</p>",
+                    "name": [
+                        "games"
+                    ],
+                    "type": "list of strings"
+                },
+                {
+                    "description": "<p>Player name</p>",
+                    "name": [
+                        "nickname"
+                    ],
+                    "type": "string"
+                }
+            ],
+            "name": "List of accounts",
+            "parameters": [
+                {
+                    "description": "<p>Application ID</p>",
+                    "name": "application_id",
+                    "required": true,
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Localization language. Valid values:</p>\n<ul>\n<li>\"en\" &mdash; English </li>\n<li>\"ru\" &mdash; \u0420\u0443\u0441\u0441\u043a\u0438\u0439 (by default)</li>\n<li>\"pl\" &mdash; Polski </li>\n<li>\"de\" &mdash; Deutsch </li>\n<li>\"fr\" &mdash; Fran\u00e7ais </li>\n<li>\"es\" &mdash; Espa\u00f1ol </li>\n<li>\"zh-cn\" &mdash; \u7b80\u4f53\u4e2d\u6587 </li>\n<li>\"tr\" &mdash; T\u00fcrk\u00e7e </li>\n<li>\"cs\" &mdash; \u010ce\u0161tina </li>\n<li>\"th\" &mdash; \u0e44\u0e17\u0e22 </li>\n<li>\"vi\" &mdash; Ti\u1ebfng Vi\u1ec7t </li>\n<li>\"ko\" &mdash; \ud55c\uad6d\uc5b4</li>\n</ul>",
+                    "name": "language",
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields.</p>",
+                    "name": "fields",
+                    "type": "string, list"
+                },
+                {
+                    "description": "<p>Name of the game to player search. If the parameter is not specified, search will be executed across known games. Valid values:</p>\n<ul>\n<li>\"wotb\" &mdash; World of Tanks Blitz </li>\n<li>\"wot\" &mdash; World of Tanks </li>\n<li>\"wows\" &mdash; World of Warships </li>\n<li>\"wotg\" &mdash; World of Tanks Generals </li>\n<li>\"wowp\" &mdash; World of Warplanes</li>\n</ul>",
+                    "name": "game",
+                    "type": "string, list"
+                },
+                {
+                    "description": "<p>Search type. Default is <strong>startswith</strong>. Valid values:</p>\n<ul>\n<li>\"startswith\" &mdash; Search by initial part of player name (case insensitive). Minimum length: 3 characters. Maximum length: 24 characters. (by default)</li>\n<li>\"exact\" &mdash; Search by exact match of player name (case insensitive). Indication of list of names, separated by commas is allowed (up to 100 values)</li>\n</ul>",
+                    "name": "type",
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Search bar by player name. Search type and minimum string length depend on \"type\" parameter. If \"exact\" search type is used, indication of list of names, separated by commas is allowed.</p>",
+                    "name": "search",
+                    "required": true,
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Number of returned entries (fewer can be returned, but not more than 100). If the limit sent exceeds 100, an limit of None is applied (by default).</p>",
+                    "name": "limit",
+                    "type": "numeric"
+                }
+            ],
+            "realm": "ru",
+            "section": "account",
+            "url": "account/list"
         }
     },
     "clans": {
         "glossary": {
-            "__doc__": "Method returns information on clan entities.",
-            "application_id": {
-                "doc": "Application ID",
-                "required": true,
-                "type": "string"
-            },
-            "fields": {
-                "doc": "Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields.",
-                "required": false,
-                "type": "string, list"
-            },
-            "language": {
-                "doc": "Localization language. Valid values: \n\n\"en\" \u2014 English (by default)\n\"ru\" \u2014 \u0420\u0443\u0441\u0441\u043a\u0438\u0439 \n\"pl\" \u2014 Polski \n\"de\" \u2014 Deutsch \n\"fr\" \u2014 Fran\u00e7ais \n\"es\" \u2014 Espa\u00f1ol \n\"zh-cn\" \u2014 \u7b80\u4f53\u4e2d\u6587 \n\"tr\" \u2014 T\u00fcrk\u00e7e \n\"cs\" \u2014 \u010ce\u0161tina \n\"th\" \u2014 \u0e44\u0e17\u0e22 \n\"vi\" \u2014 Ti\u1ebfng Vi\u1ec7t \n\"ko\" \u2014 \ud55c\uad6d\uc5b4",
-                "required": false,
-                "type": "string"
-            }
+            "allowed_http_methods": [
+                "GET",
+                "POST"
+            ],
+            "allowed_protocols": [
+                "http",
+                "https"
+            ],
+            "api_url": "api.worldoftanks.ru/wgn/",
+            "available_display_indices": [
+                "asia",
+                "eu",
+                "kr",
+                "na",
+                "ru"
+            ],
+            "description": "<p>Method returns information on clan entities in World of Tanks and World of Warplanes.</p>",
+            "display_index": "ru",
+            "fields": [
+                {
+                    "description": "<p>Available clan positions</p>",
+                    "name": [
+                        "clans_roles"
+                    ],
+                    "type": "associative array"
+                },
+                {
+                    "description": "<p>Game with clan entities</p>",
+                    "name": [
+                        "game"
+                    ],
+                    "type": "string"
+                }
+            ],
+            "name": "Clan glossary",
+            "parameters": [
+                {
+                    "description": "<p>Application ID</p>",
+                    "name": "application_id",
+                    "required": true,
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Localization language. Valid values:</p>\n<ul>\n<li>\"en\" &mdash; English </li>\n<li>\"ru\" &mdash; \u0420\u0443\u0441\u0441\u043a\u0438\u0439 (by default)</li>\n<li>\"pl\" &mdash; Polski </li>\n<li>\"de\" &mdash; Deutsch </li>\n<li>\"fr\" &mdash; Fran\u00e7ais </li>\n<li>\"es\" &mdash; Espa\u00f1ol </li>\n<li>\"zh-cn\" &mdash; \u7b80\u4f53\u4e2d\u6587 </li>\n<li>\"tr\" &mdash; T\u00fcrk\u00e7e </li>\n<li>\"cs\" &mdash; \u010ce\u0161tina </li>\n<li>\"th\" &mdash; \u0e44\u0e17\u0e22 </li>\n<li>\"vi\" &mdash; Ti\u1ebfng Vi\u1ec7t </li>\n<li>\"ko\" &mdash; \ud55c\uad6d\uc5b4</li>\n</ul>",
+                    "name": "language",
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields.</p>",
+                    "name": "fields",
+                    "type": "string, list"
+                },
+                {
+                    "description": "<p>Name of the game to perform the clan search in. If the parameter is not specified, search will be executed across World of Tanks. Valid values:</p>\n<ul>\n<li>\"wot\" &mdash; World of Tanks (by default)</li>\n<li>\"wowp\" &mdash; World of Warplanes</li>\n</ul>",
+                    "name": "game",
+                    "type": "string"
+                }
+            ],
+            "realm": "ru",
+            "section": "clans",
+            "url": "clans/glossary"
         },
         "info": {
-            "__doc__": "Method returns detailed clan information.",
-            "access_token": {
-                "doc": "Access token is used to access personal user data. The token is obtained via authentication and has expiration time.",
-                "required": false,
-                "type": "string"
-            },
-            "application_id": {
-                "doc": "Application ID",
-                "required": true,
-                "type": "string"
-            },
-            "clan_id": {
-                "doc": "Clan ID",
-                "required": true,
-                "type": "numeric, list"
-            },
-            "extra": {
-                "doc": "Extra fields to be included into the response. Valid values: \n\nprivate.online_members",
-                "required": false,
-                "type": "string, list"
-            },
-            "fields": {
-                "doc": "Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields.",
-                "required": false,
-                "type": "string, list"
-            },
-            "language": {
-                "doc": "Localization language. Valid values: \n\n\"en\" \u2014 English (by default)\n\"ru\" \u2014 \u0420\u0443\u0441\u0441\u043a\u0438\u0439 \n\"pl\" \u2014 Polski \n\"de\" \u2014 Deutsch \n\"fr\" \u2014 Fran\u00e7ais \n\"es\" \u2014 Espa\u00f1ol \n\"zh-cn\" \u2014 \u7b80\u4f53\u4e2d\u6587 \n\"tr\" \u2014 T\u00fcrk\u00e7e \n\"cs\" \u2014 \u010ce\u0161tina \n\"th\" \u2014 \u0e44\u0e17\u0e22 \n\"vi\" \u2014 Ti\u1ebfng Vi\u1ec7t \n\"ko\" \u2014 \ud55c\uad6d\uc5b4",
-                "required": false,
-                "type": "string"
-            },
-            "members_key": {
-                "doc": "This parameter changes members field type. Valid values: \n\n\"id\" \u2014 Members field will contain associative array with account_id indexing in response",
-                "required": false,
-                "type": "string"
-            }
+            "allowed_http_methods": [
+                "GET",
+                "POST"
+            ],
+            "allowed_protocols": [
+                "http",
+                "https"
+            ],
+            "api_url": "api.worldoftanks.ru/wgn/",
+            "available_display_indices": [
+                "asia",
+                "eu",
+                "kr",
+                "na",
+                "ru"
+            ],
+            "description": "<p>Method returns detailed clan information. Information is available for World of Tanks and World of Warplanes clans.</p>",
+            "display_index": "ru",
+            "fields": [
+                {
+                    "description": "<p>Clan can invite players</p>",
+                    "name": [
+                        "accepts_join_requests"
+                    ],
+                    "type": "boolean"
+                },
+                {
+                    "description": "<p>Clan ID</p>",
+                    "name": [
+                        "clan_id"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Clan color in HEX #RRGGBB</p>",
+                    "name": [
+                        "color"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Clan creation date</p>",
+                    "name": [
+                        "created_at"
+                    ],
+                    "type": "timestamp"
+                },
+                {
+                    "description": "<p>Clan creator ID</p>",
+                    "name": [
+                        "creator_id"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Clan creator's name</p>",
+                    "name": [
+                        "creator_name"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Clan description</p>",
+                    "name": [
+                        "description"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Clan description in HTML</p>",
+                    "name": [
+                        "description_html"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Game where clan was created</p>",
+                    "name": [
+                        "game"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Clan has been deleted. The deleted clan data contains valid values for the following fields only: <strong>clan_id</strong>, <strong>is_clan_disbanded</strong>, <strong>updated_at</strong>.</p>",
+                    "name": [
+                        "is_clan_disbanded"
+                    ],
+                    "type": "boolean"
+                },
+                {
+                    "description": "<p>Clan Commander ID</p>",
+                    "name": [
+                        "leader_id"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Commander's name</p>",
+                    "name": [
+                        "leader_name"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Number of clan members</p>",
+                    "name": [
+                        "members_count"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Clan motto</p>",
+                    "name": [
+                        "motto"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Clan name</p>",
+                    "name": [
+                        "name"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Old clan name</p>",
+                    "name": [
+                        "old_name"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Old clan tag</p>",
+                    "name": [
+                        "old_tag"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Time (UTC) when clan name was changed</p>",
+                    "name": [
+                        "renamed_at"
+                    ],
+                    "type": "timestamp"
+                },
+                {
+                    "description": "<p>Clan tag</p>",
+                    "name": [
+                        "tag"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Time when clan details were updated</p>",
+                    "name": [
+                        "updated_at"
+                    ],
+                    "type": "timestamp"
+                },
+                {
+                    "type": "empty_line"
+                },
+                {
+                    "description": "<p>Information on clan emblems in games and on clan portal</p>",
+                    "name": [
+                        "emblems"
+                    ],
+                    "type": "block_header"
+                },
+                {
+                    "description": "<p>List of links to 195x195 px emblems</p>",
+                    "name": [
+                        "emblems",
+                        "x195"
+                    ],
+                    "type": "associative array"
+                },
+                {
+                    "description": "<p>List of links to 24x24 px emblems</p>",
+                    "name": [
+                        "emblems",
+                        "x24"
+                    ],
+                    "type": "associative array"
+                },
+                {
+                    "description": "<p>List of links to 256x256 px emblems</p>",
+                    "name": [
+                        "emblems",
+                        "x256"
+                    ],
+                    "type": "associative array"
+                },
+                {
+                    "description": "<p>List of links to 32x32 px emblems</p>",
+                    "name": [
+                        "emblems",
+                        "x32"
+                    ],
+                    "type": "associative array"
+                },
+                {
+                    "description": "<p>List of links to 64x64 px emblems</p>",
+                    "name": [
+                        "emblems",
+                        "x64"
+                    ],
+                    "type": "associative array"
+                },
+                {
+                    "type": "empty_line"
+                },
+                {
+                    "description": "<p>Information on clan members. Field format depends on members_key input parameter.</p>",
+                    "name": [
+                        "members"
+                    ],
+                    "type": "block_header"
+                },
+                {
+                    "description": "<p>Player account ID</p>",
+                    "name": [
+                        "members",
+                        "account_id"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Player name</p>",
+                    "name": [
+                        "members",
+                        "account_name"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Date when player joined clan</p>",
+                    "name": [
+                        "members",
+                        "joined_at"
+                    ],
+                    "type": "timestamp"
+                },
+                {
+                    "description": "<p>Technical position name</p>",
+                    "name": [
+                        "members",
+                        "role"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Position</p>",
+                    "name": [
+                        "members",
+                        "role_i18n"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "type": "empty_line"
+                },
+                {
+                    "description": "<p>Restricted clan information</p>",
+                    "name": [
+                        "private"
+                    ],
+                    "type": "block_header"
+                },
+                {
+                    "description": "<p>List of clan members with an active game session in World of Tanks.</p>\n<p><strong>An extra field.</strong></p>",
+                    "name": [
+                        "private",
+                        "online_members"
+                    ],
+                    "type": "list of integers"
+                },
+                {
+                    "description": "<p>Gold in clan treasury</p>",
+                    "name": [
+                        "private",
+                        "treasury"
+                    ],
+                    "type": "numeric"
+                }
+            ],
+            "name": "Clan details",
+            "parameters": [
+                {
+                    "description": "<p>Application ID</p>",
+                    "name": "application_id",
+                    "required": true,
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Localization language. Valid values:</p>\n<ul>\n<li>\"en\" &mdash; English </li>\n<li>\"ru\" &mdash; \u0420\u0443\u0441\u0441\u043a\u0438\u0439 (by default)</li>\n<li>\"pl\" &mdash; Polski </li>\n<li>\"de\" &mdash; Deutsch </li>\n<li>\"fr\" &mdash; Fran\u00e7ais </li>\n<li>\"es\" &mdash; Espa\u00f1ol </li>\n<li>\"zh-cn\" &mdash; \u7b80\u4f53\u4e2d\u6587 </li>\n<li>\"tr\" &mdash; T\u00fcrk\u00e7e </li>\n<li>\"cs\" &mdash; \u010ce\u0161tina </li>\n<li>\"th\" &mdash; \u0e44\u0e17\u0e22 </li>\n<li>\"vi\" &mdash; Ti\u1ebfng Vi\u1ec7t </li>\n<li>\"ko\" &mdash; \ud55c\uad6d\uc5b4</li>\n</ul>",
+                    "name": "language",
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields.</p>",
+                    "name": "fields",
+                    "type": "string, list"
+                },
+                {
+                    "description": "<p>Access token is used to access personal user data. The token is obtained via authentication and has expiration time.</p>",
+                    "name": "access_token",
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Extra fields to be included into the response. Valid values: </p>\n<ul>\n<li>private.online_members</li>\n</ul>",
+                    "name": "extra",
+                    "type": "string, list"
+                },
+                {
+                    "description": "<p>Clan ID</p>",
+                    "name": "clan_id",
+                    "required": true,
+                    "type": "numeric, list"
+                },
+                {
+                    "description": "<p>This parameter changes members field type. Valid values:</p>\n<ul>\n<li>\"id\" &mdash; Members field will contain associative array with account_id indexing in response</li>\n</ul>",
+                    "name": "members_key",
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Name of the game to perform the clan search in. If the parameter is not specified, search will be executed across World of Tanks. Valid values:</p>\n<ul>\n<li>\"wot\" &mdash; World of Tanks (by default)</li>\n<li>\"wowp\" &mdash; World of Warplanes</li>\n</ul>",
+                    "name": "game",
+                    "type": "string"
+                }
+            ],
+            "realm": "ru",
+            "section": "clans",
+            "url": "clans/info"
         },
         "list": {
-            "__doc__": "Method searches through clans and sorts them by the following logic:\n\nthe exact match of clan tag is placed first\nthe exact match of clan name is placed second\nname or tag matches are placed next\nall comparisons performed are case insensitive\nexpression [wg] is considered as the clan tag\nsearch for expression \"[wg] clan\" is performed by exact match of clan name and tag\n\nDisbanded, NPC, and technically frozen clans are excluded from response.",
-            "application_id": {
-                "doc": "Application ID",
-                "required": true,
-                "type": "string"
-            },
-            "fields": {
-                "doc": "Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields.",
-                "required": false,
-                "type": "string, list"
-            },
-            "limit": {
-                "doc": "Number of returned entries (fewer can be returned, but not more than 100). If the limit sent exceeds 100, an limit of 100 is applied (by default).",
-                "required": false,
-                "type": "numeric"
-            },
-            "page_no": {
-                "doc": "Page number",
-                "required": false,
-                "type": "numeric"
-            },
-            "search": {
-                "doc": "Part of name or tag for clan search. Minimum 2 characters",
-                "required": false,
-                "type": "string"
-            }
+            "allowed_http_methods": [
+                "GET",
+                "POST"
+            ],
+            "allowed_protocols": [
+                "http",
+                "https"
+            ],
+            "api_url": "api.worldoftanks.ru/wgn/",
+            "available_display_indices": [
+                "asia",
+                "eu",
+                "kr",
+                "na",
+                "ru"
+            ],
+            "description": "<p>Method searches and sorts clans by the following logic:</p>\n<ul>\n<li>exact match of clan tag placed first</li>\n<li>exact match of clan name placed second</li>\n<li>name or tag matches are placed next</li>\n<li>all comparisons are performed case insensitive</li>\n<li>expression [wg] is converted to wg and considered as the clan tag</li>\n<li>search for expression \"[wg] clan\" is performed by exact match of clan name and tag</li>\n</ul>\n<p>Disbanded, NPC and technically frozen clans are excluded from response. Search is executed across World of Tanks and World of Warplanes.</p>",
+            "display_index": "ru",
+            "fields": [
+                {
+                    "description": "<p>Clan ID</p>",
+                    "name": [
+                        "clan_id"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Clan color in HEX #RRGGBB</p>",
+                    "name": [
+                        "color"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Clan creation date</p>",
+                    "name": [
+                        "created_at"
+                    ],
+                    "type": "timestamp"
+                },
+                {
+                    "description": "<p>Game where clan was created</p>",
+                    "name": [
+                        "game"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Number of clan members</p>",
+                    "name": [
+                        "members_count"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Clan name</p>",
+                    "name": [
+                        "name"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Clan tag</p>",
+                    "name": [
+                        "tag"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "type": "empty_line"
+                },
+                {
+                    "description": "<p>Information on clan emblems in games and on clan portal</p>",
+                    "name": [
+                        "emblems"
+                    ],
+                    "type": "block_header"
+                },
+                {
+                    "description": "<p>List of links to 195x195 px emblems</p>",
+                    "name": [
+                        "emblems",
+                        "x195"
+                    ],
+                    "type": "associative array"
+                },
+                {
+                    "description": "<p>List of links to 24x24 px emblems</p>",
+                    "name": [
+                        "emblems",
+                        "x24"
+                    ],
+                    "type": "associative array"
+                },
+                {
+                    "description": "<p>List of links to 256x256 px emblems</p>",
+                    "name": [
+                        "emblems",
+                        "x256"
+                    ],
+                    "type": "associative array"
+                },
+                {
+                    "description": "<p>List of links to 32x32 px emblems</p>",
+                    "name": [
+                        "emblems",
+                        "x32"
+                    ],
+                    "type": "associative array"
+                },
+                {
+                    "description": "<p>List of links to 64x64 px emblems</p>",
+                    "name": [
+                        "emblems",
+                        "x64"
+                    ],
+                    "type": "associative array"
+                }
+            ],
+            "name": "Clans",
+            "parameters": [
+                {
+                    "description": "<p>Application ID</p>",
+                    "name": "application_id",
+                    "required": true,
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields.</p>",
+                    "name": "fields",
+                    "type": "string, list"
+                },
+                {
+                    "description": "<p>Part of name or tag for clan search. Minimum 2 characters</p>",
+                    "name": "search",
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Number of returned entries (fewer can be returned, but not more than 100). If the limit sent exceeds 100, an limit of 100 is applied (by default).</p>",
+                    "name": "limit",
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Page number</p>",
+                    "name": "page_no",
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Name of the game to perform the clan search in. If the parameter is not specified, search will be executed across World of Tanks. Valid values:</p>\n<ul>\n<li>\"wot\" &mdash; World of Tanks </li>\n<li>\"wowp\" &mdash; World of Warplanes</li>\n</ul>",
+                    "name": "game",
+                    "type": "string, list"
+                }
+            ],
+            "realm": "ru",
+            "section": "clans",
+            "url": "clans/list"
         },
         "membersinfo": {
-            "__doc__": "Method returns clan member info and short info on the clan.",
-            "account_id": {
-                "doc": "Account ID",
-                "required": true,
-                "type": "numeric, list"
-            },
-            "application_id": {
-                "doc": "Application ID",
-                "required": true,
-                "type": "string"
-            },
-            "fields": {
-                "doc": "Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields.",
-                "required": false,
-                "type": "string, list"
-            }
+            "allowed_http_methods": [
+                "GET",
+                "POST"
+            ],
+            "allowed_protocols": [
+                "http",
+                "https"
+            ],
+            "api_url": "api.worldoftanks.ru/wgn/",
+            "available_display_indices": [
+                "asia",
+                "eu",
+                "kr",
+                "na",
+                "ru"
+            ],
+            "description": "<p>Method returns clan member info and short info on the clan. Information is available for World of Tanks and World of Warplanes clans.</p>",
+            "display_index": "ru",
+            "fields": [
+                {
+                    "description": "<p>Player account ID</p>",
+                    "name": [
+                        "account_id"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Player name</p>",
+                    "name": [
+                        "account_name"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Date when player joined clan</p>",
+                    "name": [
+                        "joined_at"
+                    ],
+                    "type": "timestamp"
+                },
+                {
+                    "description": "<p>Technical position name</p>",
+                    "name": [
+                        "role"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Position</p>",
+                    "name": [
+                        "role_i18n"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "type": "empty_line"
+                },
+                {
+                    "description": "<p>Short clan info</p>",
+                    "name": [
+                        "clan"
+                    ],
+                    "type": "block_header"
+                },
+                {
+                    "description": "<p>Clan ID</p>",
+                    "name": [
+                        "clan",
+                        "clan_id"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Clan color in HEX #RRGGBB</p>",
+                    "name": [
+                        "clan",
+                        "color"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Clan creation date</p>",
+                    "name": [
+                        "clan",
+                        "created_at"
+                    ],
+                    "type": "timestamp"
+                },
+                {
+                    "description": "<p>Game where clan was created</p>",
+                    "name": [
+                        "clan",
+                        "game"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Number of clan members</p>",
+                    "name": [
+                        "clan",
+                        "members_count"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Clan name</p>",
+                    "name": [
+                        "clan",
+                        "name"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Clan tag</p>",
+                    "name": [
+                        "clan",
+                        "tag"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "type": "empty_line"
+                },
+                {
+                    "description": "<p>Information on clan emblems in games and on clan portal</p>",
+                    "name": [
+                        "clan",
+                        "emblems"
+                    ],
+                    "type": "block_header"
+                },
+                {
+                    "description": "<p>List of links to 195x195 px emblems</p>",
+                    "name": [
+                        "clan",
+                        "emblems",
+                        "x195"
+                    ],
+                    "type": "associative array"
+                },
+                {
+                    "description": "<p>List of links to 24x24 px emblems</p>",
+                    "name": [
+                        "clan",
+                        "emblems",
+                        "x24"
+                    ],
+                    "type": "associative array"
+                },
+                {
+                    "description": "<p>List of links to 256x256 px emblems</p>",
+                    "name": [
+                        "clan",
+                        "emblems",
+                        "x256"
+                    ],
+                    "type": "associative array"
+                },
+                {
+                    "description": "<p>List of links to 32x32 px emblems</p>",
+                    "name": [
+                        "clan",
+                        "emblems",
+                        "x32"
+                    ],
+                    "type": "associative array"
+                },
+                {
+                    "description": "<p>List of links to 64x64 px emblems</p>",
+                    "name": [
+                        "clan",
+                        "emblems",
+                        "x64"
+                    ],
+                    "type": "associative array"
+                }
+            ],
+            "name": "Clan member details",
+            "parameters": [
+                {
+                    "description": "<p>Application ID</p>",
+                    "name": "application_id",
+                    "required": true,
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields.</p>",
+                    "name": "fields",
+                    "type": "string, list"
+                },
+                {
+                    "description": "<p>Account ID</p>",
+                    "name": "account_id",
+                    "required": true,
+                    "type": "numeric, list"
+                },
+                {
+                    "description": "<p>Name of the game to perform the clan search in. If the parameter is not specified, search will be executed across World of Tanks. Valid values:</p>\n<ul>\n<li>\"wot\" &mdash; World of Tanks (by default)</li>\n<li>\"wowp\" &mdash; World of Warplanes</li>\n</ul>",
+                    "name": "game",
+                    "type": "string"
+                }
+            ],
+            "realm": "ru",
+            "section": "clans",
+            "url": "clans/membersinfo"
         },
         "messageboard": {
-            "__doc__": "Method returns messages of clan Message Board.",
-            "access_token": {
-                "doc": "Access token is used to access personal user data. The token is obtained via authentication and has expiration time.",
-                "required": true,
-                "type": "string"
-            },
-            "application_id": {
-                "doc": "Application ID",
-                "required": true,
-                "type": "string"
-            },
-            "fields": {
-                "doc": "Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields.",
-                "required": false,
-                "type": "string, list"
-            }
+            "allowed_http_methods": [
+                "GET",
+                "POST"
+            ],
+            "allowed_protocols": [
+                "http",
+                "https"
+            ],
+            "api_url": "api.worldoftanks.ru/wgn/",
+            "available_display_indices": [
+                "asia",
+                "eu",
+                "kr",
+                "na",
+                "ru"
+            ],
+            "description": "<p>Method returns messages of clan Message Board.</p>",
+            "display_index": "ru",
+            "errors": [
+                {
+                    "code": 404,
+                    "description": "<p>Player is not a clan member</p>",
+                    "message": "CLAN_NOT_FOUND"
+                }
+            ],
+            "fields": [
+                {
+                    "description": "<p>Message author ID</p>",
+                    "name": [
+                        "author_id"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Message creation date</p>",
+                    "name": [
+                        "created_at"
+                    ],
+                    "type": "timestamp"
+                },
+                {
+                    "description": "<p>ID of a player who has changed the message</p>",
+                    "name": [
+                        "editor_id"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Indicates if the message has been read</p>",
+                    "name": [
+                        "is_read"
+                    ],
+                    "type": "boolean"
+                },
+                {
+                    "description": "<p>Message text</p>",
+                    "name": [
+                        "message"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Date when message was updated</p>",
+                    "name": [
+                        "updated_at"
+                    ],
+                    "type": "timestamp"
+                }
+            ],
+            "name": "Message Board",
+            "parameters": [
+                {
+                    "description": "<p>Application ID</p>",
+                    "name": "application_id",
+                    "required": true,
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields.</p>",
+                    "name": "fields",
+                    "type": "string, list"
+                },
+                {
+                    "description": "<p>Access token is used to access personal user data. The token is obtained via authentication and has expiration time.</p>",
+                    "name": "access_token",
+                    "required": true,
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Name of the game to perform the clan search in. If the parameter is not specified, search will be executed across World of Tanks. Valid values:</p>\n<ul>\n<li>\"wot\" &mdash; World of Tanks (by default)</li>\n<li>\"wowp\" &mdash; World of Warplanes</li>\n</ul>",
+                    "name": "game",
+                    "type": "string"
+                }
+            ],
+            "realm": "ru",
+            "section": "clans",
+            "url": "clans/messageboard"
         }
     },
     "league": {
         "grid": {
-            "__doc__": "Method returns tournament bracket \u2014 list of matches in the tournament rounds.",
-            "application_id": {
-                "doc": "Application ID",
-                "required": true,
-                "type": "string"
-            },
-            "fields": {
-                "doc": "Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields.",
-                "required": false,
-                "type": "string, list"
-            },
-            "language": {
-                "doc": "Localization language. Valid values: \n\n\"en\" \u2014 English (by default)\n\"ru\" \u2014 \u0420\u0443\u0441\u0441\u043a\u0438\u0439 \n\"pl\" \u2014 Polski \n\"de\" \u2014 Deutsch \n\"fr\" \u2014 Fran\u00e7ais \n\"es\" \u2014 Espa\u00f1ol \n\"zh-cn\" \u2014 \u7b80\u4f53\u4e2d\u6587 \n\"tr\" \u2014 T\u00fcrk\u00e7e \n\"cs\" \u2014 \u010ce\u0161tina \n\"th\" \u2014 \u0e44\u0e17\u0e22 \n\"vi\" \u2014 Ti\u1ebfng Vi\u1ec7t \n\"ko\" \u2014 \ud55c\uad6d\uc5b4",
-                "required": false,
-                "type": "string"
-            },
-            "tournament_id": {
-                "doc": "Tournament ID",
-                "required": true,
-                "type": "numeric"
-            }
+            "allowed_http_methods": [
+                "GET",
+                "POST"
+            ],
+            "allowed_protocols": [
+                "http",
+                "https"
+            ],
+            "api_url": "api.worldoftanks.ru/wgn/",
+            "available_display_indices": [
+                "asia",
+                "eu",
+                "kr",
+                "ru"
+            ],
+            "description": "<p>Method returns tournament bracket \u2014 list of matches in the tournament rounds.</p>",
+            "display_index": "ru",
+            "fields": [
+                {
+                    "description": "<p>Tournament round</p>",
+                    "name": [
+                        "round"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "type": "empty_line"
+                },
+                {
+                    "description": "<p>List of matches in the round</p>",
+                    "name": [
+                        "matches"
+                    ],
+                    "type": "block_header"
+                },
+                {
+                    "description": "<p>Match position in the bracket. 'winner' and 'loser' \u2014 corresponding branches for winners and losers. If it is the first round, field value is 'null'.</p>",
+                    "name": [
+                        "matches",
+                        "bracket"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Match ID</p>",
+                    "name": [
+                        "matches",
+                        "match_id"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Match position in round</p>",
+                    "name": [
+                        "matches",
+                        "position"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Match round in the tournament</p>",
+                    "name": [
+                        "matches",
+                        "round"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Match start time. If the match has not started yet, field value is 'null'.</p>",
+                    "name": [
+                        "matches",
+                        "start_at"
+                    ],
+                    "type": "timestamp"
+                },
+                {
+                    "type": "empty_line"
+                },
+                {
+                    "description": "<p>Loser's next match</p>",
+                    "name": [
+                        "matches",
+                        "loser"
+                    ],
+                    "type": "block_header"
+                },
+                {
+                    "description": "<p>ID of the next match for the team in the tournament</p>",
+                    "name": [
+                        "matches",
+                        "loser",
+                        "next_match_id"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>ID of the next round for the team</p>",
+                    "name": [
+                        "matches",
+                        "loser",
+                        "next_round"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Team position in the match: 'left' or 'right'</p>",
+                    "name": [
+                        "matches",
+                        "loser",
+                        "team_in_match"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "type": "empty_line"
+                },
+                {
+                    "description": "<p>Winner's next match</p>",
+                    "name": [
+                        "matches",
+                        "winner"
+                    ],
+                    "type": "block_header"
+                },
+                {
+                    "description": "<p>ID of the next match for the team in the tournament</p>",
+                    "name": [
+                        "matches",
+                        "winner",
+                        "next_match_id"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>ID of the next round for the team</p>",
+                    "name": [
+                        "matches",
+                        "winner",
+                        "next_round"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Team position in the match: 'left' or 'right'</p>",
+                    "name": [
+                        "matches",
+                        "winner",
+                        "team_in_match"
+                    ],
+                    "type": "string"
+                }
+            ],
+            "name": "Bracket",
+            "parameters": [
+                {
+                    "description": "<p>Application ID</p>",
+                    "name": "application_id",
+                    "required": true,
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Localization language. Valid values:</p>\n<ul>\n<li>\"en\" &mdash; English </li>\n<li>\"ru\" &mdash; \u0420\u0443\u0441\u0441\u043a\u0438\u0439 (by default)</li>\n<li>\"pl\" &mdash; Polski </li>\n<li>\"de\" &mdash; Deutsch </li>\n<li>\"fr\" &mdash; Fran\u00e7ais </li>\n<li>\"es\" &mdash; Espa\u00f1ol </li>\n<li>\"zh-cn\" &mdash; \u7b80\u4f53\u4e2d\u6587 </li>\n<li>\"tr\" &mdash; T\u00fcrk\u00e7e </li>\n<li>\"cs\" &mdash; \u010ce\u0161tina </li>\n<li>\"th\" &mdash; \u0e44\u0e17\u0e22 </li>\n<li>\"vi\" &mdash; Ti\u1ebfng Vi\u1ec7t </li>\n<li>\"ko\" &mdash; \ud55c\uad6d\uc5b4</li>\n</ul>",
+                    "name": "language",
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields.</p>",
+                    "name": "fields",
+                    "type": "string, list"
+                },
+                {
+                    "description": "<p>Tournament ID</p>",
+                    "name": "tournament_id",
+                    "required": true,
+                    "type": "numeric"
+                }
+            ],
+            "realm": "ru",
+            "section": "league",
+            "url": "league/grid"
         },
         "halloffame": {
-            "__doc__": "Method returns player ratings by the specified parameters.",
-            "account_id": {
-                "doc": "Account IDs of players",
-                "required": false,
-                "type": "numeric, list"
-            },
-            "application_id": {
-                "doc": "Application ID",
-                "required": true,
-                "type": "string"
-            },
-            "fields": {
-                "doc": "Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields.",
-                "required": false,
-                "type": "string, list"
-            },
-            "language": {
-                "doc": "Localization language. Valid values: \n\n\"en\" \u2014 English (by default)\n\"ru\" \u2014 \u0420\u0443\u0441\u0441\u043a\u0438\u0439 \n\"pl\" \u2014 Polski \n\"de\" \u2014 Deutsch \n\"fr\" \u2014 Fran\u00e7ais \n\"es\" \u2014 Espa\u00f1ol \n\"zh-cn\" \u2014 \u7b80\u4f53\u4e2d\u6587 \n\"tr\" \u2014 T\u00fcrk\u00e7e \n\"cs\" \u2014 \u010ce\u0161tina \n\"th\" \u2014 \u0e44\u0e17\u0e22 \n\"vi\" \u2014 Ti\u1ebfng Vi\u1ec7t \n\"ko\" \u2014 \ud55c\uad6d\uc5b4",
-                "required": false,
-                "type": "string"
-            },
-            "limit": {
-                "doc": "Number of returned entries (fewer can be returned, but not more than 1000). If the limit sent exceeds 1000, an limit of 100 is applied (by default).",
-                "required": false,
-                "type": "numeric"
-            },
-            "order_by": {
-                "doc": "Sorting. Multiple parameters must be divided by commas. To sort in descending order, add '-' before the parameter. Valid values: \n\n\"fct\" \u2014 battle efficiency \n\"dmg\" \u2014 damage caused \n\"frg\" \u2014 enemies destroyed \n\"spt\" \u2014 enemies spotted \n\"cpt\" \u2014 base capture points \n\"dpt\" \u2014 base defense points \n\"gpl\" \u2014 number of battles",
-                "required": false,
-                "type": "string, list"
-            },
-            "page_no": {
-                "doc": "Result page number",
-                "required": false,
-                "type": "numeric"
-            }
+            "allowed_http_methods": [
+                "GET",
+                "POST"
+            ],
+            "allowed_protocols": [
+                "http",
+                "https"
+            ],
+            "api_url": "api.worldoftanks.ru/wgn/",
+            "available_display_indices": [
+                "asia",
+                "eu",
+                "kr",
+                "ru"
+            ],
+            "description": "<p>Method returns player ratings by the specified parameters.</p>",
+            "display_index": "ru",
+            "fields": [
+                {
+                    "description": "<p>Player account ID</p>",
+                    "name": [
+                        "account_id"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Player user name</p>",
+                    "name": [
+                        "nickname"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "type": "empty_line"
+                },
+                {
+                    "description": "<p>Base capture points</p>",
+                    "name": [
+                        "cpt"
+                    ],
+                    "type": "block_header"
+                },
+                {
+                    "description": "<p>Position</p>",
+                    "name": [
+                        "cpt",
+                        "rank"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Absolute value</p>",
+                    "name": [
+                        "cpt",
+                        "value"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "type": "empty_line"
+                },
+                {
+                    "description": "<p>Damage caused</p>",
+                    "name": [
+                        "dmg"
+                    ],
+                    "type": "block_header"
+                },
+                {
+                    "description": "<p>Position</p>",
+                    "name": [
+                        "dmg",
+                        "rank"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Absolute value</p>",
+                    "name": [
+                        "dmg",
+                        "value"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "type": "empty_line"
+                },
+                {
+                    "description": "<p>Base defense points</p>",
+                    "name": [
+                        "dpt"
+                    ],
+                    "type": "block_header"
+                },
+                {
+                    "description": "<p>Position</p>",
+                    "name": [
+                        "dpt",
+                        "rank"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Absolute value</p>",
+                    "name": [
+                        "dpt",
+                        "value"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "type": "empty_line"
+                },
+                {
+                    "description": "<p>Battle efficiency</p>",
+                    "name": [
+                        "fct"
+                    ],
+                    "type": "block_header"
+                },
+                {
+                    "description": "<p>Position</p>",
+                    "name": [
+                        "fct",
+                        "rank"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Absolute value</p>",
+                    "name": [
+                        "fct",
+                        "value"
+                    ],
+                    "type": "float"
+                },
+                {
+                    "type": "empty_line"
+                },
+                {
+                    "description": "<p>Enemies destroyed</p>",
+                    "name": [
+                        "frg"
+                    ],
+                    "type": "block_header"
+                },
+                {
+                    "description": "<p>Position</p>",
+                    "name": [
+                        "frg",
+                        "rank"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Absolute value</p>",
+                    "name": [
+                        "frg",
+                        "value"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "type": "empty_line"
+                },
+                {
+                    "description": "<p>Battles</p>",
+                    "name": [
+                        "gpl"
+                    ],
+                    "type": "block_header"
+                },
+                {
+                    "description": "<p>Position</p>",
+                    "name": [
+                        "gpl",
+                        "rank"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Absolute value</p>",
+                    "name": [
+                        "gpl",
+                        "value"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "type": "empty_line"
+                },
+                {
+                    "description": "<p>Enemies spotted</p>",
+                    "name": [
+                        "spt"
+                    ],
+                    "type": "block_header"
+                },
+                {
+                    "description": "<p>Position</p>",
+                    "name": [
+                        "spt",
+                        "rank"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Absolute value</p>",
+                    "name": [
+                        "spt",
+                        "value"
+                    ],
+                    "type": "numeric"
+                }
+            ],
+            "name": "Hall of Fame",
+            "parameters": [
+                {
+                    "description": "<p>Application ID</p>",
+                    "name": "application_id",
+                    "required": true,
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Localization language. Valid values:</p>\n<ul>\n<li>\"en\" &mdash; English </li>\n<li>\"ru\" &mdash; \u0420\u0443\u0441\u0441\u043a\u0438\u0439 (by default)</li>\n<li>\"pl\" &mdash; Polski </li>\n<li>\"de\" &mdash; Deutsch </li>\n<li>\"fr\" &mdash; Fran\u00e7ais </li>\n<li>\"es\" &mdash; Espa\u00f1ol </li>\n<li>\"zh-cn\" &mdash; \u7b80\u4f53\u4e2d\u6587 </li>\n<li>\"tr\" &mdash; T\u00fcrk\u00e7e </li>\n<li>\"cs\" &mdash; \u010ce\u0161tina </li>\n<li>\"th\" &mdash; \u0e44\u0e17\u0e22 </li>\n<li>\"vi\" &mdash; Ti\u1ebfng Vi\u1ec7t </li>\n<li>\"ko\" &mdash; \ud55c\uad6d\uc5b4</li>\n</ul>",
+                    "name": "language",
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields.</p>",
+                    "name": "fields",
+                    "type": "string, list"
+                },
+                {
+                    "description": "<p>Number of returned entries (fewer can be returned, but not more than 1000). If the limit sent exceeds 1000, an limit of 100 is applied (by default).</p>",
+                    "name": "limit",
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Result page number</p>",
+                    "name": "page_no",
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Sorting. Multiple parameters must be divided by commas. To sort in descending order, add '-' before the parameter. Valid values:</p>\n<ul>\n<li>\"fct\" &mdash; battle efficiency </li>\n<li>\"dmg\" &mdash; damage caused </li>\n<li>\"frg\" &mdash; enemies destroyed </li>\n<li>\"spt\" &mdash; enemies spotted </li>\n<li>\"cpt\" &mdash; base capture points </li>\n<li>\"dpt\" &mdash; base defense points </li>\n<li>\"gpl\" &mdash; number of battles</li>\n</ul>",
+                    "name": "order_by",
+                    "type": "string, list"
+                },
+                {
+                    "description": "<p>Account IDs of players</p>",
+                    "name": "account_id",
+                    "type": "numeric, list"
+                }
+            ],
+            "realm": "ru",
+            "section": "league",
+            "url": "league/halloffame"
         },
         "leagues": {
-            "__doc__": "Method returns information about leagues. Allows to filter leagues by status.",
-            "application_id": {
-                "doc": "Application ID",
-                "required": true,
-                "type": "string"
-            },
-            "fields": {
-                "doc": "Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields.",
-                "required": false,
-                "type": "string, list"
-            },
-            "language": {
-                "doc": "Localization language. Valid values: \n\n\"en\" \u2014 English (by default)\n\"ru\" \u2014 \u0420\u0443\u0441\u0441\u043a\u0438\u0439 \n\"pl\" \u2014 Polski \n\"de\" \u2014 Deutsch \n\"fr\" \u2014 Fran\u00e7ais \n\"es\" \u2014 Espa\u00f1ol \n\"zh-cn\" \u2014 \u7b80\u4f53\u4e2d\u6587 \n\"tr\" \u2014 T\u00fcrk\u00e7e \n\"cs\" \u2014 \u010ce\u0161tina \n\"th\" \u2014 \u0e44\u0e17\u0e22 \n\"vi\" \u2014 Ti\u1ebfng Vi\u1ec7t \n\"ko\" \u2014 \ud55c\uad6d\uc5b4",
-                "required": false,
-                "type": "string"
-            },
-            "league_id": {
-                "doc": "League ID",
-                "required": false,
-                "type": "numeric, list"
-            },
-            "limit": {
-                "doc": "Number of returned entries (fewer can be returned, but not more than 1000). If the limit sent exceeds 1000, an limit of 100 is applied (by default).",
-                "required": false,
-                "type": "numeric"
-            },
-            "page_no": {
-                "doc": "Result page number",
-                "required": false,
-                "type": "numeric"
-            },
-            "status": {
-                "doc": "League status. Valid values: \n\n\"active\" \u2014 Active \n\"complete\" \u2014 Complete",
-                "required": false,
-                "type": "string"
-            }
+            "allowed_http_methods": [
+                "GET",
+                "POST"
+            ],
+            "allowed_protocols": [
+                "http",
+                "https"
+            ],
+            "api_url": "api.worldoftanks.ru/wgn/",
+            "available_display_indices": [
+                "asia",
+                "eu",
+                "kr",
+                "ru"
+            ],
+            "description": "<p>Method returns information about leagues. Allows to filter leagues by status.</p>",
+            "display_index": "ru",
+            "fields": [
+                {
+                    "description": "<p>League ID</p>",
+                    "name": [
+                        "league_id"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Localized league name</p>",
+                    "name": [
+                        "name_i18n"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Parent league ID</p>",
+                    "name": [
+                        "parent_id"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>League status: 'active' or 'complete'</p>",
+                    "name": [
+                        "status"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Date when league details were updated</p>",
+                    "name": [
+                        "updated_at"
+                    ],
+                    "type": "timestamp"
+                },
+                {
+                    "type": "empty_line"
+                },
+                {
+                    "description": "<p>List of league seasons</p>",
+                    "name": [
+                        "seasons"
+                    ],
+                    "type": "block_header"
+                },
+                {
+                    "description": "<p>Season name</p>",
+                    "name": [
+                        "seasons",
+                        "name_i18n"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Season ID</p>",
+                    "name": [
+                        "seasons",
+                        "season_id"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Season status: 'active' or 'complete'</p>",
+                    "name": [
+                        "seasons",
+                        "status"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "type": "empty_line"
+                },
+                {
+                    "description": "<p>List of league stages</p>",
+                    "name": [
+                        "stages"
+                    ],
+                    "type": "block_header"
+                },
+                {
+                    "description": "<p>Stage name</p>",
+                    "name": [
+                        "stages",
+                        "name_i18n"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Stage ID</p>",
+                    "name": [
+                        "stages",
+                        "stage_id"
+                    ],
+                    "type": "numeric"
+                }
+            ],
+            "name": "Leagues",
+            "parameters": [
+                {
+                    "description": "<p>Application ID</p>",
+                    "name": "application_id",
+                    "required": true,
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Localization language. Valid values:</p>\n<ul>\n<li>\"en\" &mdash; English </li>\n<li>\"ru\" &mdash; \u0420\u0443\u0441\u0441\u043a\u0438\u0439 (by default)</li>\n<li>\"pl\" &mdash; Polski </li>\n<li>\"de\" &mdash; Deutsch </li>\n<li>\"fr\" &mdash; Fran\u00e7ais </li>\n<li>\"es\" &mdash; Espa\u00f1ol </li>\n<li>\"zh-cn\" &mdash; \u7b80\u4f53\u4e2d\u6587 </li>\n<li>\"tr\" &mdash; T\u00fcrk\u00e7e </li>\n<li>\"cs\" &mdash; \u010ce\u0161tina </li>\n<li>\"th\" &mdash; \u0e44\u0e17\u0e22 </li>\n<li>\"vi\" &mdash; Ti\u1ebfng Vi\u1ec7t </li>\n<li>\"ko\" &mdash; \ud55c\uad6d\uc5b4</li>\n</ul>",
+                    "name": "language",
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields.</p>",
+                    "name": "fields",
+                    "type": "string, list"
+                },
+                {
+                    "description": "<p>Number of returned entries (fewer can be returned, but not more than 1000). If the limit sent exceeds 1000, an limit of 100 is applied (by default).</p>",
+                    "name": "limit",
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Result page number</p>",
+                    "name": "page_no",
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>League status. Valid values:</p>\n<ul>\n<li>\"active\" &mdash; Active </li>\n<li>\"complete\" &mdash; Complete</li>\n</ul>",
+                    "name": "status",
+                    "type": "string"
+                },
+                {
+                    "description": "<p>League ID</p>",
+                    "name": "league_id",
+                    "type": "numeric, list"
+                }
+            ],
+            "realm": "ru",
+            "section": "league",
+            "url": "league/leagues"
         },
         "matches": {
-            "__doc__": "Method returns information about the matches in tournaments.",
-            "application_id": {
-                "doc": "Application ID",
-                "required": true,
-                "type": "string"
-            },
-            "fields": {
-                "doc": "Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields.",
-                "required": false,
-                "type": "string, list"
-            },
-            "language": {
-                "doc": "Localization language. Valid values: \n\n\"en\" \u2014 English (by default)\n\"ru\" \u2014 \u0420\u0443\u0441\u0441\u043a\u0438\u0439 \n\"pl\" \u2014 Polski \n\"de\" \u2014 Deutsch \n\"fr\" \u2014 Fran\u00e7ais \n\"es\" \u2014 Espa\u00f1ol \n\"zh-cn\" \u2014 \u7b80\u4f53\u4e2d\u6587 \n\"tr\" \u2014 T\u00fcrk\u00e7e \n\"cs\" \u2014 \u010ce\u0161tina \n\"th\" \u2014 \u0e44\u0e17\u0e22 \n\"vi\" \u2014 Ti\u1ebfng Vi\u1ec7t \n\"ko\" \u2014 \ud55c\uad6d\uc5b4",
-                "required": false,
-                "type": "string"
-            },
-            "match_id": {
-                "doc": "Match ID",
-                "required": false,
-                "type": "numeric, list"
-            },
-            "tournament_id": {
-                "doc": "Tournament ID",
-                "required": true,
-                "type": "numeric"
-            }
+            "allowed_http_methods": [
+                "GET",
+                "POST"
+            ],
+            "allowed_protocols": [
+                "http",
+                "https"
+            ],
+            "api_url": "api.worldoftanks.ru/wgn/",
+            "available_display_indices": [
+                "asia",
+                "eu",
+                "kr",
+                "ru"
+            ],
+            "description": "<p>Method returns information about the matches in tournaments.</p>",
+            "display_index": "ru",
+            "fields": [
+                {
+                    "description": "<p>Map where the battles are held</p>",
+                    "name": [
+                        "arena_id"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Match position in the bracket. 'winner' and 'loser' \u2014 corresponding branches for winners and losers. If it is the first round, field value is 'null'.</p>",
+                    "name": [
+                        "bracket"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>ID of the next match in the tournament for the left team. If there is no match, field value is 'null'.</p>",
+                    "name": [
+                        "left_next_match_id"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Match results for the left team. In case of no results, field value is 'null'. If the team is disqualified, field value is '-1 '.</p>",
+                    "name": [
+                        "left_score"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>ID of the left team participating in the tournament</p>",
+                    "name": [
+                        "left_team_id"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Match ID</p>",
+                    "name": [
+                        "match_id"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Match position in round</p>",
+                    "name": [
+                        "position"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>ID of the next match in the tournament for the right team. If there is no match, field value is 'null'.</p>",
+                    "name": [
+                        "right_next_match_id"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Match results for the right team. In case of no results, field value is 'null'. If the team is disqualified, field value is '-1 '.</p>",
+                    "name": [
+                        "right_score"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>ID of the right team participating in the tournament</p>",
+                    "name": [
+                        "right_team_id"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Match round in the tournament</p>",
+                    "name": [
+                        "round"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Match start time. If the match has not started yet, field value is 'null'.</p>",
+                    "name": [
+                        "start_at"
+                    ],
+                    "type": "timestamp"
+                },
+                {
+                    "description": "<p>Tournament ID</p>",
+                    "name": [
+                        "tournament_id"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Date of the last match info update</p>",
+                    "name": [
+                        "updated_at"
+                    ],
+                    "type": "timestamp"
+                }
+            ],
+            "name": "Matches of the tournament",
+            "parameters": [
+                {
+                    "description": "<p>Application ID</p>",
+                    "name": "application_id",
+                    "required": true,
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Localization language. Valid values:</p>\n<ul>\n<li>\"en\" &mdash; English </li>\n<li>\"ru\" &mdash; \u0420\u0443\u0441\u0441\u043a\u0438\u0439 (by default)</li>\n<li>\"pl\" &mdash; Polski </li>\n<li>\"de\" &mdash; Deutsch </li>\n<li>\"fr\" &mdash; Fran\u00e7ais </li>\n<li>\"es\" &mdash; Espa\u00f1ol </li>\n<li>\"zh-cn\" &mdash; \u7b80\u4f53\u4e2d\u6587 </li>\n<li>\"tr\" &mdash; T\u00fcrk\u00e7e </li>\n<li>\"cs\" &mdash; \u010ce\u0161tina </li>\n<li>\"th\" &mdash; \u0e44\u0e17\u0e22 </li>\n<li>\"vi\" &mdash; Ti\u1ebfng Vi\u1ec7t </li>\n<li>\"ko\" &mdash; \ud55c\uad6d\uc5b4</li>\n</ul>",
+                    "name": "language",
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields.</p>",
+                    "name": "fields",
+                    "type": "string, list"
+                },
+                {
+                    "description": "<p>Tournament ID</p>",
+                    "name": "tournament_id",
+                    "required": true,
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Match ID</p>",
+                    "name": "match_id",
+                    "type": "numeric, list"
+                }
+            ],
+            "realm": "ru",
+            "section": "league",
+            "url": "league/matches"
         },
         "playerinfo": {
-            "__doc__": "Method returns player details.",
-            "account_id": {
-                "doc": "Account IDs of players",
-                "required": true,
-                "type": "numeric, list"
-            },
-            "application_id": {
-                "doc": "Application ID",
-                "required": true,
-                "type": "string"
-            },
-            "fields": {
-                "doc": "Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields.",
-                "required": false,
-                "type": "string, list"
-            },
-            "language": {
-                "doc": "Localization language. Valid values: \n\n\"en\" \u2014 English (by default)\n\"ru\" \u2014 \u0420\u0443\u0441\u0441\u043a\u0438\u0439 \n\"pl\" \u2014 Polski \n\"de\" \u2014 Deutsch \n\"fr\" \u2014 Fran\u00e7ais \n\"es\" \u2014 Espa\u00f1ol \n\"zh-cn\" \u2014 \u7b80\u4f53\u4e2d\u6587 \n\"tr\" \u2014 T\u00fcrk\u00e7e \n\"cs\" \u2014 \u010ce\u0161tina \n\"th\" \u2014 \u0e44\u0e17\u0e22 \n\"vi\" \u2014 Ti\u1ebfng Vi\u1ec7t \n\"ko\" \u2014 \ud55c\uad6d\uc5b4",
-                "required": false,
-                "type": "string"
-            }
+            "allowed_http_methods": [
+                "GET",
+                "POST"
+            ],
+            "allowed_protocols": [
+                "http",
+                "https"
+            ],
+            "api_url": "api.worldoftanks.ru/wgn/",
+            "available_display_indices": [
+                "asia",
+                "eu",
+                "kr",
+                "ru"
+            ],
+            "description": "<p>Method returns player details.</p>",
+            "display_index": "ru",
+            "fields": [
+                {
+                    "description": "<p>Player account ID</p>",
+                    "name": [
+                        "account_id"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Player's city/town</p>",
+                    "name": [
+                        "city"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Player's country</p>",
+                    "name": [
+                        "country"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Player's date of birth, YYYYMMDD</p>",
+                    "name": [
+                        "date_of_birth"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Player name</p>",
+                    "name": [
+                        "first_name"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Player's last name</p>",
+                    "name": [
+                        "last_name"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Player user name</p>",
+                    "name": [
+                        "nickname"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>ID of the team in which the player is the captain. If the player is not a captain of any team, field value is 'null'.</p>",
+                    "name": [
+                        "own_team_id"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Link to player's photo</p>",
+                    "name": [
+                        "photo_url"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>List of player teams' IDs</p>",
+                    "name": [
+                        "team_ids"
+                    ],
+                    "type": "list of integers"
+                },
+                {
+                    "type": "empty_line"
+                },
+                {
+                    "description": "<p>Links to player's profiles on social networks</p>",
+                    "name": [
+                        "socials"
+                    ],
+                    "type": "block_header"
+                },
+                {
+                    "description": "<p>Facebook link</p>",
+                    "name": [
+                        "socials",
+                        "facebook"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Twitch link</p>",
+                    "name": [
+                        "socials",
+                        "twitch"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Twitter link</p>",
+                    "name": [
+                        "socials",
+                        "twitter"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Vkontakte link</p>",
+                    "name": [
+                        "socials",
+                        "vkontakte"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>YouTube link</p>",
+                    "name": [
+                        "socials",
+                        "youtube"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "type": "empty_line"
+                },
+                {
+                    "description": "<p>Player statistics</p>",
+                    "name": [
+                        "statistics"
+                    ],
+                    "type": "block_header"
+                },
+                {
+                    "description": "<p>Average damage per battle</p>",
+                    "name": [
+                        "statistics",
+                        "avg_battle_damage"
+                    ],
+                    "type": "float"
+                },
+                {
+                    "description": "<p>Base capture points</p>",
+                    "name": [
+                        "statistics",
+                        "cpt"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Damage caused</p>",
+                    "name": [
+                        "statistics",
+                        "dmg"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Base defense points</p>",
+                    "name": [
+                        "statistics",
+                        "dpt"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Battle efficiency</p>",
+                    "name": [
+                        "statistics",
+                        "fct"
+                    ],
+                    "type": "float"
+                },
+                {
+                    "description": "<p>Enemies destroyed</p>",
+                    "name": [
+                        "statistics",
+                        "frg"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Battles fought</p>",
+                    "name": [
+                        "statistics",
+                        "gpl"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Enemies spotted</p>",
+                    "name": [
+                        "statistics",
+                        "spt"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Victories/Battles ratio</p>",
+                    "name": [
+                        "statistics",
+                        "won_battles_percent"
+                    ],
+                    "type": "float"
+                }
+            ],
+            "name": "Player details",
+            "parameters": [
+                {
+                    "description": "<p>Application ID</p>",
+                    "name": "application_id",
+                    "required": true,
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Localization language. Valid values:</p>\n<ul>\n<li>\"en\" &mdash; English </li>\n<li>\"ru\" &mdash; \u0420\u0443\u0441\u0441\u043a\u0438\u0439 (by default)</li>\n<li>\"pl\" &mdash; Polski </li>\n<li>\"de\" &mdash; Deutsch </li>\n<li>\"fr\" &mdash; Fran\u00e7ais </li>\n<li>\"es\" &mdash; Espa\u00f1ol </li>\n<li>\"zh-cn\" &mdash; \u7b80\u4f53\u4e2d\u6587 </li>\n<li>\"tr\" &mdash; T\u00fcrk\u00e7e </li>\n<li>\"cs\" &mdash; \u010ce\u0161tina </li>\n<li>\"th\" &mdash; \u0e44\u0e17\u0e22 </li>\n<li>\"vi\" &mdash; Ti\u1ebfng Vi\u1ec7t </li>\n<li>\"ko\" &mdash; \ud55c\uad6d\uc5b4</li>\n</ul>",
+                    "name": "language",
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields.</p>",
+                    "name": "fields",
+                    "type": "string, list"
+                },
+                {
+                    "description": "<p>Account IDs of players</p>",
+                    "name": "account_id",
+                    "required": true,
+                    "type": "numeric, list"
+                }
+            ],
+            "realm": "ru",
+            "section": "league",
+            "url": "league/playerinfo"
         },
         "players": {
-            "__doc__": "Method returns list of players. Allows to search by user name and player team ID.",
-            "application_id": {
-                "doc": "Application ID",
-                "required": true,
-                "type": "string"
-            },
-            "fields": {
-                "doc": "Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields.",
-                "required": false,
-                "type": "string, list"
-            },
-            "language": {
-                "doc": "Localization language. Valid values: \n\n\"en\" \u2014 English (by default)\n\"ru\" \u2014 \u0420\u0443\u0441\u0441\u043a\u0438\u0439 \n\"pl\" \u2014 Polski \n\"de\" \u2014 Deutsch \n\"fr\" \u2014 Fran\u00e7ais \n\"es\" \u2014 Espa\u00f1ol \n\"zh-cn\" \u2014 \u7b80\u4f53\u4e2d\u6587 \n\"tr\" \u2014 T\u00fcrk\u00e7e \n\"cs\" \u2014 \u010ce\u0161tina \n\"th\" \u2014 \u0e44\u0e17\u0e22 \n\"vi\" \u2014 Ti\u1ebfng Vi\u1ec7t \n\"ko\" \u2014 \ud55c\uad6d\uc5b4",
-                "required": false,
-                "type": "string"
-            },
-            "limit": {
-                "doc": "Number of returned entries (fewer can be returned, but not more than 1000). If the limit sent exceeds 1000, an limit of 100 is applied (by default).",
-                "required": false,
-                "type": "numeric"
-            },
-            "page_no": {
-                "doc": "Result page number",
-                "required": false,
-                "type": "numeric"
-            },
-            "search": {
-                "doc": "Search bar",
-                "required": false,
-                "type": "string"
-            },
-            "team_id": {
-                "doc": "Team ID",
-                "required": false,
-                "type": "numeric"
-            },
-            "type": {
-                "doc": "Search type. Default value: contains. Valid values: \n\n\"exact\" \u2014 Exact match \n\"contains\" \u2014 Contains (by default)",
-                "required": false,
-                "type": "string"
-            }
+            "allowed_http_methods": [
+                "GET",
+                "POST"
+            ],
+            "allowed_protocols": [
+                "http",
+                "https"
+            ],
+            "api_url": "api.worldoftanks.ru/wgn/",
+            "available_display_indices": [
+                "asia",
+                "eu",
+                "kr",
+                "ru"
+            ],
+            "description": "<p>Method returns list of players. Allows to search by user name and player team ID.</p>",
+            "display_index": "ru",
+            "fields": [
+                {
+                    "description": "<p>Player account ID</p>",
+                    "name": [
+                        "account_id"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Player user name</p>",
+                    "name": [
+                        "nickname"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>List of player teams' IDs</p>",
+                    "name": [
+                        "team_ids"
+                    ],
+                    "type": "list of integers"
+                }
+            ],
+            "name": "Players",
+            "parameters": [
+                {
+                    "description": "<p>Application ID</p>",
+                    "name": "application_id",
+                    "required": true,
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Localization language. Valid values:</p>\n<ul>\n<li>\"en\" &mdash; English </li>\n<li>\"ru\" &mdash; \u0420\u0443\u0441\u0441\u043a\u0438\u0439 (by default)</li>\n<li>\"pl\" &mdash; Polski </li>\n<li>\"de\" &mdash; Deutsch </li>\n<li>\"fr\" &mdash; Fran\u00e7ais </li>\n<li>\"es\" &mdash; Espa\u00f1ol </li>\n<li>\"zh-cn\" &mdash; \u7b80\u4f53\u4e2d\u6587 </li>\n<li>\"tr\" &mdash; T\u00fcrk\u00e7e </li>\n<li>\"cs\" &mdash; \u010ce\u0161tina </li>\n<li>\"th\" &mdash; \u0e44\u0e17\u0e22 </li>\n<li>\"vi\" &mdash; Ti\u1ebfng Vi\u1ec7t </li>\n<li>\"ko\" &mdash; \ud55c\uad6d\uc5b4</li>\n</ul>",
+                    "name": "language",
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields.</p>",
+                    "name": "fields",
+                    "type": "string, list"
+                },
+                {
+                    "description": "<p>Search type. Default value: <strong>contains</strong>. Valid values:</p>\n<ul>\n<li>\"exact\" &mdash; Exact match </li>\n<li>\"contains\" &mdash; Contains (by default)</li>\n</ul>",
+                    "name": "type",
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Search bar</p>",
+                    "name": "search",
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Number of returned entries (fewer can be returned, but not more than 1000). If the limit sent exceeds 1000, an limit of 100 is applied (by default).</p>",
+                    "name": "limit",
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Result page number</p>",
+                    "name": "page_no",
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Team ID</p>",
+                    "name": "team_id",
+                    "type": "numeric"
+                }
+            ],
+            "realm": "ru",
+            "section": "league",
+            "url": "league/players"
         },
         "teaminfo": {
-            "__doc__": "Returns team details.",
-            "application_id": {
-                "doc": "Application ID",
-                "required": true,
-                "type": "string"
-            },
-            "fields": {
-                "doc": "Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields.",
-                "required": false,
-                "type": "string, list"
-            },
-            "language": {
-                "doc": "Localization language. Valid values: \n\n\"en\" \u2014 English (by default)\n\"ru\" \u2014 \u0420\u0443\u0441\u0441\u043a\u0438\u0439 \n\"pl\" \u2014 Polski \n\"de\" \u2014 Deutsch \n\"fr\" \u2014 Fran\u00e7ais \n\"es\" \u2014 Espa\u00f1ol \n\"zh-cn\" \u2014 \u7b80\u4f53\u4e2d\u6587 \n\"tr\" \u2014 T\u00fcrk\u00e7e \n\"cs\" \u2014 \u010ce\u0161tina \n\"th\" \u2014 \u0e44\u0e17\u0e22 \n\"vi\" \u2014 Ti\u1ebfng Vi\u1ec7t \n\"ko\" \u2014 \ud55c\uad6d\uc5b4",
-                "required": false,
-                "type": "string"
-            },
-            "team_id": {
-                "doc": "Team ID",
-                "required": true,
-                "type": "numeric, list"
-            }
+            "allowed_http_methods": [
+                "GET",
+                "POST"
+            ],
+            "allowed_protocols": [
+                "http",
+                "https"
+            ],
+            "api_url": "api.worldoftanks.ru/wgn/",
+            "available_display_indices": [
+                "asia",
+                "eu",
+                "kr",
+                "ru"
+            ],
+            "description": "<p>Returns team details.</p>",
+            "display_index": "ru",
+            "fields": [
+                {
+                    "description": "<p>Team tag</p>",
+                    "name": [
+                        "abbreviation"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Team captain account ID. If there is no captain, field value is 'null'.</p>",
+                    "name": [
+                        "captain_id"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Team city/town</p>",
+                    "name": [
+                        "city"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Team country</p>",
+                    "name": [
+                        "country"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Team description</p>",
+                    "name": [
+                        "description"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Link to team logo</p>",
+                    "name": [
+                        "logo_url"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Team name</p>",
+                    "name": [
+                        "name"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>List of team player account IDs</p>",
+                    "name": [
+                        "player_ids"
+                    ],
+                    "type": "list of integers"
+                },
+                {
+                    "description": "<p>Team ID</p>",
+                    "name": [
+                        "team_id"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Date when team details were updated</p>",
+                    "name": [
+                        "updated_at"
+                    ],
+                    "type": "timestamp"
+                },
+                {
+                    "type": "empty_line"
+                },
+                {
+                    "description": "<p>Links to team profiles on social networks</p>",
+                    "name": [
+                        "socials"
+                    ],
+                    "type": "block_header"
+                },
+                {
+                    "description": "<p>Facebook link</p>",
+                    "name": [
+                        "socials",
+                        "facebook"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Twitch link</p>",
+                    "name": [
+                        "socials",
+                        "twitch"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Twitter link</p>",
+                    "name": [
+                        "socials",
+                        "twitter"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Vkontakte link</p>",
+                    "name": [
+                        "socials",
+                        "vkontakte"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>YouTube link</p>",
+                    "name": [
+                        "socials",
+                        "youtube"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "type": "empty_line"
+                },
+                {
+                    "description": "<p>List of sponsors</p>",
+                    "name": [
+                        "sponsors"
+                    ],
+                    "type": "block_header"
+                },
+                {
+                    "description": "<p>Link to sponsor logo</p>",
+                    "name": [
+                        "sponsors",
+                        "logo_url"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Sponsor name</p>",
+                    "name": [
+                        "sponsors",
+                        "name"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Link to sponsor website</p>",
+                    "name": [
+                        "sponsors",
+                        "website_url"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "type": "empty_line"
+                },
+                {
+                    "description": "<p>Team statistics</p>",
+                    "name": [
+                        "statistics"
+                    ],
+                    "type": "block_header"
+                },
+                {
+                    "description": "<p>Total matches played</p>",
+                    "name": [
+                        "statistics",
+                        "battles"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Matches won</p>",
+                    "name": [
+                        "statistics",
+                        "wins"
+                    ],
+                    "type": "numeric"
+                }
+            ],
+            "name": "Team details",
+            "parameters": [
+                {
+                    "description": "<p>Application ID</p>",
+                    "name": "application_id",
+                    "required": true,
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Localization language. Valid values:</p>\n<ul>\n<li>\"en\" &mdash; English </li>\n<li>\"ru\" &mdash; \u0420\u0443\u0441\u0441\u043a\u0438\u0439 (by default)</li>\n<li>\"pl\" &mdash; Polski </li>\n<li>\"de\" &mdash; Deutsch </li>\n<li>\"fr\" &mdash; Fran\u00e7ais </li>\n<li>\"es\" &mdash; Espa\u00f1ol </li>\n<li>\"zh-cn\" &mdash; \u7b80\u4f53\u4e2d\u6587 </li>\n<li>\"tr\" &mdash; T\u00fcrk\u00e7e </li>\n<li>\"cs\" &mdash; \u010ce\u0161tina </li>\n<li>\"th\" &mdash; \u0e44\u0e17\u0e22 </li>\n<li>\"vi\" &mdash; Ti\u1ebfng Vi\u1ec7t </li>\n<li>\"ko\" &mdash; \ud55c\uad6d\uc5b4</li>\n</ul>",
+                    "name": "language",
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields.</p>",
+                    "name": "fields",
+                    "type": "string, list"
+                },
+                {
+                    "description": "<p>Team ID</p>",
+                    "name": "team_id",
+                    "required": true,
+                    "type": "numeric, list"
+                }
+            ],
+            "realm": "ru",
+            "section": "league",
+            "url": "league/teaminfo"
         },
         "teams": {
-            "__doc__": "Method returns list of teams. Allows to search teams by name or tag.",
-            "application_id": {
-                "doc": "Application ID",
-                "required": true,
-                "type": "string"
-            },
-            "fields": {
-                "doc": "Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields.",
-                "required": false,
-                "type": "string, list"
-            },
-            "language": {
-                "doc": "Localization language. Valid values: \n\n\"en\" \u2014 English (by default)\n\"ru\" \u2014 \u0420\u0443\u0441\u0441\u043a\u0438\u0439 \n\"pl\" \u2014 Polski \n\"de\" \u2014 Deutsch \n\"fr\" \u2014 Fran\u00e7ais \n\"es\" \u2014 Espa\u00f1ol \n\"zh-cn\" \u2014 \u7b80\u4f53\u4e2d\u6587 \n\"tr\" \u2014 T\u00fcrk\u00e7e \n\"cs\" \u2014 \u010ce\u0161tina \n\"th\" \u2014 \u0e44\u0e17\u0e22 \n\"vi\" \u2014 Ti\u1ebfng Vi\u1ec7t \n\"ko\" \u2014 \ud55c\uad6d\uc5b4",
-                "required": false,
-                "type": "string"
-            },
-            "limit": {
-                "doc": "Number of returned entries (fewer can be returned, but not more than 1000). If the limit sent exceeds 1000, an limit of 100 is applied (by default).",
-                "required": false,
-                "type": "numeric"
-            },
-            "page_no": {
-                "doc": "Result page number",
-                "required": false,
-                "type": "numeric"
-            },
-            "search": {
-                "doc": "Search bar",
-                "required": false,
-                "type": "string"
-            },
-            "search_by": {
-                "doc": "Search parameter. Default value: abbreviation. Valid values: \n\n\"name\" \u2014 Search by name \n\"abbreviation\" \u2014 Search by tag (by default)",
-                "required": false,
-                "type": "string"
-            },
-            "type": {
-                "doc": "Search type. Default value: contains. Valid values: \n\n\"exact\" \u2014 Exact match \n\"contains\" \u2014 Contains (by default)",
-                "required": false,
-                "type": "string"
-            }
+            "allowed_http_methods": [
+                "GET",
+                "POST"
+            ],
+            "allowed_protocols": [
+                "http",
+                "https"
+            ],
+            "api_url": "api.worldoftanks.ru/wgn/",
+            "available_display_indices": [
+                "asia",
+                "eu",
+                "kr",
+                "ru"
+            ],
+            "description": "<p>Method returns list of teams. Allows to search teams by name or tag.</p>",
+            "display_index": "ru",
+            "fields": [
+                {
+                    "description": "<p>Team tag</p>",
+                    "name": [
+                        "abbreviation"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Team captain account ID. If there is no captain, field value is 'null'.</p>",
+                    "name": [
+                        "captain_id"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Link to team logo</p>",
+                    "name": [
+                        "logo_url"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Team name</p>",
+                    "name": [
+                        "name"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Team ID</p>",
+                    "name": [
+                        "team_id"
+                    ],
+                    "type": "numeric"
+                }
+            ],
+            "name": "Teams",
+            "parameters": [
+                {
+                    "description": "<p>Application ID</p>",
+                    "name": "application_id",
+                    "required": true,
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Localization language. Valid values:</p>\n<ul>\n<li>\"en\" &mdash; English </li>\n<li>\"ru\" &mdash; \u0420\u0443\u0441\u0441\u043a\u0438\u0439 (by default)</li>\n<li>\"pl\" &mdash; Polski </li>\n<li>\"de\" &mdash; Deutsch </li>\n<li>\"fr\" &mdash; Fran\u00e7ais </li>\n<li>\"es\" &mdash; Espa\u00f1ol </li>\n<li>\"zh-cn\" &mdash; \u7b80\u4f53\u4e2d\u6587 </li>\n<li>\"tr\" &mdash; T\u00fcrk\u00e7e </li>\n<li>\"cs\" &mdash; \u010ce\u0161tina </li>\n<li>\"th\" &mdash; \u0e44\u0e17\u0e22 </li>\n<li>\"vi\" &mdash; Ti\u1ebfng Vi\u1ec7t </li>\n<li>\"ko\" &mdash; \ud55c\uad6d\uc5b4</li>\n</ul>",
+                    "name": "language",
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields.</p>",
+                    "name": "fields",
+                    "type": "string, list"
+                },
+                {
+                    "description": "<p>Search type. Default value: <strong>contains</strong>. Valid values:</p>\n<ul>\n<li>\"exact\" &mdash; Exact match </li>\n<li>\"contains\" &mdash; Contains (by default)</li>\n</ul>",
+                    "name": "type",
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Search bar</p>",
+                    "name": "search",
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Number of returned entries (fewer can be returned, but not more than 1000). If the limit sent exceeds 1000, an limit of 100 is applied (by default).</p>",
+                    "name": "limit",
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Result page number</p>",
+                    "name": "page_no",
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Search parameter. Default value: <strong>abbreviation</strong>. Valid values:</p>\n<ul>\n<li>\"name\" &mdash; Search by name </li>\n<li>\"abbreviation\" &mdash; Search by tag (by default)</li>\n</ul>",
+                    "name": "search_by",
+                    "type": "string"
+                }
+            ],
+            "realm": "ru",
+            "section": "league",
+            "url": "league/teams"
         },
         "tournaments": {
-            "__doc__": "Method returns tournament details. Allows to search tournaments by status or league.",
-            "application_id": {
-                "doc": "Application ID",
-                "required": true,
-                "type": "string"
-            },
-            "fields": {
-                "doc": "Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields.",
-                "required": false,
-                "type": "string, list"
-            },
-            "language": {
-                "doc": "Localization language. Valid values: \n\n\"en\" \u2014 English (by default)\n\"ru\" \u2014 \u0420\u0443\u0441\u0441\u043a\u0438\u0439 \n\"pl\" \u2014 Polski \n\"de\" \u2014 Deutsch \n\"fr\" \u2014 Fran\u00e7ais \n\"es\" \u2014 Espa\u00f1ol \n\"zh-cn\" \u2014 \u7b80\u4f53\u4e2d\u6587 \n\"tr\" \u2014 T\u00fcrk\u00e7e \n\"cs\" \u2014 \u010ce\u0161tina \n\"th\" \u2014 \u0e44\u0e17\u0e22 \n\"vi\" \u2014 Ti\u1ebfng Vi\u1ec7t \n\"ko\" \u2014 \ud55c\uad6d\uc5b4",
-                "required": false,
-                "type": "string"
-            },
-            "league_id": {
-                "doc": "League ID",
-                "required": false,
-                "type": "numeric"
-            },
-            "limit": {
-                "doc": "Number of returned entries (fewer can be returned, but not more than 1000). If the limit sent exceeds 1000, an limit of 100 is applied (by default).",
-                "required": false,
-                "type": "numeric"
-            },
-            "page_no": {
-                "doc": "Result page number",
-                "required": false,
-                "type": "numeric"
-            },
-            "status": {
-                "doc": "Tournament status. Valid values: \n\n\"active\" \u2014 Active \n\"complete\" \u2014 Complete",
-                "required": false,
-                "type": "string"
-            },
-            "tournament_id": {
-                "doc": "Tournament ID",
-                "required": false,
-                "type": "numeric, list"
-            }
+            "allowed_http_methods": [
+                "GET",
+                "POST"
+            ],
+            "allowed_protocols": [
+                "http",
+                "https"
+            ],
+            "api_url": "api.worldoftanks.ru/wgn/",
+            "available_display_indices": [
+                "asia",
+                "eu",
+                "kr",
+                "ru"
+            ],
+            "description": "<p>Method returns tournament details. Allows to search tournaments by status or league.</p>",
+            "display_index": "ru",
+            "fields": [
+                {
+                    "description": "<p>Tournament league ID</p>",
+                    "name": [
+                        "league_id"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Date of the last tournament matches info update</p>",
+                    "name": [
+                        "matches_updated_at"
+                    ],
+                    "type": "timestamp"
+                },
+                {
+                    "description": "<p>Localized tournament name</p>",
+                    "name": [
+                        "name_i18n"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Tournament season ID</p>",
+                    "name": [
+                        "season_id"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Tournament stage ID</p>",
+                    "name": [
+                        "stage_id"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Tournament status: 'active' or 'complete'</p>",
+                    "name": [
+                        "status"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>List of participating teams IDs</p>",
+                    "name": [
+                        "team_ids"
+                    ],
+                    "type": "list of integers"
+                },
+                {
+                    "description": "<p>Tournament ID</p>",
+                    "name": [
+                        "tournament_id"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Tournament type: 'RR' - round robin, 'DE' - double elimination, 'SE' - single elimination, 'SE_KR' - single elimination for Korea</p>",
+                    "name": [
+                        "type"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Date of the last tournament info update</p>",
+                    "name": [
+                        "updated_at"
+                    ],
+                    "type": "timestamp"
+                }
+            ],
+            "name": "Tournaments",
+            "parameters": [
+                {
+                    "description": "<p>Application ID</p>",
+                    "name": "application_id",
+                    "required": true,
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Localization language. Valid values:</p>\n<ul>\n<li>\"en\" &mdash; English </li>\n<li>\"ru\" &mdash; \u0420\u0443\u0441\u0441\u043a\u0438\u0439 (by default)</li>\n<li>\"pl\" &mdash; Polski </li>\n<li>\"de\" &mdash; Deutsch </li>\n<li>\"fr\" &mdash; Fran\u00e7ais </li>\n<li>\"es\" &mdash; Espa\u00f1ol </li>\n<li>\"zh-cn\" &mdash; \u7b80\u4f53\u4e2d\u6587 </li>\n<li>\"tr\" &mdash; T\u00fcrk\u00e7e </li>\n<li>\"cs\" &mdash; \u010ce\u0161tina </li>\n<li>\"th\" &mdash; \u0e44\u0e17\u0e22 </li>\n<li>\"vi\" &mdash; Ti\u1ebfng Vi\u1ec7t </li>\n<li>\"ko\" &mdash; \ud55c\uad6d\uc5b4</li>\n</ul>",
+                    "name": "language",
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields.</p>",
+                    "name": "fields",
+                    "type": "string, list"
+                },
+                {
+                    "description": "<p>Number of returned entries (fewer can be returned, but not more than 1000). If the limit sent exceeds 1000, an limit of 100 is applied (by default).</p>",
+                    "name": "limit",
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Result page number</p>",
+                    "name": "page_no",
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Tournament status. Valid values:</p>\n<ul>\n<li>\"active\" &mdash; Active </li>\n<li>\"complete\" &mdash; Complete</li>\n</ul>",
+                    "name": "status",
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Tournament ID</p>",
+                    "name": "tournament_id",
+                    "type": "numeric, list"
+                },
+                {
+                    "description": "<p>League ID</p>",
+                    "name": "league_id",
+                    "type": "numeric"
+                }
+            ],
+            "realm": "ru",
+            "section": "league",
+            "url": "league/tournaments"
         }
     },
     "servers": {
         "info": {
-            "__doc__": "Method returns the number of online players on the servers.",
-            "application_id": {
-                "doc": "Application ID",
-                "required": true,
-                "type": "string"
-            },
-            "fields": {
-                "doc": "Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields.",
-                "required": false,
-                "type": "string, list"
-            },
-            "game": {
-                "doc": "Game ID. Valid values: \n\n\"wot\" \u2014 World of Tanks \n\"wotb\" \u2014 World of Tanks Blitz \n\"wowp\" \u2014 World of Warplanes",
-                "required": false,
-                "type": "string, list"
-            },
-            "language": {
-                "doc": "Localization language. Valid values: \n\n\"en\" \u2014 English (by default)\n\"ru\" \u2014 \u0420\u0443\u0441\u0441\u043a\u0438\u0439 \n\"pl\" \u2014 Polski \n\"de\" \u2014 Deutsch \n\"fr\" \u2014 Fran\u00e7ais \n\"es\" \u2014 Espa\u00f1ol \n\"zh-cn\" \u2014 \u7b80\u4f53\u4e2d\u6587 \n\"tr\" \u2014 T\u00fcrk\u00e7e \n\"cs\" \u2014 \u010ce\u0161tina \n\"th\" \u2014 \u0e44\u0e17\u0e22 \n\"vi\" \u2014 Ti\u1ebfng Vi\u1ec7t \n\"ko\" \u2014 \ud55c\uad6d\uc5b4",
-                "required": false,
-                "type": "string"
-            }
+            "allowed_http_methods": [
+                "GET",
+                "POST"
+            ],
+            "allowed_protocols": [
+                "http",
+                "https"
+            ],
+            "api_url": "api.worldoftanks.ru/wgn/",
+            "available_display_indices": [
+                "asia",
+                "eu",
+                "kr",
+                "na",
+                "ru"
+            ],
+            "description": "<p>Method returns the number of online players on the servers.</p>",
+            "display_index": "ru",
+            "fields": [
+                {
+                    "description": "<p>Number of online players</p>",
+                    "name": [
+                        "players_online"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Server ID</p>",
+                    "name": [
+                        "server"
+                    ],
+                    "type": "string"
+                }
+            ],
+            "name": "Game servers",
+            "parameters": [
+                {
+                    "description": "<p>Application ID</p>",
+                    "name": "application_id",
+                    "required": true,
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Localization language. Valid values:</p>\n<ul>\n<li>\"en\" &mdash; English </li>\n<li>\"ru\" &mdash; \u0420\u0443\u0441\u0441\u043a\u0438\u0439 (by default)</li>\n<li>\"pl\" &mdash; Polski </li>\n<li>\"de\" &mdash; Deutsch </li>\n<li>\"fr\" &mdash; Fran\u00e7ais </li>\n<li>\"es\" &mdash; Espa\u00f1ol </li>\n<li>\"zh-cn\" &mdash; \u7b80\u4f53\u4e2d\u6587 </li>\n<li>\"tr\" &mdash; T\u00fcrk\u00e7e </li>\n<li>\"cs\" &mdash; \u010ce\u0161tina </li>\n<li>\"th\" &mdash; \u0e44\u0e17\u0e22 </li>\n<li>\"vi\" &mdash; Ti\u1ebfng Vi\u1ec7t </li>\n<li>\"ko\" &mdash; \ud55c\uad6d\uc5b4</li>\n</ul>",
+                    "name": "language",
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields.</p>",
+                    "name": "fields",
+                    "type": "string, list"
+                },
+                {
+                    "description": "<p>Game ID. Valid values:</p>\n<ul>\n<li>\"wot\" &mdash; World of Tanks </li>\n<li>\"wotb\" &mdash; World of Tanks Blitz </li>\n<li>\"wowp\" &mdash; World of Warplanes</li>\n</ul>",
+                    "name": "game",
+                    "type": "string, list"
+                }
+            ],
+            "realm": "ru",
+            "section": "servers",
+            "url": "servers/info"
+        }
+    },
+    "wargag": {
+        "categories": {
+            "allowed_http_methods": [
+                "GET",
+                "POST"
+            ],
+            "allowed_protocols": [
+                "http",
+                "https"
+            ],
+            "api_url": "api.worldoftanks.ru/wgn/",
+            "available_display_indices": [
+                "ru"
+            ],
+            "description": "<p>Method returns information about content categories.</p>",
+            "display_index": "ru",
+            "errors": [
+                {
+                    "code": 404,
+                    "description": "",
+                    "message": "CATEGORY_ID_NOT_FOUND"
+                }
+            ],
+            "fields": [
+                {
+                    "description": "<p>Content category ID</p>",
+                    "name": [
+                        "category_id"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Content category name</p>",
+                    "name": [
+                        "name"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Content type</p>",
+                    "name": [
+                        "type"
+                    ],
+                    "type": "string"
+                }
+            ],
+            "name": "Categories",
+            "parameters": [
+                {
+                    "description": "<p>Application ID</p>",
+                    "name": "application_id",
+                    "required": true,
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields.</p>",
+                    "name": "fields",
+                    "type": "string, list"
+                },
+                {
+                    "description": "<p>Content type. Valid values:</p>\n<ul>\n<li>\"video\" &mdash; Video content type </li>\n<li>\"picture\" &mdash; Image content type</li>\n</ul>",
+                    "name": "type",
+                    "required": true,
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Content category ID</p>",
+                    "name": "category_id",
+                    "type": "numeric"
+                }
+            ],
+            "realm": "ru",
+            "section": "wargag",
+            "url": "wargag/categories"
+        },
+        "comments": {
+            "allowed_http_methods": [
+                "GET",
+                "POST"
+            ],
+            "allowed_protocols": [
+                "http",
+                "https"
+            ],
+            "api_url": "api.worldoftanks.ru/wgn/",
+            "available_display_indices": [
+                "ru"
+            ],
+            "description": "<p>Method returns comments to the content.</p>",
+            "display_index": "ru",
+            "errors": [
+                {
+                    "code": 404,
+                    "description": "",
+                    "message": "CONTENT_ID_NOT_FOUND"
+                }
+            ],
+            "fields": [
+                {
+                    "description": "<p>Comment author ID</p>",
+                    "name": [
+                        "account_id"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Comment text</p>",
+                    "name": [
+                        "comment"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Comment ID</p>",
+                    "name": [
+                        "comment_id"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Publication ID</p>",
+                    "name": [
+                        "content_id"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Comment date</p>",
+                    "name": [
+                        "created_at"
+                    ],
+                    "type": "timestamp"
+                },
+                {
+                    "description": "<p>Player name</p>",
+                    "name": [
+                        "nickname"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "type": "empty_line"
+                },
+                {
+                    "description": "<p>Comment Author</p>",
+                    "name": [
+                        "author"
+                    ],
+                    "type": "block_header"
+                },
+                {
+                    "description": "<p>Author's reputation</p>",
+                    "name": [
+                        "author",
+                        "reputation"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Author's title</p>",
+                    "name": [
+                        "author",
+                        "status"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Title icon</p>",
+                    "name": [
+                        "author",
+                        "status_image"
+                    ],
+                    "type": "string"
+                }
+            ],
+            "name": "Comments",
+            "parameters": [
+                {
+                    "description": "<p>Application ID</p>",
+                    "name": "application_id",
+                    "required": true,
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields.</p>",
+                    "name": "fields",
+                    "type": "string, list"
+                },
+                {
+                    "description": "<p>Publication ID</p>",
+                    "name": "content_id",
+                    "required": true,
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Result page number</p>",
+                    "name": "page_no",
+                    "type": "numeric"
+                }
+            ],
+            "realm": "ru",
+            "section": "wargag",
+            "url": "wargag/comments"
+        },
+        "content": {
+            "allowed_http_methods": [
+                "GET",
+                "POST"
+            ],
+            "allowed_protocols": [
+                "http",
+                "https"
+            ],
+            "api_url": "api.worldoftanks.ru/wgn/",
+            "available_display_indices": [
+                "ru"
+            ],
+            "description": "<p>Method returns information about content.</p>",
+            "display_index": "ru",
+            "fields": [
+                {
+                    "description": "<p>Publication author ID</p>",
+                    "name": [
+                        "account_id"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Content category ID</p>",
+                    "name": [
+                        "category_id"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Publication ID</p>",
+                    "name": [
+                        "content_id"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Publication date in UNIX timestamp or ISO 8601</p>",
+                    "name": [
+                        "created_at"
+                    ],
+                    "type": "timestamp"
+                },
+                {
+                    "description": "<p>Publication text</p>",
+                    "name": [
+                        "description"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Link to image preview. Available for <em>picture</em> content only.</p>",
+                    "name": [
+                        "media_preview_url"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Video/image link</p>",
+                    "name": [
+                        "media_url"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Player name</p>",
+                    "name": [
+                        "nickname"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Current rating</p>",
+                    "name": [
+                        "rating"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Publication topic</p>",
+                    "name": [
+                        "subject"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Tag ID</p>",
+                    "name": [
+                        "tag_id"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Content type</p>",
+                    "name": [
+                        "type"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Link to original publication</p>",
+                    "name": [
+                        "wargag_url"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Indicates the possibility to vote for content. This data requires a valid access_token for the specified account.</p>",
+                    "name": [
+                        "allowed_to_vote"
+                    ],
+                    "type": "boolean"
+                },
+                {
+                    "type": "empty_line"
+                },
+                {
+                    "description": "<p>Content author</p>",
+                    "name": [
+                        "author"
+                    ],
+                    "type": "block_header"
+                },
+                {
+                    "description": "<p>Author's reputation</p>",
+                    "name": [
+                        "author",
+                        "reputation"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Author's title</p>",
+                    "name": [
+                        "author",
+                        "status"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Title icon</p>",
+                    "name": [
+                        "author",
+                        "status_image"
+                    ],
+                    "type": "string"
+                }
+            ],
+            "name": "Content",
+            "parameters": [
+                {
+                    "description": "<p>Application ID</p>",
+                    "name": "application_id",
+                    "required": true,
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields.</p>",
+                    "name": "fields",
+                    "type": "string, list"
+                },
+                {
+                    "description": "<p>Access token is used to access personal user data. The token is obtained via authentication and has expiration time.</p>",
+                    "name": "access_token",
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Content ID. When this parameter is specified, all other passed-in parameters are ignored.</p>",
+                    "name": "content_id",
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Content type. Valid values:</p>\n<ul>\n<li>\"quote\" &mdash; Quote content </li>\n<li>\"video\" &mdash; Video content </li>\n<li>\"picture\" &mdash; Image content type</li>\n</ul>",
+                    "name": "type",
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Publication date</p>",
+                    "name": "date",
+                    "type": "timestamp/date"
+                },
+                {
+                    "description": "<p>Content category ID</p>",
+                    "name": "category_id",
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Tag ID</p>",
+                    "name": "tag_id",
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Threshold of publication rating</p>",
+                    "name": "rating_threshold",
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Publication author ID</p>",
+                    "name": "account_id",
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Result page number</p>",
+                    "name": "page_no",
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Sorting. Valid values:</p>\n<ul>\n<li>\"date\" &mdash; by publication date </li>\n<li>\"-date\" &mdash; by publication date in reverse order (by default)</li>\n<li>\"rating\" &mdash; by rating value </li>\n<li>\"-rating\" &mdash; by rating value in reverse order</li>\n</ul>",
+                    "name": "order_by",
+                    "type": "string"
+                }
+            ],
+            "realm": "ru",
+            "section": "wargag",
+            "url": "wargag/content"
+        },
+        "deletecomment": {
+            "allowed_http_methods": [
+                "POST"
+            ],
+            "allowed_protocols": [
+                "https"
+            ],
+            "api_url": "api.worldoftanks.ru/wgn/",
+            "available_display_indices": [
+                "ru"
+            ],
+            "description": "<p>Method allows to delete comments. A valid <strong>access_token</strong> for the specified account is required.</p>",
+            "display_index": "ru",
+            "errors": [
+                {
+                    "code": 403,
+                    "description": "<p>Forbidden action.</p>",
+                    "message": "ACCESS_DENIED"
+                }
+            ],
+            "name": "Deleting comments",
+            "parameters": [
+                {
+                    "description": "<p>Application ID</p>",
+                    "name": "application_id",
+                    "required": true,
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Access token is used to access personal user data. The token is obtained via authentication and has expiration time.</p>",
+                    "name": "access_token",
+                    "required": true,
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Comment ID</p>",
+                    "name": "comment_id",
+                    "required": true,
+                    "type": "numeric"
+                }
+            ],
+            "realm": "ru",
+            "section": "wargag",
+            "url": "wargag/deletecomment"
+        },
+        "newcomment": {
+            "allowed_http_methods": [
+                "POST"
+            ],
+            "allowed_protocols": [
+                "https"
+            ],
+            "api_url": "api.worldoftanks.ru/wgn/",
+            "available_display_indices": [
+                "ru"
+            ],
+            "description": "<p>Method allows to add comments. A valid <strong>access_token</strong> for the specified account is required. Comments allowed for <em>picture</em> and <em>video</em> content only.</p>",
+            "display_index": "ru",
+            "errors": [
+                {
+                    "code": 403,
+                    "description": "<p>Forbidden action.</p>",
+                    "message": "ACCESS_DENIED"
+                }
+            ],
+            "fields": [
+                {
+                    "description": "<p>Comment author ID</p>",
+                    "name": [
+                        "account_id"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Comment text</p>",
+                    "name": [
+                        "comment"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Comment ID</p>",
+                    "name": [
+                        "comment_id"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Publication ID</p>",
+                    "name": [
+                        "content_id"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Comment date</p>",
+                    "name": [
+                        "created_at"
+                    ],
+                    "type": "timestamp"
+                },
+                {
+                    "description": "<p>Player name</p>",
+                    "name": [
+                        "nickname"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "type": "empty_line"
+                },
+                {
+                    "description": "<p>Comment Author</p>",
+                    "name": [
+                        "author"
+                    ],
+                    "type": "block_header"
+                },
+                {
+                    "description": "<p>Author's reputation</p>",
+                    "name": [
+                        "author",
+                        "reputation"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Author's title</p>",
+                    "name": [
+                        "author",
+                        "status"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Title icon</p>",
+                    "name": [
+                        "author",
+                        "status_image"
+                    ],
+                    "type": "string"
+                }
+            ],
+            "name": "Adding comments",
+            "parameters": [
+                {
+                    "description": "<p>Application ID</p>",
+                    "name": "application_id",
+                    "required": true,
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Access token is used to access personal user data. The token is obtained via authentication and has expiration time.</p>",
+                    "name": "access_token",
+                    "required": true,
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Publication ID</p>",
+                    "name": "content_id",
+                    "required": true,
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Comment text. Maximum length: 1000 symbols.</p>",
+                    "name": "text",
+                    "required": true,
+                    "type": "string"
+                }
+            ],
+            "realm": "ru",
+            "section": "wargag",
+            "url": "wargag/newcomment"
+        },
+        "rate": {
+            "allowed_http_methods": [
+                "POST"
+            ],
+            "allowed_protocols": [
+                "https"
+            ],
+            "api_url": "api.worldoftanks.ru/wgn/",
+            "available_display_indices": [
+                "ru"
+            ],
+            "description": "<p>Method allows to rate content. A valid <strong>access_token</strong> for the specified account is required.</p>",
+            "display_index": "ru",
+            "errors": [
+                {
+                    "code": 403,
+                    "description": "<p>Forbidden action.</p>",
+                    "message": "ACCESS_DENIED"
+                }
+            ],
+            "fields": [
+                {
+                    "description": "<p>Publication author ID</p>",
+                    "name": [
+                        "account_id"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Content category ID</p>",
+                    "name": [
+                        "category_id"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Publication ID</p>",
+                    "name": [
+                        "content_id"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Publication date in UNIX timestamp or ISO 8601</p>",
+                    "name": [
+                        "created_at"
+                    ],
+                    "type": "timestamp"
+                },
+                {
+                    "description": "<p>Publication text</p>",
+                    "name": [
+                        "description"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Link to image preview. Available for <em>picture</em> content only.</p>",
+                    "name": [
+                        "media_preview_url"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Video/image link</p>",
+                    "name": [
+                        "media_url"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Player name</p>",
+                    "name": [
+                        "nickname"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Current rating</p>",
+                    "name": [
+                        "rating"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Publication topic</p>",
+                    "name": [
+                        "subject"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Tag ID</p>",
+                    "name": [
+                        "tag_id"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Content type</p>",
+                    "name": [
+                        "type"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Link to original publication</p>",
+                    "name": [
+                        "wargag_url"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "type": "empty_line"
+                },
+                {
+                    "description": "<p>Content author</p>",
+                    "name": [
+                        "author"
+                    ],
+                    "type": "block_header"
+                },
+                {
+                    "description": "<p>Author's reputation</p>",
+                    "name": [
+                        "author",
+                        "reputation"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Author's title</p>",
+                    "name": [
+                        "author",
+                        "status"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Title icon</p>",
+                    "name": [
+                        "author",
+                        "status_image"
+                    ],
+                    "type": "string"
+                }
+            ],
+            "name": "Rating content",
+            "parameters": [
+                {
+                    "description": "<p>Application ID</p>",
+                    "name": "application_id",
+                    "required": true,
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Access token is used to access personal user data. The token is obtained via authentication and has expiration time.</p>",
+                    "name": "access_token",
+                    "required": true,
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Publication ID</p>",
+                    "name": "content_id",
+                    "required": true,
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Rate. Valid values:</p>\n<ul>\n<li>\"up\" &mdash; Rate content positively </li>\n<li>\"down\" &mdash; Rate content negatively</li>\n</ul>",
+                    "name": "rating",
+                    "required": true,
+                    "type": "string"
+                }
+            ],
+            "realm": "ru",
+            "section": "wargag",
+            "url": "wargag/rate"
+        },
+        "search": {
+            "allowed_http_methods": [
+                "GET",
+                "POST"
+            ],
+            "allowed_protocols": [
+                "http",
+                "https"
+            ],
+            "api_url": "api.worldoftanks.ru/wgn/",
+            "available_display_indices": [
+                "ru"
+            ],
+            "description": "<p>Method searches content for specified text.</p>",
+            "display_index": "ru",
+            "errors": [
+                {
+                    "code": 402,
+                    "description": "",
+                    "message": "Q_NOT_SPECIFIED"
+                },
+                {
+                    "code": 407,
+                    "description": "",
+                    "message": "NOT_ENOUGH_Q_LENGTH"
+                }
+            ],
+            "fields": [
+                {
+                    "description": "<p>Publication author ID</p>",
+                    "name": [
+                        "account_id"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Content category ID</p>",
+                    "name": [
+                        "category_id"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Publication ID</p>",
+                    "name": [
+                        "content_id"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Publication date in UNIX timestamp or ISO 8601</p>",
+                    "name": [
+                        "created_at"
+                    ],
+                    "type": "timestamp"
+                },
+                {
+                    "description": "<p>Publication text</p>",
+                    "name": [
+                        "description"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Link to image preview. Available for <em>picture</em> content only.</p>",
+                    "name": [
+                        "media_preview_url"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Video/image link</p>",
+                    "name": [
+                        "media_url"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Player name</p>",
+                    "name": [
+                        "nickname"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Current rating</p>",
+                    "name": [
+                        "rating"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Publication topic</p>",
+                    "name": [
+                        "subject"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Tag ID</p>",
+                    "name": [
+                        "tag_id"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Content type</p>",
+                    "name": [
+                        "type"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Link to original publication</p>",
+                    "name": [
+                        "wargag_url"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Indicates the possibility to vote for content. This data requires a valid access_token for the specified account.</p>",
+                    "name": [
+                        "allowed_to_vote"
+                    ],
+                    "type": "boolean"
+                },
+                {
+                    "type": "empty_line"
+                },
+                {
+                    "description": "<p>Content author</p>",
+                    "name": [
+                        "author"
+                    ],
+                    "type": "block_header"
+                },
+                {
+                    "description": "<p>Author's reputation</p>",
+                    "name": [
+                        "author",
+                        "reputation"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Author's title</p>",
+                    "name": [
+                        "author",
+                        "status"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Title icon</p>",
+                    "name": [
+                        "author",
+                        "status_image"
+                    ],
+                    "type": "string"
+                }
+            ],
+            "name": "Content search",
+            "parameters": [
+                {
+                    "description": "<p>Application ID</p>",
+                    "name": "application_id",
+                    "required": true,
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields.</p>",
+                    "name": "fields",
+                    "type": "string, list"
+                },
+                {
+                    "description": "<p>Access token is used to access personal user data. The token is obtained via authentication and has expiration time.</p>",
+                    "name": "access_token",
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Search text. Minimum length: 3 characters. Case insensitive.</p>",
+                    "name": "q",
+                    "required": true,
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Content type. Valid values:</p>\n<ul>\n<li>\"quote\" &mdash; Quote content </li>\n<li>\"video\" &mdash; Video content </li>\n<li>\"picture\" &mdash; Image content type</li>\n</ul>",
+                    "name": "type",
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Content category ID</p>",
+                    "name": "category_id",
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Tag ID</p>",
+                    "name": "tag_id",
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Threshold of publication rating</p>",
+                    "name": "rating_threshold",
+                    "type": "numeric"
+                }
+            ],
+            "realm": "ru",
+            "section": "wargag",
+            "url": "wargag/search"
+        },
+        "tags": {
+            "allowed_http_methods": [
+                "GET",
+                "POST"
+            ],
+            "allowed_protocols": [
+                "http",
+                "https"
+            ],
+            "api_url": "api.worldoftanks.ru/wgn/",
+            "available_display_indices": [
+                "ru"
+            ],
+            "description": "<p>Method returns information about content tags.</p>",
+            "display_index": "ru",
+            "errors": [
+                {
+                    "code": 404,
+                    "description": "",
+                    "message": "TAG_ID_NOT_FOUND"
+                }
+            ],
+            "fields": [
+                {
+                    "description": "<p>Tag name</p>",
+                    "name": [
+                        "name"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Tag ID</p>",
+                    "name": [
+                        "tag_id"
+                    ],
+                    "type": "numeric"
+                }
+            ],
+            "name": "Tags",
+            "parameters": [
+                {
+                    "description": "<p>Application ID</p>",
+                    "name": "application_id",
+                    "required": true,
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields.</p>",
+                    "name": "fields",
+                    "type": "string, list"
+                },
+                {
+                    "description": "<p>Tag ID</p>",
+                    "name": "tag_id",
+                    "type": "numeric"
+                }
+            ],
+            "realm": "ru",
+            "section": "wargag",
+            "url": "wargag/tags"
+        }
+    },
+    "wgtv": {
+        "tags": {
+            "allowed_http_methods": [
+                "GET",
+                "POST"
+            ],
+            "allowed_protocols": [
+                "http",
+                "https"
+            ],
+            "api_url": "api.worldoftanks.ru/wgn/",
+            "available_display_indices": [
+                "na",
+                "ru"
+            ],
+            "description": "<p>Method returns lists of game projects, categories, and programs.</p>",
+            "display_index": "ru",
+            "fields": [
+                {
+                    "type": "empty_line"
+                },
+                {
+                    "description": "<p>List of categories</p>",
+                    "name": [
+                        "categories"
+                    ],
+                    "type": "block_header"
+                },
+                {
+                    "description": "<p>Content category ID</p>",
+                    "name": [
+                        "categories",
+                        "category_id"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Localized name of the category</p>",
+                    "name": [
+                        "categories",
+                        "name"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Sort order</p>",
+                    "name": [
+                        "categories",
+                        "order"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "type": "empty_line"
+                },
+                {
+                    "description": "<p>List of programs</p>",
+                    "name": [
+                        "programs"
+                    ],
+                    "type": "block_header"
+                },
+                {
+                    "description": "<p>Localized name of the program</p>",
+                    "name": [
+                        "programs",
+                        "name"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Sort order</p>",
+                    "name": [
+                        "programs",
+                        "order"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Program ID</p>",
+                    "name": [
+                        "programs",
+                        "program_id"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "type": "empty_line"
+                },
+                {
+                    "description": "<p>List of projects</p>",
+                    "name": [
+                        "projects"
+                    ],
+                    "type": "block_header"
+                },
+                {
+                    "description": "<p>Name of the game project</p>",
+                    "name": [
+                        "projects",
+                        "name"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Sort order</p>",
+                    "name": [
+                        "projects",
+                        "order"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Game project ID</p>",
+                    "name": [
+                        "projects",
+                        "project_id"
+                    ],
+                    "type": "numeric"
+                }
+            ],
+            "name": "Tags",
+            "parameters": [
+                {
+                    "description": "<p>Application ID</p>",
+                    "name": "application_id",
+                    "required": true,
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Localization language. Valid values:</p>\n<ul>\n<li>\"en\" &mdash; English </li>\n<li>\"ru\" &mdash; \u0420\u0443\u0441\u0441\u043a\u0438\u0439 (by default)</li>\n<li>\"pl\" &mdash; Polski </li>\n<li>\"de\" &mdash; Deutsch </li>\n<li>\"fr\" &mdash; Fran\u00e7ais </li>\n<li>\"es\" &mdash; Espa\u00f1ol </li>\n<li>\"zh-cn\" &mdash; \u7b80\u4f53\u4e2d\u6587 </li>\n<li>\"tr\" &mdash; T\u00fcrk\u00e7e </li>\n<li>\"cs\" &mdash; \u010ce\u0161tina </li>\n<li>\"th\" &mdash; \u0e44\u0e17\u0e22 </li>\n<li>\"vi\" &mdash; Ti\u1ebfng Vi\u1ec7t </li>\n<li>\"ko\" &mdash; \ud55c\uad6d\uc5b4</li>\n</ul>",
+                    "name": "language",
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields.</p>",
+                    "name": "fields",
+                    "type": "string, list"
+                }
+            ],
+            "realm": "ru",
+            "section": "wgtv",
+            "url": "wgtv/tags"
+        },
+        "vehicles": {
+            "allowed_http_methods": [
+                "GET",
+                "POST"
+            ],
+            "allowed_protocols": [
+                "http",
+                "https"
+            ],
+            "api_url": "api.worldoftanks.ru/wgn/",
+            "available_display_indices": [
+                "na",
+                "ru"
+            ],
+            "description": "<p>Method returns a list of vehicles sorted by games and covered by videos</p>",
+            "display_index": "ru",
+            "fields": [
+                {
+                    "description": "<p>Vehicle IDs by games</p>",
+                    "name": [
+                        "vehicles"
+                    ],
+                    "type": "associative array"
+                }
+            ],
+            "name": "Vehicles",
+            "parameters": [
+                {
+                    "description": "<p>Application ID</p>",
+                    "name": "application_id",
+                    "required": true,
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Game project ID</p>",
+                    "name": "project_id",
+                    "type": "numeric, list"
+                },
+                {
+                    "description": "<p>Content category ID</p>",
+                    "name": "category_id",
+                    "type": "numeric, list"
+                },
+                {
+                    "description": "<p>Program ID</p>",
+                    "name": "program_id",
+                    "type": "numeric, list"
+                }
+            ],
+            "realm": "ru",
+            "section": "wgtv",
+            "url": "wgtv/vehicles"
+        },
+        "videos": {
+            "allowed_http_methods": [
+                "GET",
+                "POST"
+            ],
+            "allowed_protocols": [
+                "http",
+                "https"
+            ],
+            "api_url": "api.worldoftanks.ru/wgn/",
+            "available_display_indices": [
+                "na",
+                "ru"
+            ],
+            "description": "<p>Method returns list of videos filtered by the specified parameter.</p>",
+            "display_index": "ru",
+            "fields": [
+                {
+                    "description": "<p>List of category IDs</p>",
+                    "name": [
+                        "category_id"
+                    ],
+                    "type": "list of integers"
+                },
+                {
+                    "description": "<p>Localized description of the video</p>",
+                    "name": [
+                        "description"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Video duration in seconds. The field can return null.</p>",
+                    "name": [
+                        "duration"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Name of the video on YouTube</p>",
+                    "name": [
+                        "ext_title"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>\"Important\" mark</p>",
+                    "name": [
+                        "important"
+                    ],
+                    "type": "boolean"
+                },
+                {
+                    "description": "<p>Program ID</p>",
+                    "name": [
+                        "program_id"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>List of project IDs</p>",
+                    "name": [
+                        "project_id"
+                    ],
+                    "type": "list of integers"
+                },
+                {
+                    "description": "<p>Publication date and time</p>",
+                    "name": [
+                        "published_at"
+                    ],
+                    "type": "timestamp"
+                },
+                {
+                    "description": "<p>Localized name of the video</p>",
+                    "name": [
+                        "title"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>List of vehicle IDs covered in the video</p>",
+                    "name": [
+                        "vehicles"
+                    ],
+                    "type": "associative array"
+                },
+                {
+                    "description": "<p>Youtube ID</p>",
+                    "name": [
+                        "video_id"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Youtube link</p>",
+                    "name": [
+                        "video_url"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "type": "empty_line"
+                },
+                {
+                    "description": "<p>List of images</p>",
+                    "name": [
+                        "thumbnails"
+                    ],
+                    "type": "block_header"
+                },
+                {
+                    "description": "<p>Height</p>",
+                    "name": [
+                        "thumbnails",
+                        "height"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Image link</p>",
+                    "name": [
+                        "thumbnails",
+                        "url"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Width</p>",
+                    "name": [
+                        "thumbnails",
+                        "width"
+                    ],
+                    "type": "numeric"
+                }
+            ],
+            "name": "List of videos",
+            "parameters": [
+                {
+                    "description": "<p>Application ID</p>",
+                    "name": "application_id",
+                    "required": true,
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Localization language. Valid values:</p>\n<ul>\n<li>\"en\" &mdash; English </li>\n<li>\"ru\" &mdash; \u0420\u0443\u0441\u0441\u043a\u0438\u0439 (by default)</li>\n<li>\"pl\" &mdash; Polski </li>\n<li>\"de\" &mdash; Deutsch </li>\n<li>\"fr\" &mdash; Fran\u00e7ais </li>\n<li>\"es\" &mdash; Espa\u00f1ol </li>\n<li>\"zh-cn\" &mdash; \u7b80\u4f53\u4e2d\u6587 </li>\n<li>\"tr\" &mdash; T\u00fcrk\u00e7e </li>\n<li>\"cs\" &mdash; \u010ce\u0161tina </li>\n<li>\"th\" &mdash; \u0e44\u0e17\u0e22 </li>\n<li>\"vi\" &mdash; Ti\u1ebfng Vi\u1ec7t </li>\n<li>\"ko\" &mdash; \ud55c\uad6d\uc5b4</li>\n</ul>",
+                    "name": "language",
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields.</p>",
+                    "name": "fields",
+                    "type": "string, list"
+                },
+                {
+                    "description": "<p>Youtube ID</p>",
+                    "name": "video_id",
+                    "type": "string, list"
+                },
+                {
+                    "description": "<p>Game project ID</p>",
+                    "name": "project_id",
+                    "type": "numeric, list"
+                },
+                {
+                    "description": "<p>Content category ID</p>",
+                    "name": "category_id",
+                    "type": "numeric, list"
+                },
+                {
+                    "description": "<p>Program ID</p>",
+                    "name": "program_id",
+                    "type": "numeric, list"
+                },
+                {
+                    "description": "<p>Text for search by name</p>",
+                    "name": "q",
+                    "type": "string"
+                },
+                {
+                    "description": "<p>\"Important\" mark</p>",
+                    "name": "important",
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Dated from the specified date</p>",
+                    "name": "date_from",
+                    "type": "timestamp/date"
+                },
+                {
+                    "description": "<p>Number of returned entries (fewer can be returned, but not more than 1000). If the limit sent exceeds 1000, an limit of 100 is applied (by default).</p>",
+                    "name": "limit",
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Result page number</p>",
+                    "name": "page_no",
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Vehicle ID</p>",
+                    "name": "vehicle_id",
+                    "type": "numeric, list"
+                }
+            ],
+            "realm": "ru",
+            "section": "wgtv",
+            "url": "wgtv/videos"
         }
     }
 }

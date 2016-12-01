@@ -19,13 +19,14 @@ class PyTest(TestCommand):
 def lines(filename):
     return [x.strip() for x in open(filename).read().splitlines()]
 
+
 install_requires = lines('requirements.txt')
 
 test_requires = lines('requirements_test.txt')
 
 setup(
     name='wargaming',
-    version='2016.6.1',
+    version='2016.12.1',
     author='svartalf',
     author_email='self@svartalf.info',
     url='https://github.com/svartalf/python-wargaming',

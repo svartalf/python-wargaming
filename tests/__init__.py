@@ -14,59 +14,62 @@ class WargamingMetaTestCase(unittest.TestCase):
     open_schema = mock_open(read_data=json.dumps(
         {'sub_module_name': {
             'func1': {
-                '__doc__': 'doc example for func1',
-                'application_id': {
-                    'doc': 'doc for application_id',
+                'description': 'doc example for func1',
+                'parameters': [{
+                    'name': 'application_id',
+                    'description': 'doc for application_id',
                     'required': True,
                     'type': 'string',
-                },
-                'language': {
-                    'doc': 'doc for language',
+                }, {
+                    'name': 'language',
+                    'description': 'doc for language',
                     'required': True,
                     'type': 'string',
-                },
+                }],
+                'url': 'sub_module_name/func1',
             }, 'func2': {
-                '__doc__': 'doc example for func2',
-                'application_id': {
-                    'doc': 'doc for application_id',
+                'description': 'doc example for func2',
+                'parameters': [{
+                    'name': 'application_id',
+                    'description': 'doc for application_id',
                     'required': True,
                     'type': 'string',
-                },
-                'language': {
-                    'doc': 'doc for language',
+                }, {
+                    'name': 'language',
+                    'description': 'doc for language',
                     'required': True,
                     'type': 'string',
-                },
-                'date': {
-                    'doc': 'sample date field',
-                    'required': False,
+                }, {
+                    'name': 'date',
+                    'description': 'sample date field',
                     'type': 'timestamp/date',
-                },
-                'fields': {
-                    'doc': 'doc for fields',
-                    'required': False,
+                }, {
+                    'name': 'fields',
+                    'description': 'doc for fields',
                     'type': 'string',
-                },
-
+                }],
+                'url': 'sub_module_name/func2',
             },
             # }, 'func3': { is used for custom function
             'func4': {
-                '__doc__': 'doc example for func2',
-                'application_id': {
-                    'doc': 'doc for application_id',
+                'description': 'doc example for func4',
+                'parameters': [{
+                    'name': 'application_id',
+                    'description': 'doc for application_id',
                     'required': True,
                     'type': 'string',
-                },
-                'language': {
-                    'doc': 'doc for language',
+                }, {
+                    'name': 'language',
+                    'description': 'doc for language',
                     'required': True,
                     'type': 'string',
-                },
-                'clan_id': {
-                    'doc': 'fetch info about clan',
+                }, {
+                    'name': 'clan_id',
+                    'description': 'fetch info about clan',
                     'required': True,
                     'type': 'string',
-                }
+                }],
+                'url': 'sub_module_name/func4',
             }
         }}
     ))

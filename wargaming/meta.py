@@ -4,6 +4,7 @@ import requests
 import six
 from retrying import retry
 from datetime import datetime
+from bs4 import BeautifulSoup
 
 from wargaming.exceptions import RequestError, ValidationError
 from wargaming.settings import (
@@ -166,14 +167,20 @@ class MetaAPI(type):
         cls = super(MetaAPI, mcs).__new__(mcs, name, bases, attrs)
         cls._module_dict = {}
 
-        def make_api_call(url, fields):
+        def make_api_call(call_schema):
             """
             API function generator (list, info, etc.)
-            :param url: url to function
-            :param fields:  allowed fields
+            :param call_schema:  allowed fields
             :return: api call function
             """
-            doc = fields.pop('__doc__')
+            url = call_schema['url']
+            if not url.endswith('/'):
+                url += '/'
+
+            parameters = {
+                parameter['name']: parameter
+                for parameter in call_schema['parameters']
+            }
 
             def api_call(self, **kwargs):
                 """API call to WG public API
@@ -182,7 +189,7 @@ class MetaAPI(type):
                 :return: WGAPI instance
                 """
                 for field in kwargs.keys():
-                    if field not in fields:
+                    if field not in parameters:
                         raise ValidationError('Wrong parameter: {0}'.format(field))
 
                 if 'language' not in kwargs:
@@ -191,16 +198,18 @@ class MetaAPI(type):
                 if 'application_id' not in kwargs:
                     kwargs['application_id'] = self.application_id
 
-                for field, params in fields.items():
-                    if params['required'] and field not in kwargs:
+                for field, params in parameters.items():
+                    if params.get('required') and field not in kwargs:
                         raise ValidationError('Missing required paramter : {0}'.format(field))
 
                 return WGAPI(self.base_url + url, **kwargs)
+            doc = BeautifulSoup(call_schema['description'], "html.parser").get_text()
             doc += "\n\nKeyword arguments:\n"
-            for value_name, value_desc in fields.items():
-                doc += "%-20s  doc:      %s\n" % (value_name, value_desc['doc'])
-                doc += "%-20s  required: %s\n" % ('', value_desc['required'])
-                doc += "%-20s  type:     %s\n\n" % ('', value_desc['type'])
+            for field in call_schema['parameters']:
+                doc += "%-20s  doc:      %s\n" % (
+                    field['name'], BeautifulSoup(field['description'], "html.parser").get_text())
+                doc += "%-20s  required: %s\n" % ('', field.get('required', False))
+                doc += "%-20s  type:     %s\n\n" % ('', field['type'])
             api_call.__doc__ = doc
             api_call.__name__ = str(url.split('/')[-1])
             api_call.__module__ = str(url.split('/')[0])
@@ -224,7 +233,7 @@ class MetaAPI(type):
             # make this work without class initialization
             setattr(cls, obj_name, module_obj)
 
-            for func_name, func in obj.items():
-                setattr(module_obj, func_name, make_api_call(obj_name + '/' + func_name + '/', func))
+            for func_name, api_call_schema in obj.items():
+                setattr(module_obj, func_name, make_api_call(api_call_schema))
 
         return cls
