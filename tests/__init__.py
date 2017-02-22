@@ -75,6 +75,7 @@ class WargamingMetaTestCase(unittest.TestCase):
     ))
 
     @patch('wargaming.meta.ALLOWED_GAMES', ['demo'])
+    @patch('wargaming.meta.GAME_API_ENDPOINTS', {'demo': 'https://api.worldoftanks'})
     @patch('wargaming.meta.open', open_schema)
     def setUp(self):
 
