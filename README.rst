@@ -42,3 +42,9 @@ Just fork, update and send pull request. Do not forget to run tests:
 Also check for a PEP-0008 compliance:
 
     $ pep8 --max-line-length=120 wargaming
+
+Contributors
+------------
+
+ * monester
+ * LanceMaverick
