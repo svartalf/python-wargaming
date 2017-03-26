@@ -13,7 +13,6 @@
             "available_display_indices": [
                 "asia",
                 "eu",
-                "kr",
                 "na",
                 "ru"
             ],
@@ -51,7 +50,7 @@
                     "type": "string"
                 },
                 {
-                    "description": "<p>Application ID. Default is ru. Valid values:</p>\n<ul>\n<li>\"en\" &mdash; English </li>\n<li>\"ru\" &mdash; \u0420\u0443\u0441\u0441\u043a\u0438\u0439 (by default)</li>\n<li>\"pl\" &mdash; Polski </li>\n<li>\"de\" &mdash; Deutsch </li>\n<li>\"fr\" &mdash; Fran\u00e7ais </li>\n<li>\"es\" &mdash; Espa\u00f1ol </li>\n<li>\"zh-cn\" &mdash; \u7b80\u4f53\u4e2d\u6587 </li>\n<li>\"zh-tw\" &mdash; \u7e41\u9ad4\u4e2d\u6587 </li>\n<li>\"tr\" &mdash; T\u00fcrk\u00e7e </li>\n<li>\"cs\" &mdash; \u010ce\u0161tina </li>\n<li>\"th\" &mdash; \u0e44\u0e17\u0e22 </li>\n<li>\"vi\" &mdash; Ti\u1ebfng Vi\u1ec7t </li>\n<li>\"ko\" &mdash; \ud55c\uad6d\uc5b4</li>\n</ul>",
+                    "description": "<p>Localization language. Default is ru. Valid values:</p>\n<ul>\n<li>\"en\" &mdash; English </li>\n<li>\"ru\" &mdash; \u0420\u0443\u0441\u0441\u043a\u0438\u0439 (by default)</li>\n<li>\"pl\" &mdash; Polski </li>\n<li>\"de\" &mdash; Deutsch </li>\n<li>\"fr\" &mdash; Fran\u00e7ais </li>\n<li>\"es\" &mdash; Espa\u00f1ol </li>\n<li>\"zh-cn\" &mdash; \u7b80\u4f53\u4e2d\u6587 </li>\n<li>\"zh-tw\" &mdash; \u7e41\u9ad4\u4e2d\u6587 </li>\n<li>\"tr\" &mdash; T\u00fcrk\u00e7e </li>\n<li>\"cs\" &mdash; \u010ce\u0161tina </li>\n<li>\"th\" &mdash; \u0e44\u0e17\u0e22 </li>\n<li>\"vi\" &mdash; Ti\u1ebfng Vi\u1ec7t </li>\n<li>\"ko\" &mdash; \ud55c\uad6d\uc5b4</li>\n</ul>",
                     "name": "language",
                     "type": "string"
                 },
@@ -84,7 +83,6 @@
             "available_display_indices": [
                 "asia",
                 "eu",
-                "kr",
                 "na",
                 "ru"
             ],
@@ -106,6 +104,7 @@
                     "type": "numeric"
                 },
                 {
+                    "deprecated": true,
                     "description": "<p>Account ban details</p>",
                     "name": [
                         "ban_info"
@@ -113,6 +112,7 @@
                     "type": "string"
                 },
                 {
+                    "deprecated": true,
                     "description": "<p>End time of account ban</p>",
                     "name": [
                         "ban_time"
@@ -186,6 +186,22 @@
                     "type": "block_header"
                 },
                 {
+                    "description": "<p>Account ban details</p>",
+                    "name": [
+                        "private",
+                        "ban_info"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>End time of account ban</p>",
+                    "name": [
+                        "private",
+                        "ban_time"
+                    ],
+                    "type": "timestamp"
+                },
+                {
                     "description": "<p>Overall battle life time in seconds</p>",
                     "name": [
                         "private",
@@ -208,15 +224,6 @@
                         "free_xp"
                     ],
                     "type": "numeric"
-                },
-                {
-                    "deprecated": true,
-                    "description": "<p>Account IDs of player's friends</p>",
-                    "name": [
-                        "private",
-                        "friends"
-                    ],
-                    "type": "list of integers"
                 },
                 {
                     "description": "<p>Vehicles in the Garage.</p>\n<p><strong>An extra field.</strong></p>",
@@ -424,16 +431,6 @@
                         "private",
                         "restrictions",
                         "chat_ban_time"
-                    ],
-                    "type": "timestamp"
-                },
-                {
-                    "deprecated": true,
-                    "description": "<p>End time of clan restrictions</p>",
-                    "name": [
-                        "private",
-                        "restrictions",
-                        "clan_time"
                     ],
                     "type": "timestamp"
                 },
@@ -4171,7 +4168,7 @@
                     "type": "string"
                 },
                 {
-                    "description": "<p>Application ID. Default is ru. Valid values:</p>\n<ul>\n<li>\"en\" &mdash; English </li>\n<li>\"ru\" &mdash; \u0420\u0443\u0441\u0441\u043a\u0438\u0439 (by default)</li>\n<li>\"pl\" &mdash; Polski </li>\n<li>\"de\" &mdash; Deutsch </li>\n<li>\"fr\" &mdash; Fran\u00e7ais </li>\n<li>\"es\" &mdash; Espa\u00f1ol </li>\n<li>\"zh-cn\" &mdash; \u7b80\u4f53\u4e2d\u6587 </li>\n<li>\"zh-tw\" &mdash; \u7e41\u9ad4\u4e2d\u6587 </li>\n<li>\"tr\" &mdash; T\u00fcrk\u00e7e </li>\n<li>\"cs\" &mdash; \u010ce\u0161tina </li>\n<li>\"th\" &mdash; \u0e44\u0e17\u0e22 </li>\n<li>\"vi\" &mdash; Ti\u1ebfng Vi\u1ec7t </li>\n<li>\"ko\" &mdash; \ud55c\uad6d\uc5b4</li>\n</ul>",
+                    "description": "<p>Localization language. Default is ru. Valid values:</p>\n<ul>\n<li>\"en\" &mdash; English </li>\n<li>\"ru\" &mdash; \u0420\u0443\u0441\u0441\u043a\u0438\u0439 (by default)</li>\n<li>\"pl\" &mdash; Polski </li>\n<li>\"de\" &mdash; Deutsch </li>\n<li>\"fr\" &mdash; Fran\u00e7ais </li>\n<li>\"es\" &mdash; Espa\u00f1ol </li>\n<li>\"zh-cn\" &mdash; \u7b80\u4f53\u4e2d\u6587 </li>\n<li>\"zh-tw\" &mdash; \u7e41\u9ad4\u4e2d\u6587 </li>\n<li>\"tr\" &mdash; T\u00fcrk\u00e7e </li>\n<li>\"cs\" &mdash; \u010ce\u0161tina </li>\n<li>\"th\" &mdash; \u0e44\u0e17\u0e22 </li>\n<li>\"vi\" &mdash; Ti\u1ebfng Vi\u1ec7t </li>\n<li>\"ko\" &mdash; \ud55c\uad6d\uc5b4</li>\n</ul>",
                     "name": "language",
                     "type": "string"
                 },
@@ -4214,7 +4211,6 @@
             "available_display_indices": [
                 "asia",
                 "eu",
-                "kr",
                 "na",
                 "ru"
             ],
@@ -4257,7 +4253,7 @@
                     "type": "string"
                 },
                 {
-                    "description": "<p>Application ID. Default is ru. Valid values:</p>\n<ul>\n<li>\"en\" &mdash; English </li>\n<li>\"ru\" &mdash; \u0420\u0443\u0441\u0441\u043a\u0438\u0439 (by default)</li>\n<li>\"pl\" &mdash; Polski </li>\n<li>\"de\" &mdash; Deutsch </li>\n<li>\"fr\" &mdash; Fran\u00e7ais </li>\n<li>\"es\" &mdash; Espa\u00f1ol </li>\n<li>\"zh-cn\" &mdash; \u7b80\u4f53\u4e2d\u6587 </li>\n<li>\"zh-tw\" &mdash; \u7e41\u9ad4\u4e2d\u6587 </li>\n<li>\"tr\" &mdash; T\u00fcrk\u00e7e </li>\n<li>\"cs\" &mdash; \u010ce\u0161tina </li>\n<li>\"th\" &mdash; \u0e44\u0e17\u0e22 </li>\n<li>\"vi\" &mdash; Ti\u1ebfng Vi\u1ec7t </li>\n<li>\"ko\" &mdash; \ud55c\uad6d\uc5b4</li>\n</ul>",
+                    "description": "<p>Localization language. Default is ru. Valid values:</p>\n<ul>\n<li>\"en\" &mdash; English </li>\n<li>\"ru\" &mdash; \u0420\u0443\u0441\u0441\u043a\u0438\u0439 (by default)</li>\n<li>\"pl\" &mdash; Polski </li>\n<li>\"de\" &mdash; Deutsch </li>\n<li>\"fr\" &mdash; Fran\u00e7ais </li>\n<li>\"es\" &mdash; Espa\u00f1ol </li>\n<li>\"zh-cn\" &mdash; \u7b80\u4f53\u4e2d\u6587 </li>\n<li>\"zh-tw\" &mdash; \u7e41\u9ad4\u4e2d\u6587 </li>\n<li>\"tr\" &mdash; T\u00fcrk\u00e7e </li>\n<li>\"cs\" &mdash; \u010ce\u0161tina </li>\n<li>\"th\" &mdash; \u0e44\u0e17\u0e22 </li>\n<li>\"vi\" &mdash; Ti\u1ebfng Vi\u1ec7t </li>\n<li>\"ko\" &mdash; \ud55c\uad6d\uc5b4</li>\n</ul>",
                     "name": "language",
                     "type": "string"
                 },
@@ -4300,7 +4296,6 @@
             "available_display_indices": [
                 "asia",
                 "eu",
-                "kr",
                 "na",
                 "ru"
             ],
@@ -4364,7 +4359,7 @@
                     "type": "string"
                 },
                 {
-                    "description": "<p>Application ID. Default is ru. Valid values:</p>\n<ul>\n<li>\"en\" &mdash; English </li>\n<li>\"ru\" &mdash; \u0420\u0443\u0441\u0441\u043a\u0438\u0439 (by default)</li>\n<li>\"pl\" &mdash; Polski </li>\n<li>\"de\" &mdash; Deutsch </li>\n<li>\"fr\" &mdash; Fran\u00e7ais </li>\n<li>\"es\" &mdash; Espa\u00f1ol </li>\n<li>\"zh-cn\" &mdash; \u7b80\u4f53\u4e2d\u6587 </li>\n<li>\"zh-tw\" &mdash; \u7e41\u9ad4\u4e2d\u6587 </li>\n<li>\"tr\" &mdash; T\u00fcrk\u00e7e </li>\n<li>\"cs\" &mdash; \u010ce\u0161tina </li>\n<li>\"th\" &mdash; \u0e44\u0e17\u0e22 </li>\n<li>\"vi\" &mdash; Ti\u1ebfng Vi\u1ec7t </li>\n<li>\"ko\" &mdash; \ud55c\uad6d\uc5b4</li>\n</ul>",
+                    "description": "<p>Localization language. Default is ru. Valid values:</p>\n<ul>\n<li>\"en\" &mdash; English </li>\n<li>\"ru\" &mdash; \u0420\u0443\u0441\u0441\u043a\u0438\u0439 (by default)</li>\n<li>\"pl\" &mdash; Polski </li>\n<li>\"de\" &mdash; Deutsch </li>\n<li>\"fr\" &mdash; Fran\u00e7ais </li>\n<li>\"es\" &mdash; Espa\u00f1ol </li>\n<li>\"zh-cn\" &mdash; \u7b80\u4f53\u4e2d\u6587 </li>\n<li>\"zh-tw\" &mdash; \u7e41\u9ad4\u4e2d\u6587 </li>\n<li>\"tr\" &mdash; T\u00fcrk\u00e7e </li>\n<li>\"cs\" &mdash; \u010ce\u0161tina </li>\n<li>\"th\" &mdash; \u0e44\u0e17\u0e22 </li>\n<li>\"vi\" &mdash; Ti\u1ebfng Vi\u1ec7t </li>\n<li>\"ko\" &mdash; \ud55c\uad6d\uc5b4</li>\n</ul>",
                     "name": "language",
                     "type": "string"
                 },
@@ -4408,7 +4403,6 @@
             "available_display_indices": [
                 "asia",
                 "eu",
-                "kr",
                 "na",
                 "ru"
             ],
@@ -4484,7 +4478,6 @@
             "available_display_indices": [
                 "asia",
                 "eu",
-                "kr",
                 "na",
                 "ru"
             ],
@@ -4520,7 +4513,6 @@
             "available_display_indices": [
                 "asia",
                 "eu",
-                "kr",
                 "na",
                 "ru"
             ],
@@ -4588,7 +4580,6 @@
             "available_display_indices": [
                 "asia",
                 "eu",
-                "kr",
                 "na",
                 "ru"
             ],
@@ -4736,7 +4727,7 @@
                     "type": "empty_line"
                 },
                 {
-                    "description": "<p>Clan Elo rating in Battles for Stronghold</p>",
+                    "description": "<p>Weighted Elo rating achieved in the Stronghold mode</p>",
                     "name": [
                         "fb_elo_rating"
                     ],
@@ -4770,7 +4761,7 @@
                     "type": "empty_line"
                 },
                 {
-                    "description": "<p>Elo rating in Battles for Stronghold in Absolute division</p>",
+                    "description": "<p>Elo rating achieved by the clan on Tier X vehicles in the Stronghold mode</p>",
                     "name": [
                         "fb_elo_rating_10"
                     ],
@@ -4804,7 +4795,41 @@
                     "type": "empty_line"
                 },
                 {
-                    "description": "<p>Elo rating in Battles for Stronghold in Champion division</p>",
+                    "description": "<p>Elo rating achieved on Tier VI vehicles in the Stronghold mode</p>",
+                    "name": [
+                        "fb_elo_rating_6"
+                    ],
+                    "type": "block_header"
+                },
+                {
+                    "description": "<p>Position</p>",
+                    "name": [
+                        "fb_elo_rating_6",
+                        "rank"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Change of position in rating</p>",
+                    "name": [
+                        "fb_elo_rating_6",
+                        "rank_delta"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Absolute value</p>",
+                    "name": [
+                        "fb_elo_rating_6",
+                        "value"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "type": "empty_line"
+                },
+                {
+                    "description": "<p>Elo rating achieved on Tier VIII vehicles in the Stronghold mode</p>",
                     "name": [
                         "fb_elo_rating_8"
                     ],
@@ -5150,7 +5175,7 @@
                     "type": "string"
                 },
                 {
-                    "description": "<p>Application ID. Default is ru. Valid values:</p>\n<ul>\n<li>\"en\" &mdash; English </li>\n<li>\"ru\" &mdash; \u0420\u0443\u0441\u0441\u043a\u0438\u0439 (by default)</li>\n<li>\"pl\" &mdash; Polski </li>\n<li>\"de\" &mdash; Deutsch </li>\n<li>\"fr\" &mdash; Fran\u00e7ais </li>\n<li>\"es\" &mdash; Espa\u00f1ol </li>\n<li>\"zh-cn\" &mdash; \u7b80\u4f53\u4e2d\u6587 </li>\n<li>\"zh-tw\" &mdash; \u7e41\u9ad4\u4e2d\u6587 </li>\n<li>\"tr\" &mdash; T\u00fcrk\u00e7e </li>\n<li>\"cs\" &mdash; \u010ce\u0161tina </li>\n<li>\"th\" &mdash; \u0e44\u0e17\u0e22 </li>\n<li>\"vi\" &mdash; Ti\u1ebfng Vi\u1ec7t </li>\n<li>\"ko\" &mdash; \ud55c\uad6d\uc5b4</li>\n</ul>",
+                    "description": "<p>Localization language. Default is ru. Valid values:</p>\n<ul>\n<li>\"en\" &mdash; English </li>\n<li>\"ru\" &mdash; \u0420\u0443\u0441\u0441\u043a\u0438\u0439 (by default)</li>\n<li>\"pl\" &mdash; Polski </li>\n<li>\"de\" &mdash; Deutsch </li>\n<li>\"fr\" &mdash; Fran\u00e7ais </li>\n<li>\"es\" &mdash; Espa\u00f1ol </li>\n<li>\"zh-cn\" &mdash; \u7b80\u4f53\u4e2d\u6587 </li>\n<li>\"zh-tw\" &mdash; \u7e41\u9ad4\u4e2d\u6587 </li>\n<li>\"tr\" &mdash; T\u00fcrk\u00e7e </li>\n<li>\"cs\" &mdash; \u010ce\u0161tina </li>\n<li>\"th\" &mdash; \u0e44\u0e17\u0e22 </li>\n<li>\"vi\" &mdash; Ti\u1ebfng Vi\u1ec7t </li>\n<li>\"ko\" &mdash; \ud55c\uad6d\uc5b4</li>\n</ul>",
                     "name": "language",
                     "type": "string"
                 },
@@ -5188,7 +5213,6 @@
             "available_display_indices": [
                 "asia",
                 "eu",
-                "kr",
                 "na",
                 "ru"
             ],
@@ -5234,7 +5258,6 @@
             "available_display_indices": [
                 "asia",
                 "eu",
-                "kr",
                 "na",
                 "ru"
             ],
@@ -5382,7 +5405,7 @@
                     "type": "empty_line"
                 },
                 {
-                    "description": "<p>Clan Elo rating in Battles for Stronghold</p>",
+                    "description": "<p>Weighted Elo rating achieved in the Stronghold mode</p>",
                     "name": [
                         "fb_elo_rating"
                     ],
@@ -5416,7 +5439,7 @@
                     "type": "empty_line"
                 },
                 {
-                    "description": "<p>Elo rating in Battles for Stronghold in Absolute division</p>",
+                    "description": "<p>Elo rating achieved by the clan on Tier X vehicles in the Stronghold mode</p>",
                     "name": [
                         "fb_elo_rating_10"
                     ],
@@ -5450,7 +5473,41 @@
                     "type": "empty_line"
                 },
                 {
-                    "description": "<p>Elo rating in Battles for Stronghold in Champion division</p>",
+                    "description": "<p>Elo rating achieved on Tier VI vehicles in the Stronghold mode</p>",
+                    "name": [
+                        "fb_elo_rating_6"
+                    ],
+                    "type": "block_header"
+                },
+                {
+                    "description": "<p>Position</p>",
+                    "name": [
+                        "fb_elo_rating_6",
+                        "rank"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Change of position in rating</p>",
+                    "name": [
+                        "fb_elo_rating_6",
+                        "rank_delta"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Absolute value</p>",
+                    "name": [
+                        "fb_elo_rating_6",
+                        "value"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "type": "empty_line"
+                },
+                {
+                    "description": "<p>Elo rating achieved on Tier VIII vehicles in the Stronghold mode</p>",
                     "name": [
                         "fb_elo_rating_8"
                     ],
@@ -5796,7 +5853,7 @@
                     "type": "string"
                 },
                 {
-                    "description": "<p>Application ID. Default is ru. Valid values:</p>\n<ul>\n<li>\"en\" &mdash; English </li>\n<li>\"ru\" &mdash; \u0420\u0443\u0441\u0441\u043a\u0438\u0439 (by default)</li>\n<li>\"pl\" &mdash; Polski </li>\n<li>\"de\" &mdash; Deutsch </li>\n<li>\"fr\" &mdash; Fran\u00e7ais </li>\n<li>\"es\" &mdash; Espa\u00f1ol </li>\n<li>\"zh-cn\" &mdash; \u7b80\u4f53\u4e2d\u6587 </li>\n<li>\"zh-tw\" &mdash; \u7e41\u9ad4\u4e2d\u6587 </li>\n<li>\"tr\" &mdash; T\u00fcrk\u00e7e </li>\n<li>\"cs\" &mdash; \u010ce\u0161tina </li>\n<li>\"th\" &mdash; \u0e44\u0e17\u0e22 </li>\n<li>\"vi\" &mdash; Ti\u1ebfng Vi\u1ec7t </li>\n<li>\"ko\" &mdash; \ud55c\uad6d\uc5b4</li>\n</ul>",
+                    "description": "<p>Localization language. Default is ru. Valid values:</p>\n<ul>\n<li>\"en\" &mdash; English </li>\n<li>\"ru\" &mdash; \u0420\u0443\u0441\u0441\u043a\u0438\u0439 (by default)</li>\n<li>\"pl\" &mdash; Polski </li>\n<li>\"de\" &mdash; Deutsch </li>\n<li>\"fr\" &mdash; Fran\u00e7ais </li>\n<li>\"es\" &mdash; Espa\u00f1ol </li>\n<li>\"zh-cn\" &mdash; \u7b80\u4f53\u4e2d\u6587 </li>\n<li>\"zh-tw\" &mdash; \u7e41\u9ad4\u4e2d\u6587 </li>\n<li>\"tr\" &mdash; T\u00fcrk\u00e7e </li>\n<li>\"cs\" &mdash; \u010ce\u0161tina </li>\n<li>\"th\" &mdash; \u0e44\u0e17\u0e22 </li>\n<li>\"vi\" &mdash; Ti\u1ebfng Vi\u1ec7t </li>\n<li>\"ko\" &mdash; \ud55c\uad6d\uc5b4</li>\n</ul>",
                     "name": "language",
                     "type": "string"
                 },
@@ -5845,7 +5902,6 @@
             "available_display_indices": [
                 "asia",
                 "eu",
-                "kr",
                 "na",
                 "ru"
             ],
@@ -5993,7 +6049,7 @@
                     "type": "empty_line"
                 },
                 {
-                    "description": "<p>Clan Elo rating in Battles for Stronghold</p>",
+                    "description": "<p>Weighted Elo rating achieved in the Stronghold mode</p>",
                     "name": [
                         "fb_elo_rating"
                     ],
@@ -6027,7 +6083,7 @@
                     "type": "empty_line"
                 },
                 {
-                    "description": "<p>Elo rating in Battles for Stronghold in Absolute division</p>",
+                    "description": "<p>Elo rating achieved by the clan on Tier X vehicles in the Stronghold mode</p>",
                     "name": [
                         "fb_elo_rating_10"
                     ],
@@ -6061,7 +6117,41 @@
                     "type": "empty_line"
                 },
                 {
-                    "description": "<p>Elo rating in Battles for Stronghold in Champion division</p>",
+                    "description": "<p>Elo rating achieved on Tier VI vehicles in the Stronghold mode</p>",
+                    "name": [
+                        "fb_elo_rating_6"
+                    ],
+                    "type": "block_header"
+                },
+                {
+                    "description": "<p>Position</p>",
+                    "name": [
+                        "fb_elo_rating_6",
+                        "rank"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Change of position in rating</p>",
+                    "name": [
+                        "fb_elo_rating_6",
+                        "rank_delta"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Absolute value</p>",
+                    "name": [
+                        "fb_elo_rating_6",
+                        "value"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "type": "empty_line"
+                },
+                {
+                    "description": "<p>Elo rating achieved on Tier VIII vehicles in the Stronghold mode</p>",
                     "name": [
                         "fb_elo_rating_8"
                     ],
@@ -6407,7 +6497,7 @@
                     "type": "string"
                 },
                 {
-                    "description": "<p>Application ID. Default is ru. Valid values:</p>\n<ul>\n<li>\"en\" &mdash; English </li>\n<li>\"ru\" &mdash; \u0420\u0443\u0441\u0441\u043a\u0438\u0439 (by default)</li>\n<li>\"pl\" &mdash; Polski </li>\n<li>\"de\" &mdash; Deutsch </li>\n<li>\"fr\" &mdash; Fran\u00e7ais </li>\n<li>\"es\" &mdash; Espa\u00f1ol </li>\n<li>\"zh-cn\" &mdash; \u7b80\u4f53\u4e2d\u6587 </li>\n<li>\"zh-tw\" &mdash; \u7e41\u9ad4\u4e2d\u6587 </li>\n<li>\"tr\" &mdash; T\u00fcrk\u00e7e </li>\n<li>\"cs\" &mdash; \u010ce\u0161tina </li>\n<li>\"th\" &mdash; \u0e44\u0e17\u0e22 </li>\n<li>\"vi\" &mdash; Ti\u1ebfng Vi\u1ec7t </li>\n<li>\"ko\" &mdash; \ud55c\uad6d\uc5b4</li>\n</ul>",
+                    "description": "<p>Localization language. Default is ru. Valid values:</p>\n<ul>\n<li>\"en\" &mdash; English </li>\n<li>\"ru\" &mdash; \u0420\u0443\u0441\u0441\u043a\u0438\u0439 (by default)</li>\n<li>\"pl\" &mdash; Polski </li>\n<li>\"de\" &mdash; Deutsch </li>\n<li>\"fr\" &mdash; Fran\u00e7ais </li>\n<li>\"es\" &mdash; Espa\u00f1ol </li>\n<li>\"zh-cn\" &mdash; \u7b80\u4f53\u4e2d\u6587 </li>\n<li>\"zh-tw\" &mdash; \u7e41\u9ad4\u4e2d\u6587 </li>\n<li>\"tr\" &mdash; T\u00fcrk\u00e7e </li>\n<li>\"cs\" &mdash; \u010ce\u0161tina </li>\n<li>\"th\" &mdash; \u0e44\u0e17\u0e22 </li>\n<li>\"vi\" &mdash; Ti\u1ebfng Vi\u1ec7t </li>\n<li>\"ko\" &mdash; \ud55c\uad6d\uc5b4</li>\n</ul>",
                     "name": "language",
                     "type": "string"
                 },
@@ -6455,7 +6545,6 @@
             "available_display_indices": [
                 "asia",
                 "eu",
-                "kr",
                 "na",
                 "ru"
             ],
@@ -6505,7 +6594,6 @@
             "available_display_indices": [
                 "asia",
                 "eu",
-                "kr",
                 "na",
                 "ru"
             ],
@@ -6579,14 +6667,6 @@
                     "description": "<p>Section</p>",
                     "name": [
                         "section"
-                    ],
-                    "type": "string"
-                },
-                {
-                    "deprecated": true,
-                    "description": "<p>Localized section name</p>",
-                    "name": [
-                        "section_i18n"
                     ],
                     "type": "string"
                 },
@@ -6721,7 +6801,6 @@
             "available_display_indices": [
                 "asia",
                 "eu",
-                "kr",
                 "na",
                 "ru"
             ],
@@ -6793,7 +6872,6 @@
             "available_display_indices": [
                 "asia",
                 "eu",
-                "kr",
                 "na",
                 "ru"
             ],
@@ -6926,7 +7004,6 @@
             "available_display_indices": [
                 "asia",
                 "eu",
-                "kr",
                 "na",
                 "ru"
             ],
@@ -7038,7 +7115,6 @@
             "available_display_indices": [
                 "asia",
                 "eu",
-                "kr",
                 "na",
                 "ru"
             ],
@@ -7452,7 +7528,6 @@
             "available_display_indices": [
                 "asia",
                 "eu",
-                "kr",
                 "na",
                 "ru"
             ],
@@ -7815,7 +7890,6 @@
             "available_display_indices": [
                 "asia",
                 "eu",
-                "kr",
                 "na",
                 "ru"
             ],
@@ -7932,7 +8006,6 @@
             "available_display_indices": [
                 "asia",
                 "eu",
-                "kr",
                 "na",
                 "ru"
             ],
@@ -8027,7 +8100,7 @@
                     "type": "string"
                 },
                 {
-                    "description": "<p>Application ID. Default is ru. Valid values:</p>\n<ul>\n<li>\"en\" &mdash; English </li>\n<li>\"ru\" &mdash; \u0420\u0443\u0441\u0441\u043a\u0438\u0439 (by default)</li>\n<li>\"pl\" &mdash; Polski </li>\n<li>\"de\" &mdash; Deutsch </li>\n<li>\"fr\" &mdash; Fran\u00e7ais </li>\n<li>\"es\" &mdash; Espa\u00f1ol </li>\n<li>\"zh-cn\" &mdash; \u7b80\u4f53\u4e2d\u6587 </li>\n<li>\"zh-tw\" &mdash; \u7e41\u9ad4\u4e2d\u6587 </li>\n<li>\"tr\" &mdash; T\u00fcrk\u00e7e </li>\n<li>\"cs\" &mdash; \u010ce\u0161tina </li>\n<li>\"th\" &mdash; \u0e44\u0e17\u0e22 </li>\n<li>\"vi\" &mdash; Ti\u1ebfng Vi\u1ec7t </li>\n<li>\"ko\" &mdash; \ud55c\uad6d\uc5b4</li>\n</ul>",
+                    "description": "<p>Localization language. Default is ru. Valid values:</p>\n<ul>\n<li>\"en\" &mdash; English </li>\n<li>\"ru\" &mdash; \u0420\u0443\u0441\u0441\u043a\u0438\u0439 (by default)</li>\n<li>\"pl\" &mdash; Polski </li>\n<li>\"de\" &mdash; Deutsch </li>\n<li>\"fr\" &mdash; Fran\u00e7ais </li>\n<li>\"es\" &mdash; Espa\u00f1ol </li>\n<li>\"zh-cn\" &mdash; \u7b80\u4f53\u4e2d\u6587 </li>\n<li>\"zh-tw\" &mdash; \u7e41\u9ad4\u4e2d\u6587 </li>\n<li>\"tr\" &mdash; T\u00fcrk\u00e7e </li>\n<li>\"cs\" &mdash; \u010ce\u0161tina </li>\n<li>\"th\" &mdash; \u0e44\u0e17\u0e22 </li>\n<li>\"vi\" &mdash; Ti\u1ebfng Vi\u1ec7t </li>\n<li>\"ko\" &mdash; \ud55c\uad6d\uc5b4</li>\n</ul>",
                     "name": "language",
                     "type": "string"
                 },
@@ -8064,7 +8137,6 @@
             "available_display_indices": [
                 "asia",
                 "eu",
-                "kr",
                 "na",
                 "ru"
             ],
@@ -8159,7 +8231,7 @@
                     "type": "string"
                 },
                 {
-                    "description": "<p>Application ID. Default is ru. Valid values:</p>\n<ul>\n<li>\"en\" &mdash; English </li>\n<li>\"ru\" &mdash; \u0420\u0443\u0441\u0441\u043a\u0438\u0439 (by default)</li>\n<li>\"pl\" &mdash; Polski </li>\n<li>\"de\" &mdash; Deutsch </li>\n<li>\"fr\" &mdash; Fran\u00e7ais </li>\n<li>\"es\" &mdash; Espa\u00f1ol </li>\n<li>\"zh-cn\" &mdash; \u7b80\u4f53\u4e2d\u6587 </li>\n<li>\"zh-tw\" &mdash; \u7e41\u9ad4\u4e2d\u6587 </li>\n<li>\"tr\" &mdash; T\u00fcrk\u00e7e </li>\n<li>\"cs\" &mdash; \u010ce\u0161tina </li>\n<li>\"th\" &mdash; \u0e44\u0e17\u0e22 </li>\n<li>\"vi\" &mdash; Ti\u1ebfng Vi\u1ec7t </li>\n<li>\"ko\" &mdash; \ud55c\uad6d\uc5b4</li>\n</ul>",
+                    "description": "<p>Localization language. Default is ru. Valid values:</p>\n<ul>\n<li>\"en\" &mdash; English </li>\n<li>\"ru\" &mdash; \u0420\u0443\u0441\u0441\u043a\u0438\u0439 (by default)</li>\n<li>\"pl\" &mdash; Polski </li>\n<li>\"de\" &mdash; Deutsch </li>\n<li>\"fr\" &mdash; Fran\u00e7ais </li>\n<li>\"es\" &mdash; Espa\u00f1ol </li>\n<li>\"zh-cn\" &mdash; \u7b80\u4f53\u4e2d\u6587 </li>\n<li>\"zh-tw\" &mdash; \u7e41\u9ad4\u4e2d\u6587 </li>\n<li>\"tr\" &mdash; T\u00fcrk\u00e7e </li>\n<li>\"cs\" &mdash; \u010ce\u0161tina </li>\n<li>\"th\" &mdash; \u0e44\u0e17\u0e22 </li>\n<li>\"vi\" &mdash; Ti\u1ebfng Vi\u1ec7t </li>\n<li>\"ko\" &mdash; \ud55c\uad6d\uc5b4</li>\n</ul>",
                     "name": "language",
                     "type": "string"
                 },
@@ -8196,7 +8268,6 @@
             "available_display_indices": [
                 "asia",
                 "eu",
-                "kr",
                 "na",
                 "ru"
             ],
@@ -8305,7 +8376,7 @@
                     "type": "string"
                 },
                 {
-                    "description": "<p>Application ID. Default is ru. Valid values:</p>\n<ul>\n<li>\"en\" &mdash; English </li>\n<li>\"ru\" &mdash; \u0420\u0443\u0441\u0441\u043a\u0438\u0439 (by default)</li>\n<li>\"pl\" &mdash; Polski </li>\n<li>\"de\" &mdash; Deutsch </li>\n<li>\"fr\" &mdash; Fran\u00e7ais </li>\n<li>\"es\" &mdash; Espa\u00f1ol </li>\n<li>\"zh-cn\" &mdash; \u7b80\u4f53\u4e2d\u6587 </li>\n<li>\"zh-tw\" &mdash; \u7e41\u9ad4\u4e2d\u6587 </li>\n<li>\"tr\" &mdash; T\u00fcrk\u00e7e </li>\n<li>\"cs\" &mdash; \u010ce\u0161tina </li>\n<li>\"th\" &mdash; \u0e44\u0e17\u0e22 </li>\n<li>\"vi\" &mdash; Ti\u1ebfng Vi\u1ec7t </li>\n<li>\"ko\" &mdash; \ud55c\uad6d\uc5b4</li>\n</ul>",
+                    "description": "<p>Localization language. Default is ru. Valid values:</p>\n<ul>\n<li>\"en\" &mdash; English </li>\n<li>\"ru\" &mdash; \u0420\u0443\u0441\u0441\u043a\u0438\u0439 (by default)</li>\n<li>\"pl\" &mdash; Polski </li>\n<li>\"de\" &mdash; Deutsch </li>\n<li>\"fr\" &mdash; Fran\u00e7ais </li>\n<li>\"es\" &mdash; Espa\u00f1ol </li>\n<li>\"zh-cn\" &mdash; \u7b80\u4f53\u4e2d\u6587 </li>\n<li>\"zh-tw\" &mdash; \u7e41\u9ad4\u4e2d\u6587 </li>\n<li>\"tr\" &mdash; T\u00fcrk\u00e7e </li>\n<li>\"cs\" &mdash; \u010ce\u0161tina </li>\n<li>\"th\" &mdash; \u0e44\u0e17\u0e22 </li>\n<li>\"vi\" &mdash; Ti\u1ebfng Vi\u1ec7t </li>\n<li>\"ko\" &mdash; \ud55c\uad6d\uc5b4</li>\n</ul>",
                     "name": "language",
                     "type": "string"
                 },
@@ -8352,7 +8423,6 @@
             "available_display_indices": [
                 "asia",
                 "eu",
-                "kr",
                 "na",
                 "ru"
             ],
@@ -8854,7 +8924,7 @@
                     "type": "string"
                 },
                 {
-                    "description": "<p>Application ID. Default is ru. Valid values:</p>\n<ul>\n<li>\"en\" &mdash; English </li>\n<li>\"ru\" &mdash; \u0420\u0443\u0441\u0441\u043a\u0438\u0439 (by default)</li>\n<li>\"pl\" &mdash; Polski </li>\n<li>\"de\" &mdash; Deutsch </li>\n<li>\"fr\" &mdash; Fran\u00e7ais </li>\n<li>\"es\" &mdash; Espa\u00f1ol </li>\n<li>\"zh-cn\" &mdash; \u7b80\u4f53\u4e2d\u6587 </li>\n<li>\"zh-tw\" &mdash; \u7e41\u9ad4\u4e2d\u6587 </li>\n<li>\"tr\" &mdash; T\u00fcrk\u00e7e </li>\n<li>\"cs\" &mdash; \u010ce\u0161tina </li>\n<li>\"th\" &mdash; \u0e44\u0e17\u0e22 </li>\n<li>\"vi\" &mdash; Ti\u1ebfng Vi\u1ec7t </li>\n<li>\"ko\" &mdash; \ud55c\uad6d\uc5b4</li>\n</ul>",
+                    "description": "<p>Localization language. Default is ru. Valid values:</p>\n<ul>\n<li>\"en\" &mdash; English </li>\n<li>\"ru\" &mdash; \u0420\u0443\u0441\u0441\u043a\u0438\u0439 (by default)</li>\n<li>\"pl\" &mdash; Polski </li>\n<li>\"de\" &mdash; Deutsch </li>\n<li>\"fr\" &mdash; Fran\u00e7ais </li>\n<li>\"es\" &mdash; Espa\u00f1ol </li>\n<li>\"zh-cn\" &mdash; \u7b80\u4f53\u4e2d\u6587 </li>\n<li>\"zh-tw\" &mdash; \u7e41\u9ad4\u4e2d\u6587 </li>\n<li>\"tr\" &mdash; T\u00fcrk\u00e7e </li>\n<li>\"cs\" &mdash; \u010ce\u0161tina </li>\n<li>\"th\" &mdash; \u0e44\u0e17\u0e22 </li>\n<li>\"vi\" &mdash; Ti\u1ebfng Vi\u1ec7t </li>\n<li>\"ko\" &mdash; \ud55c\uad6d\uc5b4</li>\n</ul>",
                     "name": "language",
                     "type": "string"
                 },
@@ -8887,7 +8957,6 @@
             "available_display_indices": [
                 "asia",
                 "eu",
-                "kr",
                 "na",
                 "ru"
             ],
@@ -8975,7 +9044,7 @@
                     "type": "string"
                 },
                 {
-                    "description": "<p>Application ID. Default is ru. Valid values:</p>\n<ul>\n<li>\"en\" &mdash; English </li>\n<li>\"ru\" &mdash; \u0420\u0443\u0441\u0441\u043a\u0438\u0439 (by default)</li>\n<li>\"pl\" &mdash; Polski </li>\n<li>\"de\" &mdash; Deutsch </li>\n<li>\"fr\" &mdash; Fran\u00e7ais </li>\n<li>\"es\" &mdash; Espa\u00f1ol </li>\n<li>\"zh-cn\" &mdash; \u7b80\u4f53\u4e2d\u6587 </li>\n<li>\"zh-tw\" &mdash; \u7e41\u9ad4\u4e2d\u6587 </li>\n<li>\"tr\" &mdash; T\u00fcrk\u00e7e </li>\n<li>\"cs\" &mdash; \u010ce\u0161tina </li>\n<li>\"th\" &mdash; \u0e44\u0e17\u0e22 </li>\n<li>\"vi\" &mdash; Ti\u1ebfng Vi\u1ec7t </li>\n<li>\"ko\" &mdash; \ud55c\uad6d\uc5b4</li>\n</ul>",
+                    "description": "<p>Localization language. Default is ru. Valid values:</p>\n<ul>\n<li>\"en\" &mdash; English </li>\n<li>\"ru\" &mdash; \u0420\u0443\u0441\u0441\u043a\u0438\u0439 (by default)</li>\n<li>\"pl\" &mdash; Polski </li>\n<li>\"de\" &mdash; Deutsch </li>\n<li>\"fr\" &mdash; Fran\u00e7ais </li>\n<li>\"es\" &mdash; Espa\u00f1ol </li>\n<li>\"zh-cn\" &mdash; \u7b80\u4f53\u4e2d\u6587 </li>\n<li>\"zh-tw\" &mdash; \u7e41\u9ad4\u4e2d\u6587 </li>\n<li>\"tr\" &mdash; T\u00fcrk\u00e7e </li>\n<li>\"cs\" &mdash; \u010ce\u0161tina </li>\n<li>\"th\" &mdash; \u0e44\u0e17\u0e22 </li>\n<li>\"vi\" &mdash; Ti\u1ebfng Vi\u1ec7t </li>\n<li>\"ko\" &mdash; \ud55c\uad6d\uc5b4</li>\n</ul>",
                     "name": "language",
                     "type": "string"
                 },
@@ -9012,7 +9081,6 @@
             "available_display_indices": [
                 "asia",
                 "eu",
-                "kr",
                 "na",
                 "ru"
             ],
@@ -9121,7 +9189,7 @@
                     "type": "string"
                 },
                 {
-                    "description": "<p>Application ID. Default is ru. Valid values:</p>\n<ul>\n<li>\"en\" &mdash; English </li>\n<li>\"ru\" &mdash; \u0420\u0443\u0441\u0441\u043a\u0438\u0439 (by default)</li>\n<li>\"pl\" &mdash; Polski </li>\n<li>\"de\" &mdash; Deutsch </li>\n<li>\"fr\" &mdash; Fran\u00e7ais </li>\n<li>\"es\" &mdash; Espa\u00f1ol </li>\n<li>\"zh-cn\" &mdash; \u7b80\u4f53\u4e2d\u6587 </li>\n<li>\"zh-tw\" &mdash; \u7e41\u9ad4\u4e2d\u6587 </li>\n<li>\"tr\" &mdash; T\u00fcrk\u00e7e </li>\n<li>\"cs\" &mdash; \u010ce\u0161tina </li>\n<li>\"th\" &mdash; \u0e44\u0e17\u0e22 </li>\n<li>\"vi\" &mdash; Ti\u1ebfng Vi\u1ec7t </li>\n<li>\"ko\" &mdash; \ud55c\uad6d\uc5b4</li>\n</ul>",
+                    "description": "<p>Localization language. Default is ru. Valid values:</p>\n<ul>\n<li>\"en\" &mdash; English </li>\n<li>\"ru\" &mdash; \u0420\u0443\u0441\u0441\u043a\u0438\u0439 (by default)</li>\n<li>\"pl\" &mdash; Polski </li>\n<li>\"de\" &mdash; Deutsch </li>\n<li>\"fr\" &mdash; Fran\u00e7ais </li>\n<li>\"es\" &mdash; Espa\u00f1ol </li>\n<li>\"zh-cn\" &mdash; \u7b80\u4f53\u4e2d\u6587 </li>\n<li>\"zh-tw\" &mdash; \u7e41\u9ad4\u4e2d\u6587 </li>\n<li>\"tr\" &mdash; T\u00fcrk\u00e7e </li>\n<li>\"cs\" &mdash; \u010ce\u0161tina </li>\n<li>\"th\" &mdash; \u0e44\u0e17\u0e22 </li>\n<li>\"vi\" &mdash; Ti\u1ebfng Vi\u1ec7t </li>\n<li>\"ko\" &mdash; \ud55c\uad6d\uc5b4</li>\n</ul>",
                     "name": "language",
                     "type": "string"
                 },
@@ -9148,7 +9216,6 @@
             "available_display_indices": [
                 "asia",
                 "eu",
-                "kr",
                 "na",
                 "ru"
             ],
@@ -9264,7 +9331,7 @@
                     "type": "string"
                 },
                 {
-                    "description": "<p>Application ID. Default is ru. Valid values:</p>\n<ul>\n<li>\"en\" &mdash; English </li>\n<li>\"ru\" &mdash; \u0420\u0443\u0441\u0441\u043a\u0438\u0439 (by default)</li>\n<li>\"pl\" &mdash; Polski </li>\n<li>\"de\" &mdash; Deutsch </li>\n<li>\"fr\" &mdash; Fran\u00e7ais </li>\n<li>\"es\" &mdash; Espa\u00f1ol </li>\n<li>\"zh-cn\" &mdash; \u7b80\u4f53\u4e2d\u6587 </li>\n<li>\"zh-tw\" &mdash; \u7e41\u9ad4\u4e2d\u6587 </li>\n<li>\"tr\" &mdash; T\u00fcrk\u00e7e </li>\n<li>\"cs\" &mdash; \u010ce\u0161tina </li>\n<li>\"th\" &mdash; \u0e44\u0e17\u0e22 </li>\n<li>\"vi\" &mdash; Ti\u1ebfng Vi\u1ec7t </li>\n<li>\"ko\" &mdash; \ud55c\uad6d\uc5b4</li>\n</ul>",
+                    "description": "<p>Localization language. Default is ru. Valid values:</p>\n<ul>\n<li>\"en\" &mdash; English </li>\n<li>\"ru\" &mdash; \u0420\u0443\u0441\u0441\u043a\u0438\u0439 (by default)</li>\n<li>\"pl\" &mdash; Polski </li>\n<li>\"de\" &mdash; Deutsch </li>\n<li>\"fr\" &mdash; Fran\u00e7ais </li>\n<li>\"es\" &mdash; Espa\u00f1ol </li>\n<li>\"zh-cn\" &mdash; \u7b80\u4f53\u4e2d\u6587 </li>\n<li>\"zh-tw\" &mdash; \u7e41\u9ad4\u4e2d\u6587 </li>\n<li>\"tr\" &mdash; T\u00fcrk\u00e7e </li>\n<li>\"cs\" &mdash; \u010ce\u0161tina </li>\n<li>\"th\" &mdash; \u0e44\u0e17\u0e22 </li>\n<li>\"vi\" &mdash; Ti\u1ebfng Vi\u1ec7t </li>\n<li>\"ko\" &mdash; \ud55c\uad6d\uc5b4</li>\n</ul>",
                     "name": "language",
                     "type": "string"
                 },
@@ -9301,7 +9368,6 @@
             "available_display_indices": [
                 "asia",
                 "eu",
-                "kr",
                 "na",
                 "ru"
             ],
@@ -9785,6 +9851,88 @@
                     "type": "empty_line"
                 },
                 {
+                    "description": "<p>Vehicle characteristics in the Siege mode</p>",
+                    "name": [
+                        "siege"
+                    ],
+                    "type": "block_header"
+                },
+                {
+                    "description": "<p>Aiming time (s)</p>",
+                    "name": [
+                        "siege",
+                        "aim_time"
+                    ],
+                    "type": "float"
+                },
+                {
+                    "description": "<p>Dispersion at 100 m (m)</p>",
+                    "name": [
+                        "siege",
+                        "dispersion"
+                    ],
+                    "type": "float"
+                },
+                {
+                    "description": "<p>Depression angle (deg)</p>",
+                    "name": [
+                        "siege",
+                        "move_down_arc"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Elevation angle (deg)</p>",
+                    "name": [
+                        "siege",
+                        "move_up_arc"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Reload time (s)</p>",
+                    "name": [
+                        "siege",
+                        "reload_time"
+                    ],
+                    "type": "float"
+                },
+                {
+                    "description": "<p>Top reverse speed (km/h)</p>",
+                    "name": [
+                        "siege",
+                        "speed_backward"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Standard suspension traverse speed</p>",
+                    "name": [
+                        "siege",
+                        "suspension_traverse_speed"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Time needed to switch on the Siege mode</p>",
+                    "name": [
+                        "siege",
+                        "switch_off_time"
+                    ],
+                    "type": "float"
+                },
+                {
+                    "description": "<p>Time needed to switch off the Siege mode</p>",
+                    "name": [
+                        "siege",
+                        "switch_on_time"
+                    ],
+                    "type": "float"
+                },
+                {
+                    "type": "empty_line"
+                },
+                {
                     "description": "<p>Suspension characteristics</p>",
                     "name": [
                         "suspension"
@@ -9994,7 +10142,6 @@
             "available_display_indices": [
                 "asia",
                 "eu",
-                "kr",
                 "na",
                 "ru"
             ],
@@ -10077,7 +10224,6 @@
             "available_display_indices": [
                 "asia",
                 "eu",
-                "kr",
                 "na",
                 "ru"
             ],
@@ -10120,6 +10266,7 @@
                     "type": "boolean"
                 },
                 {
+                    "deprecated": true,
                     "description": "<p>Indicates the IGR vehicle. Active only for Korea realm</p>",
                     "name": [
                         "is_premium_igr"
@@ -10764,6 +10911,98 @@
                     "type": "empty_line"
                 },
                 {
+                    "description": "<p>Vehicle characteristics in the Siege mode</p>",
+                    "name": [
+                        "default_profile",
+                        "siege"
+                    ],
+                    "type": "block_header"
+                },
+                {
+                    "description": "<p>Aiming time (s)</p>",
+                    "name": [
+                        "default_profile",
+                        "siege",
+                        "aim_time"
+                    ],
+                    "type": "float"
+                },
+                {
+                    "description": "<p>Dispersion at 100 m (m)</p>",
+                    "name": [
+                        "default_profile",
+                        "siege",
+                        "dispersion"
+                    ],
+                    "type": "float"
+                },
+                {
+                    "description": "<p>Depression angle (deg)</p>",
+                    "name": [
+                        "default_profile",
+                        "siege",
+                        "move_down_arc"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Elevation angle (deg)</p>",
+                    "name": [
+                        "default_profile",
+                        "siege",
+                        "move_up_arc"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Reload time (s)</p>",
+                    "name": [
+                        "default_profile",
+                        "siege",
+                        "reload_time"
+                    ],
+                    "type": "float"
+                },
+                {
+                    "description": "<p>Top reverse speed (km/h)</p>",
+                    "name": [
+                        "default_profile",
+                        "siege",
+                        "speed_backward"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Standard suspension traverse speed</p>",
+                    "name": [
+                        "default_profile",
+                        "siege",
+                        "suspension_traverse_speed"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Time needed to switch on the Siege mode</p>",
+                    "name": [
+                        "default_profile",
+                        "siege",
+                        "switch_off_time"
+                    ],
+                    "type": "float"
+                },
+                {
+                    "description": "<p>Time needed to switch off the Siege mode</p>",
+                    "name": [
+                        "default_profile",
+                        "siege",
+                        "switch_on_time"
+                    ],
+                    "type": "float"
+                },
+                {
+                    "type": "empty_line"
+                },
+                {
                     "description": "<p>Suspension characteristics</p>",
                     "name": [
                         "default_profile",
@@ -11084,7 +11323,6 @@
             "available_display_indices": [
                 "asia",
                 "eu",
-                "kr",
                 "na",
                 "ru"
             ],
@@ -11207,7 +11445,6 @@
             "available_display_indices": [
                 "asia",
                 "eu",
-                "kr",
                 "na",
                 "ru"
             ],
@@ -11444,7 +11681,6 @@
             "available_display_indices": [
                 "asia",
                 "eu",
-                "kr",
                 "na",
                 "ru"
             ],
@@ -11623,7 +11859,6 @@
             "available_display_indices": [
                 "asia",
                 "eu",
-                "kr",
                 "na",
                 "ru"
             ],
@@ -11827,7 +12062,6 @@
             "available_display_indices": [
                 "asia",
                 "eu",
-                "kr",
                 "na",
                 "ru"
             ],
@@ -12004,7 +12238,6 @@
             "available_display_indices": [
                 "asia",
                 "eu",
-                "kr",
                 "na",
                 "ru"
             ],
@@ -12175,7 +12408,6 @@
             "available_display_indices": [
                 "asia",
                 "eu",
-                "kr",
                 "na",
                 "ru"
             ],
@@ -12337,7 +12569,6 @@
             "available_display_indices": [
                 "asia",
                 "eu",
-                "kr",
                 "na",
                 "ru"
             ],
@@ -12489,7 +12720,6 @@
             "available_display_indices": [
                 "asia",
                 "eu",
-                "kr",
                 "na",
                 "ru"
             ],
@@ -12642,7 +12872,6 @@
             "available_display_indices": [
                 "asia",
                 "eu",
-                "kr",
                 "na",
                 "ru"
             ],
@@ -12782,7 +13011,6 @@
             "available_display_indices": [
                 "asia",
                 "eu",
-                "kr",
                 "na",
                 "ru"
             ],
@@ -13011,7 +13239,6 @@
             "available_display_indices": [
                 "asia",
                 "eu",
-                "kr",
                 "na",
                 "ru"
             ],
@@ -13078,7 +13305,6 @@
             "available_display_indices": [
                 "asia",
                 "eu",
-                "kr",
                 "na",
                 "ru"
             ],
@@ -13477,7 +13703,6 @@
             "available_display_indices": [
                 "asia",
                 "eu",
-                "kr",
                 "na",
                 "ru"
             ],
@@ -13623,7 +13848,6 @@
             "available_display_indices": [
                 "asia",
                 "eu",
-                "kr",
                 "na",
                 "ru"
             ],
@@ -13761,7 +13985,6 @@
             "available_display_indices": [
                 "asia",
                 "eu",
-                "kr",
                 "na",
                 "ru"
             ],
@@ -13899,7 +14122,6 @@
             "available_display_indices": [
                 "asia",
                 "eu",
-                "kr",
                 "na",
                 "ru"
             ],
@@ -14038,7 +14260,6 @@
             "available_display_indices": [
                 "asia",
                 "eu",
-                "kr",
                 "na",
                 "ru"
             ],
@@ -14180,7 +14401,6 @@
             "available_display_indices": [
                 "asia",
                 "eu",
-                "kr",
                 "na",
                 "ru"
             ],
@@ -14728,7 +14948,7 @@
                     "type": "string"
                 },
                 {
-                    "description": "<p>Application ID. Default is ru. Valid values:</p>\n<ul>\n<li>\"en\" &mdash; English </li>\n<li>\"ru\" &mdash; \u0420\u0443\u0441\u0441\u043a\u0438\u0439 (by default)</li>\n<li>\"pl\" &mdash; Polski </li>\n<li>\"de\" &mdash; Deutsch </li>\n<li>\"fr\" &mdash; Fran\u00e7ais </li>\n<li>\"es\" &mdash; Espa\u00f1ol </li>\n<li>\"zh-cn\" &mdash; \u7b80\u4f53\u4e2d\u6587 </li>\n<li>\"zh-tw\" &mdash; \u7e41\u9ad4\u4e2d\u6587 </li>\n<li>\"tr\" &mdash; T\u00fcrk\u00e7e </li>\n<li>\"cs\" &mdash; \u010ce\u0161tina </li>\n<li>\"th\" &mdash; \u0e44\u0e17\u0e22 </li>\n<li>\"vi\" &mdash; Ti\u1ebfng Vi\u1ec7t </li>\n<li>\"ko\" &mdash; \ud55c\uad6d\uc5b4</li>\n</ul>",
+                    "description": "<p>Localization language. Default is ru. Valid values:</p>\n<ul>\n<li>\"en\" &mdash; English </li>\n<li>\"ru\" &mdash; \u0420\u0443\u0441\u0441\u043a\u0438\u0439 (by default)</li>\n<li>\"pl\" &mdash; Polski </li>\n<li>\"de\" &mdash; Deutsch </li>\n<li>\"fr\" &mdash; Fran\u00e7ais </li>\n<li>\"es\" &mdash; Espa\u00f1ol </li>\n<li>\"zh-cn\" &mdash; \u7b80\u4f53\u4e2d\u6587 </li>\n<li>\"zh-tw\" &mdash; \u7e41\u9ad4\u4e2d\u6587 </li>\n<li>\"tr\" &mdash; T\u00fcrk\u00e7e </li>\n<li>\"cs\" &mdash; \u010ce\u0161tina </li>\n<li>\"th\" &mdash; \u0e44\u0e17\u0e22 </li>\n<li>\"vi\" &mdash; Ti\u1ebfng Vi\u1ec7t </li>\n<li>\"ko\" &mdash; \ud55c\uad6d\uc5b4</li>\n</ul>",
                     "name": "language",
                     "type": "string"
                 },
@@ -14777,7 +14997,6 @@
             "available_display_indices": [
                 "asia",
                 "eu",
-                "kr",
                 "na",
                 "ru"
             ],
@@ -14808,7 +15027,7 @@
                     "type": "string"
                 },
                 {
-                    "description": "<p>Application ID. Default is ru. Valid values:</p>\n<ul>\n<li>\"en\" &mdash; English </li>\n<li>\"ru\" &mdash; \u0420\u0443\u0441\u0441\u043a\u0438\u0439 (by default)</li>\n<li>\"pl\" &mdash; Polski </li>\n<li>\"de\" &mdash; Deutsch </li>\n<li>\"fr\" &mdash; Fran\u00e7ais </li>\n<li>\"es\" &mdash; Espa\u00f1ol </li>\n<li>\"zh-cn\" &mdash; \u7b80\u4f53\u4e2d\u6587 </li>\n<li>\"zh-tw\" &mdash; \u7e41\u9ad4\u4e2d\u6587 </li>\n<li>\"tr\" &mdash; T\u00fcrk\u00e7e </li>\n<li>\"cs\" &mdash; \u010ce\u0161tina </li>\n<li>\"th\" &mdash; \u0e44\u0e17\u0e22 </li>\n<li>\"vi\" &mdash; Ti\u1ebfng Vi\u1ec7t </li>\n<li>\"ko\" &mdash; \ud55c\uad6d\uc5b4</li>\n</ul>",
+                    "description": "<p>Localization language. Default is ru. Valid values:</p>\n<ul>\n<li>\"en\" &mdash; English </li>\n<li>\"ru\" &mdash; \u0420\u0443\u0441\u0441\u043a\u0438\u0439 (by default)</li>\n<li>\"pl\" &mdash; Polski </li>\n<li>\"de\" &mdash; Deutsch </li>\n<li>\"fr\" &mdash; Fran\u00e7ais </li>\n<li>\"es\" &mdash; Espa\u00f1ol </li>\n<li>\"zh-cn\" &mdash; \u7b80\u4f53\u4e2d\u6587 </li>\n<li>\"zh-tw\" &mdash; \u7e41\u9ad4\u4e2d\u6587 </li>\n<li>\"tr\" &mdash; T\u00fcrk\u00e7e </li>\n<li>\"cs\" &mdash; \u010ce\u0161tina </li>\n<li>\"th\" &mdash; \u0e44\u0e17\u0e22 </li>\n<li>\"vi\" &mdash; Ti\u1ebfng Vi\u1ec7t </li>\n<li>\"ko\" &mdash; \ud55c\uad6d\uc5b4</li>\n</ul>",
                     "name": "language",
                     "type": "string"
                 },
@@ -14851,7 +15070,6 @@
             "available_display_indices": [
                 "asia",
                 "eu",
-                "kr",
                 "na",
                 "ru"
             ],
@@ -15399,7 +15617,7 @@
                     "type": "string"
                 },
                 {
-                    "description": "<p>Application ID. Default is ru. Valid values:</p>\n<ul>\n<li>\"en\" &mdash; English </li>\n<li>\"ru\" &mdash; \u0420\u0443\u0441\u0441\u043a\u0438\u0439 (by default)</li>\n<li>\"pl\" &mdash; Polski </li>\n<li>\"de\" &mdash; Deutsch </li>\n<li>\"fr\" &mdash; Fran\u00e7ais </li>\n<li>\"es\" &mdash; Espa\u00f1ol </li>\n<li>\"zh-cn\" &mdash; \u7b80\u4f53\u4e2d\u6587 </li>\n<li>\"zh-tw\" &mdash; \u7e41\u9ad4\u4e2d\u6587 </li>\n<li>\"tr\" &mdash; T\u00fcrk\u00e7e </li>\n<li>\"cs\" &mdash; \u010ce\u0161tina </li>\n<li>\"th\" &mdash; \u0e44\u0e17\u0e22 </li>\n<li>\"vi\" &mdash; Ti\u1ebfng Vi\u1ec7t </li>\n<li>\"ko\" &mdash; \ud55c\uad6d\uc5b4</li>\n</ul>",
+                    "description": "<p>Localization language. Default is ru. Valid values:</p>\n<ul>\n<li>\"en\" &mdash; English </li>\n<li>\"ru\" &mdash; \u0420\u0443\u0441\u0441\u043a\u0438\u0439 (by default)</li>\n<li>\"pl\" &mdash; Polski </li>\n<li>\"de\" &mdash; Deutsch </li>\n<li>\"fr\" &mdash; Fran\u00e7ais </li>\n<li>\"es\" &mdash; Espa\u00f1ol </li>\n<li>\"zh-cn\" &mdash; \u7b80\u4f53\u4e2d\u6587 </li>\n<li>\"zh-tw\" &mdash; \u7e41\u9ad4\u4e2d\u6587 </li>\n<li>\"tr\" &mdash; T\u00fcrk\u00e7e </li>\n<li>\"cs\" &mdash; \u010ce\u0161tina </li>\n<li>\"th\" &mdash; \u0e44\u0e17\u0e22 </li>\n<li>\"vi\" &mdash; Ti\u1ebfng Vi\u1ec7t </li>\n<li>\"ko\" &mdash; \ud55c\uad6d\uc5b4</li>\n</ul>",
                     "name": "language",
                     "type": "string"
                 },
@@ -15459,7 +15677,6 @@
             "available_display_indices": [
                 "asia",
                 "eu",
-                "kr",
                 "na",
                 "ru"
             ],
@@ -16007,7 +16224,7 @@
                     "type": "string"
                 },
                 {
-                    "description": "<p>Application ID. Default is ru. Valid values:</p>\n<ul>\n<li>\"en\" &mdash; English </li>\n<li>\"ru\" &mdash; \u0420\u0443\u0441\u0441\u043a\u0438\u0439 (by default)</li>\n<li>\"pl\" &mdash; Polski </li>\n<li>\"de\" &mdash; Deutsch </li>\n<li>\"fr\" &mdash; Fran\u00e7ais </li>\n<li>\"es\" &mdash; Espa\u00f1ol </li>\n<li>\"zh-cn\" &mdash; \u7b80\u4f53\u4e2d\u6587 </li>\n<li>\"zh-tw\" &mdash; \u7e41\u9ad4\u4e2d\u6587 </li>\n<li>\"tr\" &mdash; T\u00fcrk\u00e7e </li>\n<li>\"cs\" &mdash; \u010ce\u0161tina </li>\n<li>\"th\" &mdash; \u0e44\u0e17\u0e22 </li>\n<li>\"vi\" &mdash; Ti\u1ebfng Vi\u1ec7t </li>\n<li>\"ko\" &mdash; \ud55c\uad6d\uc5b4</li>\n</ul>",
+                    "description": "<p>Localization language. Default is ru. Valid values:</p>\n<ul>\n<li>\"en\" &mdash; English </li>\n<li>\"ru\" &mdash; \u0420\u0443\u0441\u0441\u043a\u0438\u0439 (by default)</li>\n<li>\"pl\" &mdash; Polski </li>\n<li>\"de\" &mdash; Deutsch </li>\n<li>\"fr\" &mdash; Fran\u00e7ais </li>\n<li>\"es\" &mdash; Espa\u00f1ol </li>\n<li>\"zh-cn\" &mdash; \u7b80\u4f53\u4e2d\u6587 </li>\n<li>\"zh-tw\" &mdash; \u7e41\u9ad4\u4e2d\u6587 </li>\n<li>\"tr\" &mdash; T\u00fcrk\u00e7e </li>\n<li>\"cs\" &mdash; \u010ce\u0161tina </li>\n<li>\"th\" &mdash; \u0e44\u0e17\u0e22 </li>\n<li>\"vi\" &mdash; Ti\u1ebfng Vi\u1ec7t </li>\n<li>\"ko\" &mdash; \ud55c\uad6d\uc5b4</li>\n</ul>",
                     "name": "language",
                     "type": "string"
                 },
@@ -16066,7 +16283,6 @@
             "available_display_indices": [
                 "asia",
                 "eu",
-                "kr",
                 "na",
                 "ru"
             ],
@@ -16111,7 +16327,7 @@
                     "type": "string"
                 },
                 {
-                    "description": "<p>Application ID. Default is ru. Valid values:</p>\n<ul>\n<li>\"en\" &mdash; English </li>\n<li>\"ru\" &mdash; \u0420\u0443\u0441\u0441\u043a\u0438\u0439 (by default)</li>\n<li>\"pl\" &mdash; Polski </li>\n<li>\"de\" &mdash; Deutsch </li>\n<li>\"fr\" &mdash; Fran\u00e7ais </li>\n<li>\"es\" &mdash; Espa\u00f1ol </li>\n<li>\"zh-cn\" &mdash; \u7b80\u4f53\u4e2d\u6587 </li>\n<li>\"zh-tw\" &mdash; \u7e41\u9ad4\u4e2d\u6587 </li>\n<li>\"tr\" &mdash; T\u00fcrk\u00e7e </li>\n<li>\"cs\" &mdash; \u010ce\u0161tina </li>\n<li>\"th\" &mdash; \u0e44\u0e17\u0e22 </li>\n<li>\"vi\" &mdash; Ti\u1ebfng Vi\u1ec7t </li>\n<li>\"ko\" &mdash; \ud55c\uad6d\uc5b4</li>\n</ul>",
+                    "description": "<p>Localization language. Default is ru. Valid values:</p>\n<ul>\n<li>\"en\" &mdash; English </li>\n<li>\"ru\" &mdash; \u0420\u0443\u0441\u0441\u043a\u0438\u0439 (by default)</li>\n<li>\"pl\" &mdash; Polski </li>\n<li>\"de\" &mdash; Deutsch </li>\n<li>\"fr\" &mdash; Fran\u00e7ais </li>\n<li>\"es\" &mdash; Espa\u00f1ol </li>\n<li>\"zh-cn\" &mdash; \u7b80\u4f53\u4e2d\u6587 </li>\n<li>\"zh-tw\" &mdash; \u7e41\u9ad4\u4e2d\u6587 </li>\n<li>\"tr\" &mdash; T\u00fcrk\u00e7e </li>\n<li>\"cs\" &mdash; \u010ce\u0161tina </li>\n<li>\"th\" &mdash; \u0e44\u0e17\u0e22 </li>\n<li>\"vi\" &mdash; Ti\u1ebfng Vi\u1ec7t </li>\n<li>\"ko\" &mdash; \ud55c\uad6d\uc5b4</li>\n</ul>",
                     "name": "language",
                     "type": "string"
                 },
@@ -16131,539 +16347,8 @@
             "url": "ratings/types"
         }
     },
-    "regularteams": {
-        "info": {
-            "allowed_http_methods": [
-                "GET",
-                "POST"
-            ],
-            "allowed_protocols": [
-                "http",
-                "https"
-            ],
-            "api_url": "api.worldoftanks.ru/wot/",
-            "available_display_indices": [
-                "asia",
-                "eu",
-                "kr",
-                "na",
-                "ru"
-            ],
-            "description": "<p>Method returns details on permanent teams</p>",
-            "display_index": "ru",
-            "fields": [
-                {
-                    "description": "<p>Team can invite players</p>",
-                    "name": [
-                        "accepts_join_requests"
-                    ],
-                    "type": "boolean"
-                },
-                {
-                    "description": "<p>Team can participate in Random Battles</p>",
-                    "name": [
-                        "allow_random_battles"
-                    ],
-                    "type": "boolean"
-                },
-                {
-                    "description": "<p>Number of battles played by a team</p>",
-                    "name": [
-                        "battles_count"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Commander's account ID</p>",
-                    "name": [
-                        "captain_id"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Team creation date</p>",
-                    "name": [
-                        "created_at"
-                    ],
-                    "type": "timestamp"
-                },
-                {
-                    "description": "<p>Team description</p>",
-                    "name": [
-                        "description"
-                    ],
-                    "type": "string"
-                },
-                {
-                    "description": "<p>Number of team members</p>",
-                    "name": [
-                        "members_count"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Team name</p>",
-                    "name": [
-                        "name"
-                    ],
-                    "type": "string"
-                },
-                {
-                    "description": "<p>Short team description</p>",
-                    "name": [
-                        "short_description"
-                    ],
-                    "type": "string"
-                },
-                {
-                    "description": "<p>Team tag</p>",
-                    "name": [
-                        "tag"
-                    ],
-                    "type": "string"
-                },
-                {
-                    "description": "<p>Team ID</p>",
-                    "name": [
-                        "team_id"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Date when team data were updated</p>",
-                    "name": [
-                        "updated_at"
-                    ],
-                    "type": "timestamp"
-                },
-                {
-                    "description": "<p>Number of victories of a team</p>",
-                    "name": [
-                        "wins_count"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "type": "empty_line"
-                },
-                {
-                    "description": "<p>Team emblems</p>",
-                    "name": [
-                        "emblems"
-                    ],
-                    "type": "block_header"
-                },
-                {
-                    "description": "<p>Link to 195x195 emblem</p>",
-                    "name": [
-                        "emblems",
-                        "x195"
-                    ],
-                    "type": "string"
-                },
-                {
-                    "description": "<p>Link to 24x24 emblem</p>",
-                    "name": [
-                        "emblems",
-                        "x24"
-                    ],
-                    "type": "string"
-                },
-                {
-                    "description": "<p>Link to 256x256 emblem</p>",
-                    "name": [
-                        "emblems",
-                        "x256"
-                    ],
-                    "type": "string"
-                },
-                {
-                    "description": "<p>Link to 32x32 emblem</p>",
-                    "name": [
-                        "emblems",
-                        "x32"
-                    ],
-                    "type": "string"
-                },
-                {
-                    "description": "<p>Link to 64x64 emblem</p>",
-                    "name": [
-                        "emblems",
-                        "x64"
-                    ],
-                    "type": "string"
-                },
-                {
-                    "type": "empty_line"
-                },
-                {
-                    "description": "<p>Position in Ranked Battles</p>",
-                    "name": [
-                        "ladder"
-                    ],
-                    "type": "block_header"
-                },
-                {
-                    "description": "<p>Division level</p>",
-                    "name": [
-                        "ladder",
-                        "division"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Group number</p>",
-                    "name": [
-                        "ladder",
-                        "group"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Ladder points</p>",
-                    "name": [
-                        "ladder",
-                        "points"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Position in team</p>",
-                    "name": [
-                        "ladder",
-                        "rank"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "type": "empty_line"
-                },
-                {
-                    "description": "<p>List of team members</p>",
-                    "name": [
-                        "players"
-                    ],
-                    "type": "block_header"
-                },
-                {
-                    "description": "<p>Player account ID</p>",
-                    "name": [
-                        "players",
-                        "account_id"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Date when joined the team</p>",
-                    "name": [
-                        "players",
-                        "joined_at"
-                    ],
-                    "type": "timestamp"
-                },
-                {
-                    "description": "<p>Technical position name in a team</p>",
-                    "name": [
-                        "players",
-                        "role"
-                    ],
-                    "type": "string"
-                }
-            ],
-            "name": "Permanent team&#39;s details",
-            "parameters": [
-                {
-                    "description": "<p>Application ID</p>",
-                    "name": "application_id",
-                    "required": true,
-                    "type": "string"
-                },
-                {
-                    "description": "<p>Application ID. Default is ru. Valid values:</p>\n<ul>\n<li>\"en\" &mdash; English </li>\n<li>\"ru\" &mdash; \u0420\u0443\u0441\u0441\u043a\u0438\u0439 (by default)</li>\n<li>\"pl\" &mdash; Polski </li>\n<li>\"de\" &mdash; Deutsch </li>\n<li>\"fr\" &mdash; Fran\u00e7ais </li>\n<li>\"es\" &mdash; Espa\u00f1ol </li>\n<li>\"zh-cn\" &mdash; \u7b80\u4f53\u4e2d\u6587 </li>\n<li>\"zh-tw\" &mdash; \u7e41\u9ad4\u4e2d\u6587 </li>\n<li>\"tr\" &mdash; T\u00fcrk\u00e7e </li>\n<li>\"cs\" &mdash; \u010ce\u0161tina </li>\n<li>\"th\" &mdash; \u0e44\u0e17\u0e22 </li>\n<li>\"vi\" &mdash; Ti\u1ebfng Vi\u1ec7t </li>\n<li>\"ko\" &mdash; \ud55c\uad6d\uc5b4</li>\n</ul>",
-                    "name": "language",
-                    "type": "string"
-                },
-                {
-                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Max limit is 100.</p>",
-                    "name": "fields",
-                    "type": "string, list"
-                },
-                {
-                    "description": "<p>Team ID. Max limit is 100.</p>",
-                    "name": "team_id",
-                    "required": true,
-                    "type": "numeric, list"
-                }
-            ],
-            "realm": "ru",
-            "section": "regularteams",
-            "url": "regularteams/info"
-        },
-        "list": {
-            "allowed_http_methods": [
-                "GET",
-                "POST"
-            ],
-            "allowed_protocols": [
-                "http",
-                "https"
-            ],
-            "api_url": "api.worldoftanks.ru/wot/",
-            "available_display_indices": [
-                "asia",
-                "eu",
-                "kr",
-                "na",
-                "ru"
-            ],
-            "description": "<p>Method returns full list of permanent teams and allows to search and sort them.</p>",
-            "display_index": "ru",
-            "fields": [
-                {
-                    "description": "<p>Commander's account ID</p>",
-                    "name": [
-                        "captain_id"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Number of team members</p>",
-                    "name": [
-                        "members_count"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Team name</p>",
-                    "name": [
-                        "name"
-                    ],
-                    "type": "string"
-                },
-                {
-                    "description": "<p>Team tag</p>",
-                    "name": [
-                        "tag"
-                    ],
-                    "type": "string"
-                },
-                {
-                    "description": "<p>Team ID</p>",
-                    "name": [
-                        "team_id"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "type": "empty_line"
-                },
-                {
-                    "description": "<p>Team emblems</p>",
-                    "name": [
-                        "emblems"
-                    ],
-                    "type": "block_header"
-                },
-                {
-                    "description": "<p>Link to 195x195 emblem</p>",
-                    "name": [
-                        "emblems",
-                        "x195"
-                    ],
-                    "type": "string"
-                },
-                {
-                    "description": "<p>Link to 24x24 emblem</p>",
-                    "name": [
-                        "emblems",
-                        "x24"
-                    ],
-                    "type": "string"
-                },
-                {
-                    "description": "<p>Link to 256x256 emblem</p>",
-                    "name": [
-                        "emblems",
-                        "x256"
-                    ],
-                    "type": "string"
-                },
-                {
-                    "description": "<p>Link to 32x32 emblem</p>",
-                    "name": [
-                        "emblems",
-                        "x32"
-                    ],
-                    "type": "string"
-                },
-                {
-                    "description": "<p>Link to 64x64 emblem</p>",
-                    "name": [
-                        "emblems",
-                        "x64"
-                    ],
-                    "type": "string"
-                },
-                {
-                    "type": "empty_line"
-                },
-                {
-                    "description": "<p>Position in Ranked Battles</p>",
-                    "name": [
-                        "ladder"
-                    ],
-                    "type": "block_header"
-                },
-                {
-                    "description": "<p>Division level</p>",
-                    "name": [
-                        "ladder",
-                        "division"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Group number</p>",
-                    "name": [
-                        "ladder",
-                        "group"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Ladder points</p>",
-                    "name": [
-                        "ladder",
-                        "points"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Position in team</p>",
-                    "name": [
-                        "ladder",
-                        "rank"
-                    ],
-                    "type": "numeric"
-                }
-            ],
-            "name": "List of permanent teams",
-            "parameters": [
-                {
-                    "description": "<p>Application ID</p>",
-                    "name": "application_id",
-                    "required": true,
-                    "type": "string"
-                },
-                {
-                    "description": "<p>Application ID. Default is ru. Valid values:</p>\n<ul>\n<li>\"en\" &mdash; English </li>\n<li>\"ru\" &mdash; \u0420\u0443\u0441\u0441\u043a\u0438\u0439 (by default)</li>\n<li>\"pl\" &mdash; Polski </li>\n<li>\"de\" &mdash; Deutsch </li>\n<li>\"fr\" &mdash; Fran\u00e7ais </li>\n<li>\"es\" &mdash; Espa\u00f1ol </li>\n<li>\"zh-cn\" &mdash; \u7b80\u4f53\u4e2d\u6587 </li>\n<li>\"zh-tw\" &mdash; \u7e41\u9ad4\u4e2d\u6587 </li>\n<li>\"tr\" &mdash; T\u00fcrk\u00e7e </li>\n<li>\"cs\" &mdash; \u010ce\u0161tina </li>\n<li>\"th\" &mdash; \u0e44\u0e17\u0e22 </li>\n<li>\"vi\" &mdash; Ti\u1ebfng Vi\u1ec7t </li>\n<li>\"ko\" &mdash; \ud55c\uad6d\uc5b4</li>\n</ul>",
-                    "name": "language",
-                    "type": "string"
-                },
-                {
-                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Max limit is 100.</p>",
-                    "name": "fields",
-                    "type": "string, list"
-                },
-                {
-                    "description": "<p>Number of returned entries (fewer can be returned, but not more than 100). If the limit sent exceeds 100, an limit of 100 is applied (by default).</p>",
-                    "name": "limit",
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Result page number. Default is 1. Min value is 1.</p>",
-                    "name": "page_no",
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Search bar by team tag or team name</p>",
-                    "name": "search",
-                    "type": "string"
-                },
-                {
-                    "description": "<p>Allows to sort teams by a specified parameter. Valid values:</p>\n<ul>\n<li>\"team_id\" &mdash; by team id </li>\n<li>\"-team_id\" &mdash; by team id in reverse order </li>\n<li>\"name\" &mdash; by team name </li>\n<li>\"-name\" &mdash; by team name in reverse order </li>\n<li>\"tag\" &mdash; by team tag </li>\n<li>\"-tag\" &mdash; by team tag in reverse order </li>\n<li>\"members_count\" &mdash; by team size </li>\n<li>\"-members_count\" &mdash; by team size in reverse order</li>\n</ul>",
-                    "name": "order_by",
-                    "type": "string"
-                }
-            ],
-            "realm": "ru",
-            "section": "regularteams",
-            "url": "regularteams/list"
-        },
-        "memberinfo": {
-            "allowed_http_methods": [
-                "GET",
-                "POST"
-            ],
-            "allowed_protocols": [
-                "http",
-                "https"
-            ],
-            "api_url": "api.worldoftanks.ru/wot/",
-            "available_display_indices": [
-                "asia",
-                "eu",
-                "kr",
-                "na",
-                "ru"
-            ],
-            "description": "<p>Method returns team member info.</p>",
-            "display_index": "ru",
-            "fields": [
-                {
-                    "description": "<p>Account ID</p>",
-                    "name": [
-                        "account_id"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Role</p>",
-                    "name": [
-                        "role"
-                    ],
-                    "type": "string"
-                },
-                {
-                    "description": "<p>Team ID</p>",
-                    "name": [
-                        "team_id"
-                    ],
-                    "type": "numeric"
-                }
-            ],
-            "name": "Permanent team member details",
-            "parameters": [
-                {
-                    "description": "<p>Application ID</p>",
-                    "name": "application_id",
-                    "required": true,
-                    "type": "string"
-                },
-                {
-                    "description": "<p>Application ID. Default is ru. Valid values:</p>\n<ul>\n<li>\"en\" &mdash; English </li>\n<li>\"ru\" &mdash; \u0420\u0443\u0441\u0441\u043a\u0438\u0439 (by default)</li>\n<li>\"pl\" &mdash; Polski </li>\n<li>\"de\" &mdash; Deutsch </li>\n<li>\"fr\" &mdash; Fran\u00e7ais </li>\n<li>\"es\" &mdash; Espa\u00f1ol </li>\n<li>\"zh-cn\" &mdash; \u7b80\u4f53\u4e2d\u6587 </li>\n<li>\"zh-tw\" &mdash; \u7e41\u9ad4\u4e2d\u6587 </li>\n<li>\"tr\" &mdash; T\u00fcrk\u00e7e </li>\n<li>\"cs\" &mdash; \u010ce\u0161tina </li>\n<li>\"th\" &mdash; \u0e44\u0e17\u0e22 </li>\n<li>\"vi\" &mdash; Ti\u1ebfng Vi\u1ec7t </li>\n<li>\"ko\" &mdash; \ud55c\uad6d\uc5b4</li>\n</ul>",
-                    "name": "language",
-                    "type": "string"
-                },
-                {
-                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Max limit is 100.</p>",
-                    "name": "fields",
-                    "type": "string, list"
-                },
-                {
-                    "description": "<p>Account ID</p>",
-                    "name": "account_id",
-                    "required": true,
-                    "type": "numeric"
-                }
-            ],
-            "realm": "ru",
-            "section": "regularteams",
-            "url": "regularteams/memberinfo"
-        }
-    },
     "stronghold": {
-        "accountstats": {
+        "claninfo": {
             "allowed_http_methods": [
                 "GET",
                 "POST"
@@ -16676,618 +16361,12 @@
             "available_display_indices": [
                 "asia",
                 "eu",
-                "kr",
                 "na",
                 "ru"
             ],
-            "description": "<p>Method returns player stats for the current clan's Stronghold.</p>",
-            "display_index": "ru",
-            "errors": [
-                {
-                    "code": 407,
-                    "description": "<p>Limit of passed-in <strong>account_id</strong> IDs exceeded. Maximum: 100.</p>",
-                    "message": "ACCOUNT_ID_LIST_LIMIT_EXCEEDED"
-                }
-            ],
-            "fields": [
-                {
-                    "description": "<p>Player account ID</p>",
-                    "name": [
-                        "account_id"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Player clan ID</p>",
-                    "name": [
-                        "clan_id"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Total amount of Industrial Resource earned by player</p>",
-                    "name": [
-                        "total_resources_earned"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Industrial Resource earned by player per week</p>",
-                    "name": [
-                        "week_resources_earned"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "type": "empty_line"
-                },
-                {
-                    "description": "<p>Player's battle stats in the current clan's Stronghold defense. If player's clan has no Stronghold, field value is null.</p>",
-                    "name": [
-                        "stronghold_defense"
-                    ],
-                    "type": "block_header"
-                },
-                {
-                    "description": "<p>Average experience per battle</p>",
-                    "name": [
-                        "stronghold_defense",
-                        "battle_avg_xp"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Battles fought</p>",
-                    "name": [
-                        "stronghold_defense",
-                        "battles"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Base capture points</p>",
-                    "name": [
-                        "stronghold_defense",
-                        "capture_points"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Damage caused</p>",
-                    "name": [
-                        "stronghold_defense",
-                        "damage_dealt"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Damage received</p>",
-                    "name": [
-                        "stronghold_defense",
-                        "damage_received"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Direct hits received</p>",
-                    "name": [
-                        "stronghold_defense",
-                        "direct_hits_received"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Draws</p>",
-                    "name": [
-                        "stronghold_defense",
-                        "draws"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Base defense points</p>",
-                    "name": [
-                        "stronghold_defense",
-                        "dropped_capture_points"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Hits on enemy as a result of splash damage</p>",
-                    "name": [
-                        "stronghold_defense",
-                        "explosion_hits"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Hits received as a result of splash damage</p>",
-                    "name": [
-                        "stronghold_defense",
-                        "explosion_hits_received"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Vehicles destroyed</p>",
-                    "name": [
-                        "stronghold_defense",
-                        "frags"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Hits</p>",
-                    "name": [
-                        "stronghold_defense",
-                        "hits"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Hit ratio</p>",
-                    "name": [
-                        "stronghold_defense",
-                        "hits_percents"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Defeats</p>",
-                    "name": [
-                        "stronghold_defense",
-                        "losses"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Direct hits received that caused no damage</p>",
-                    "name": [
-                        "stronghold_defense",
-                        "no_damage_direct_hits_received"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Penetrations</p>",
-                    "name": [
-                        "stronghold_defense",
-                        "piercings"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Penetrations received</p>",
-                    "name": [
-                        "stronghold_defense",
-                        "piercings_received"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Shots fired</p>",
-                    "name": [
-                        "stronghold_defense",
-                        "shots"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Enemies spotted</p>",
-                    "name": [
-                        "stronghold_defense",
-                        "spotted"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Battles survived</p>",
-                    "name": [
-                        "stronghold_defense",
-                        "survived_battles"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Ratio of damage blocked by armor from AP, HEAT, and APCR shells to damage received from these types of shells.\nValue is calculated starting from version 9.0.</p>",
-                    "name": [
-                        "stronghold_defense",
-                        "tanking_factor"
-                    ],
-                    "type": "float"
-                },
-                {
-                    "description": "<p>Victories</p>",
-                    "name": [
-                        "stronghold_defense",
-                        "wins"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Total experience</p>",
-                    "name": [
-                        "stronghold_defense",
-                        "xp"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "type": "empty_line"
-                },
-                {
-                    "description": "<p>Player's battle stats in the current clan's Skirmishes. If player's clan has no Stronghold, field value is null.</p>",
-                    "name": [
-                        "stronghold_skirmish"
-                    ],
-                    "type": "block_header"
-                },
-                {
-                    "description": "<p>Average experience per battle</p>",
-                    "name": [
-                        "stronghold_skirmish",
-                        "battle_avg_xp"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Battles fought</p>",
-                    "name": [
-                        "stronghold_skirmish",
-                        "battles"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Base capture points</p>",
-                    "name": [
-                        "stronghold_skirmish",
-                        "capture_points"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Damage caused</p>",
-                    "name": [
-                        "stronghold_skirmish",
-                        "damage_dealt"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Damage received</p>",
-                    "name": [
-                        "stronghold_skirmish",
-                        "damage_received"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Direct hits received</p>",
-                    "name": [
-                        "stronghold_skirmish",
-                        "direct_hits_received"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Draws</p>",
-                    "name": [
-                        "stronghold_skirmish",
-                        "draws"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Base defense points</p>",
-                    "name": [
-                        "stronghold_skirmish",
-                        "dropped_capture_points"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Hits on enemy as a result of splash damage</p>",
-                    "name": [
-                        "stronghold_skirmish",
-                        "explosion_hits"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Hits received as a result of splash damage</p>",
-                    "name": [
-                        "stronghold_skirmish",
-                        "explosion_hits_received"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Vehicles destroyed</p>",
-                    "name": [
-                        "stronghold_skirmish",
-                        "frags"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Hits</p>",
-                    "name": [
-                        "stronghold_skirmish",
-                        "hits"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Hit ratio</p>",
-                    "name": [
-                        "stronghold_skirmish",
-                        "hits_percents"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Defeats</p>",
-                    "name": [
-                        "stronghold_skirmish",
-                        "losses"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Direct hits received that caused no damage</p>",
-                    "name": [
-                        "stronghold_skirmish",
-                        "no_damage_direct_hits_received"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Penetrations</p>",
-                    "name": [
-                        "stronghold_skirmish",
-                        "piercings"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Penetrations received</p>",
-                    "name": [
-                        "stronghold_skirmish",
-                        "piercings_received"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Shots fired</p>",
-                    "name": [
-                        "stronghold_skirmish",
-                        "shots"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Enemies spotted</p>",
-                    "name": [
-                        "stronghold_skirmish",
-                        "spotted"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Battles survived</p>",
-                    "name": [
-                        "stronghold_skirmish",
-                        "survived_battles"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Ratio of damage blocked by armor from AP, HEAT, and APCR shells to damage received from these types of shells.\nValue is calculated starting from version 9.0.</p>",
-                    "name": [
-                        "stronghold_skirmish",
-                        "tanking_factor"
-                    ],
-                    "type": "float"
-                },
-                {
-                    "description": "<p>Victories</p>",
-                    "name": [
-                        "stronghold_skirmish",
-                        "wins"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Total experience</p>",
-                    "name": [
-                        "stronghold_skirmish",
-                        "xp"
-                    ],
-                    "type": "numeric"
-                }
-            ],
-            "name": "Player stats for the current clan&#39;s Stronghold",
-            "parameters": [
-                {
-                    "description": "<p>Application ID</p>",
-                    "name": "application_id",
-                    "required": true,
-                    "type": "string"
-                },
-                {
-                    "description": "<p>Application ID. Default is ru. Valid values:</p>\n<ul>\n<li>\"en\" &mdash; English </li>\n<li>\"ru\" &mdash; \u0420\u0443\u0441\u0441\u043a\u0438\u0439 (by default)</li>\n<li>\"pl\" &mdash; Polski </li>\n<li>\"de\" &mdash; Deutsch </li>\n<li>\"fr\" &mdash; Fran\u00e7ais </li>\n<li>\"es\" &mdash; Espa\u00f1ol </li>\n<li>\"zh-cn\" &mdash; \u7b80\u4f53\u4e2d\u6587 </li>\n<li>\"zh-tw\" &mdash; \u7e41\u9ad4\u4e2d\u6587 </li>\n<li>\"tr\" &mdash; T\u00fcrk\u00e7e </li>\n<li>\"cs\" &mdash; \u010ce\u0161tina </li>\n<li>\"th\" &mdash; \u0e44\u0e17\u0e22 </li>\n<li>\"vi\" &mdash; Ti\u1ebfng Vi\u1ec7t </li>\n<li>\"ko\" &mdash; \ud55c\uad6d\uc5b4</li>\n</ul>",
-                    "name": "language",
-                    "type": "string"
-                },
-                {
-                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Max limit is 100.</p>",
-                    "name": "fields",
-                    "type": "string, list"
-                },
-                {
-                    "description": "<p><a href=\"/documentation/guide/principles/#access_token\">Access token</a> for the private data of a user's account; can be received via the authorization method; valid within a stated time period</p>",
-                    "name": "access_token",
-                    "type": "string"
-                },
-                {
-                    "description": "<p>Player account ID. Max limit is 100.</p>",
-                    "name": "account_id",
-                    "required": true,
-                    "type": "numeric, list"
-                }
-            ],
-            "realm": "ru",
-            "section": "stronghold",
-            "url": "stronghold/accountstats"
-        },
-        "buildings": {
-            "allowed_http_methods": [
-                "GET",
-                "POST"
-            ],
-            "allowed_protocols": [
-                "http",
-                "https"
-            ],
-            "api_url": "api.worldoftanks.ru/wot/",
-            "available_display_indices": [
-                "asia",
-                "eu",
-                "kr",
-                "na",
-                "ru"
-            ],
-            "description": "<p>Method returns encyclopedia information on all structures of the Stronghold.</p>",
+            "description": "<p>Method returns general information and the battle statistics of clans in the Stronghold mode. Please note that information about the number of battles fought as well as the number of defeats and victories is updated once every 24 hours.</p>",
             "display_index": "ru",
             "fields": [
-                {
-                    "description": "<p>Localized full description</p>",
-                    "name": [
-                        "description"
-                    ],
-                    "type": "string"
-                },
-                {
-                    "description": "<p>Image link</p>",
-                    "name": [
-                        "image_url"
-                    ],
-                    "type": "string"
-                },
-                {
-                    "description": "<p>Localized short description</p>",
-                    "name": [
-                        "short_description"
-                    ],
-                    "type": "string"
-                },
-                {
-                    "description": "<p>Localized name</p>",
-                    "name": [
-                        "title"
-                    ],
-                    "type": "string"
-                },
-                {
-                    "description": "<p>Unique type</p>",
-                    "name": [
-                        "type"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "type": "empty_line"
-                },
-                {
-                    "description": "<p>Reserve information</p>",
-                    "name": [
-                        "reserve"
-                    ],
-                    "type": "block_header"
-                },
-                {
-                    "description": "<p>Localized description</p>",
-                    "name": [
-                        "reserve",
-                        "description"
-                    ],
-                    "type": "string"
-                },
-                {
-                    "description": "<p>Image link</p>",
-                    "name": [
-                        "reserve",
-                        "image_url"
-                    ],
-                    "type": "string"
-                },
-                {
-                    "description": "<p>Localized name</p>",
-                    "name": [
-                        "reserve",
-                        "title"
-                    ],
-                    "type": "string"
-                }
-            ],
-            "name": "Structures",
-            "parameters": [
-                {
-                    "description": "<p>Application ID</p>",
-                    "name": "application_id",
-                    "required": true,
-                    "type": "string"
-                },
-                {
-                    "description": "<p>Application ID. Default is ru. Valid values:</p>\n<ul>\n<li>\"en\" &mdash; English </li>\n<li>\"ru\" &mdash; \u0420\u0443\u0441\u0441\u043a\u0438\u0439 (by default)</li>\n<li>\"pl\" &mdash; Polski </li>\n<li>\"de\" &mdash; Deutsch </li>\n<li>\"fr\" &mdash; Fran\u00e7ais </li>\n<li>\"es\" &mdash; Espa\u00f1ol </li>\n<li>\"zh-cn\" &mdash; \u7b80\u4f53\u4e2d\u6587 </li>\n<li>\"zh-tw\" &mdash; \u7e41\u9ad4\u4e2d\u6587 </li>\n<li>\"tr\" &mdash; T\u00fcrk\u00e7e </li>\n<li>\"cs\" &mdash; \u010ce\u0161tina </li>\n<li>\"th\" &mdash; \u0e44\u0e17\u0e22 </li>\n<li>\"vi\" &mdash; Ti\u1ebfng Vi\u1ec7t </li>\n<li>\"ko\" &mdash; \ud55c\uad6d\uc5b4</li>\n</ul>",
-                    "name": "language",
-                    "type": "string"
-                },
-                {
-                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Max limit is 100.</p>",
-                    "name": "fields",
-                    "type": "string, list"
-                }
-            ],
-            "realm": "ru",
-            "section": "stronghold",
-            "url": "stronghold/buildings"
-        },
-        "info": {
-            "allowed_http_methods": [
-                "GET",
-                "POST"
-            ],
-            "allowed_protocols": [
-                "http",
-                "https"
-            ],
-            "api_url": "api.worldoftanks.ru/wot/",
-            "available_display_indices": [
-                "asia",
-                "eu",
-                "kr",
-                "na",
-                "ru"
-            ],
-            "description": "<p>Method returns information on clan's Stronghold.</p>",
-            "display_index": "ru",
-            "fields": [
-                {
-                    "description": "<p>Total number of battles fought by clan</p>",
-                    "name": [
-                        "battles_count_total"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Number of structures</p>",
-                    "name": [
-                        "buildings_count"
-                    ],
-                    "type": "numeric"
-                },
                 {
                     "description": "<p>Clan ID</p>",
                     "name": [
@@ -17303,476 +16382,355 @@
                     "type": "string"
                 },
                 {
-                    "description": "<p>Clan Tag</p>",
+                    "description": "<p>Clan tag</p>",
                     "name": [
                         "clan_tag"
                     ],
                     "type": "string"
                 },
                 {
-                    "description": "<p>Ceasefire day. Indicates the index number of the weekday: 0 - Monday, ..., 6 - Sunday. If the Defense Period is not activated, value is -1.</p>",
+                    "description": "<p>Map ID associated with the Command Center construction site</p>",
                     "name": [
-                        "day_off"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Indicates if the defense period is activated</p>",
-                    "name": [
-                        "defense_mode_is_activated"
-                    ],
-                    "type": "boolean"
-                },
-                {
-                    "description": "<p>Names of Zones available in Stronghold</p>",
-                    "name": [
-                        "directions"
-                    ],
-                    "type": "list of strings"
-                },
-                {
-                    "description": "<p>Number of Zones</p>",
-                    "name": [
-                        "directions_count"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Tier</p>",
-                    "name": [
-                        "level"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "deprecated": true,
-                    "deprecated_text": "<p>Use <strong>server</strong> field</p>",
-                    "description": "<p>Server ID</p>",
-                    "name": [
-                        "periphery_id"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Server ID</p>",
-                    "name": [
-                        "server"
+                        "command_center_arena_id"
                     ],
                     "type": "string"
                 },
                 {
-                    "description": "<p>End date of Period of Neutrality</p>",
+                    "description": "<p>Total level of the Stronghold's structures</p>",
                     "name": [
-                        "vacation_finish"
+                        "stronghold_buildings_level"
                     ],
-                    "type": "timestamp"
+                    "type": "numeric"
                 },
                 {
-                    "description": "<p>Start date of Period of Neutrality</p>",
+                    "description": "<p>Stronghold's level</p>",
                     "name": [
-                        "vacation_start"
+                        "stronghold_level"
                     ],
-                    "type": "timestamp"
+                    "type": "numeric"
                 },
                 {
                     "type": "empty_line"
                 },
                 {
-                    "description": "<p>Structures info by unique type IDs</p>",
+                    "description": "<p>Statistics for the clan's battles in the Stronghold mode</p>",
                     "name": [
-                        "buildings"
+                        "battles_for_strongholds_statistics"
                     ],
                     "type": "block_header"
                 },
                 {
-                    "description": "<p>Number of players attached to the structure</p>",
+                    "description": "<p>End time of the last battle held on Tier X vehicles</p>",
                     "name": [
-                        "buildings",
-                        "attached_account_count"
+                        "battles_for_strongholds_statistics",
+                        "last_time_10"
+                    ],
+                    "type": "timestamp"
+                },
+                {
+                    "description": "<p>Number of defeats on Tier X vehicles</p>",
+                    "name": [
+                        "battles_for_strongholds_statistics",
+                        "lose_10"
                     ],
                     "type": "numeric"
                 },
                 {
-                    "description": "<p>List of IDs of players attached to the structure</p>",
+                    "description": "<p>Total number of battles on Tier X vehicles</p>",
                     "name": [
-                        "buildings",
-                        "attached_account_ids"
+                        "battles_for_strongholds_statistics",
+                        "total_10"
                     ],
-                    "type": "list of integers"
+                    "type": "numeric"
                 },
                 {
-                    "description": "<p>Zone name. Value '\u2013-' is used for Command Center only.</p>",
+                    "description": "<p>Total number of battles on Tier X vehicles within the last 28 days</p>",
                     "name": [
-                        "buildings",
-                        "direction_name"
+                        "battles_for_strongholds_statistics",
+                        "total_10_in_28d"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Number of victories on Tier X vehicles</p>",
+                    "name": [
+                        "battles_for_strongholds_statistics",
+                        "win_10"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Number of victories on Tier X vehicles within the last 28 days</p>",
+                    "name": [
+                        "battles_for_strongholds_statistics",
+                        "win_10_in_28d"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "type": "empty_line"
+                },
+                {
+                    "description": "<p>Statistics for skirmishes against the clan's Stronghold</p>",
+                    "name": [
+                        "battles_series_for_strongholds_statistics"
+                    ],
+                    "type": "block_header"
+                },
+                {
+                    "description": "<p>Number of defeats on Tier X vehicles</p>",
+                    "name": [
+                        "battles_series_for_strongholds_statistics",
+                        "lose_10"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Total number of battles on Tier X vehicles</p>",
+                    "name": [
+                        "battles_series_for_strongholds_statistics",
+                        "total_10"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Total number of battles on Tier X vehicles within the last 28 days</p>",
+                    "name": [
+                        "battles_series_for_strongholds_statistics",
+                        "total_10_in_28d"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Number of victories on Tier X vehicles</p>",
+                    "name": [
+                        "battles_series_for_strongholds_statistics",
+                        "win_10"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Number of victories on Tier X vehicles within the last 28 days</p>",
+                    "name": [
+                        "battles_series_for_strongholds_statistics",
+                        "win_10_in_28d"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "type": "empty_line"
+                },
+                {
+                    "description": "<p>Information about the Stronghold's construction sites</p>",
+                    "name": [
+                        "building_slots"
+                    ],
+                    "type": "block_header"
+                },
+                {
+                    "description": "<p>Map ID associated with the current construction site</p>",
+                    "name": [
+                        "building_slots",
+                        "arena_id"
                     ],
                     "type": "string"
                 },
                 {
-                    "description": "<p>Structure level</p>",
+                    "description": "<p>Level of the structure located on the current construction site</p>",
                     "name": [
-                        "buildings",
-                        "level"
+                        "building_slots",
+                        "building_level"
                     ],
                     "type": "numeric"
                 },
                 {
-                    "description": "<p>Structure type</p>",
+                    "description": "<p>Name of the structure located on the current construction site</p>",
                     "name": [
-                        "buildings",
-                        "type"
+                        "building_slots",
+                        "building_title"
                     ],
-                    "type": "numeric"
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Bridgehead's name</p>",
+                    "name": [
+                        "building_slots",
+                        "direction"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Position of the construction site</p>",
+                    "name": [
+                        "building_slots",
+                        "position"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Name of the Reserve earned in the structure located on the current construction site</p>",
+                    "name": [
+                        "building_slots",
+                        "reserve_title"
+                    ],
+                    "type": "string"
                 },
                 {
                     "type": "empty_line"
                 },
                 {
-                    "description": "<p>Information on the active Defense Period. If defense is deactivated, field value is null.</p>",
+                    "description": "<p>Clan's skirmish statistics</p>",
                     "name": [
-                        "defense"
+                        "skirmish_statistics"
                     ],
                     "type": "block_header"
                 },
                 {
-                    "description": "<p>Total number of attacks</p>",
+                    "description": "<p>End time of the last battle held on Tier X vehicles</p>",
                     "name": [
-                        "defense",
-                        "attacks_count"
+                        "skirmish_statistics",
+                        "last_time_10"
+                    ],
+                    "type": "timestamp"
+                },
+                {
+                    "description": "<p>End time of the last battle held on Tier VI vehicles</p>",
+                    "name": [
+                        "skirmish_statistics",
+                        "last_time_6"
+                    ],
+                    "type": "timestamp"
+                },
+                {
+                    "description": "<p>End time of the last battle held on Tier VIII vehicles</p>",
+                    "name": [
+                        "skirmish_statistics",
+                        "last_time_8"
+                    ],
+                    "type": "timestamp"
+                },
+                {
+                    "description": "<p>Number of defeats on Tier X vehicles</p>",
+                    "name": [
+                        "skirmish_statistics",
+                        "lose_10"
                     ],
                     "type": "numeric"
                 },
                 {
-                    "description": "<p>Attack efficiency</p>",
+                    "description": "<p>Number of defeats on Tier VI vehicles</p>",
                     "name": [
-                        "defense",
-                        "attacks_efficiency"
-                    ],
-                    "type": "float"
-                },
-                {
-                    "description": "<p>Number of attacks in which clan has pillaged at least one enemy structure</p>",
-                    "name": [
-                        "defense",
-                        "attacks_wins"
+                        "skirmish_statistics",
+                        "lose_6"
                     ],
                     "type": "numeric"
                 },
                 {
-                    "description": "<p>Total number of battles</p>",
+                    "description": "<p>Number of defeats on Tier VIII vehicles</p>",
                     "name": [
-                        "defense",
-                        "battles_count"
+                        "skirmish_statistics",
+                        "lose_8"
                     ],
                     "type": "numeric"
                 },
                 {
-                    "description": "<p>Victories/Battles ratio</p>",
+                    "description": "<p>Total number of battles on Tier X vehicles</p>",
                     "name": [
-                        "defense",
-                        "battles_win_percentage"
-                    ],
-                    "type": "float"
-                },
-                {
-                    "description": "<p>Number of victories</p>",
-                    "name": [
-                        "defense",
-                        "battles_wins"
+                        "skirmish_statistics",
+                        "total_10"
                     ],
                     "type": "numeric"
                 },
                 {
-                    "description": "<p>Command Centers captured</p>",
+                    "description": "<p>Total number of battles on Tier X vehicles within the last 28 days</p>",
                     "name": [
-                        "defense",
-                        "capture_bases_count"
+                        "skirmish_statistics",
+                        "total_10_in_28d"
                     ],
                     "type": "numeric"
                 },
                 {
-                    "description": "<p>Enemy structures pillaged</p>",
+                    "description": "<p>Total number of battles on Tier VI vehicles</p>",
                     "name": [
-                        "defense",
-                        "capture_buildings_count"
+                        "skirmish_statistics",
+                        "total_6"
                     ],
                     "type": "numeric"
                 },
                 {
-                    "description": "<p>Industrial Resource earned</p>",
+                    "description": "<p>Total number of battles on Tier VI vehicles within the last 28 days</p>",
                     "name": [
-                        "defense",
-                        "capture_resources_count"
+                        "skirmish_statistics",
+                        "total_6_in_28d"
                     ],
                     "type": "numeric"
                 },
                 {
-                    "description": "<p>Total number of battles for structures</p>",
+                    "description": "<p>Total number of battles on Tier VIII vehicles</p>",
                     "name": [
-                        "defense",
-                        "clashes_count"
+                        "skirmish_statistics",
+                        "total_8"
                     ],
                     "type": "numeric"
                 },
                 {
-                    "description": "<p>Victories/Battles ration in battles for structures</p>",
+                    "description": "<p>Total number of battles on Tier VIII vehicles within the last 28 days</p>",
                     "name": [
-                        "defense",
-                        "clashes_win_percentage"
-                    ],
-                    "type": "float"
-                },
-                {
-                    "description": "<p>Number of attacks in which clan has pillaged at least one enemy structure</p>",
-                    "name": [
-                        "defense",
-                        "clashes_wins"
+                        "skirmish_statistics",
+                        "total_8_in_28d"
                     ],
                     "type": "numeric"
                 },
                 {
-                    "description": "<p>Total number of Defenses</p>",
+                    "description": "<p>Number of victories on Tier X vehicles</p>",
                     "name": [
-                        "defense",
-                        "defenses_count"
+                        "skirmish_statistics",
+                        "win_10"
                     ],
                     "type": "numeric"
                 },
                 {
-                    "description": "<p>Defense efficiency</p>",
+                    "description": "<p>Number of victories on Tier X vehicles within the last 28 days</p>",
                     "name": [
-                        "defense",
-                        "defenses_efficiency"
-                    ],
-                    "type": "float"
-                },
-                {
-                    "description": "<p>Number of Defenses in which clan has lost no structures</p>",
-                    "name": [
-                        "defense",
-                        "defenses_wins"
+                        "skirmish_statistics",
+                        "win_10_in_28d"
                     ],
                     "type": "numeric"
                 },
                 {
-                    "description": "<p>Command Centers lost</p>",
+                    "description": "<p>Number of victories on Tier VI vehicles</p>",
                     "name": [
-                        "defense",
-                        "loss_bases_count"
+                        "skirmish_statistics",
+                        "win_6"
                     ],
                     "type": "numeric"
                 },
                 {
-                    "description": "<p>Clan structures pillaged</p>",
+                    "description": "<p>Number of victories on Tier VI vehicles within the last 28 days</p>",
                     "name": [
-                        "defense",
-                        "loss_buildings_count"
+                        "skirmish_statistics",
+                        "win_6_in_28d"
                     ],
                     "type": "numeric"
                 },
                 {
-                    "description": "<p>Industrial Resource lost</p>",
+                    "description": "<p>Number of victories on Tier VIII vehicles</p>",
                     "name": [
-                        "defense",
-                        "loss_resources_count"
+                        "skirmish_statistics",
+                        "win_8"
                     ],
                     "type": "numeric"
                 },
                 {
-                    "type": "empty_line"
-                },
-                {
-                    "description": "<p>Restricted Stronghold data</p>",
+                    "description": "<p>Number of victories on Tier VIII vehicles within the last 28 days</p>",
                     "name": [
-                        "private"
-                    ],
-                    "type": "block_header"
-                },
-                {
-                    "description": "<p>Total amount of Industrial Resource in the Stronghold</p>",
-                    "name": [
-                        "private",
-                        "total_resource_amount"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "type": "empty_line"
-                },
-                {
-                    "description": "<p>Restricted information on structures by unique type keys</p>",
-                    "name": [
-                        "private",
-                        "buildings"
-                    ],
-                    "type": "block_header"
-                },
-                {
-                    "description": "<p>Amount of Industrial Resource in the structure</p>",
-                    "name": [
-                        "private",
-                        "buildings",
-                        "resource_amount"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Structure type</p>",
-                    "name": [
-                        "private",
-                        "buildings",
-                        "type"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "type": "empty_line"
-                },
-                {
-                    "description": "<p>Private data on Defense Period.</p>",
-                    "name": [
-                        "private",
-                        "defense"
-                    ],
-                    "type": "block_header"
-                },
-                {
-                    "deprecated": true,
-                    "description": "<p>Total amount of Industrial Resource earned during Defense Period</p>",
-                    "name": [
-                        "private",
-                        "defense",
-                        "resource_capture_count"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "deprecated": true,
-                    "description": "<p>Total amount of Industrial Resource lost during Defense Period</p>",
-                    "name": [
-                        "private",
-                        "defense",
-                        "resource_loss_count"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "type": "empty_line"
-                },
-                {
-                    "description": "<p>Restricted information on Skirmishes</p>",
-                    "name": [
-                        "private",
-                        "skirmish"
-                    ],
-                    "type": "block_header"
-                },
-                {
-                    "description": "<p>Number of Skirmishes in Absolute division</p>",
-                    "name": [
-                        "private",
-                        "skirmish",
-                        "absolute_battles_count"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Industrial Resource earned in Skirmishes of Absolute division</p>",
-                    "name": [
-                        "private",
-                        "skirmish",
-                        "absolute_resource_capture"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Number of Skirmishes in Champion division</p>",
-                    "name": [
-                        "private",
-                        "skirmish",
-                        "champion_battles_count"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Industrial Resource earned in Skirmishes of Champion division</p>",
-                    "name": [
-                        "private",
-                        "skirmish",
-                        "champion_resource_capture"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Number of Skirmishes in Medium division</p>",
-                    "name": [
-                        "private",
-                        "skirmish",
-                        "middle_battles_count"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Industrial Resource earned in Skirmishes of Medium division</p>",
-                    "name": [
-                        "private",
-                        "skirmish",
-                        "middle_resource_capture"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "type": "empty_line"
-                },
-                {
-                    "description": "<p>Information on Skirmishes</p>",
-                    "name": [
-                        "skirmish"
-                    ],
-                    "type": "block_header"
-                },
-                {
-                    "description": "<p>Total number of Skirmishes</p>",
-                    "name": [
-                        "skirmish",
-                        "battles_count"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Number of defeats in Skirmishes</p>",
-                    "name": [
-                        "skirmish",
-                        "battles_losses"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Victories/Battles ratio in Skirmishes</p>",
-                    "name": [
-                        "skirmish",
-                        "battles_win_percentage"
-                    ],
-                    "type": "float"
-                },
-                {
-                    "description": "<p>Number of victories in Skirmishes</p>",
-                    "name": [
-                        "skirmish",
-                        "battles_wins"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Total amount of Industrial Resource earned in Skirmishes</p>",
-                    "name": [
-                        "skirmish",
-                        "total_resource_capture"
+                        "skirmish_statistics",
+                        "win_8_in_28d"
                     ],
                     "type": "numeric"
                 }
             ],
-            "name": "Clan&#39;s Stronghold",
+            "name": "Information about the clan&#39;s Stronghold",
             "parameters": [
                 {
                     "description": "<p>Application ID</p>",
@@ -17781,22 +16739,17 @@
                     "type": "string"
                 },
                 {
-                    "description": "<p>Application ID. Default is ru. Valid values:</p>\n<ul>\n<li>\"en\" &mdash; English </li>\n<li>\"ru\" &mdash; \u0420\u0443\u0441\u0441\u043a\u0438\u0439 (by default)</li>\n<li>\"pl\" &mdash; Polski </li>\n<li>\"de\" &mdash; Deutsch </li>\n<li>\"fr\" &mdash; Fran\u00e7ais </li>\n<li>\"es\" &mdash; Espa\u00f1ol </li>\n<li>\"zh-cn\" &mdash; \u7b80\u4f53\u4e2d\u6587 </li>\n<li>\"zh-tw\" &mdash; \u7e41\u9ad4\u4e2d\u6587 </li>\n<li>\"tr\" &mdash; T\u00fcrk\u00e7e </li>\n<li>\"cs\" &mdash; \u010ce\u0161tina </li>\n<li>\"th\" &mdash; \u0e44\u0e17\u0e22 </li>\n<li>\"vi\" &mdash; Ti\u1ebfng Vi\u1ec7t </li>\n<li>\"ko\" &mdash; \ud55c\uad6d\uc5b4</li>\n</ul>",
-                    "name": "language",
-                    "type": "string"
-                },
-                {
                     "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Max limit is 100.</p>",
                     "name": "fields",
                     "type": "string, list"
                 },
                 {
-                    "description": "<p><a href=\"/documentation/guide/principles/#access_token\">Access token</a> for the private data of a user's account; can be received via the authorization method; valid within a stated time period</p>",
-                    "name": "access_token",
+                    "description": "<p>Localization language. Default is ru. Valid values:</p>\n<ul>\n<li>\"ru\" &mdash; Russian (by default)</li>\n<li>\"be\" &mdash; Belarusian </li>\n<li>\"uk\" &mdash; Ukrainian </li>\n<li>\"kk\" &mdash; Kazakh</li>\n</ul>",
+                    "name": "language",
                     "type": "string"
                 },
                 {
-                    "description": "<p>Clan ID. To get a clan ID, use the <a href=\"/reference/all/wgn/clans/list\">Clans</a> method. Max limit is 100.</p>",
+                    "description": "<p>Clan ID. To get a clan ID, use the <a href=\"/reference/all/wgn/clans/list\">Clans</a> method. Max limit is 10.</p>",
                     "name": "clan_id",
                     "required": true,
                     "type": "numeric, list"
@@ -17804,134 +16757,7 @@
             ],
             "realm": "ru",
             "section": "stronghold",
-            "url": "stronghold/info"
-        },
-        "plannedbattles": {
-            "allowed_http_methods": [
-                "GET",
-                "POST"
-            ],
-            "allowed_protocols": [
-                "http",
-                "https"
-            ],
-            "api_url": "api.worldoftanks.ru/wot/",
-            "available_display_indices": [
-                "asia",
-                "eu",
-                "kr",
-                "na",
-                "ru"
-            ],
-            "description": "<p>Method returns information on Clan's Battles for Stronghold. Only battles planned in 2 weeks range from the current date are returned in response.</p>",
-            "display_index": "ru",
-            "fields": [
-                {
-                    "description": "<p>Attack direction</p>",
-                    "name": [
-                        "attack_direction"
-                    ],
-                    "type": "string"
-                },
-                {
-                    "description": "<p>Attacking clan ID</p>",
-                    "name": [
-                        "attacker_clan_id"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Attacking clan name</p>",
-                    "name": [
-                        "attacker_clan_name"
-                    ],
-                    "type": "string"
-                },
-                {
-                    "description": "<p>Attacking clan tag</p>",
-                    "name": [
-                        "attacker_clan_tag"
-                    ],
-                    "type": "string"
-                },
-                {
-                    "description": "<p>Battle creation date</p>",
-                    "name": [
-                        "battle_creation_date"
-                    ],
-                    "type": "timestamp"
-                },
-                {
-                    "description": "<p>Battle planned date</p>",
-                    "name": [
-                        "battle_planned_date"
-                    ],
-                    "type": "timestamp"
-                },
-                {
-                    "description": "<p>Battle type (attack / defense)</p>",
-                    "name": [
-                        "battle_type"
-                    ],
-                    "type": "string"
-                },
-                {
-                    "description": "<p>Defending clan ID</p>",
-                    "name": [
-                        "defender_clan_id"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Defending clan name</p>",
-                    "name": [
-                        "defender_clan_name"
-                    ],
-                    "type": "string"
-                },
-                {
-                    "description": "<p>Defending clan tag</p>",
-                    "name": [
-                        "defender_clan_tag"
-                    ],
-                    "type": "string"
-                },
-                {
-                    "description": "<p>Defense direction</p>",
-                    "name": [
-                        "defense_direction"
-                    ],
-                    "type": "string"
-                }
-            ],
-            "name": "Planned battles",
-            "parameters": [
-                {
-                    "description": "<p>Application ID</p>",
-                    "name": "application_id",
-                    "required": true,
-                    "type": "string"
-                },
-                {
-                    "description": "<p>Application ID. Default is ru. Valid values:</p>\n<ul>\n<li>\"en\" &mdash; English </li>\n<li>\"ru\" &mdash; \u0420\u0443\u0441\u0441\u043a\u0438\u0439 (by default)</li>\n<li>\"pl\" &mdash; Polski </li>\n<li>\"de\" &mdash; Deutsch </li>\n<li>\"fr\" &mdash; Fran\u00e7ais </li>\n<li>\"es\" &mdash; Espa\u00f1ol </li>\n<li>\"zh-cn\" &mdash; \u7b80\u4f53\u4e2d\u6587 </li>\n<li>\"zh-tw\" &mdash; \u7e41\u9ad4\u4e2d\u6587 </li>\n<li>\"tr\" &mdash; T\u00fcrk\u00e7e </li>\n<li>\"cs\" &mdash; \u010ce\u0161tina </li>\n<li>\"th\" &mdash; \u0e44\u0e17\u0e22 </li>\n<li>\"vi\" &mdash; Ti\u1ebfng Vi\u1ec7t </li>\n<li>\"ko\" &mdash; \ud55c\uad6d\uc5b4</li>\n</ul>",
-                    "name": "language",
-                    "type": "string"
-                },
-                {
-                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Max limit is 100.</p>",
-                    "name": "fields",
-                    "type": "string, list"
-                },
-                {
-                    "description": "<p>Clan ID. To get a clan ID, use the <a href=\"/reference/all/wgn/clans/list\">Clans</a> method. Max limit is 100.</p>",
-                    "name": "clan_id",
-                    "required": true,
-                    "type": "numeric, list"
-                }
-            ],
-            "realm": "ru",
-            "section": "stronghold",
-            "url": "stronghold/plannedbattles"
+            "url": "stronghold/claninfo"
         }
     },
     "tanks": {
@@ -17948,7 +16774,6 @@
             "available_display_indices": [
                 "asia",
                 "eu",
-                "kr",
                 "na",
                 "ru"
             ],
@@ -18000,7 +16825,7 @@
                     "type": "string"
                 },
                 {
-                    "description": "<p>Application ID. Default is ru. Valid values:</p>\n<ul>\n<li>\"en\" &mdash; English </li>\n<li>\"ru\" &mdash; \u0420\u0443\u0441\u0441\u043a\u0438\u0439 (by default)</li>\n<li>\"pl\" &mdash; Polski </li>\n<li>\"de\" &mdash; Deutsch </li>\n<li>\"fr\" &mdash; Fran\u00e7ais </li>\n<li>\"es\" &mdash; Espa\u00f1ol </li>\n<li>\"zh-cn\" &mdash; \u7b80\u4f53\u4e2d\u6587 </li>\n<li>\"zh-tw\" &mdash; \u7e41\u9ad4\u4e2d\u6587 </li>\n<li>\"tr\" &mdash; T\u00fcrk\u00e7e </li>\n<li>\"cs\" &mdash; \u010ce\u0161tina </li>\n<li>\"th\" &mdash; \u0e44\u0e17\u0e22 </li>\n<li>\"vi\" &mdash; Ti\u1ebfng Vi\u1ec7t </li>\n<li>\"ko\" &mdash; \ud55c\uad6d\uc5b4</li>\n</ul>",
+                    "description": "<p>Localization language. Default is ru. Valid values:</p>\n<ul>\n<li>\"en\" &mdash; English </li>\n<li>\"ru\" &mdash; \u0420\u0443\u0441\u0441\u043a\u0438\u0439 (by default)</li>\n<li>\"pl\" &mdash; Polski </li>\n<li>\"de\" &mdash; Deutsch </li>\n<li>\"fr\" &mdash; Fran\u00e7ais </li>\n<li>\"es\" &mdash; Espa\u00f1ol </li>\n<li>\"zh-cn\" &mdash; \u7b80\u4f53\u4e2d\u6587 </li>\n<li>\"zh-tw\" &mdash; \u7e41\u9ad4\u4e2d\u6587 </li>\n<li>\"tr\" &mdash; T\u00fcrk\u00e7e </li>\n<li>\"cs\" &mdash; \u010ce\u0161tina </li>\n<li>\"th\" &mdash; \u0e44\u0e17\u0e22 </li>\n<li>\"vi\" &mdash; Ti\u1ebfng Vi\u1ec7t </li>\n<li>\"ko\" &mdash; \ud55c\uad6d\uc5b4</li>\n</ul>",
                     "name": "language",
                     "type": "string"
                 },
@@ -18048,7 +16873,6 @@
             "available_display_indices": [
                 "asia",
                 "eu",
-                "kr",
                 "na",
                 "ru"
             ],
@@ -20094,7 +18918,7 @@
                     "type": "string"
                 },
                 {
-                    "description": "<p>Application ID. Default is ru. Valid values:</p>\n<ul>\n<li>\"en\" &mdash; English </li>\n<li>\"ru\" &mdash; \u0420\u0443\u0441\u0441\u043a\u0438\u0439 (by default)</li>\n<li>\"pl\" &mdash; Polski </li>\n<li>\"de\" &mdash; Deutsch </li>\n<li>\"fr\" &mdash; Fran\u00e7ais </li>\n<li>\"es\" &mdash; Espa\u00f1ol </li>\n<li>\"zh-cn\" &mdash; \u7b80\u4f53\u4e2d\u6587 </li>\n<li>\"zh-tw\" &mdash; \u7e41\u9ad4\u4e2d\u6587 </li>\n<li>\"tr\" &mdash; T\u00fcrk\u00e7e </li>\n<li>\"cs\" &mdash; \u010ce\u0161tina </li>\n<li>\"th\" &mdash; \u0e44\u0e17\u0e22 </li>\n<li>\"vi\" &mdash; Ti\u1ebfng Vi\u1ec7t </li>\n<li>\"ko\" &mdash; \ud55c\uad6d\uc5b4</li>\n</ul>",
+                    "description": "<p>Localization language. Default is ru. Valid values:</p>\n<ul>\n<li>\"en\" &mdash; English </li>\n<li>\"ru\" &mdash; \u0420\u0443\u0441\u0441\u043a\u0438\u0439 (by default)</li>\n<li>\"pl\" &mdash; Polski </li>\n<li>\"de\" &mdash; Deutsch </li>\n<li>\"fr\" &mdash; Fran\u00e7ais </li>\n<li>\"es\" &mdash; Espa\u00f1ol </li>\n<li>\"zh-cn\" &mdash; \u7b80\u4f53\u4e2d\u6587 </li>\n<li>\"zh-tw\" &mdash; \u7e41\u9ad4\u4e2d\u6587 </li>\n<li>\"tr\" &mdash; T\u00fcrk\u00e7e </li>\n<li>\"cs\" &mdash; \u010ce\u0161tina </li>\n<li>\"th\" &mdash; \u0e44\u0e17\u0e22 </li>\n<li>\"vi\" &mdash; Ti\u1ebfng Vi\u1ec7t </li>\n<li>\"ko\" &mdash; \ud55c\uad6d\uc5b4</li>\n</ul>",
                     "name": "language",
                     "type": "string"
                 },

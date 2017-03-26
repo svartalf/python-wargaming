@@ -50,7 +50,7 @@
                     "type": "string"
                 },
                 {
-                    "description": "<p>Application ID. Default is ru. Valid values:</p>\n<ul>\n<li>\"en\" &mdash; English </li>\n<li>\"ru\" &mdash; \u0420\u0443\u0441\u0441\u043a\u0438\u0439 (by default)</li>\n<li>\"pl\" &mdash; Polski </li>\n<li>\"de\" &mdash; Deutsch </li>\n<li>\"fr\" &mdash; Fran\u00e7ais </li>\n<li>\"es\" &mdash; Espa\u00f1ol </li>\n<li>\"zh-cn\" &mdash; \u7b80\u4f53\u4e2d\u6587 </li>\n<li>\"zh-tw\" &mdash; \u7e41\u9ad4\u4e2d\u6587 </li>\n<li>\"tr\" &mdash; T\u00fcrk\u00e7e </li>\n<li>\"cs\" &mdash; \u010ce\u0161tina </li>\n<li>\"th\" &mdash; \u0e44\u0e17\u0e22 </li>\n<li>\"vi\" &mdash; Ti\u1ebfng Vi\u1ec7t </li>\n<li>\"ko\" &mdash; \ud55c\uad6d\uc5b4</li>\n</ul>",
+                    "description": "<p>Localization language. Default is ru. Valid values:</p>\n<ul>\n<li>\"en\" &mdash; English </li>\n<li>\"ru\" &mdash; \u0420\u0443\u0441\u0441\u043a\u0438\u0439 (by default)</li>\n<li>\"pl\" &mdash; Polski </li>\n<li>\"de\" &mdash; Deutsch </li>\n<li>\"fr\" &mdash; Fran\u00e7ais </li>\n<li>\"es\" &mdash; Espa\u00f1ol </li>\n<li>\"zh-cn\" &mdash; \u7b80\u4f53\u4e2d\u6587 </li>\n<li>\"zh-tw\" &mdash; \u7e41\u9ad4\u4e2d\u6587 </li>\n<li>\"tr\" &mdash; T\u00fcrk\u00e7e </li>\n<li>\"cs\" &mdash; \u010ce\u0161tina </li>\n<li>\"th\" &mdash; \u0e44\u0e17\u0e22 </li>\n<li>\"vi\" &mdash; Ti\u1ebfng Vi\u1ec7t </li>\n<li>\"ko\" &mdash; \ud55c\uad6d\uc5b4</li>\n</ul>",
                     "name": "language",
                     "type": "string"
                 },
@@ -462,6 +462,188 @@
                         "xp"
                     ],
                     "type": "numeric"
+                },
+                {
+                    "type": "empty_line"
+                },
+                {
+                    "description": "<p>Clan battle statistics</p>",
+                    "name": [
+                        "statistics",
+                        "clan"
+                    ],
+                    "type": "block_header"
+                },
+                {
+                    "description": "<p>Number of battles</p>",
+                    "name": [
+                        "statistics",
+                        "clan",
+                        "battles"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Base capture points</p>",
+                    "name": [
+                        "statistics",
+                        "clan",
+                        "capture_points"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Damage caused</p>",
+                    "name": [
+                        "statistics",
+                        "clan",
+                        "damage_dealt"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Damage received</p>",
+                    "name": [
+                        "statistics",
+                        "clan",
+                        "damage_received"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Base defense points</p>",
+                    "name": [
+                        "statistics",
+                        "clan",
+                        "dropped_capture_points"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Vehicles destroyed</p>",
+                    "name": [
+                        "statistics",
+                        "clan",
+                        "frags"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Vehicles destroyed (Tier &gt;= 8)</p>",
+                    "name": [
+                        "statistics",
+                        "clan",
+                        "frags8p"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Number of hits</p>",
+                    "name": [
+                        "statistics",
+                        "clan",
+                        "hits"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Defeats</p>",
+                    "name": [
+                        "statistics",
+                        "clan",
+                        "losses"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Maximum destroyed in battle</p>",
+                    "name": [
+                        "statistics",
+                        "clan",
+                        "max_frags"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Vehicle with maximum number of enemy vehicles destroyed</p>",
+                    "name": [
+                        "statistics",
+                        "clan",
+                        "max_frags_tank_id"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Maximum experience per battle</p>",
+                    "name": [
+                        "statistics",
+                        "clan",
+                        "max_xp"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Vehicle used to gain maximum experience per battle</p>",
+                    "name": [
+                        "statistics",
+                        "clan",
+                        "max_xp_tank_id"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Shots fired</p>",
+                    "name": [
+                        "statistics",
+                        "clan",
+                        "shots"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Vehicles spotted</p>",
+                    "name": [
+                        "statistics",
+                        "clan",
+                        "spotted"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Battles survived</p>",
+                    "name": [
+                        "statistics",
+                        "clan",
+                        "survived_battles"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Victories in battles survived</p>",
+                    "name": [
+                        "statistics",
+                        "clan",
+                        "win_and_survived"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Victories</p>",
+                    "name": [
+                        "statistics",
+                        "clan",
+                        "wins"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Total experience</p>",
+                    "name": [
+                        "statistics",
+                        "clan",
+                        "xp"
+                    ],
+                    "type": "numeric"
                 }
             ],
             "name": "Player personal data",
@@ -473,7 +655,7 @@
                     "type": "string"
                 },
                 {
-                    "description": "<p>Application ID. Default is ru. Valid values:</p>\n<ul>\n<li>\"en\" &mdash; English </li>\n<li>\"ru\" &mdash; \u0420\u0443\u0441\u0441\u043a\u0438\u0439 (by default)</li>\n<li>\"pl\" &mdash; Polski </li>\n<li>\"de\" &mdash; Deutsch </li>\n<li>\"fr\" &mdash; Fran\u00e7ais </li>\n<li>\"es\" &mdash; Espa\u00f1ol </li>\n<li>\"zh-cn\" &mdash; \u7b80\u4f53\u4e2d\u6587 </li>\n<li>\"zh-tw\" &mdash; \u7e41\u9ad4\u4e2d\u6587 </li>\n<li>\"tr\" &mdash; T\u00fcrk\u00e7e </li>\n<li>\"cs\" &mdash; \u010ce\u0161tina </li>\n<li>\"th\" &mdash; \u0e44\u0e17\u0e22 </li>\n<li>\"vi\" &mdash; Ti\u1ebfng Vi\u1ec7t </li>\n<li>\"ko\" &mdash; \ud55c\uad6d\uc5b4</li>\n</ul>",
+                    "description": "<p>Localization language. Default is ru. Valid values:</p>\n<ul>\n<li>\"en\" &mdash; English </li>\n<li>\"ru\" &mdash; \u0420\u0443\u0441\u0441\u043a\u0438\u0439 (by default)</li>\n<li>\"pl\" &mdash; Polski </li>\n<li>\"de\" &mdash; Deutsch </li>\n<li>\"fr\" &mdash; Fran\u00e7ais </li>\n<li>\"es\" &mdash; Espa\u00f1ol </li>\n<li>\"zh-cn\" &mdash; \u7b80\u4f53\u4e2d\u6587 </li>\n<li>\"zh-tw\" &mdash; \u7e41\u9ad4\u4e2d\u6587 </li>\n<li>\"tr\" &mdash; T\u00fcrk\u00e7e </li>\n<li>\"cs\" &mdash; \u010ce\u0161tina </li>\n<li>\"th\" &mdash; \u0e44\u0e17\u0e22 </li>\n<li>\"vi\" &mdash; Ti\u1ebfng Vi\u1ec7t </li>\n<li>\"ko\" &mdash; \ud55c\uad6d\uc5b4</li>\n</ul>",
                     "name": "language",
                     "type": "string"
                 },
@@ -558,7 +740,7 @@
                     "type": "string"
                 },
                 {
-                    "description": "<p>Application ID. Default is ru. Valid values:</p>\n<ul>\n<li>\"en\" &mdash; English </li>\n<li>\"ru\" &mdash; \u0420\u0443\u0441\u0441\u043a\u0438\u0439 (by default)</li>\n<li>\"pl\" &mdash; Polski </li>\n<li>\"de\" &mdash; Deutsch </li>\n<li>\"fr\" &mdash; Fran\u00e7ais </li>\n<li>\"es\" &mdash; Espa\u00f1ol </li>\n<li>\"zh-cn\" &mdash; \u7b80\u4f53\u4e2d\u6587 </li>\n<li>\"zh-tw\" &mdash; \u7e41\u9ad4\u4e2d\u6587 </li>\n<li>\"tr\" &mdash; T\u00fcrk\u00e7e </li>\n<li>\"cs\" &mdash; \u010ce\u0161tina </li>\n<li>\"th\" &mdash; \u0e44\u0e17\u0e22 </li>\n<li>\"vi\" &mdash; Ti\u1ebfng Vi\u1ec7t </li>\n<li>\"ko\" &mdash; \ud55c\uad6d\uc5b4</li>\n</ul>",
+                    "description": "<p>Localization language. Default is ru. Valid values:</p>\n<ul>\n<li>\"en\" &mdash; English </li>\n<li>\"ru\" &mdash; \u0420\u0443\u0441\u0441\u043a\u0438\u0439 (by default)</li>\n<li>\"pl\" &mdash; Polski </li>\n<li>\"de\" &mdash; Deutsch </li>\n<li>\"fr\" &mdash; Fran\u00e7ais </li>\n<li>\"es\" &mdash; Espa\u00f1ol </li>\n<li>\"zh-cn\" &mdash; \u7b80\u4f53\u4e2d\u6587 </li>\n<li>\"zh-tw\" &mdash; \u7e41\u9ad4\u4e2d\u6587 </li>\n<li>\"tr\" &mdash; T\u00fcrk\u00e7e </li>\n<li>\"cs\" &mdash; \u010ce\u0161tina </li>\n<li>\"th\" &mdash; \u0e44\u0e17\u0e22 </li>\n<li>\"vi\" &mdash; Ti\u1ebfng Vi\u1ec7t </li>\n<li>\"ko\" &mdash; \ud55c\uad6d\uc5b4</li>\n</ul>",
                     "name": "language",
                     "type": "string"
                 },
@@ -805,7 +987,7 @@
                     "type": "string"
                 },
                 {
-                    "description": "<p>Application ID. Default is ru. Valid values:</p>\n<ul>\n<li>\"en\" &mdash; English </li>\n<li>\"ru\" &mdash; \u0420\u0443\u0441\u0441\u043a\u0438\u0439 (by default)</li>\n<li>\"pl\" &mdash; Polski </li>\n<li>\"de\" &mdash; Deutsch </li>\n<li>\"fr\" &mdash; Fran\u00e7ais </li>\n<li>\"es\" &mdash; Espa\u00f1ol </li>\n<li>\"zh-cn\" &mdash; \u7b80\u4f53\u4e2d\u6587 </li>\n<li>\"zh-tw\" &mdash; \u7e41\u9ad4\u4e2d\u6587 </li>\n<li>\"tr\" &mdash; T\u00fcrk\u00e7e </li>\n<li>\"cs\" &mdash; \u010ce\u0161tina </li>\n<li>\"th\" &mdash; \u0e44\u0e17\u0e22 </li>\n<li>\"vi\" &mdash; Ti\u1ebfng Vi\u1ec7t </li>\n<li>\"ko\" &mdash; \ud55c\uad6d\uc5b4</li>\n</ul>",
+                    "description": "<p>Localization language. Default is ru. Valid values:</p>\n<ul>\n<li>\"en\" &mdash; English </li>\n<li>\"ru\" &mdash; \u0420\u0443\u0441\u0441\u043a\u0438\u0439 (by default)</li>\n<li>\"pl\" &mdash; Polski </li>\n<li>\"de\" &mdash; Deutsch </li>\n<li>\"fr\" &mdash; Fran\u00e7ais </li>\n<li>\"es\" &mdash; Espa\u00f1ol </li>\n<li>\"zh-cn\" &mdash; \u7b80\u4f53\u4e2d\u6587 </li>\n<li>\"zh-tw\" &mdash; \u7e41\u9ad4\u4e2d\u6587 </li>\n<li>\"tr\" &mdash; T\u00fcrk\u00e7e </li>\n<li>\"cs\" &mdash; \u010ce\u0161tina </li>\n<li>\"th\" &mdash; \u0e44\u0e17\u0e22 </li>\n<li>\"vi\" &mdash; Ti\u1ebfng Vi\u1ec7t </li>\n<li>\"ko\" &mdash; \ud55c\uad6d\uc5b4</li>\n</ul>",
                     "name": "language",
                     "type": "string"
                 },
@@ -1602,7 +1784,7 @@
                     "type": "string"
                 },
                 {
-                    "description": "<p>Application ID. Default is ru. Valid values:</p>\n<ul>\n<li>\"en\" &mdash; English </li>\n<li>\"ru\" &mdash; \u0420\u0443\u0441\u0441\u043a\u0438\u0439 (by default)</li>\n<li>\"pl\" &mdash; Polski </li>\n<li>\"de\" &mdash; Deutsch </li>\n<li>\"fr\" &mdash; Fran\u00e7ais </li>\n<li>\"es\" &mdash; Espa\u00f1ol </li>\n<li>\"zh-cn\" &mdash; \u7b80\u4f53\u4e2d\u6587 </li>\n<li>\"zh-tw\" &mdash; \u7e41\u9ad4\u4e2d\u6587 </li>\n<li>\"tr\" &mdash; T\u00fcrk\u00e7e </li>\n<li>\"cs\" &mdash; \u010ce\u0161tina </li>\n<li>\"th\" &mdash; \u0e44\u0e17\u0e22 </li>\n<li>\"vi\" &mdash; Ti\u1ebfng Vi\u1ec7t </li>\n<li>\"ko\" &mdash; \ud55c\uad6d\uc5b4</li>\n</ul>",
+                    "description": "<p>Localization language. Default is ru. Valid values:</p>\n<ul>\n<li>\"en\" &mdash; English </li>\n<li>\"ru\" &mdash; \u0420\u0443\u0441\u0441\u043a\u0438\u0439 (by default)</li>\n<li>\"pl\" &mdash; Polski </li>\n<li>\"de\" &mdash; Deutsch </li>\n<li>\"fr\" &mdash; Fran\u00e7ais </li>\n<li>\"es\" &mdash; Espa\u00f1ol </li>\n<li>\"zh-cn\" &mdash; \u7b80\u4f53\u4e2d\u6587 </li>\n<li>\"zh-tw\" &mdash; \u7e41\u9ad4\u4e2d\u6587 </li>\n<li>\"tr\" &mdash; T\u00fcrk\u00e7e </li>\n<li>\"cs\" &mdash; \u010ce\u0161tina </li>\n<li>\"th\" &mdash; \u0e44\u0e17\u0e22 </li>\n<li>\"vi\" &mdash; Ti\u1ebfng Vi\u1ec7t </li>\n<li>\"ko\" &mdash; \ud55c\uad6d\uc5b4</li>\n</ul>",
                     "name": "language",
                     "type": "string"
                 },
@@ -2768,6 +2950,16 @@
                     "description": "<p>Module ID. Max limit is 100.</p>",
                     "name": "module_id",
                     "type": "numeric, list"
+                },
+                {
+                    "description": "<p>Module type. Valid values:</p>\n<ul>\n<li>\"vehicleEngine\" &mdash; Engines </li>\n<li>\"vehicleGun\" &mdash; Gun </li>\n<li>\"vehicleChassis\" &mdash; Suspension </li>\n<li>\"vehicleTurret\" &mdash; Turret</li>\n</ul>",
+                    "name": "type",
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Nation</p>",
+                    "name": "nation",
+                    "type": "string"
                 }
             ],
             "realm": "ru",
@@ -2912,6 +3104,20 @@
                 }
             ],
             "fields": [
+                {
+                    "description": "<p>The highest battle Tier of the vehicle</p>",
+                    "name": [
+                        "battle_level_range_max"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>The lowest battle Tier of the vehicle</p>",
+                    "name": [
+                        "battle_level_range_min"
+                    ],
+                    "type": "numeric"
+                },
                 {
                     "description": "<p>Engine ID</p>",
                     "name": [
@@ -3206,6 +3412,22 @@
                         "caliber"
                     ],
                     "type": "numeric"
+                },
+                {
+                    "description": "<p>Number of shells in the ammo</p>",
+                    "name": [
+                        "gun",
+                        "clip_capacity"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Reload time</p>",
+                    "name": [
+                        "gun",
+                        "clip_reload_time"
+                    ],
+                    "type": "float"
                 },
                 {
                     "description": "<p>Dispersion at 100 m (m)</p>",
@@ -3512,6 +3734,41 @@
             "display_index": "ru",
             "fields": [
                 {
+                    "description": "<p>The highest battle Tier of the vehicle</p>",
+                    "name": [
+                        "battle_level_range_max"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>The lowest battle Tier of the vehicle</p>",
+                    "name": [
+                        "battle_level_range_min"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Firepower (%)</p>",
+                    "name": [
+                        "firepower"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Hit points</p>",
+                    "name": [
+                        "hp"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Hull weight (kg)</p>",
+                    "name": [
+                        "hull_weight"
+                    ],
+                    "type": "numeric"
+                },
+                {
                     "description": "<p>Standard configuration</p>",
                     "name": [
                         "is_default"
@@ -3519,9 +3776,37 @@
                     "type": "boolean"
                 },
                 {
+                    "description": "<p>Maneuverability (%)</p>",
+                    "name": [
+                        "maneuverability"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Ammunition</p>",
+                    "name": [
+                        "max_ammo"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Load limit (kg)</p>",
+                    "name": [
+                        "max_weight"
+                    ],
+                    "type": "numeric"
+                },
+                {
                     "description": "<p>Configuration cost in credits</p>",
                     "name": [
                         "price_credit"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Configuration cost in experience</p>",
+                    "name": [
+                        "price_xp"
                     ],
                     "type": "numeric"
                 },
@@ -3533,9 +3818,339 @@
                     "type": "string"
                 },
                 {
+                    "description": "<p>Armor protection (%)</p>",
+                    "name": [
+                        "protection"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Shot efficiency (%)</p>",
+                    "name": [
+                        "shot_efficiency"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Signal range</p>",
+                    "name": [
+                        "signal_range"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Top reverse speed (km/h)</p>",
+                    "name": [
+                        "speed_backward"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Top speed (km/h)</p>",
+                    "name": [
+                        "speed_forward"
+                    ],
+                    "type": "numeric"
+                },
+                {
                     "description": "<p>Vehicle ID</p>",
                     "name": [
                         "tank_id"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Weight (kg)</p>",
+                    "name": [
+                        "weight"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "type": "empty_line"
+                },
+                {
+                    "description": "<p>Armor</p>",
+                    "name": [
+                        "armor"
+                    ],
+                    "type": "block_header"
+                },
+                {
+                    "type": "empty_line"
+                },
+                {
+                    "description": "<p>Hull armor</p>",
+                    "name": [
+                        "armor",
+                        "hull"
+                    ],
+                    "type": "block_header"
+                },
+                {
+                    "description": "<p>Front (mm)</p>",
+                    "name": [
+                        "armor",
+                        "hull",
+                        "front"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Rear (mm)</p>",
+                    "name": [
+                        "armor",
+                        "hull",
+                        "rear"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Sides (mm)</p>",
+                    "name": [
+                        "armor",
+                        "hull",
+                        "sides"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "type": "empty_line"
+                },
+                {
+                    "description": "<p>Turret armor</p>",
+                    "name": [
+                        "armor",
+                        "turret"
+                    ],
+                    "type": "block_header"
+                },
+                {
+                    "description": "<p>Front (mm)</p>",
+                    "name": [
+                        "armor",
+                        "turret",
+                        "front"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Rear (mm)</p>",
+                    "name": [
+                        "armor",
+                        "turret",
+                        "rear"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Sides (mm)</p>",
+                    "name": [
+                        "armor",
+                        "turret",
+                        "sides"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "type": "empty_line"
+                },
+                {
+                    "description": "<p>Engine characteristics</p>",
+                    "name": [
+                        "engine"
+                    ],
+                    "type": "block_header"
+                },
+                {
+                    "description": "<p>Engine Power (hp)</p>",
+                    "name": [
+                        "engine",
+                        "power"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "type": "empty_line"
+                },
+                {
+                    "description": "<p>Gun characteristics</p>",
+                    "name": [
+                        "gun"
+                    ],
+                    "type": "block_header"
+                },
+                {
+                    "description": "<p>Aiming time (s)</p>",
+                    "name": [
+                        "gun",
+                        "aim_time"
+                    ],
+                    "type": "float"
+                },
+                {
+                    "description": "<p>Caliber (mm)</p>",
+                    "name": [
+                        "gun",
+                        "caliber"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Number of shells in the ammo</p>",
+                    "name": [
+                        "gun",
+                        "clip_capacity"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Reload time</p>",
+                    "name": [
+                        "gun",
+                        "clip_reload_time"
+                    ],
+                    "type": "float"
+                },
+                {
+                    "description": "<p>Dispersion at 100 m (m)</p>",
+                    "name": [
+                        "gun",
+                        "dispersion"
+                    ],
+                    "type": "float"
+                },
+                {
+                    "description": "<p>Rate of fire (rounds/min)</p>",
+                    "name": [
+                        "gun",
+                        "fire_rate"
+                    ],
+                    "type": "float"
+                },
+                {
+                    "description": "<p>Depression angle (deg)</p>",
+                    "name": [
+                        "gun",
+                        "move_down_arc"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Elevation angle (deg)</p>",
+                    "name": [
+                        "gun",
+                        "move_up_arc"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Reload time (s)</p>",
+                    "name": [
+                        "gun",
+                        "reload_time"
+                    ],
+                    "type": "float"
+                },
+                {
+                    "description": "<p>Traverse speed (deg/s)</p>",
+                    "name": [
+                        "gun",
+                        "traverse_speed"
+                    ],
+                    "type": "float"
+                },
+                {
+                    "type": "empty_line"
+                },
+                {
+                    "description": "<p>Gun shells characteristics</p>",
+                    "name": [
+                        "shells"
+                    ],
+                    "type": "block_header"
+                },
+                {
+                    "description": "<p>Average damage (HP)</p>",
+                    "name": [
+                        "shells",
+                        "damage"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Average penetration (mm)</p>",
+                    "name": [
+                        "shells",
+                        "penetration"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "type": "empty_line"
+                },
+                {
+                    "description": "<p>Suspension characteristics</p>",
+                    "name": [
+                        "suspension"
+                    ],
+                    "type": "block_header"
+                },
+                {
+                    "description": "<p>Load limit (kg)</p>",
+                    "name": [
+                        "suspension",
+                        "load_limit"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Traverse speed (deg/s)</p>",
+                    "name": [
+                        "suspension",
+                        "traverse_speed"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "type": "empty_line"
+                },
+                {
+                    "description": "<p>Turret characteristics</p>",
+                    "name": [
+                        "turret"
+                    ],
+                    "type": "block_header"
+                },
+                {
+                    "description": "<p>Traverse angle, left (deg)</p>",
+                    "name": [
+                        "turret",
+                        "traverse_left_arc"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Traverse angle, right (deg)</p>",
+                    "name": [
+                        "turret",
+                        "traverse_right_arc"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Traverse speed (deg/s)</p>",
+                    "name": [
+                        "turret",
+                        "traverse_speed"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>View range (m)</p>",
+                    "name": [
+                        "turret",
+                        "view_range"
                     ],
                     "type": "numeric"
                 }
@@ -3719,6 +4334,22 @@
                         "default_profile"
                     ],
                     "type": "block_header"
+                },
+                {
+                    "description": "<p>The highest battle Tier of the vehicle</p>",
+                    "name": [
+                        "default_profile",
+                        "battle_level_range_max"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>The lowest battle Tier of the vehicle</p>",
+                    "name": [
+                        "default_profile",
+                        "battle_level_range_min"
+                    ],
+                    "type": "numeric"
                 },
                 {
                     "description": "<p>Engine ID</p>",
@@ -4053,6 +4684,24 @@
                     "type": "numeric"
                 },
                 {
+                    "description": "<p>Number of shells in the ammo</p>",
+                    "name": [
+                        "default_profile",
+                        "gun",
+                        "clip_capacity"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Reload time</p>",
+                    "name": [
+                        "default_profile",
+                        "gun",
+                        "clip_reload_time"
+                    ],
+                    "type": "float"
+                },
+                {
                     "description": "<p>Dispersion at 100 m (m)</p>",
                     "name": [
                         "default_profile",
@@ -4335,6 +4984,80 @@
                         "preview"
                     ],
                     "type": "string"
+                },
+                {
+                    "type": "empty_line"
+                },
+                {
+                    "description": "<p>Module research information</p>",
+                    "name": [
+                        "modules_tree"
+                    ],
+                    "type": "block_header"
+                },
+                {
+                    "description": "<p>Indicates if the module is basic</p>",
+                    "name": [
+                        "modules_tree",
+                        "is_default"
+                    ],
+                    "type": "boolean"
+                },
+                {
+                    "description": "<p>Module ID</p>",
+                    "name": [
+                        "modules_tree",
+                        "module_id"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Module name</p>",
+                    "name": [
+                        "modules_tree",
+                        "name"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>List of module IDs available after research of the module</p>",
+                    "name": [
+                        "modules_tree",
+                        "next_modules"
+                    ],
+                    "type": "list of integers"
+                },
+                {
+                    "description": "<p>List of vehicle IDs available after research of the module</p>",
+                    "name": [
+                        "modules_tree",
+                        "next_tanks"
+                    ],
+                    "type": "list of integers"
+                },
+                {
+                    "description": "<p>Cost in credits</p>",
+                    "name": [
+                        "modules_tree",
+                        "price_credit"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Research cost</p>",
+                    "name": [
+                        "modules_tree",
+                        "price_xp"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Module type</p>",
+                    "name": [
+                        "modules_tree",
+                        "type"
+                    ],
+                    "type": "string"
                 }
             ],
             "name": "Vehicles",
@@ -4429,7 +5152,7 @@
                     "type": "string"
                 },
                 {
-                    "description": "<p>Application ID. Default is ru. Valid values:</p>\n<ul>\n<li>\"en\" &mdash; English </li>\n<li>\"ru\" &mdash; \u0420\u0443\u0441\u0441\u043a\u0438\u0439 (by default)</li>\n<li>\"pl\" &mdash; Polski </li>\n<li>\"de\" &mdash; Deutsch </li>\n<li>\"fr\" &mdash; Fran\u00e7ais </li>\n<li>\"es\" &mdash; Espa\u00f1ol </li>\n<li>\"zh-cn\" &mdash; \u7b80\u4f53\u4e2d\u6587 </li>\n<li>\"zh-tw\" &mdash; \u7e41\u9ad4\u4e2d\u6587 </li>\n<li>\"tr\" &mdash; T\u00fcrk\u00e7e </li>\n<li>\"cs\" &mdash; \u010ce\u0161tina </li>\n<li>\"th\" &mdash; \u0e44\u0e17\u0e22 </li>\n<li>\"vi\" &mdash; Ti\u1ebfng Vi\u1ec7t </li>\n<li>\"ko\" &mdash; \ud55c\uad6d\uc5b4</li>\n</ul>",
+                    "description": "<p>Localization language. Default is ru. Valid values:</p>\n<ul>\n<li>\"en\" &mdash; English </li>\n<li>\"ru\" &mdash; \u0420\u0443\u0441\u0441\u043a\u0438\u0439 (by default)</li>\n<li>\"pl\" &mdash; Polski </li>\n<li>\"de\" &mdash; Deutsch </li>\n<li>\"fr\" &mdash; Fran\u00e7ais </li>\n<li>\"es\" &mdash; Espa\u00f1ol </li>\n<li>\"zh-cn\" &mdash; \u7b80\u4f53\u4e2d\u6587 </li>\n<li>\"zh-tw\" &mdash; \u7e41\u9ad4\u4e2d\u6587 </li>\n<li>\"tr\" &mdash; T\u00fcrk\u00e7e </li>\n<li>\"cs\" &mdash; \u010ce\u0161tina </li>\n<li>\"th\" &mdash; \u0e44\u0e17\u0e22 </li>\n<li>\"vi\" &mdash; Ti\u1ebfng Vi\u1ec7t </li>\n<li>\"ko\" &mdash; \ud55c\uad6d\uc5b4</li>\n</ul>",
                     "name": "language",
                     "type": "string"
                 },
@@ -4538,14 +5261,6 @@
                     "description": "<p>Vehicle ID</p>",
                     "name": [
                         "tank_id"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "deprecated": true,
-                    "description": "<p>Trees knocked down</p>",
-                    "name": [
-                        "trees_cut"
                     ],
                     "type": "numeric"
                 },
@@ -4719,7 +5434,7 @@
                     "type": "string"
                 },
                 {
-                    "description": "<p>Application ID. Default is ru. Valid values:</p>\n<ul>\n<li>\"en\" &mdash; English </li>\n<li>\"ru\" &mdash; \u0420\u0443\u0441\u0441\u043a\u0438\u0439 (by default)</li>\n<li>\"pl\" &mdash; Polski </li>\n<li>\"de\" &mdash; Deutsch </li>\n<li>\"fr\" &mdash; Fran\u00e7ais </li>\n<li>\"es\" &mdash; Espa\u00f1ol </li>\n<li>\"zh-cn\" &mdash; \u7b80\u4f53\u4e2d\u6587 </li>\n<li>\"zh-tw\" &mdash; \u7e41\u9ad4\u4e2d\u6587 </li>\n<li>\"tr\" &mdash; T\u00fcrk\u00e7e </li>\n<li>\"cs\" &mdash; \u010ce\u0161tina </li>\n<li>\"th\" &mdash; \u0e44\u0e17\u0e22 </li>\n<li>\"vi\" &mdash; Ti\u1ebfng Vi\u1ec7t </li>\n<li>\"ko\" &mdash; \ud55c\uad6d\uc5b4</li>\n</ul>",
+                    "description": "<p>Localization language. Default is ru. Valid values:</p>\n<ul>\n<li>\"en\" &mdash; English </li>\n<li>\"ru\" &mdash; \u0420\u0443\u0441\u0441\u043a\u0438\u0439 (by default)</li>\n<li>\"pl\" &mdash; Polski </li>\n<li>\"de\" &mdash; Deutsch </li>\n<li>\"fr\" &mdash; Fran\u00e7ais </li>\n<li>\"es\" &mdash; Espa\u00f1ol </li>\n<li>\"zh-cn\" &mdash; \u7b80\u4f53\u4e2d\u6587 </li>\n<li>\"zh-tw\" &mdash; \u7e41\u9ad4\u4e2d\u6587 </li>\n<li>\"tr\" &mdash; T\u00fcrk\u00e7e </li>\n<li>\"cs\" &mdash; \u010ce\u0161tina </li>\n<li>\"th\" &mdash; \u0e44\u0e17\u0e22 </li>\n<li>\"vi\" &mdash; Ti\u1ebfng Vi\u1ec7t </li>\n<li>\"ko\" &mdash; \ud55c\uad6d\uc5b4</li>\n</ul>",
                     "name": "language",
                     "type": "string"
                 },
@@ -5587,6 +6302,7 @@
                     "type": "numeric"
                 },
                 {
+                    "deprecated": true,
                     "description": "<p>List of stage tours (numbers of tours)</p>",
                     "name": [
                         "rounds"

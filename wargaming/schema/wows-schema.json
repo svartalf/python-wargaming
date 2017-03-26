@@ -43,7 +43,7 @@
                     "type": "string"
                 },
                 {
-                    "description": "<p>Localization language. Default is ru. Valid values:</p>\n<ul>\n<li>\"cs\" &mdash; \u010ce\u0161tina </li>\n<li>\"de\" &mdash; Deutsch </li>\n<li>\"en\" &mdash; English </li>\n<li>\"es\" &mdash; Espa\u00f1ol </li>\n<li>\"fr\" &mdash; Fran\u00e7ais </li>\n<li>\"ja\" &mdash; \u65e5\u672c\u8a9e </li>\n<li>\"pl\" &mdash; Polski </li>\n<li>\"ru\" &mdash; \u0420\u0443\u0441\u0441\u043a\u0438\u0439 (by default)</li>\n<li>\"th\" &mdash; \u0e44\u0e17\u0e22 </li>\n<li>\"zh-tw\" &mdash; \u7e41\u9ad4\u4e2d\u6587</li>\n</ul>",
+                    "description": "<p>Application ID. Default is ru. Valid values:</p>\n<ul>\n<li>\"cs\" &mdash; \u010ce\u0161tina </li>\n<li>\"de\" &mdash; Deutsch </li>\n<li>\"en\" &mdash; English </li>\n<li>\"es\" &mdash; Espa\u00f1ol </li>\n<li>\"fr\" &mdash; Fran\u00e7ais </li>\n<li>\"ja\" &mdash; \u65e5\u672c\u8a9e </li>\n<li>\"pl\" &mdash; Polski </li>\n<li>\"ru\" &mdash; \u0420\u0443\u0441\u0441\u043a\u0438\u0439 (by default)</li>\n<li>\"th\" &mdash; \u0e44\u0e17\u0e22 </li>\n<li>\"zh-tw\" &mdash; \u7e41\u9ad4\u4e2d\u6587</li>\n</ul>",
                     "name": "language",
                     "type": "string"
                 },
@@ -53,7 +53,7 @@
                     "type": "string, list"
                 },
                 {
-                    "description": "<p>Access token is used to access personal user data. The token is obtained via authentication and has expiration time.</p>",
+                    "description": "<p><a href=\"/documentation/guide/principles/#access_token\">Access token</a> for the private data of a user's account; can be received via the authorization method; valid within a stated time period</p>",
                     "name": "access_token",
                     "type": "string"
                 },
@@ -5875,16 +5875,6 @@
                     "type": "numeric"
                 },
                 {
-                    "deprecated": true,
-                    "description": "<p>Total number of capture points</p>",
-                    "name": [
-                        "statistics",
-                        "rank_div2",
-                        "capture_points"
-                    ],
-                    "type": "numeric"
-                },
-                {
                     "description": "<p>Base capture points</p>",
                     "name": [
                         "statistics",
@@ -5926,16 +5916,6 @@
                         "statistics",
                         "rank_div2",
                         "draws"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "deprecated": true,
-                    "description": "<p>Total number of defense points</p>",
-                    "name": [
-                        "statistics",
-                        "rank_div2",
-                        "dropped_capture_points"
                     ],
                     "type": "numeric"
                 },
@@ -6464,16 +6444,6 @@
                     "type": "numeric"
                 },
                 {
-                    "deprecated": true,
-                    "description": "<p>Total number of capture points</p>",
-                    "name": [
-                        "statistics",
-                        "rank_div3",
-                        "capture_points"
-                    ],
-                    "type": "numeric"
-                },
-                {
                     "description": "<p>Base capture points</p>",
                     "name": [
                         "statistics",
@@ -6515,16 +6485,6 @@
                         "statistics",
                         "rank_div3",
                         "draws"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "deprecated": true,
-                    "description": "<p>Total number of defense points</p>",
-                    "name": [
-                        "statistics",
-                        "rank_div3",
-                        "dropped_capture_points"
                     ],
                     "type": "numeric"
                 },
@@ -7053,16 +7013,6 @@
                     "type": "numeric"
                 },
                 {
-                    "deprecated": true,
-                    "description": "<p>Total number of capture points</p>",
-                    "name": [
-                        "statistics",
-                        "rank_solo",
-                        "capture_points"
-                    ],
-                    "type": "numeric"
-                },
-                {
                     "description": "<p>Base capture points</p>",
                     "name": [
                         "statistics",
@@ -7104,16 +7054,6 @@
                         "statistics",
                         "rank_solo",
                         "draws"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "deprecated": true,
-                    "description": "<p>Total number of defense points</p>",
-                    "name": [
-                        "statistics",
-                        "rank_solo",
-                        "dropped_capture_points"
                     ],
                     "type": "numeric"
                 },
@@ -7622,7 +7562,7 @@
                     "type": "string"
                 },
                 {
-                    "description": "<p>Localization language. Default is ru. Valid values:</p>\n<ul>\n<li>\"cs\" &mdash; \u010ce\u0161tina </li>\n<li>\"de\" &mdash; Deutsch </li>\n<li>\"en\" &mdash; English </li>\n<li>\"es\" &mdash; Espa\u00f1ol </li>\n<li>\"fr\" &mdash; Fran\u00e7ais </li>\n<li>\"ja\" &mdash; \u65e5\u672c\u8a9e </li>\n<li>\"pl\" &mdash; Polski </li>\n<li>\"ru\" &mdash; \u0420\u0443\u0441\u0441\u043a\u0438\u0439 (by default)</li>\n<li>\"th\" &mdash; \u0e44\u0e17\u0e22 </li>\n<li>\"zh-tw\" &mdash; \u7e41\u9ad4\u4e2d\u6587</li>\n</ul>",
+                    "description": "<p>Application ID. Default is ru. Valid values:</p>\n<ul>\n<li>\"cs\" &mdash; \u010ce\u0161tina </li>\n<li>\"de\" &mdash; Deutsch </li>\n<li>\"en\" &mdash; English </li>\n<li>\"es\" &mdash; Espa\u00f1ol </li>\n<li>\"fr\" &mdash; Fran\u00e7ais </li>\n<li>\"ja\" &mdash; \u65e5\u672c\u8a9e </li>\n<li>\"pl\" &mdash; Polski </li>\n<li>\"ru\" &mdash; \u0420\u0443\u0441\u0441\u043a\u0438\u0439 (by default)</li>\n<li>\"th\" &mdash; \u0e44\u0e17\u0e22 </li>\n<li>\"zh-tw\" &mdash; \u7e41\u9ad4\u4e2d\u6587</li>\n</ul>",
                     "name": "language",
                     "type": "string"
                 },
@@ -7632,12 +7572,12 @@
                     "type": "string, list"
                 },
                 {
-                    "description": "<p>Access token is used to access personal user data. The token is obtained via authentication and has expiration time.</p>",
+                    "description": "<p><a href=\"/documentation/guide/principles/#access_token\">Access token</a> for the private data of a user's account; can be received via the authorization method; valid within a stated time period</p>",
                     "name": "access_token",
                     "type": "string"
                 },
                 {
-                    "description": "<p>Extra fields to be included into the response. Valid values: </p>\n<ul>\n<li>private.grouped_contacts</li>\n<li>private.port</li>\n<li>statistics.club</li>\n<li>statistics.pve</li>\n<li>statistics.pve_div2</li>\n<li>statistics.pve_div3</li>\n<li>statistics.pve_solo</li>\n<li>statistics.pvp_div2</li>\n<li>statistics.pvp_div3</li>\n<li>statistics.pvp_solo</li>\n<li>statistics.rank_div2</li>\n<li>statistics.rank_div3</li>\n<li>statistics.rank_solo</li>\n</ul>",
+                    "description": "<p>Extra fields that will be added to the response. Valid values:</p>\n<ul>\n<li>\"private.grouped_contacts\" </li>\n<li>\"private.port\" </li>\n<li>\"statistics.club\" </li>\n<li>\"statistics.pve\" </li>\n<li>\"statistics.pve_div2\" </li>\n<li>\"statistics.pve_div3\" </li>\n<li>\"statistics.pve_solo\" </li>\n<li>\"statistics.pvp_div2\" </li>\n<li>\"statistics.pvp_div3\" </li>\n<li>\"statistics.pvp_solo\" </li>\n<li>\"statistics.rank_div2\" </li>\n<li>\"statistics.rank_div3\" </li>\n<li>\"statistics.rank_solo\"</li>\n</ul>",
                     "name": "extra",
                     "type": "string, list"
                 },
@@ -7707,7 +7647,7 @@
                     "type": "string"
                 },
                 {
-                    "description": "<p>Localization language. Default is ru. Valid values:</p>\n<ul>\n<li>\"cs\" &mdash; \u010ce\u0161tina </li>\n<li>\"de\" &mdash; Deutsch </li>\n<li>\"en\" &mdash; English </li>\n<li>\"es\" &mdash; Espa\u00f1ol </li>\n<li>\"fr\" &mdash; Fran\u00e7ais </li>\n<li>\"ja\" &mdash; \u65e5\u672c\u8a9e </li>\n<li>\"pl\" &mdash; Polski </li>\n<li>\"ru\" &mdash; \u0420\u0443\u0441\u0441\u043a\u0438\u0439 (by default)</li>\n<li>\"th\" &mdash; \u0e44\u0e17\u0e22 </li>\n<li>\"zh-tw\" &mdash; \u7e41\u9ad4\u4e2d\u6587</li>\n</ul>",
+                    "description": "<p>Application ID. Default is ru. Valid values:</p>\n<ul>\n<li>\"cs\" &mdash; \u010ce\u0161tina </li>\n<li>\"de\" &mdash; Deutsch </li>\n<li>\"en\" &mdash; English </li>\n<li>\"es\" &mdash; Espa\u00f1ol </li>\n<li>\"fr\" &mdash; Fran\u00e7ais </li>\n<li>\"ja\" &mdash; \u65e5\u672c\u8a9e </li>\n<li>\"pl\" &mdash; Polski </li>\n<li>\"ru\" &mdash; \u0420\u0443\u0441\u0441\u043a\u0438\u0439 (by default)</li>\n<li>\"th\" &mdash; \u0e44\u0e17\u0e22 </li>\n<li>\"zh-tw\" &mdash; \u7e41\u9ad4\u4e2d\u6587</li>\n</ul>",
                     "name": "language",
                     "type": "string"
                 },
@@ -7994,7 +7934,7 @@
                     "type": "string"
                 },
                 {
-                    "description": "<p>Localization language. Default is ru. Valid values:</p>\n<ul>\n<li>\"cs\" &mdash; \u010ce\u0161tina </li>\n<li>\"de\" &mdash; Deutsch </li>\n<li>\"en\" &mdash; English </li>\n<li>\"es\" &mdash; Espa\u00f1ol </li>\n<li>\"fr\" &mdash; Fran\u00e7ais </li>\n<li>\"ja\" &mdash; \u65e5\u672c\u8a9e </li>\n<li>\"pl\" &mdash; Polski </li>\n<li>\"ru\" &mdash; \u0420\u0443\u0441\u0441\u043a\u0438\u0439 (by default)</li>\n<li>\"th\" &mdash; \u0e44\u0e17\u0e22 </li>\n<li>\"zh-tw\" &mdash; \u7e41\u9ad4\u4e2d\u6587</li>\n</ul>",
+                    "description": "<p>Application ID. Default is ru. Valid values:</p>\n<ul>\n<li>\"cs\" &mdash; \u010ce\u0161tina </li>\n<li>\"de\" &mdash; Deutsch </li>\n<li>\"en\" &mdash; English </li>\n<li>\"es\" &mdash; Espa\u00f1ol </li>\n<li>\"fr\" &mdash; Fran\u00e7ais </li>\n<li>\"ja\" &mdash; \u65e5\u672c\u8a9e </li>\n<li>\"pl\" &mdash; Polski </li>\n<li>\"ru\" &mdash; \u0420\u0443\u0441\u0441\u043a\u0438\u0439 (by default)</li>\n<li>\"th\" &mdash; \u0e44\u0e17\u0e22 </li>\n<li>\"zh-tw\" &mdash; \u7e41\u9ad4\u4e2d\u6587</li>\n</ul>",
                     "name": "language",
                     "type": "string"
                 },
@@ -8004,12 +7944,12 @@
                     "type": "string, list"
                 },
                 {
-                    "description": "<p>Access token is used to access personal user data. The token is obtained via authentication and has expiration time.</p>",
+                    "description": "<p><a href=\"/documentation/guide/principles/#access_token\">Access token</a> for the private data of a user's account; can be received via the authorization method; valid within a stated time period</p>",
                     "name": "access_token",
                     "type": "string"
                 },
                 {
-                    "description": "<p>Extra fields to be included into the response. Valid values: </p>\n<ul>\n<li>pve</li>\n</ul>",
+                    "description": "<p>Extra fields that will be added to the response. Valid values:</p>\n<ul>\n<li>\"pve\"</li>\n</ul>",
                     "name": "extra",
                     "type": "string, list"
                 },
@@ -9238,16 +9178,6 @@
                     "type": "float"
                 },
                 {
-                    "deprecated": true,
-                    "description": "<p>Maximum bomb damage</p>",
-                    "name": [
-                        "profile",
-                        "dive_bomber",
-                        "bomb_damage"
-                    ],
-                    "type": "numeric"
-                },
-                {
                     "description": "<p>Cruise Speed (knots)</p>",
                     "name": [
                         "profile",
@@ -10159,189 +10089,6 @@
                         "artillery",
                         "slots",
                         "name"
-                    ],
-                    "type": "string"
-                },
-                {
-                    "type": "empty_line"
-                },
-                {
-                    "deprecated": true,
-                    "deprecated_text": "<p>Please use field <strong>atbas</strong> for information about Secondary Armament.</p>",
-                    "description": "<p>Secondary armament. If the module is absent on the ship, field value is null.</p>",
-                    "name": [
-                        "atba"
-                    ],
-                    "type": "block_header"
-                },
-                {
-                    "description": "<p>Firing range</p>",
-                    "name": [
-                        "atba",
-                        "distance"
-                    ],
-                    "type": "float"
-                },
-                {
-                    "description": "<p>Rate of fire (rounds / min)</p>",
-                    "name": [
-                        "atba",
-                        "gun_rate"
-                    ],
-                    "type": "float"
-                },
-                {
-                    "type": "empty_line"
-                },
-                {
-                    "description": "<p>Shells</p>",
-                    "name": [
-                        "atba",
-                        "shells"
-                    ],
-                    "type": "block_header"
-                },
-                {
-                    "type": "empty_line"
-                },
-                {
-                    "description": "<p>Armor Piercing Shells</p>",
-                    "name": [
-                        "atba",
-                        "shells",
-                        "AP"
-                    ],
-                    "type": "block_header"
-                },
-                {
-                    "description": "<p>Shell weight</p>",
-                    "name": [
-                        "atba",
-                        "shells",
-                        "AP",
-                        "bullet_mass"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Shell speed</p>",
-                    "name": [
-                        "atba",
-                        "shells",
-                        "AP",
-                        "bullet_speed"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Chance of Fire on target caused by shell (%)</p>",
-                    "name": [
-                        "atba",
-                        "shells",
-                        "AP",
-                        "burn_probability"
-                    ],
-                    "type": "float"
-                },
-                {
-                    "description": "<p>Maximum Damage</p>",
-                    "name": [
-                        "atba",
-                        "shells",
-                        "AP",
-                        "damage"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Shell name</p>",
-                    "name": [
-                        "atba",
-                        "shells",
-                        "AP",
-                        "name"
-                    ],
-                    "type": "string"
-                },
-                {
-                    "description": "<p>Shell type</p>",
-                    "name": [
-                        "atba",
-                        "shells",
-                        "AP",
-                        "type"
-                    ],
-                    "type": "string"
-                },
-                {
-                    "type": "empty_line"
-                },
-                {
-                    "description": "<p>High Explosive Shells</p>",
-                    "name": [
-                        "atba",
-                        "shells",
-                        "HE"
-                    ],
-                    "type": "block_header"
-                },
-                {
-                    "description": "<p>Shell weight</p>",
-                    "name": [
-                        "atba",
-                        "shells",
-                        "HE",
-                        "bullet_mass"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Shell speed</p>",
-                    "name": [
-                        "atba",
-                        "shells",
-                        "HE",
-                        "bullet_speed"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Chance of Fire on target caused by shell (%)</p>",
-                    "name": [
-                        "atba",
-                        "shells",
-                        "HE",
-                        "burn_probability"
-                    ],
-                    "type": "float"
-                },
-                {
-                    "description": "<p>Maximum Damage</p>",
-                    "name": [
-                        "atba",
-                        "shells",
-                        "HE",
-                        "damage"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Shell name</p>",
-                    "name": [
-                        "atba",
-                        "shells",
-                        "HE",
-                        "name"
-                    ],
-                    "type": "string"
-                },
-                {
-                    "description": "<p>Shell type</p>",
-                    "name": [
-                        "atba",
-                        "shells",
-                        "HE",
-                        "type"
                     ],
                     "type": "string"
                 },
@@ -12065,207 +11812,6 @@
                         "artillery",
                         "slots",
                         "name"
-                    ],
-                    "type": "string"
-                },
-                {
-                    "type": "empty_line"
-                },
-                {
-                    "deprecated": true,
-                    "deprecated_text": "<p>Please use field <strong>atbas</strong> for information about Secondary Armament.</p>",
-                    "description": "<p>Secondary armament. If the module is absent on the ship, field value is null.</p>",
-                    "name": [
-                        "default_profile",
-                        "atba"
-                    ],
-                    "type": "block_header"
-                },
-                {
-                    "description": "<p>Firing range</p>",
-                    "name": [
-                        "default_profile",
-                        "atba",
-                        "distance"
-                    ],
-                    "type": "float"
-                },
-                {
-                    "description": "<p>Rate of fire (rounds / min)</p>",
-                    "name": [
-                        "default_profile",
-                        "atba",
-                        "gun_rate"
-                    ],
-                    "type": "float"
-                },
-                {
-                    "type": "empty_line"
-                },
-                {
-                    "description": "<p>Shells</p>",
-                    "name": [
-                        "default_profile",
-                        "atba",
-                        "shells"
-                    ],
-                    "type": "block_header"
-                },
-                {
-                    "type": "empty_line"
-                },
-                {
-                    "description": "<p>Armor Piercing Shells</p>",
-                    "name": [
-                        "default_profile",
-                        "atba",
-                        "shells",
-                        "AP"
-                    ],
-                    "type": "block_header"
-                },
-                {
-                    "description": "<p>Shell weight</p>",
-                    "name": [
-                        "default_profile",
-                        "atba",
-                        "shells",
-                        "AP",
-                        "bullet_mass"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Shell speed</p>",
-                    "name": [
-                        "default_profile",
-                        "atba",
-                        "shells",
-                        "AP",
-                        "bullet_speed"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Chance of Fire on target caused by shell (%)</p>",
-                    "name": [
-                        "default_profile",
-                        "atba",
-                        "shells",
-                        "AP",
-                        "burn_probability"
-                    ],
-                    "type": "float"
-                },
-                {
-                    "description": "<p>Maximum Damage</p>",
-                    "name": [
-                        "default_profile",
-                        "atba",
-                        "shells",
-                        "AP",
-                        "damage"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Shell name</p>",
-                    "name": [
-                        "default_profile",
-                        "atba",
-                        "shells",
-                        "AP",
-                        "name"
-                    ],
-                    "type": "string"
-                },
-                {
-                    "description": "<p>Shell type</p>",
-                    "name": [
-                        "default_profile",
-                        "atba",
-                        "shells",
-                        "AP",
-                        "type"
-                    ],
-                    "type": "string"
-                },
-                {
-                    "type": "empty_line"
-                },
-                {
-                    "description": "<p>High Explosive Shells</p>",
-                    "name": [
-                        "default_profile",
-                        "atba",
-                        "shells",
-                        "HE"
-                    ],
-                    "type": "block_header"
-                },
-                {
-                    "description": "<p>Shell weight</p>",
-                    "name": [
-                        "default_profile",
-                        "atba",
-                        "shells",
-                        "HE",
-                        "bullet_mass"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Shell speed</p>",
-                    "name": [
-                        "default_profile",
-                        "atba",
-                        "shells",
-                        "HE",
-                        "bullet_speed"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Chance of Fire on target caused by shell (%)</p>",
-                    "name": [
-                        "default_profile",
-                        "atba",
-                        "shells",
-                        "HE",
-                        "burn_probability"
-                    ],
-                    "type": "float"
-                },
-                {
-                    "description": "<p>Maximum Damage</p>",
-                    "name": [
-                        "default_profile",
-                        "atba",
-                        "shells",
-                        "HE",
-                        "damage"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Shell name</p>",
-                    "name": [
-                        "default_profile",
-                        "atba",
-                        "shells",
-                        "HE",
-                        "name"
-                    ],
-                    "type": "string"
-                },
-                {
-                    "description": "<p>Shell type</p>",
-                    "name": [
-                        "default_profile",
-                        "atba",
-                        "shells",
-                        "HE",
-                        "type"
                     ],
                     "type": "string"
                 },
@@ -14480,16 +14026,6 @@
                     "type": "numeric"
                 },
                 {
-                    "deprecated": true,
-                    "description": "<p>Base capture points</p>",
-                    "name": [
-                        "seasons",
-                        "rank_div2",
-                        "capture_points"
-                    ],
-                    "type": "numeric"
-                },
-                {
                     "description": "<p>Damage caused</p>",
                     "name": [
                         "seasons",
@@ -14504,16 +14040,6 @@
                         "seasons",
                         "rank_div2",
                         "draws"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "deprecated": true,
-                    "description": "<p>Base defense points</p>",
-                    "name": [
-                        "seasons",
-                        "rank_div2",
-                        "dropped_capture_points"
                     ],
                     "type": "numeric"
                 },
@@ -14857,16 +14383,6 @@
                     "type": "numeric"
                 },
                 {
-                    "deprecated": true,
-                    "description": "<p>Base capture points</p>",
-                    "name": [
-                        "seasons",
-                        "rank_div3",
-                        "capture_points"
-                    ],
-                    "type": "numeric"
-                },
-                {
                     "description": "<p>Damage caused</p>",
                     "name": [
                         "seasons",
@@ -14881,16 +14397,6 @@
                         "seasons",
                         "rank_div3",
                         "draws"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "deprecated": true,
-                    "description": "<p>Base defense points</p>",
-                    "name": [
-                        "seasons",
-                        "rank_div3",
-                        "dropped_capture_points"
                     ],
                     "type": "numeric"
                 },
@@ -15290,16 +14796,6 @@
                     "type": "numeric"
                 },
                 {
-                    "deprecated": true,
-                    "description": "<p>Base capture points</p>",
-                    "name": [
-                        "seasons",
-                        "rank_solo",
-                        "capture_points"
-                    ],
-                    "type": "numeric"
-                },
-                {
                     "description": "<p>Damage caused</p>",
                     "name": [
                         "seasons",
@@ -15314,16 +14810,6 @@
                         "seasons",
                         "rank_solo",
                         "draws"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "deprecated": true,
-                    "description": "<p>Base defense points</p>",
-                    "name": [
-                        "seasons",
-                        "rank_solo",
-                        "dropped_capture_points"
                     ],
                     "type": "numeric"
                 },
@@ -15656,7 +15142,7 @@
                     "type": "string"
                 },
                 {
-                    "description": "<p>Localization language. Default is ru. Valid values:</p>\n<ul>\n<li>\"cs\" &mdash; \u010ce\u0161tina </li>\n<li>\"de\" &mdash; Deutsch </li>\n<li>\"en\" &mdash; English </li>\n<li>\"es\" &mdash; Espa\u00f1ol </li>\n<li>\"fr\" &mdash; Fran\u00e7ais </li>\n<li>\"ja\" &mdash; \u65e5\u672c\u8a9e </li>\n<li>\"pl\" &mdash; Polski </li>\n<li>\"ru\" &mdash; \u0420\u0443\u0441\u0441\u043a\u0438\u0439 (by default)</li>\n<li>\"th\" &mdash; \u0e44\u0e17\u0e22 </li>\n<li>\"zh-tw\" &mdash; \u7e41\u9ad4\u4e2d\u6587</li>\n</ul>",
+                    "description": "<p>Application ID. Default is ru. Valid values:</p>\n<ul>\n<li>\"cs\" &mdash; \u010ce\u0161tina </li>\n<li>\"de\" &mdash; Deutsch </li>\n<li>\"en\" &mdash; English </li>\n<li>\"es\" &mdash; Espa\u00f1ol </li>\n<li>\"fr\" &mdash; Fran\u00e7ais </li>\n<li>\"ja\" &mdash; \u65e5\u672c\u8a9e </li>\n<li>\"pl\" &mdash; Polski </li>\n<li>\"ru\" &mdash; \u0420\u0443\u0441\u0441\u043a\u0438\u0439 (by default)</li>\n<li>\"th\" &mdash; \u0e44\u0e17\u0e22 </li>\n<li>\"zh-tw\" &mdash; \u7e41\u9ad4\u4e2d\u6587</li>\n</ul>",
                     "name": "language",
                     "type": "string"
                 },
@@ -15666,7 +15152,7 @@
                     "type": "string, list"
                 },
                 {
-                    "description": "<p>Access token is used to access personal user data. The token is obtained via authentication and has expiration time.</p>",
+                    "description": "<p><a href=\"/documentation/guide/principles/#access_token\">Access token</a> for the private data of a user's account; can be received via the authorization method; valid within a stated time period</p>",
                     "name": "access_token",
                     "type": "string"
                 },
@@ -15894,16 +15380,6 @@
                     "type": "numeric"
                 },
                 {
-                    "deprecated": true,
-                    "description": "<p>Base capture points</p>",
-                    "name": [
-                        "seasons",
-                        "rank_div2",
-                        "capture_points"
-                    ],
-                    "type": "numeric"
-                },
-                {
                     "description": "<p>Damage caused</p>",
                     "name": [
                         "seasons",
@@ -15918,16 +15394,6 @@
                         "seasons",
                         "rank_div2",
                         "draws"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "deprecated": true,
-                    "description": "<p>Base defense points</p>",
-                    "name": [
-                        "seasons",
-                        "rank_div2",
-                        "dropped_capture_points"
                     ],
                     "type": "numeric"
                 },
@@ -16271,16 +15737,6 @@
                     "type": "numeric"
                 },
                 {
-                    "deprecated": true,
-                    "description": "<p>Base capture points</p>",
-                    "name": [
-                        "seasons",
-                        "rank_div3",
-                        "capture_points"
-                    ],
-                    "type": "numeric"
-                },
-                {
                     "description": "<p>Damage caused</p>",
                     "name": [
                         "seasons",
@@ -16295,16 +15751,6 @@
                         "seasons",
                         "rank_div3",
                         "draws"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "deprecated": true,
-                    "description": "<p>Base defense points</p>",
-                    "name": [
-                        "seasons",
-                        "rank_div3",
-                        "dropped_capture_points"
                     ],
                     "type": "numeric"
                 },
@@ -16648,16 +16094,6 @@
                     "type": "numeric"
                 },
                 {
-                    "deprecated": true,
-                    "description": "<p>Base capture points</p>",
-                    "name": [
-                        "seasons",
-                        "rank_solo",
-                        "capture_points"
-                    ],
-                    "type": "numeric"
-                },
-                {
                     "description": "<p>Damage caused</p>",
                     "name": [
                         "seasons",
@@ -16672,16 +16108,6 @@
                         "seasons",
                         "rank_solo",
                         "draws"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "deprecated": true,
-                    "description": "<p>Base defense points</p>",
-                    "name": [
-                        "seasons",
-                        "rank_solo",
-                        "dropped_capture_points"
                     ],
                     "type": "numeric"
                 },
@@ -17014,7 +16440,7 @@
                     "type": "string"
                 },
                 {
-                    "description": "<p>Localization language. Default is ru. Valid values:</p>\n<ul>\n<li>\"cs\" &mdash; \u010ce\u0161tina </li>\n<li>\"de\" &mdash; Deutsch </li>\n<li>\"en\" &mdash; English </li>\n<li>\"es\" &mdash; Espa\u00f1ol </li>\n<li>\"fr\" &mdash; Fran\u00e7ais </li>\n<li>\"ja\" &mdash; \u65e5\u672c\u8a9e </li>\n<li>\"pl\" &mdash; Polski </li>\n<li>\"ru\" &mdash; \u0420\u0443\u0441\u0441\u043a\u0438\u0439 (by default)</li>\n<li>\"th\" &mdash; \u0e44\u0e17\u0e22 </li>\n<li>\"zh-tw\" &mdash; \u7e41\u9ad4\u4e2d\u6587</li>\n</ul>",
+                    "description": "<p>Application ID. Default is ru. Valid values:</p>\n<ul>\n<li>\"cs\" &mdash; \u010ce\u0161tina </li>\n<li>\"de\" &mdash; Deutsch </li>\n<li>\"en\" &mdash; English </li>\n<li>\"es\" &mdash; Espa\u00f1ol </li>\n<li>\"fr\" &mdash; Fran\u00e7ais </li>\n<li>\"ja\" &mdash; \u65e5\u672c\u8a9e </li>\n<li>\"pl\" &mdash; Polski </li>\n<li>\"ru\" &mdash; \u0420\u0443\u0441\u0441\u043a\u0438\u0439 (by default)</li>\n<li>\"th\" &mdash; \u0e44\u0e17\u0e22 </li>\n<li>\"zh-tw\" &mdash; \u7e41\u9ad4\u4e2d\u6587</li>\n</ul>",
                     "name": "language",
                     "type": "string"
                 },
@@ -17024,7 +16450,7 @@
                     "type": "string, list"
                 },
                 {
-                    "description": "<p>Access token is used to access personal user data. The token is obtained via authentication and has expiration time.</p>",
+                    "description": "<p><a href=\"/documentation/guide/principles/#access_token\">Access token</a> for the private data of a user's account; can be received via the authorization method; valid within a stated time period</p>",
                     "name": "access_token",
                     "type": "string"
                 },
@@ -21006,15 +20432,6 @@
                     "type": "numeric"
                 },
                 {
-                    "deprecated": true,
-                    "description": "<p>Base capture points</p>",
-                    "name": [
-                        "rank_div2",
-                        "capture_points"
-                    ],
-                    "type": "numeric"
-                },
-                {
                     "description": "<p>Damage caused</p>",
                     "name": [
                         "rank_div2",
@@ -21035,15 +20452,6 @@
                     "name": [
                         "rank_div2",
                         "draws"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "deprecated": true,
-                    "description": "<p>Base defense points</p>",
-                    "name": [
-                        "rank_div2",
-                        "dropped_capture_points"
                     ],
                     "type": "numeric"
                 },
@@ -21417,15 +20825,6 @@
                     "type": "numeric"
                 },
                 {
-                    "deprecated": true,
-                    "description": "<p>Base capture points</p>",
-                    "name": [
-                        "rank_div3",
-                        "capture_points"
-                    ],
-                    "type": "numeric"
-                },
-                {
                     "description": "<p>Damage caused</p>",
                     "name": [
                         "rank_div3",
@@ -21446,15 +20845,6 @@
                     "name": [
                         "rank_div3",
                         "draws"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "deprecated": true,
-                    "description": "<p>Base defense points</p>",
-                    "name": [
-                        "rank_div3",
-                        "dropped_capture_points"
                     ],
                     "type": "numeric"
                 },
@@ -21828,15 +21218,6 @@
                     "type": "numeric"
                 },
                 {
-                    "deprecated": true,
-                    "description": "<p>Base capture points</p>",
-                    "name": [
-                        "rank_solo",
-                        "capture_points"
-                    ],
-                    "type": "numeric"
-                },
-                {
                     "description": "<p>Damage caused</p>",
                     "name": [
                         "rank_solo",
@@ -21857,15 +21238,6 @@
                     "name": [
                         "rank_solo",
                         "draws"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "deprecated": true,
-                    "description": "<p>Base defense points</p>",
-                    "name": [
-                        "rank_solo",
-                        "dropped_capture_points"
                     ],
                     "type": "numeric"
                 },
@@ -22222,7 +21594,7 @@
                     "type": "string"
                 },
                 {
-                    "description": "<p>Localization language. Default is ru. Valid values:</p>\n<ul>\n<li>\"cs\" &mdash; \u010ce\u0161tina </li>\n<li>\"de\" &mdash; Deutsch </li>\n<li>\"en\" &mdash; English </li>\n<li>\"es\" &mdash; Espa\u00f1ol </li>\n<li>\"fr\" &mdash; Fran\u00e7ais </li>\n<li>\"ja\" &mdash; \u65e5\u672c\u8a9e </li>\n<li>\"pl\" &mdash; Polski </li>\n<li>\"ru\" &mdash; \u0420\u0443\u0441\u0441\u043a\u0438\u0439 (by default)</li>\n<li>\"th\" &mdash; \u0e44\u0e17\u0e22 </li>\n<li>\"zh-tw\" &mdash; \u7e41\u9ad4\u4e2d\u6587</li>\n</ul>",
+                    "description": "<p>Application ID. Default is ru. Valid values:</p>\n<ul>\n<li>\"cs\" &mdash; \u010ce\u0161tina </li>\n<li>\"de\" &mdash; Deutsch </li>\n<li>\"en\" &mdash; English </li>\n<li>\"es\" &mdash; Espa\u00f1ol </li>\n<li>\"fr\" &mdash; Fran\u00e7ais </li>\n<li>\"ja\" &mdash; \u65e5\u672c\u8a9e </li>\n<li>\"pl\" &mdash; Polski </li>\n<li>\"ru\" &mdash; \u0420\u0443\u0441\u0441\u043a\u0438\u0439 (by default)</li>\n<li>\"th\" &mdash; \u0e44\u0e17\u0e22 </li>\n<li>\"zh-tw\" &mdash; \u7e41\u9ad4\u4e2d\u6587</li>\n</ul>",
                     "name": "language",
                     "type": "string"
                 },
@@ -22232,12 +21604,12 @@
                     "type": "string, list"
                 },
                 {
-                    "description": "<p>Access token is used to access personal user data. The token is obtained via authentication and has expiration time.</p>",
+                    "description": "<p><a href=\"/documentation/guide/principles/#access_token\">Access token</a> for the private data of a user's account; can be received via the authorization method; valid within a stated time period</p>",
                     "name": "access_token",
                     "type": "string"
                 },
                 {
-                    "description": "<p>Extra fields to be included into the response. Valid values: </p>\n<ul>\n<li>club</li>\n<li>pve</li>\n<li>pve_div2</li>\n<li>pve_div3</li>\n<li>pve_solo</li>\n<li>pvp_div2</li>\n<li>pvp_div3</li>\n<li>pvp_solo</li>\n<li>rank_div2</li>\n<li>rank_div3</li>\n<li>rank_solo</li>\n</ul>",
+                    "description": "<p>Extra fields that will be added to the response. Valid values:</p>\n<ul>\n<li>\"club\" </li>\n<li>\"pve\" </li>\n<li>\"pve_div2\" </li>\n<li>\"pve_div3\" </li>\n<li>\"pve_solo\" </li>\n<li>\"pvp_div2\" </li>\n<li>\"pvp_div3\" </li>\n<li>\"pvp_solo\" </li>\n<li>\"rank_div2\" </li>\n<li>\"rank_div3\" </li>\n<li>\"rank_solo\"</li>\n</ul>",
                     "name": "extra",
                     "type": "string, list"
                 },
