@@ -16,11 +16,20 @@ Available API
 
     import wargaming
 
+    # World of Tanks
     wot = wargaming.WoT('demo', region='ru', language='ru')
+    # Wargaming NET
     wgn = wargaming.WGN('demo', region='na', language='en')
+    # World of Tanks Blitz
     wotb = wargaming.WoTB('demo', region='eu', language='pl')
+    # World of Warships
     wows = wargaming.WoWS('demo', region='eu', language='fr')
+    # World of Warplanes
     wowp = wargaming.WoWP('demo', region='kr', language='ko')
+    # World of Tanks XBox
+    wot_xbox = wargaming.WoWP('demo', region='xbox', language='ru')
+    # World of Tanks Playstation 4
+    wot_ps4 = wargaming.WoWP('demo', region='ps4', language='ru')
 
 
 Examples

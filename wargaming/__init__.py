@@ -9,8 +9,8 @@ from wargaming.exceptions import ValidationError
 
 @six.add_metaclass(MetaAPI)
 class WoT(BaseAPI):
-    def __init__(self, application_id, language, region=DEFAULT_REGION):
-        super(WoT, self).__init__(application_id, language, region)
+    def __init__(self, application_id, language, region=DEFAULT_REGION, enable_parser=False):
+        super(WoT, self).__init__(application_id, language, region, enable_parser)
 
         def wg_clan_battles(clan_id):
             """Unofficial API call to list planned and current battles"""

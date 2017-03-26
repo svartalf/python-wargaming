@@ -1,7 +1,7 @@
 from itertools import count
 import wargaming
 
-wot = wargaming.WoT('demo', region='ru', language='ru', enable_parser=True)
+wot = wargaming.WoT('demo', region='ru', language='ru')
 
 
 def list_all_provinces():

@@ -13,8 +13,9 @@ from wargaming.settings import (
     HTTP_USER_AGENT_HEADER,
     RETRY_COUNT,
     GAME_API_ENDPOINTS,
-    REGION_API_EXT
+    REGION_API_EXT,
 )
+from wargaming import parser
 
 
 def check_allowed_game(game):
@@ -35,23 +36,21 @@ def region_url(region, game):
 
     # all api calls for all project goes to api.worldoftanks.*
     # maybe WG would move this api to api.wargaming.net
-    return '%s.%s/%s/' % (
-            GAME_API_ENDPOINTS[game],
-            REGION_API_EXT[region],
-            game)
+    return '%s.%s/%s/' % (GAME_API_ENDPOINTS[game], REGION_API_EXT[region], game)
 
 
 @six.python_2_unicode_compatible
 class WGAPI(object):
     """Result from WG API request"""
 
-    def __init__(self, url, stop_max_attempt_number=RETRY_COUNT, **kwargs):
+    def __init__(self, url, parser=None, stop_max_attempt_number=RETRY_COUNT, **kwargs):
         self.url = url
         for name, value in kwargs.items():
             if isinstance(value, list) or isinstance(value, tuple):
                 kwargs[name] = ','.join(str(i) for i in value)
             elif isinstance(value, datetime):
                 kwargs[name] = value.isoformat()
+        self.parser = parser
         self.params = kwargs
         self._data = None
         self.error = None
@@ -78,6 +77,8 @@ class WGAPI(object):
                 raise RequestError(**self.error)
 
             self._data = data.get('data', data)
+            if self.parser:
+                self._data = self.parser.parse_response_data(self._data)
         return self._data
 
     @property
@@ -127,7 +128,7 @@ class WGAPI(object):
 class ModuleAPI(object):
     _module_dict = {}
 
-    def __init__(self, application_id, language, base_url):
+    def __init__(self, application_id, language, base_url, enable_parser):
         """
         :param application_id: WG application id
         :param language: default language param
@@ -136,12 +137,13 @@ class ModuleAPI(object):
         self.application_id = application_id
         self.language = language
         self.base_url = base_url
+        self._enable_parser = enable_parser
 
 
 class BaseAPI(object):
     _module_dict = {}
 
-    def __init__(self, application_id, language, region):
+    def __init__(self, application_id, language, region, enable_parser=False):
         """
         :param application_id: WG application id
         :param language: default language param
@@ -151,8 +153,9 @@ class BaseAPI(object):
         self.language = language
         self.region = region
         self.base_url = region_url(region, self.__class__.__name__.lower())
+        self._enable_parser = enable_parser
         for k, v in self._module_dict.items():
-            setattr(self, k, v(application_id, language, self.base_url))
+            setattr(self, k, v(application_id, language, self.base_url, enable_parser))
 
     def __repr__(self):
         return str("<%s at %s, language=%s>" % (self.__class__.__name__, self.base_url, self.language))
@@ -190,6 +193,8 @@ class MetaAPI(type):
                 for parameter in call_schema['parameters']
             }
 
+            fields_parser = parser.Parser(call_schema.get('fields', []))
+
             def api_call(self, **kwargs):
                 """API call to WG public API
                 :param self: instance of sub module
@@ -210,7 +215,11 @@ class MetaAPI(type):
                     if params.get('required') and field not in kwargs:
                         raise ValidationError('Missing required paramter : {0}'.format(field))
 
-                return WGAPI(self.base_url + url, **kwargs)
+                return WGAPI(self.base_url + url,
+                             fields_parser if self._enable_parser else None,
+                             **kwargs)
+
+            # BeautifulSoup is used because of HTML in description field
             doc = BeautifulSoup(call_schema['description'], "html.parser").get_text()
             doc += "\n\nKeyword arguments:\n"
             for field in call_schema['parameters']:
