@@ -6,30 +6,71 @@ Contents:
 .. toctree::
     :maxdepth: 2
 
+    index
     exceptions
 
 Available API
 =============
 
-    >>> wot = wargaming.WoT('demo', region='ru', language='ru')
-    >>> wgn = wargaming.WGN('demo', region='na', language='en')
-    >>> wotb = wargaming.WoTB('demo', region='eu', language='pl')
-    >>> wows = wargaming.WoWS('demo', region='eu', language='fr')
-    >>> wowp = wargaming.WoWP('demo', region='kr', language='ko')
+.. code-block:: python
+
+    import wargaming
+
+    wot = wargaming.WoT('demo', region='ru', language='ru')
+    wgn = wargaming.WGN('demo', region='na', language='en')
+    wotb = wargaming.WoTB('demo', region='eu', language='pl')
+    wows = wargaming.WoWS('demo', region='eu', language='fr')
+    wowp = wargaming.WoWP('demo', region='kr', language='ko')
 
 
 Examples
 --------
 
-    >>> wot.ratings.types()
-    >>> fronts = wot.globalmap.fronts()
-    >>> wot.globalmap.provinces(front_id=fronts[0]['front_id'])
+.. code-block:: python
+
+    from itertools  import count
+    import wargaming
+
+    wot = wargaming.WoT('demo', region='ru', language='ru')
+
+
+    def list_all_provinces():
+        """List provinces from all fronts using WG Public API"""
+
+        # get fronts list
+        fronts = wot.globalmap.fronts()
+
+        # iterate through fronts
+        for front in fronts:
+            # provinces method return no more than 100 provinces per page,
+            # adding pagination iteration
+            for page_no in count(start=1):
+                # provinces method require 2 parameters - front_id and page_no
+                provinces = wot.globalmap.provinces(front_id=front['front_id'], page_no=page_no)
+
+                # if no provinces on this page, then we got all provinces on the front
+                if len(provinces) == 0:
+                    break
+
+                # iterate through provinces list
+                for province in provinces:
+                    print(province['province_name'])
+
+
+    try:
+        list_all_provinces()
+    except wargaming.exceptions.RequestError as e:
+        if e.code == 407:  # REQUEST_LIMIT_EXCEEDED
+            print("ERROR: You should register your own API key and not use 'demo' key")
+        else:
+            print("Unknown error %s" % repr(e))
+
 
 Parameters to API
 -----------------
 
 wargaming module maps 1 to 1 as official wargaming API, please consult for parameters on official page:
-https://wargaming.net/developers/
+https://developers.wargaming.net/reference/
 
 Usage and common things
 =======================
@@ -45,7 +86,7 @@ Region and Language
     +----------------+----------------+------------------------------------------------------+
     + Parameter      | Valid values   | Description                                          |
     +================+================+======================================================+
-    + application_id | APPLICATION_ID | Application ID registered on WG developers portal    |
+    + application_id | demo           | Application ID registered on WG developers portal    |
     +----------------+----------------+------------------------------------------------------+
     + region         | - ru           | Wargaming API region                                 |
     +                | - asia         |                                                      |
@@ -54,8 +95,8 @@ Region and Language
     +                | - kr           |                                                      |
     +----------------+----------------+------------------------------------------------------+
     + language       | - en           | Language available in the region, check info on WG   |
-    +                | - ru           | developers portal                                    |
-    +                | - pl           |                                                      |
+    +                | - ru           |                                                      |
+    +                | - pl           | developers portal                                    |
     +                | - de           |                                                      |
     +                | - fr           |                                                      |
     +                | - es           |                                                      |
