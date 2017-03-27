@@ -1,9 +1,6 @@
-import re
 from collections import namedtuple
 from datetime import datetime
 import six
-
-list_regex = re.compile('^list of (integers|strings|timestamps)$')
 
 type_tuple = namedtuple('validator', ['validate', 'convert'])
 types_map = {
@@ -18,7 +15,6 @@ types_map = {
     ),
     'list of strings': type_tuple(
         lambda x: all(map(lambda y: isinstance(y, six.string_types), x)),
-        # test_str,
         lambda x: list(map(str, x))
     )
 }
