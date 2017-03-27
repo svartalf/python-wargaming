@@ -203,9 +203,21 @@ class MetaAPI(type):
                 :param kwargs: params to WG public API
                 :return: WGAPI instance
                 """
-                for field in kwargs.keys():
+                for field, value in kwargs.items():
                     if field not in parameters:
-                        raise ValidationError('Wrong parameter: {0}'.format(field))
+                        # this make available such calls wot.account.info(account=accounts)
+                        # instead if wot.account.info(account_id=[i['account_id'] for i in accounts])
+                        field_id = field + '_id'
+                        value = value.data if isinstance(value, WGAPI) else value
+                        if field_id in parameters and isinstance(value, dict) and field_id in value:
+                            kwargs[field_id] = value[field_id]
+                            del kwargs[field]
+                        elif field_id in parameters and isinstance(value, list) and \
+                                isinstance(value[0], dict) and field_id in value[0]:
+                            kwargs[field_id] = [i[field_id] for i in value]
+                            del kwargs[field]
+                        else:
+                            raise ValidationError('Wrong parameter: {0}'.format(field))
 
                 if 'language' not in kwargs:
                     kwargs['language'] = self.language
