@@ -54,8 +54,6 @@ class WGAPI(object):
         self.params = kwargs
         self._data = None
         self.error = None
-        self._iter = None
-        self.stop_max_attempt_number = stop_max_attempt_number
 
         # Retry only if SOURCE_NOT_AVAILABLE error
         self._fetch_data = retry(
@@ -64,28 +62,29 @@ class WGAPI(object):
         )(self._fetch_data)
 
     def _fetch_data(self):
-        if not self._data:
-            self.response = response = requests.get(self.url, params=self.params, headers={
-                'User-Agent': HTTP_USER_AGENT_HEADER,
-            })
+        response = requests.get(self.url, params=self.params, headers={
+            'User-Agent': HTTP_USER_AGENT_HEADER,
+        })
 
-            try:
-                data = response.json()
-            except requests.exceptions.ContentDecodingError:
-                raise RequestError('Unable to decode json')
+        try:
+            data = response.json()
+        except requests.exceptions.ContentDecodingError:
+            raise RequestError('Unable to decode json')
 
-            if data.get('status', '') == 'error':
-                self.error = data['error']
-                raise RequestError(**self.error)
+        if data.get('status', '') == 'error':
+            self.error = data['error']
+            raise RequestError(**self.error)
 
-            self._data = data.get('data', data)
-            if self.parser:
-                self._data = self.parser.parse_response_data(self._data)
-        return self._data
+        data = data.get('data', data)
+        if self.parser:
+            data = self.parser.parse_response_data(data)
+        return data
 
     @property
     def data(self):
-        return self._fetch_data()
+        if not self._data:
+            self._data = self._fetch_data()
+        return self._data
 
     @data.setter
     def data(self, value):
@@ -125,6 +124,39 @@ class WGAPI(object):
     def __repr__(self):
         res = str(self.data)
         return res[0:200] + ('...' if len(res) > 200 else '')
+
+
+class PaginatedWGAPI(WGAPI):
+    def __init__(self, *args, **kwargs):
+        super(PaginatedWGAPI, self).__init__(*args, **kwargs)
+        self.params['page_no'] = int(self.params.get('page_no', 1))
+        self._data = []
+        self._iter = iter(self._data)
+        self._fetch_next = True
+
+    def _fetch_next_data(self):
+        data = self._fetch_data()
+        self._data.extend(data)
+        self.params['page_no'] += 1  # set next page_no
+        self._fetch_next = False
+
+    def __iter__(self):
+        return self
+
+    def next(self):
+        if self._fetch_next:
+            self._fetch_next_data()
+        value = next(self._iter)
+        if value == self._data[-1]:
+            self._fetch_next = True
+        return value
+
+    def __len__(self):
+        raise TypeError("WGAPI paginated objects has no len()")
+
+    @property
+    def data(self):
+        return self._data
 
 
 class ModuleAPI(object):
@@ -203,6 +235,9 @@ class MetaAPI(type):
                 :param kwargs: params to WG public API
                 :return: WGAPI instance
                 """
+                # enable infinite pagination if page_no is in parameters
+                all_pages = 'page_no' in parameters and kwargs.pop('all_pages', False)
+
                 for field, value in kwargs.items():
                     if field not in parameters:
                         # this make available such calls wot.account.info(account=accounts)
@@ -229,9 +264,14 @@ class MetaAPI(type):
                     if params.get('required') and field not in kwargs:
                         raise ValidationError('Missing required paramter : {0}'.format(field))
 
-                return WGAPI(self.base_url + url,
-                             fields_parser if self._enable_parser else None,
-                             **kwargs)
+                if all_pages:
+                    return PaginatedWGAPI(self.base_url + url,
+                                          fields_parser if self._enable_parser else None,
+                                          **kwargs)
+                else:
+                    return WGAPI(self.base_url + url,
+                                 fields_parser if self._enable_parser else None,
+                                 **kwargs)
 
             # BeautifulSoup is used because of HTML in description field
             doc = BeautifulSoup(call_schema['description'], "html.parser").get_text()
