@@ -56,9 +56,11 @@ class WGAPI(object):
         self.error = None
         self._iter = None
         self.stop_max_attempt_number = stop_max_attempt_number
+
+        # Retry only if SOURCE_NOT_AVAILABLE error
         self._fetch_data = retry(
             stop_max_attempt_number=stop_max_attempt_number,
-            retry_on_exception=lambda ex: isinstance(ex, RequestError)
+            retry_on_exception=lambda ex: isinstance(ex, RequestError) and ex.code == 504
         )(self._fetch_data)
 
     def _fetch_data(self):
