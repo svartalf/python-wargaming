@@ -11,5 +11,11 @@ install:
     - 'pip install --upgrade -r requirements.txt'
     - 'pip install --upgrade -r requirements_test.txt'
 
+matrix:
+  include:
+  - python: '3.6'
+    env: VERIFY_ENDPOINTS=True
+
+
 script:
     - 'python setup.py test'

@@ -13,7 +13,7 @@ from wargaming.settings import (
     HTTP_USER_AGENT_HEADER,
     RETRY_COUNT,
     GAME_API_ENDPOINTS,
-    REGION_API_EXT,
+    REGION_TLD_MAP,
 )
 from wargaming import parser
 
@@ -36,7 +36,7 @@ def region_url(region, game):
 
     # all api calls for all project goes to api.worldoftanks.*
     # maybe WG would move this api to api.wargaming.net
-    return '%s.%s/%s/' % (GAME_API_ENDPOINTS[game], REGION_API_EXT[region], game)
+    return GAME_API_ENDPOINTS[game].format(region=REGION_TLD_MAP.get(region, region))
 
 
 @six.python_2_unicode_compatible

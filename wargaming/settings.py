@@ -3,25 +3,22 @@ from wargaming.version import get_version
 ALLOWED_GAMES = ('wot', 'wgn', 'wows', 'wotb', 'wotx', 'wowp')
 
 # WG classes xbox and ps4 as 'regions' hence they are incuded here
-ALLOWED_REGIONS = ('ru', 'asia', 'na', 'eu', 'kr', 'xbox', 'ps4')
-REGION_API_EXT = {
+ALLOWED_REGIONS = ('ru', 'asia', 'na', 'eu', 'xbox', 'ps4')
+REGION_TLD_MAP = {
     'ru': 'ru',
     'asia': 'asia',
     'na': 'com',
     'eu': 'eu',
-    'kr': 'kr',
-    'ps4': 'com',
-    'xbox': 'com',
 }
+
 GAME_API_ENDPOINTS = {
-    'wgn': 'https://api.worldoftanks',
-    'wot': 'https://api.worldoftanks',
-    'wotb': 'https://api.wotblitz',
-    'wotx': 'https://api-xbox-console.worldoftanks',
-    'wotp': 'https://api-ps4-console.worldoftanks',
-    'wowp': 'https://api.worldofwarplanes',
-    'wows': 'https://api.worldofwarships',
-    }
+    'wgn': 'https://api.worldoftanks.{region}/wgn',
+    'wot': 'https://api.worldoftanks.{region}/wot/',
+    'wotb': 'https://api.wotblitz.{region}/wotb/',
+    'wotx': 'https://api-{region}-console.worldoftanks.com/wotx/',
+    'wowp': 'https://api.worldofwarplanes.{region}/wowp/',
+    'wows': 'https://api.worldofwarships.{region}/wows/',
+}
 
 DEFAULT_REGION = 'ru'
 

@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+import os
 
 from setuptools import setup, find_packages
 from setuptools.command.test import test as TestCommand
@@ -14,6 +15,9 @@ class PyTest(TestCommand):
     def run_tests(self):
         import pytest
         pytest.main(self.test_args)
+        if 'VERIFY_ENDPOINTS' in os.environ:
+            from tests import validate_endpoints
+            validate_endpoints.main()
 
 
 def lines(filename):
@@ -47,6 +51,7 @@ setup(
         'Programming Language :: Python :: 2.7',
         'Programming Language :: Python :: 3.4',
         'Programming Language :: Python :: 3.5',
+        'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: Implementation :: PyPy',
         'Topic :: Software Development :: Libraries',
     ),
