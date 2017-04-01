@@ -25,11 +25,11 @@ Available API
     # World of Warships
     wows = wargaming.WoWS('demo', region='eu', language='fr')
     # World of Warplanes
-    wowp = wargaming.WoWP('demo', region='kr', language='ko')
+    wowp = wargaming.WoWP('demo', region='eu', language='en')
     # World of Tanks XBox
-    wot_xbox = wargaming.WoWP('demo', region='xbox', language='ru')
+    wot_xbox = wargaming.WoTX('demo', region='xbox', language='ru')
     # World of Tanks Playstation 4
-    wot_ps4 = wargaming.WoWP('demo', region='ps4', language='ru')
+    wot_ps4 = wargaming.WoTX('demo', region='ps4', language='ru')
 
 
 Examples
@@ -101,7 +101,8 @@ Region and Language
     +                | - asia         |                                                      |
     +                | - na           |                                                      |
     +                | - eu           |                                                      |
-    +                | - kr           |                                                      |
+    +                | - xbox         |                                                      |
+    +                | - ps4          |                                                      |
     +----------------+----------------+------------------------------------------------------+
     + language       | - en           | Language available in the region, check info on WG   |
     +                | - ru           |                                                      |
@@ -117,9 +118,9 @@ Region and Language
     +                | - ko           |                                                      |
     +----------------+----------------+------------------------------------------------------+
 
-    If you want, you can manually set language for a individual requests:
+    If needed, language can be specified for an individual requests:
 
-    >>> api.accounts.list(language='fr')
+    >>> wot.encyclopedia.achievements(language='pl')['crucialShotMedal']['description']
 
 
 Parameters conversion
