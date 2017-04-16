@@ -1,6 +1,10 @@
 Python library for Wargaming.net API
 ====================================
 
+.. image:: https://badges.gitter.im/Join%20Chat.svg
+   :alt: Join the chat at https://gitter.im/svartalf/python-wargaming
+   :target: https://gitter.im/svartalf/python-wargaming?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge
+
 Pure pythonic library for accessing Wargaming.net API (https://wargaming.net/developers/).
 
 Compatible with a Python>=2.7 and Python >=3.4 versions. PyPy also!
