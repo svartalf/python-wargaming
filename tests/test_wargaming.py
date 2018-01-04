@@ -12,6 +12,7 @@ from wargaming.exceptions import ValidationError, RequestError
 open_schema = mock_open(read_data=json.dumps(
     {'sub_module_name': {
         'func1': {
+            'allowed_http_methods': ['GET', 'POST'],
             'description': 'doc example for func1',
             'parameters': [{
                 'name': 'application_id',
@@ -33,6 +34,7 @@ open_schema = mock_open(read_data=json.dumps(
             }],
             'url': 'sub_module_name/func1',
         }, 'func2': {
+            'allowed_http_methods': ['GET', 'POST'],
             'description': 'doc example for func2',
             'parameters': [{
                 'name': 'application_id',
@@ -57,6 +59,7 @@ open_schema = mock_open(read_data=json.dumps(
         },
         # }, 'func3': { is used for custom function
         'func4': {
+            'allowed_http_methods': ['POST'],
             'description': 'doc example for func4',
             'parameters': [{
                 'name': 'application_id',

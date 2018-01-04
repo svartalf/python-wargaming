@@ -43,7 +43,7 @@ def region_url(region, game):
 class WGAPI(object):
     """Result from WG API request"""
 
-    def __init__(self, url, parser=None, stop_max_attempt_number=RETRY_COUNT, **kwargs):
+    def __init__(self, url, http_method='GET', parser=None, stop_max_attempt_number=RETRY_COUNT, **kwargs):
         self.url = url
         for name, value in kwargs.items():
             if isinstance(value, list) or isinstance(value, tuple):
@@ -52,6 +52,7 @@ class WGAPI(object):
                 kwargs[name] = value.isoformat()
         self.parser = parser
         self.params = kwargs
+        self.http_method = http_method
         self._data = None
         self.error = None
 
@@ -62,9 +63,17 @@ class WGAPI(object):
         )(self._fetch_data)
 
     def _fetch_data(self):
-        response = requests.get(self.url, params=self.params, headers={
-            'User-Agent': HTTP_USER_AGENT_HEADER,
-        })
+        # method can be GET/POST
+        if self.http_method == 'GET':
+            response = requests.get(self.url, params=self.params, headers={
+                'User-Agent': HTTP_USER_AGENT_HEADER,
+            })
+        elif self.http_method == 'POST':
+            response = requests.post(self.url, data=self.params, headers={
+                'User-Agent': HTTP_USER_AGENT_HEADER,
+            })
+        else:
+            raise RequestError('Unknown HTTP method %s' % self.http_method)
 
         try:
             data = response.json()
@@ -222,6 +231,8 @@ class MetaAPI(type):
             if not url.endswith('/'):
                 url += '/'
 
+            default_http_method = call_schema['allowed_http_methods'][0]
+
             parameters = {
                 parameter['name']: parameter
                 for parameter in call_schema['parameters']
@@ -229,7 +240,7 @@ class MetaAPI(type):
 
             fields_parser = parser.Parser(call_schema.get('fields', []))
 
-            def api_call(self, **kwargs):
+            def api_call(self, http_method=default_http_method, **kwargs):
                 """API call to WG public API
                 :param self: instance of sub module
                 :param kwargs: params to WG public API
@@ -237,6 +248,11 @@ class MetaAPI(type):
                 """
                 # enable infinite pagination if page_no is in parameters
                 all_pages = 'page_no' in parameters and kwargs.pop('all_pages', False)
+
+                # check that specified http_method is in allowed_http_methods
+                if http_method not in call_schema['allowed_http_methods']:
+                    raise ValidationError('Wrong http_method: %s. Possible values: %s.' % (
+                        http_method, ', '.merge(call_schema['allowed_http_methods'])))
 
                 for field, value in kwargs.items():
                     if field not in parameters:
@@ -262,16 +278,16 @@ class MetaAPI(type):
 
                 for field, params in parameters.items():
                     if params.get('required') and field not in kwargs:
-                        raise ValidationError('Missing required paramter : {0}'.format(field))
+                        raise ValidationError('Missing required parameter : {0}'.format(field))
+
+                # set parameters in kwargs to pass with API arguments to the WGAPI class
+                kwargs['parser'] = fields_parser if self._enable_parser else None
+                kwargs['http_method'] = http_method
 
                 if all_pages:
-                    return PaginatedWGAPI(self.base_url + url,
-                                          fields_parser if self._enable_parser else None,
-                                          **kwargs)
+                    return PaginatedWGAPI(self.base_url + url, **kwargs)
                 else:
-                    return WGAPI(self.base_url + url,
-                                 fields_parser if self._enable_parser else None,
-                                 **kwargs)
+                    return WGAPI(self.base_url + url, **kwargs)
 
             # BeautifulSoup is used because of HTML in description field
             doc = BeautifulSoup(call_schema['description'], "html.parser").get_text()
