@@ -43,7 +43,7 @@
                     "type": "string"
                 },
                 {
-                    "description": "<p>Application ID. Default is ru. Valid values:</p>\n<ul>\n<li>\"cs\" &mdash; \u010ce\u0161tina </li>\n<li>\"de\" &mdash; Deutsch </li>\n<li>\"en\" &mdash; English </li>\n<li>\"es\" &mdash; Espa\u00f1ol </li>\n<li>\"fr\" &mdash; Fran\u00e7ais </li>\n<li>\"ja\" &mdash; \u65e5\u672c\u8a9e </li>\n<li>\"pl\" &mdash; Polski </li>\n<li>\"ru\" &mdash; \u0420\u0443\u0441\u0441\u043a\u0438\u0439 (by default)</li>\n<li>\"th\" &mdash; \u0e44\u0e17\u0e22 </li>\n<li>\"zh-tw\" &mdash; \u7e41\u9ad4\u4e2d\u6587</li>\n</ul>",
+                    "description": "<p>Localization language. Default is \"ru\". Valid values:</p>\n<ul>\n<li>\"cs\" &mdash; \u010ce\u0161tina </li>\n<li>\"de\" &mdash; Deutsch </li>\n<li>\"en\" &mdash; English </li>\n<li>\"es\" &mdash; Espa\u00f1ol </li>\n<li>\"fr\" &mdash; Fran\u00e7ais </li>\n<li>\"ja\" &mdash; \u65e5\u672c\u8a9e </li>\n<li>\"pl\" &mdash; Polski </li>\n<li>\"ru\" &mdash; \u0420\u0443\u0441\u0441\u043a\u0438\u0439 (by default)</li>\n<li>\"th\" &mdash; \u0e44\u0e17\u0e22 </li>\n<li>\"zh-tw\" &mdash; \u7e41\u9ad4\u4e2d\u6587</li>\n</ul>",
                     "name": "language",
                     "type": "string"
                 },
@@ -894,6 +894,228 @@
                         "club",
                         "torpedoes",
                         "shots"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "type": "empty_line"
+                },
+                {
+                    "description": "<p>Player's statistics for playing the Operation mode, normal difficulty, in a Division..</p>\n<p><strong>An extra field.</strong></p>",
+                    "name": [
+                        "statistics",
+                        "oper_div"
+                    ],
+                    "type": "block_header"
+                },
+                {
+                    "description": "<p>Battles fought</p>",
+                    "name": [
+                        "statistics",
+                        "oper_div",
+                        "battles"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Defeats</p>",
+                    "name": [
+                        "statistics",
+                        "oper_div",
+                        "losses"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Battles survived</p>",
+                    "name": [
+                        "statistics",
+                        "oper_div",
+                        "survived_battles"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Victories in battles survived</p>",
+                    "name": [
+                        "statistics",
+                        "oper_div",
+                        "survived_wins"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Victories</p>",
+                    "name": [
+                        "statistics",
+                        "oper_div",
+                        "wins"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Victories for completing missions. The key is a number of completed missions, and the value is a number of victories.</p>",
+                    "name": [
+                        "statistics",
+                        "oper_div",
+                        "wins_by_tasks"
+                    ],
+                    "type": "associative array"
+                },
+                {
+                    "description": "<p>Total Experience Points , including XP earned with Premium Account</p>",
+                    "name": [
+                        "statistics",
+                        "oper_div",
+                        "xp"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "type": "empty_line"
+                },
+                {
+                    "description": "<p>Player's statistics for playing the Operation mode, hard difficulty, in a Division..</p>\n<p><strong>An extra field.</strong></p>",
+                    "name": [
+                        "statistics",
+                        "oper_div_hard"
+                    ],
+                    "type": "block_header"
+                },
+                {
+                    "description": "<p>Battles fought</p>",
+                    "name": [
+                        "statistics",
+                        "oper_div_hard",
+                        "battles"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Defeats</p>",
+                    "name": [
+                        "statistics",
+                        "oper_div_hard",
+                        "losses"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Battles survived</p>",
+                    "name": [
+                        "statistics",
+                        "oper_div_hard",
+                        "survived_battles"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Victories in battles survived</p>",
+                    "name": [
+                        "statistics",
+                        "oper_div_hard",
+                        "survived_wins"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Victories</p>",
+                    "name": [
+                        "statistics",
+                        "oper_div_hard",
+                        "wins"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Victories for completing missions. The key is a number of completed missions, and the value is a number of victories.</p>",
+                    "name": [
+                        "statistics",
+                        "oper_div_hard",
+                        "wins_by_tasks"
+                    ],
+                    "type": "associative array"
+                },
+                {
+                    "description": "<p>Total Experience Points , including XP earned with Premium Account</p>",
+                    "name": [
+                        "statistics",
+                        "oper_div_hard",
+                        "xp"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "type": "empty_line"
+                },
+                {
+                    "description": "<p>Player's statistics for playing solo the Operation mode, normal difficulty..</p>\n<p><strong>An extra field.</strong></p>",
+                    "name": [
+                        "statistics",
+                        "oper_solo"
+                    ],
+                    "type": "block_header"
+                },
+                {
+                    "description": "<p>Battles fought</p>",
+                    "name": [
+                        "statistics",
+                        "oper_solo",
+                        "battles"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Defeats</p>",
+                    "name": [
+                        "statistics",
+                        "oper_solo",
+                        "losses"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Battles survived</p>",
+                    "name": [
+                        "statistics",
+                        "oper_solo",
+                        "survived_battles"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Victories in battles survived</p>",
+                    "name": [
+                        "statistics",
+                        "oper_solo",
+                        "survived_wins"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Victories</p>",
+                    "name": [
+                        "statistics",
+                        "oper_solo",
+                        "wins"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Victories for completing missions. The key is a number of completed missions, and the value is a number of victories.</p>",
+                    "name": [
+                        "statistics",
+                        "oper_solo",
+                        "wins_by_tasks"
+                    ],
+                    "type": "associative array"
+                },
+                {
+                    "description": "<p>Total Experience Points , including XP earned with Premium Account</p>",
+                    "name": [
+                        "statistics",
+                        "oper_solo",
+                        "xp"
                     ],
                     "type": "numeric"
                 },
@@ -7562,7 +7784,7 @@
                     "type": "string"
                 },
                 {
-                    "description": "<p>Application ID. Default is ru. Valid values:</p>\n<ul>\n<li>\"cs\" &mdash; \u010ce\u0161tina </li>\n<li>\"de\" &mdash; Deutsch </li>\n<li>\"en\" &mdash; English </li>\n<li>\"es\" &mdash; Espa\u00f1ol </li>\n<li>\"fr\" &mdash; Fran\u00e7ais </li>\n<li>\"ja\" &mdash; \u65e5\u672c\u8a9e </li>\n<li>\"pl\" &mdash; Polski </li>\n<li>\"ru\" &mdash; \u0420\u0443\u0441\u0441\u043a\u0438\u0439 (by default)</li>\n<li>\"th\" &mdash; \u0e44\u0e17\u0e22 </li>\n<li>\"zh-tw\" &mdash; \u7e41\u9ad4\u4e2d\u6587</li>\n</ul>",
+                    "description": "<p>Localization language. Default is \"ru\". Valid values:</p>\n<ul>\n<li>\"cs\" &mdash; \u010ce\u0161tina </li>\n<li>\"de\" &mdash; Deutsch </li>\n<li>\"en\" &mdash; English </li>\n<li>\"es\" &mdash; Espa\u00f1ol </li>\n<li>\"fr\" &mdash; Fran\u00e7ais </li>\n<li>\"ja\" &mdash; \u65e5\u672c\u8a9e </li>\n<li>\"pl\" &mdash; Polski </li>\n<li>\"ru\" &mdash; \u0420\u0443\u0441\u0441\u043a\u0438\u0439 (by default)</li>\n<li>\"th\" &mdash; \u0e44\u0e17\u0e22 </li>\n<li>\"zh-tw\" &mdash; \u7e41\u9ad4\u4e2d\u6587</li>\n</ul>",
                     "name": "language",
                     "type": "string"
                 },
@@ -7577,7 +7799,7 @@
                     "type": "string"
                 },
                 {
-                    "description": "<p>Extra fields that will be added to the response. Valid values:</p>\n<ul>\n<li>\"private.grouped_contacts\" </li>\n<li>\"private.port\" </li>\n<li>\"statistics.club\" </li>\n<li>\"statistics.pve\" </li>\n<li>\"statistics.pve_div2\" </li>\n<li>\"statistics.pve_div3\" </li>\n<li>\"statistics.pve_solo\" </li>\n<li>\"statistics.pvp_div2\" </li>\n<li>\"statistics.pvp_div3\" </li>\n<li>\"statistics.pvp_solo\" </li>\n<li>\"statistics.rank_div2\" </li>\n<li>\"statistics.rank_div3\" </li>\n<li>\"statistics.rank_solo\"</li>\n</ul>",
+                    "description": "<p>Extra fields that will be added to the response. Valid values:</p>\n<ul>\n<li>\"private.grouped_contacts\" </li>\n<li>\"private.port\" </li>\n<li>\"statistics.club\" </li>\n<li>\"statistics.oper_div\" </li>\n<li>\"statistics.oper_div_hard\" </li>\n<li>\"statistics.oper_solo\" </li>\n<li>\"statistics.pve\" </li>\n<li>\"statistics.pve_div2\" </li>\n<li>\"statistics.pve_div3\" </li>\n<li>\"statistics.pve_solo\" </li>\n<li>\"statistics.pvp_div2\" </li>\n<li>\"statistics.pvp_div3\" </li>\n<li>\"statistics.pvp_solo\" </li>\n<li>\"statistics.rank_div2\" </li>\n<li>\"statistics.rank_div3\" </li>\n<li>\"statistics.rank_solo\"</li>\n</ul>",
                     "name": "extra",
                     "type": "string, list"
                 },
@@ -7613,18 +7835,23 @@
             "errors": [
                 {
                     "code": 402,
-                    "description": "<p>Parameter <strong>search</strong> not specified</p>",
+                    "description": "<p><strong>Search</strong> parameter not specified with no account_id</p>",
                     "message": "SEARCH_NOT_SPECIFIED"
                 },
                 {
                     "code": 407,
-                    "description": "<p><strong>Search</strong> parameter is not long enough. Minimum length: 3 characters.</p>",
+                    "description": "<p><strong>Search</strong> parameter is not long enough. Allowed value depends on <strong>type</strong> parameter.</p>",
                     "message": "NOT_ENOUGH_SEARCH_LENGTH"
+                },
+                {
+                    "code": 407,
+                    "description": "<p>Limit of specified names in <strong>search</strong> parameter exceeded ( &gt;100 )</p>",
+                    "message": "SEARCH_LIST_LIMIT_EXCEEDED"
                 }
             ],
             "fields": [
                 {
-                    "description": "<p>Player account ID</p>",
+                    "description": "<p>Player ID</p>",
                     "name": [
                         "account_id"
                     ],
@@ -7647,7 +7874,7 @@
                     "type": "string"
                 },
                 {
-                    "description": "<p>Application ID. Default is ru. Valid values:</p>\n<ul>\n<li>\"cs\" &mdash; \u010ce\u0161tina </li>\n<li>\"de\" &mdash; Deutsch </li>\n<li>\"en\" &mdash; English </li>\n<li>\"es\" &mdash; Espa\u00f1ol </li>\n<li>\"fr\" &mdash; Fran\u00e7ais </li>\n<li>\"ja\" &mdash; \u65e5\u672c\u8a9e </li>\n<li>\"pl\" &mdash; Polski </li>\n<li>\"ru\" &mdash; \u0420\u0443\u0441\u0441\u043a\u0438\u0439 (by default)</li>\n<li>\"th\" &mdash; \u0e44\u0e17\u0e22 </li>\n<li>\"zh-tw\" &mdash; \u7e41\u9ad4\u4e2d\u6587</li>\n</ul>",
+                    "description": "<p>Localization language. Default is \"ru\". Valid values:</p>\n<ul>\n<li>\"cs\" &mdash; \u010ce\u0161tina </li>\n<li>\"de\" &mdash; Deutsch </li>\n<li>\"en\" &mdash; English </li>\n<li>\"es\" &mdash; Espa\u00f1ol </li>\n<li>\"fr\" &mdash; Fran\u00e7ais </li>\n<li>\"ja\" &mdash; \u65e5\u672c\u8a9e </li>\n<li>\"pl\" &mdash; Polski </li>\n<li>\"ru\" &mdash; \u0420\u0443\u0441\u0441\u043a\u0438\u0439 (by default)</li>\n<li>\"th\" &mdash; \u0e44\u0e17\u0e22 </li>\n<li>\"zh-tw\" &mdash; \u7e41\u9ad4\u4e2d\u6587</li>\n</ul>",
                     "name": "language",
                     "type": "string"
                 },
@@ -7657,18 +7884,18 @@
                     "type": "string, list"
                 },
                 {
-                    "description": "<p>Search type. Defines minimum length and type of search. Default value: <strong>startswith</strong>. Default is startswith. Valid values:</p>\n<ul>\n<li>\"startswith\" &mdash; Search by initial characters of player name. Minimum length: 3 characters. Case insensitive. (by default)</li>\n<li>\"exact\" &mdash; Search by exact match of player name. Minimum length: 1 character. Case insensitive.</li>\n</ul>",
+                    "description": "<p>Search type. Default is \"startswith\". Valid values:</p>\n<ul>\n<li>\"startswith\" &mdash; Search by initial characters of player name. Minimum length: 3 characters. Maximum length: 24 characters. (by default)</li>\n<li>\"exact\" &mdash; Search by exact match of player name. Case insensitive. You can enter several names, separated with commas (up to 100).</li>\n</ul>",
                     "name": "type",
                     "type": "string"
                 },
                 {
-                    "description": "<p>Player name search string. Parameter 'type' defines minimum length and type of search.\n        Maximum length: 24 symbols.</p>",
+                    "description": "<p>Player name search string. Parameter \"type\" defines minimum length and type of search. Using the exact search type, you can enter several names, separated with commas. Maximum length: 24.</p>",
                     "name": "search",
                     "required": true,
                     "type": "string"
                 },
                 {
-                    "description": "<p>Number of returned entries (fewer can be returned, but not more than 100). If the limit sent exceeds 100, an limit of 100 is applied (by default).</p>",
+                    "description": "<p>Number of returned entries (fewer can be returned, but not more than 100). If the limit sent exceeds 100, a limit of 100 is applied (by default).</p>",
                     "name": "limit",
                     "type": "numeric"
                 }
@@ -7934,7 +8161,7 @@
                     "type": "string"
                 },
                 {
-                    "description": "<p>Application ID. Default is ru. Valid values:</p>\n<ul>\n<li>\"cs\" &mdash; \u010ce\u0161tina </li>\n<li>\"de\" &mdash; Deutsch </li>\n<li>\"en\" &mdash; English </li>\n<li>\"es\" &mdash; Espa\u00f1ol </li>\n<li>\"fr\" &mdash; Fran\u00e7ais </li>\n<li>\"ja\" &mdash; \u65e5\u672c\u8a9e </li>\n<li>\"pl\" &mdash; Polski </li>\n<li>\"ru\" &mdash; \u0420\u0443\u0441\u0441\u043a\u0438\u0439 (by default)</li>\n<li>\"th\" &mdash; \u0e44\u0e17\u0e22 </li>\n<li>\"zh-tw\" &mdash; \u7e41\u9ad4\u4e2d\u6587</li>\n</ul>",
+                    "description": "<p>Localization language. Default is \"ru\". Valid values:</p>\n<ul>\n<li>\"cs\" &mdash; \u010ce\u0161tina </li>\n<li>\"de\" &mdash; Deutsch </li>\n<li>\"en\" &mdash; English </li>\n<li>\"es\" &mdash; Espa\u00f1ol </li>\n<li>\"fr\" &mdash; Fran\u00e7ais </li>\n<li>\"ja\" &mdash; \u65e5\u672c\u8a9e </li>\n<li>\"pl\" &mdash; Polski </li>\n<li>\"ru\" &mdash; \u0420\u0443\u0441\u0441\u043a\u0438\u0439 (by default)</li>\n<li>\"th\" &mdash; \u0e44\u0e17\u0e22 </li>\n<li>\"zh-tw\" &mdash; \u7e41\u9ad4\u4e2d\u6587</li>\n</ul>",
                     "name": "language",
                     "type": "string"
                 },
@@ -7968,6 +8195,750 @@
             "realm": "ru",
             "section": "account",
             "url": "account/statsbydate"
+        }
+    },
+    "clans": {
+        "accountinfo": {
+            "allowed_http_methods": [
+                "GET",
+                "POST"
+            ],
+            "allowed_protocols": [
+                "http",
+                "https"
+            ],
+            "api_url": "api.worldofwarships.ru/wows/",
+            "available_display_indices": [
+                "asia",
+                "eu",
+                "na",
+                "ru"
+            ],
+            "description": "<p>Method returns player clan data. Player clan data exist only for accounts, that were participating in clan activities: sent join requests, were clan members etc.</p>",
+            "display_index": "ru",
+            "fields": [
+                {
+                    "description": "<p>User ID</p>",
+                    "name": [
+                        "account_id"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Player name</p>",
+                    "name": [
+                        "account_name"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Clan ID</p>",
+                    "name": [
+                        "clan_id"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Date when player joined clan</p>",
+                    "name": [
+                        "joined_at"
+                    ],
+                    "type": "timestamp"
+                },
+                {
+                    "description": "<p>Technical position name</p>",
+                    "name": [
+                        "role"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "type": "empty_line"
+                },
+                {
+                    "description": "<p>Short info about clan.</p>\n<p><strong>An extra field.</strong></p>",
+                    "name": [
+                        "clan"
+                    ],
+                    "type": "block_header"
+                },
+                {
+                    "description": "<p>Clan ID</p>",
+                    "name": [
+                        "clan",
+                        "clan_id"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Clan creation date</p>",
+                    "name": [
+                        "clan",
+                        "created_at"
+                    ],
+                    "type": "timestamp"
+                },
+                {
+                    "description": "<p>Number of clan members</p>",
+                    "name": [
+                        "clan",
+                        "members_count"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Clan name</p>",
+                    "name": [
+                        "clan",
+                        "name"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Clan tag</p>",
+                    "name": [
+                        "clan",
+                        "tag"
+                    ],
+                    "type": "string"
+                }
+            ],
+            "name": "Player clan data",
+            "parameters": [
+                {
+                    "description": "<p>Application ID</p>",
+                    "name": "application_id",
+                    "required": true,
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Localization language. Default is \"ru\". Valid values:</p>\n<ul>\n<li>\"cs\" &mdash; \u010ce\u0161tina </li>\n<li>\"de\" &mdash; Deutsch </li>\n<li>\"en\" &mdash; English </li>\n<li>\"es\" &mdash; Espa\u00f1ol </li>\n<li>\"fr\" &mdash; Fran\u00e7ais </li>\n<li>\"ja\" &mdash; \u65e5\u672c\u8a9e </li>\n<li>\"pl\" &mdash; Polski </li>\n<li>\"ru\" &mdash; \u0420\u0443\u0441\u0441\u043a\u0438\u0439 (by default)</li>\n<li>\"th\" &mdash; \u0e44\u0e17\u0e22 </li>\n<li>\"zh-tw\" &mdash; \u7e41\u9ad4\u4e2d\u6587</li>\n</ul>",
+                    "name": "language",
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Max limit is 100.</p>",
+                    "name": "fields",
+                    "type": "string, list"
+                },
+                {
+                    "description": "<p>Extra fields that will be added to the response. Valid values:</p>\n<ul>\n<li>\"clan\"</li>\n</ul>",
+                    "name": "extra",
+                    "type": "string, list"
+                },
+                {
+                    "description": "<p>Account ID. Max limit is 100. Min value is 1.</p>",
+                    "name": "account_id",
+                    "required": true,
+                    "type": "numeric, list"
+                }
+            ],
+            "realm": "ru",
+            "section": "clans",
+            "url": "clans/accountinfo"
+        },
+        "glossary": {
+            "allowed_http_methods": [
+                "GET",
+                "POST"
+            ],
+            "allowed_protocols": [
+                "http",
+                "https"
+            ],
+            "api_url": "api.worldofwarships.ru/wows/",
+            "available_display_indices": [
+                "asia",
+                "eu",
+                "na",
+                "ru"
+            ],
+            "description": "<p>Method returns information on clan entities.</p>",
+            "display_index": "ru",
+            "fields": [
+                {
+                    "description": "<p>Available clan positions</p>",
+                    "name": [
+                        "clans_roles"
+                    ],
+                    "type": "associative array"
+                },
+                {
+                    "type": "empty_line"
+                },
+                {
+                    "description": "<p>Installation type</p>",
+                    "name": [
+                        "building_types"
+                    ],
+                    "type": "block_header"
+                },
+                {
+                    "description": "<p>Installation ID</p>",
+                    "name": [
+                        "building_types",
+                        "building_type_id"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Structure name</p>",
+                    "name": [
+                        "building_types",
+                        "name"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "type": "empty_line"
+                },
+                {
+                    "description": "<p>Installations</p>",
+                    "name": [
+                        "buildings"
+                    ],
+                    "type": "block_header"
+                },
+                {
+                    "description": "<p>The type of the bonus that is provided to the clan members after building the installation. Existing bonus types:</p>\n<ul>\n<li>exp_boost\u2014rate of additional XP;</li>\n<li>members_count\u2014number of clan members on which the clan size is increased;</li>\n<li>maintenance_discount\u2014rate of reducing cost of servicing ships;</li>\n<li>purchase_discount\u2014rate of reducing cost of researched ships;</li>\n<li>dummy\u2014no bonuses.</li>\n</ul>",
+                    "name": [
+                        "buildings",
+                        "bonus_type"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>The value of the bonus based on this bonus type.</p>",
+                    "name": [
+                        "buildings",
+                        "bonus_value"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Installation ID</p>",
+                    "name": [
+                        "buildings",
+                        "building_id"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Installation ID</p>",
+                    "name": [
+                        "buildings",
+                        "building_type_id"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Building cost in oil</p>",
+                    "name": [
+                        "buildings",
+                        "cost"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Installation name</p>",
+                    "name": [
+                        "buildings",
+                        "name"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>The nation of ships that will get a bonus from this installation. If value = \"empty string\" or \"null\", the bonus will be received on ships of all nations.</p>",
+                    "name": [
+                        "buildings",
+                        "ship_nation"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Tier of ships that will get a bonus after building this installation. If value = \"null\", the bonus will be received on ships of all Tiers.</p>",
+                    "name": [
+                        "buildings",
+                        "ship_tier"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Type of ships that will get a bonus after building this installation. If value = \"empty string\" or \"null\", the bonus will be received on ships of all types.</p>",
+                    "name": [
+                        "buildings",
+                        "ship_type"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "type": "empty_line"
+                },
+                {
+                    "description": "<p>Clan settings</p>",
+                    "name": [
+                        "settings"
+                    ],
+                    "type": "block_header"
+                },
+                {
+                    "description": "<p>Max number of clan members</p>",
+                    "name": [
+                        "settings",
+                        "max_members_count"
+                    ],
+                    "type": "numeric"
+                }
+            ],
+            "name": "Clan glossary",
+            "parameters": [
+                {
+                    "description": "<p>Application ID</p>",
+                    "name": "application_id",
+                    "required": true,
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Localization language. Default is \"ru\". Valid values:</p>\n<ul>\n<li>\"cs\" &mdash; \u010ce\u0161tina </li>\n<li>\"de\" &mdash; Deutsch </li>\n<li>\"en\" &mdash; English </li>\n<li>\"es\" &mdash; Espa\u00f1ol </li>\n<li>\"fr\" &mdash; Fran\u00e7ais </li>\n<li>\"ja\" &mdash; \u65e5\u672c\u8a9e </li>\n<li>\"pl\" &mdash; Polski </li>\n<li>\"ru\" &mdash; \u0420\u0443\u0441\u0441\u043a\u0438\u0439 (by default)</li>\n<li>\"th\" &mdash; \u0e44\u0e17\u0e22 </li>\n<li>\"zh-tw\" &mdash; \u7e41\u9ad4\u4e2d\u6587</li>\n</ul>",
+                    "name": "language",
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Max limit is 100.</p>",
+                    "name": "fields",
+                    "type": "string, list"
+                }
+            ],
+            "realm": "ru",
+            "section": "clans",
+            "url": "clans/glossary"
+        },
+        "info": {
+            "allowed_http_methods": [
+                "GET",
+                "POST"
+            ],
+            "allowed_protocols": [
+                "http",
+                "https"
+            ],
+            "api_url": "api.worldofwarships.ru/wows/",
+            "available_display_indices": [
+                "asia",
+                "eu",
+                "na",
+                "ru"
+            ],
+            "description": "<p>Method returns detailed clan information.</p>",
+            "display_index": "ru",
+            "fields": [
+                {
+                    "description": "<p>Clan ID</p>",
+                    "name": [
+                        "clan_id"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Clan creation date</p>",
+                    "name": [
+                        "created_at"
+                    ],
+                    "type": "timestamp"
+                },
+                {
+                    "description": "<p>Clan creator ID</p>",
+                    "name": [
+                        "creator_id"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Clan creator's name</p>",
+                    "name": [
+                        "creator_name"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Clan description</p>",
+                    "name": [
+                        "description"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Clan has been deleted. The deleted clan data contains valid values for the following fields only: <strong>clan_id</strong>, <strong>is_clan_disbanded</strong>, <strong>updated_at</strong>.</p>",
+                    "name": [
+                        "is_clan_disbanded"
+                    ],
+                    "type": "boolean"
+                },
+                {
+                    "description": "<p>Commander ID</p>",
+                    "name": [
+                        "leader_id"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Commander's name</p>",
+                    "name": [
+                        "leader_name"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Number of clan members</p>",
+                    "name": [
+                        "members_count"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>List of clan players' IDs</p>",
+                    "name": [
+                        "members_ids"
+                    ],
+                    "type": "list of integers"
+                },
+                {
+                    "description": "<p>Clan name</p>",
+                    "name": [
+                        "name"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Old clan name</p>",
+                    "name": [
+                        "old_name"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Old clan tag</p>",
+                    "name": [
+                        "old_tag"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Time (UTC) when clan name was changed</p>",
+                    "name": [
+                        "renamed_at"
+                    ],
+                    "type": "timestamp"
+                },
+                {
+                    "description": "<p>Clan tag</p>",
+                    "name": [
+                        "tag"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Time when clan details were updated</p>",
+                    "name": [
+                        "updated_at"
+                    ],
+                    "type": "timestamp"
+                },
+                {
+                    "type": "empty_line"
+                },
+                {
+                    "description": "<p>Clan members.</p>\n<p><strong>An extra field.</strong></p>",
+                    "name": [
+                        "members"
+                    ],
+                    "type": "block_header"
+                },
+                {
+                    "description": "<p>User ID</p>",
+                    "name": [
+                        "members",
+                        "account_id"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Player name</p>",
+                    "name": [
+                        "members",
+                        "account_name"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Date when player joined clan</p>",
+                    "name": [
+                        "members",
+                        "joined_at"
+                    ],
+                    "type": "timestamp"
+                },
+                {
+                    "description": "<p>Technical position name</p>",
+                    "name": [
+                        "members",
+                        "role"
+                    ],
+                    "type": "string"
+                }
+            ],
+            "name": "Clan details",
+            "parameters": [
+                {
+                    "description": "<p>Application ID</p>",
+                    "name": "application_id",
+                    "required": true,
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Localization language. Default is \"ru\". Valid values:</p>\n<ul>\n<li>\"cs\" &mdash; \u010ce\u0161tina </li>\n<li>\"de\" &mdash; Deutsch </li>\n<li>\"en\" &mdash; English </li>\n<li>\"es\" &mdash; Espa\u00f1ol </li>\n<li>\"fr\" &mdash; Fran\u00e7ais </li>\n<li>\"ja\" &mdash; \u65e5\u672c\u8a9e </li>\n<li>\"pl\" &mdash; Polski </li>\n<li>\"ru\" &mdash; \u0420\u0443\u0441\u0441\u043a\u0438\u0439 (by default)</li>\n<li>\"th\" &mdash; \u0e44\u0e17\u0e22 </li>\n<li>\"zh-tw\" &mdash; \u7e41\u9ad4\u4e2d\u6587</li>\n</ul>",
+                    "name": "language",
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Max limit is 100.</p>",
+                    "name": "fields",
+                    "type": "string, list"
+                },
+                {
+                    "description": "<p>Extra fields that will be added to the response. Valid values:</p>\n<ul>\n<li>\"members\"</li>\n</ul>",
+                    "name": "extra",
+                    "type": "string, list"
+                },
+                {
+                    "description": "<p>Clan ID. Max limit is 100. Min value is 1.</p>",
+                    "name": "clan_id",
+                    "required": true,
+                    "type": "numeric, list"
+                }
+            ],
+            "realm": "ru",
+            "section": "clans",
+            "url": "clans/info"
+        },
+        "list": {
+            "allowed_http_methods": [
+                "GET",
+                "POST"
+            ],
+            "allowed_protocols": [
+                "http",
+                "https"
+            ],
+            "api_url": "api.worldofwarships.ru/wows/",
+            "available_display_indices": [
+                "asia",
+                "eu",
+                "na",
+                "ru"
+            ],
+            "description": "<p>Method searches through clans and sorts them in a specified order.</p>",
+            "display_index": "ru",
+            "fields": [
+                {
+                    "description": "<p>Clan ID</p>",
+                    "name": [
+                        "clan_id"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Clan creation date</p>",
+                    "name": [
+                        "created_at"
+                    ],
+                    "type": "timestamp"
+                },
+                {
+                    "description": "<p>Number of clan members</p>",
+                    "name": [
+                        "members_count"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Clan name</p>",
+                    "name": [
+                        "name"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Clan tag</p>",
+                    "name": [
+                        "tag"
+                    ],
+                    "type": "string"
+                }
+            ],
+            "name": "Clans",
+            "parameters": [
+                {
+                    "description": "<p>Application ID</p>",
+                    "name": "application_id",
+                    "required": true,
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Localization language. Default is \"ru\". Valid values:</p>\n<ul>\n<li>\"cs\" &mdash; \u010ce\u0161tina </li>\n<li>\"de\" &mdash; Deutsch </li>\n<li>\"en\" &mdash; English </li>\n<li>\"es\" &mdash; Espa\u00f1ol </li>\n<li>\"fr\" &mdash; Fran\u00e7ais </li>\n<li>\"ja\" &mdash; \u65e5\u672c\u8a9e </li>\n<li>\"pl\" &mdash; Polski </li>\n<li>\"ru\" &mdash; \u0420\u0443\u0441\u0441\u043a\u0438\u0439 (by default)</li>\n<li>\"th\" &mdash; \u0e44\u0e17\u0e22 </li>\n<li>\"zh-tw\" &mdash; \u7e41\u9ad4\u4e2d\u6587</li>\n</ul>",
+                    "name": "language",
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Max limit is 100.</p>",
+                    "name": "fields",
+                    "type": "string, list"
+                },
+                {
+                    "description": "<p>Part of name or tag for clan search. Minimum 2 characters</p>",
+                    "name": "search",
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Number of returned entries (fewer can be returned, but not more than 100). If the limit sent exceeds 100, a limit of 100 is applied (by default).</p>",
+                    "name": "limit",
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Page number. Default is 1. Min value is 1.</p>",
+                    "name": "page_no",
+                    "type": "numeric"
+                }
+            ],
+            "realm": "ru",
+            "section": "clans",
+            "url": "clans/list"
+        },
+        "season": {
+            "allowed_http_methods": [
+                "GET",
+                "POST"
+            ],
+            "allowed_protocols": [
+                "http",
+                "https"
+            ],
+            "api_url": "api.worldofwarships.ru/wows/",
+            "available_display_indices": [
+                "asia",
+                "eu",
+                "na",
+                "ru"
+            ],
+            "description": "<p>Method returns the information about Clan Battles season.</p>",
+            "display_index": "ru",
+            "fields": [
+                {
+                    "description": "<p>Number of the Rating points required for progression to the next league</p>",
+                    "name": [
+                        "division_points"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Season end time</p>",
+                    "name": [
+                        "finish_time"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Season name</p>",
+                    "name": [
+                        "name"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Season ID</p>",
+                    "name": [
+                        "season_id"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Maximum ship Tier in a season</p>",
+                    "name": [
+                        "ship_tier_max"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Minimal ship Tier in a season</p>",
+                    "name": [
+                        "ship_tier_min"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Season start time</p>",
+                    "name": [
+                        "start_time"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "type": "empty_line"
+                },
+                {
+                    "description": "<p>Leagues in the season Rating</p>",
+                    "name": [
+                        "leagues"
+                    ],
+                    "type": "block_header"
+                },
+                {
+                    "description": "<p>Color of the league icon</p>",
+                    "name": [
+                        "leagues",
+                        "color"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>League icon</p>",
+                    "name": [
+                        "leagues",
+                        "icon"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>League name</p>",
+                    "name": [
+                        "leagues",
+                        "name"
+                    ],
+                    "type": "string"
+                }
+            ],
+            "name": "Clan Battle Seasons",
+            "parameters": [
+                {
+                    "description": "<p>Application ID</p>",
+                    "name": "application_id",
+                    "required": true,
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Max limit is 100.</p>",
+                    "name": "fields",
+                    "type": "string, list"
+                },
+                {
+                    "description": "<p>Localization language. Default is \"ru\". Valid values:</p>\n<ul>\n<li>\"cs\" &mdash; \u010ce\u0161tina </li>\n<li>\"de\" &mdash; Deutsch </li>\n<li>\"en\" &mdash; English </li>\n<li>\"es\" &mdash; Espa\u00f1ol </li>\n<li>\"fr\" &mdash; Fran\u00e7ais </li>\n<li>\"ja\" &mdash; \u65e5\u672c\u8a9e </li>\n<li>\"pl\" &mdash; Polski </li>\n<li>\"ru\" &mdash; \u0420\u0443\u0441\u0441\u043a\u0438\u0439 (by default)</li>\n<li>\"th\" &mdash; \u0e44\u0e17\u0e22 </li>\n<li>\"zh-tw\" &mdash; \u7e41\u9ad4\u4e2d\u6587 </li>\n<li>\"tr\" &mdash; T\u00fcrk\u00e7e </li>\n<li>\"zh-cn\" &mdash; \u4e2d\u6587 </li>\n<li>\"pt-br\" &mdash; Portugu\u00eas do Brasil </li>\n<li>\"es-mx\" &mdash; Espa\u00f1ol (M\u00e9xico)</li>\n</ul>",
+                    "name": "language",
+                    "type": "string"
+                }
+            ],
+            "realm": "ru",
+            "section": "clans",
+            "url": "clans/season"
         }
     },
     "encyclopedia": {
@@ -8068,7 +9039,7 @@
                     "type": "string"
                 },
                 {
-                    "description": "<p>Battle types in which players can receive achievements. Battle types according to the [Battle Types] method response (/reference/all/wows/encyclopedia/battletypes/)</p>",
+                    "description": "<p>Battle types in which players can receive achievements. Battle types according to the <a href=\"/reference/all/wows/encyclopedia/battletypes/\">Battle Types</a> method response</p>",
                     "name": [
                         "battle",
                         "battle_types"
@@ -8202,7 +9173,7 @@
                     "type": "string, list"
                 },
                 {
-                    "description": "<p>Localization language. Default is ru. Valid values:</p>\n<ul>\n<li>\"cs\" &mdash; \u010ce\u0161tina </li>\n<li>\"de\" &mdash; Deutsch </li>\n<li>\"en\" &mdash; English </li>\n<li>\"es\" &mdash; Espa\u00f1ol </li>\n<li>\"fr\" &mdash; Fran\u00e7ais </li>\n<li>\"ja\" &mdash; \u65e5\u672c\u8a9e </li>\n<li>\"pl\" &mdash; Polski </li>\n<li>\"ru\" &mdash; \u0420\u0443\u0441\u0441\u043a\u0438\u0439 (by default)</li>\n<li>\"th\" &mdash; \u0e44\u0e17\u0e22 </li>\n<li>\"zh-tw\" &mdash; \u7e41\u9ad4\u4e2d\u6587 </li>\n<li>\"tr\" &mdash; T\u00fcrk\u00e7e </li>\n<li>\"zh-cn\" &mdash; \u4e2d\u6587 </li>\n<li>\"pt-br\" &mdash; Portugu\u00eas do Brasil </li>\n<li>\"es-mx\" &mdash; Espa\u00f1ol (M\u00e9xico)</li>\n</ul>",
+                    "description": "<p>Localization language. Default is \"ru\". Valid values:</p>\n<ul>\n<li>\"cs\" &mdash; \u010ce\u0161tina </li>\n<li>\"de\" &mdash; Deutsch </li>\n<li>\"en\" &mdash; English </li>\n<li>\"es\" &mdash; Espa\u00f1ol </li>\n<li>\"fr\" &mdash; Fran\u00e7ais </li>\n<li>\"ja\" &mdash; \u65e5\u672c\u8a9e </li>\n<li>\"pl\" &mdash; Polski </li>\n<li>\"ru\" &mdash; \u0420\u0443\u0441\u0441\u043a\u0438\u0439 (by default)</li>\n<li>\"th\" &mdash; \u0e44\u0e17\u0e22 </li>\n<li>\"zh-tw\" &mdash; \u7e41\u9ad4\u4e2d\u6587 </li>\n<li>\"tr\" &mdash; T\u00fcrk\u00e7e </li>\n<li>\"zh-cn\" &mdash; \u4e2d\u6587 </li>\n<li>\"pt-br\" &mdash; Portugu\u00eas do Brasil </li>\n<li>\"es-mx\" &mdash; Espa\u00f1ol (M\u00e9xico)</li>\n</ul>",
                     "name": "language",
                     "type": "string"
                 }
@@ -8210,6 +9181,77 @@
             "realm": "ru",
             "section": "encyclopedia",
             "url": "encyclopedia/achievements"
+        },
+        "battlearenas": {
+            "allowed_http_methods": [
+                "GET",
+                "POST"
+            ],
+            "allowed_protocols": [
+                "http",
+                "https"
+            ],
+            "api_url": "api.worldofwarships.ru/wows/",
+            "available_display_indices": [
+                "asia",
+                "eu",
+                "na",
+                "ru"
+            ],
+            "description": "<p>Method returns the information about maps.</p>",
+            "display_index": "ru",
+            "fields": [
+                {
+                    "description": "<p>Map ID</p>",
+                    "name": [
+                        "battle_arena_id"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Map description</p>",
+                    "name": [
+                        "description"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>URL to the map icon</p>",
+                    "name": [
+                        "icon"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Map name</p>",
+                    "name": [
+                        "name"
+                    ],
+                    "type": "string"
+                }
+            ],
+            "name": "Maps",
+            "parameters": [
+                {
+                    "description": "<p>Application ID</p>",
+                    "name": "application_id",
+                    "required": true,
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Max limit is 100.</p>",
+                    "name": "fields",
+                    "type": "string, list"
+                },
+                {
+                    "description": "<p>Localization language. Default is \"ru\". Valid values:</p>\n<ul>\n<li>\"cs\" &mdash; \u010ce\u0161tina </li>\n<li>\"de\" &mdash; Deutsch </li>\n<li>\"en\" &mdash; English </li>\n<li>\"es\" &mdash; Espa\u00f1ol </li>\n<li>\"fr\" &mdash; Fran\u00e7ais </li>\n<li>\"ja\" &mdash; \u65e5\u672c\u8a9e </li>\n<li>\"pl\" &mdash; Polski </li>\n<li>\"ru\" &mdash; \u0420\u0443\u0441\u0441\u043a\u0438\u0439 (by default)</li>\n<li>\"th\" &mdash; \u0e44\u0e17\u0e22 </li>\n<li>\"zh-tw\" &mdash; \u7e41\u9ad4\u4e2d\u6587 </li>\n<li>\"tr\" &mdash; T\u00fcrk\u00e7e </li>\n<li>\"zh-cn\" &mdash; \u4e2d\u6587 </li>\n<li>\"pt-br\" &mdash; Portugu\u00eas do Brasil </li>\n<li>\"es-mx\" &mdash; Espa\u00f1ol (M\u00e9xico)</li>\n</ul>",
+                    "name": "language",
+                    "type": "string"
+                }
+            ],
+            "realm": "ru",
+            "section": "encyclopedia",
+            "url": "encyclopedia/battlearenas"
         },
         "battletypes": {
             "allowed_http_methods": [
@@ -8273,7 +9315,7 @@
                     "type": "string, list"
                 },
                 {
-                    "description": "<p>Localization language. Default is ru. Valid values:</p>\n<ul>\n<li>\"cs\" &mdash; \u010ce\u0161tina </li>\n<li>\"de\" &mdash; Deutsch </li>\n<li>\"en\" &mdash; English </li>\n<li>\"es\" &mdash; Espa\u00f1ol </li>\n<li>\"fr\" &mdash; Fran\u00e7ais </li>\n<li>\"ja\" &mdash; \u65e5\u672c\u8a9e </li>\n<li>\"pl\" &mdash; Polski </li>\n<li>\"ru\" &mdash; \u0420\u0443\u0441\u0441\u043a\u0438\u0439 (by default)</li>\n<li>\"th\" &mdash; \u0e44\u0e17\u0e22 </li>\n<li>\"zh-tw\" &mdash; \u7e41\u9ad4\u4e2d\u6587 </li>\n<li>\"tr\" &mdash; T\u00fcrk\u00e7e </li>\n<li>\"zh-cn\" &mdash; \u4e2d\u6587 </li>\n<li>\"pt-br\" &mdash; Portugu\u00eas do Brasil </li>\n<li>\"es-mx\" &mdash; Espa\u00f1ol (M\u00e9xico)</li>\n</ul>",
+                    "description": "<p>Localization language. Default is \"ru\". Valid values:</p>\n<ul>\n<li>\"cs\" &mdash; \u010ce\u0161tina </li>\n<li>\"de\" &mdash; Deutsch </li>\n<li>\"en\" &mdash; English </li>\n<li>\"es\" &mdash; Espa\u00f1ol </li>\n<li>\"fr\" &mdash; Fran\u00e7ais </li>\n<li>\"ja\" &mdash; \u65e5\u672c\u8a9e </li>\n<li>\"pl\" &mdash; Polski </li>\n<li>\"ru\" &mdash; \u0420\u0443\u0441\u0441\u043a\u0438\u0439 (by default)</li>\n<li>\"th\" &mdash; \u0e44\u0e17\u0e22 </li>\n<li>\"zh-tw\" &mdash; \u7e41\u9ad4\u4e2d\u6587 </li>\n<li>\"tr\" &mdash; T\u00fcrk\u00e7e </li>\n<li>\"zh-cn\" &mdash; \u4e2d\u6587 </li>\n<li>\"pt-br\" &mdash; Portugu\u00eas do Brasil </li>\n<li>\"es-mx\" &mdash; Espa\u00f1ol (M\u00e9xico)</li>\n</ul>",
                     "name": "language",
                     "type": "string"
                 }
@@ -8281,6 +9323,341 @@
             "realm": "ru",
             "section": "encyclopedia",
             "url": "encyclopedia/battletypes"
+        },
+        "collectioncards": {
+            "allowed_http_methods": [
+                "GET",
+                "POST"
+            ],
+            "allowed_protocols": [
+                "http",
+                "https"
+            ],
+            "api_url": "api.worldofwarships.ru/wows/",
+            "available_display_indices": [
+                "asia",
+                "eu",
+                "na",
+                "ru"
+            ],
+            "description": "<p>Method returns information about items that are included in the collection.</p>",
+            "display_index": "ru",
+            "fields": [
+                {
+                    "description": "<p>Item ID</p>",
+                    "name": [
+                        "card_id"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Collection ID</p>",
+                    "name": [
+                        "collection_id"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Item description</p>",
+                    "name": [
+                        "description"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Item name</p>",
+                    "name": [
+                        "name"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Item tag</p>",
+                    "name": [
+                        "tag"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "type": "empty_line"
+                },
+                {
+                    "description": "<p>Item card icons</p>",
+                    "name": [
+                        "images"
+                    ],
+                    "type": "block_header"
+                },
+                {
+                    "description": "<p>URL to the large card icon</p>",
+                    "name": [
+                        "images",
+                        "large"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>URL to the medium card icon</p>",
+                    "name": [
+                        "images",
+                        "medium"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>URL to the small card icon</p>",
+                    "name": [
+                        "images",
+                        "small"
+                    ],
+                    "type": "string"
+                }
+            ],
+            "name": "Collection items",
+            "parameters": [
+                {
+                    "description": "<p>Application ID</p>",
+                    "name": "application_id",
+                    "required": true,
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Max limit is 100.</p>",
+                    "name": "fields",
+                    "type": "string, list"
+                },
+                {
+                    "description": "<p>Localization language. Default is \"ru\". Valid values:</p>\n<ul>\n<li>\"cs\" &mdash; \u010ce\u0161tina </li>\n<li>\"de\" &mdash; Deutsch </li>\n<li>\"en\" &mdash; English </li>\n<li>\"es\" &mdash; Espa\u00f1ol </li>\n<li>\"fr\" &mdash; Fran\u00e7ais </li>\n<li>\"ja\" &mdash; \u65e5\u672c\u8a9e </li>\n<li>\"pl\" &mdash; Polski </li>\n<li>\"ru\" &mdash; \u0420\u0443\u0441\u0441\u043a\u0438\u0439 (by default)</li>\n<li>\"th\" &mdash; \u0e44\u0e17\u0e22 </li>\n<li>\"zh-tw\" &mdash; \u7e41\u9ad4\u4e2d\u6587 </li>\n<li>\"tr\" &mdash; T\u00fcrk\u00e7e </li>\n<li>\"zh-cn\" &mdash; \u4e2d\u6587 </li>\n<li>\"pt-br\" &mdash; Portugu\u00eas do Brasil </li>\n<li>\"es-mx\" &mdash; Espa\u00f1ol (M\u00e9xico)</li>\n</ul>",
+                    "name": "language",
+                    "type": "string"
+                }
+            ],
+            "realm": "ru",
+            "section": "encyclopedia",
+            "url": "encyclopedia/collectioncards"
+        },
+        "collections": {
+            "allowed_http_methods": [
+                "GET",
+                "POST"
+            ],
+            "allowed_protocols": [
+                "http",
+                "https"
+            ],
+            "api_url": "api.worldofwarships.ru/wows/",
+            "available_display_indices": [
+                "asia",
+                "eu",
+                "na",
+                "ru"
+            ],
+            "description": "<p>Method returns information about collections.</p>",
+            "display_index": "ru",
+            "fields": [
+                {
+                    "description": "<p>Collection item cost in duplicates</p>",
+                    "name": [
+                        "card_cost"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Collection ID</p>",
+                    "name": [
+                        "collection_id"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Collection description</p>",
+                    "name": [
+                        "description"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Link to collection image</p>",
+                    "name": [
+                        "image"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Collection name</p>",
+                    "name": [
+                        "name"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Collection tag</p>",
+                    "name": [
+                        "tag"
+                    ],
+                    "type": "string"
+                }
+            ],
+            "name": "Collections",
+            "parameters": [
+                {
+                    "description": "<p>Application ID</p>",
+                    "name": "application_id",
+                    "required": true,
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Max limit is 100.</p>",
+                    "name": "fields",
+                    "type": "string, list"
+                },
+                {
+                    "description": "<p>Localization language. Default is \"ru\". Valid values:</p>\n<ul>\n<li>\"cs\" &mdash; \u010ce\u0161tina </li>\n<li>\"de\" &mdash; Deutsch </li>\n<li>\"en\" &mdash; English </li>\n<li>\"es\" &mdash; Espa\u00f1ol </li>\n<li>\"fr\" &mdash; Fran\u00e7ais </li>\n<li>\"ja\" &mdash; \u65e5\u672c\u8a9e </li>\n<li>\"pl\" &mdash; Polski </li>\n<li>\"ru\" &mdash; \u0420\u0443\u0441\u0441\u043a\u0438\u0439 (by default)</li>\n<li>\"th\" &mdash; \u0e44\u0e17\u0e22 </li>\n<li>\"zh-tw\" &mdash; \u7e41\u9ad4\u4e2d\u6587 </li>\n<li>\"tr\" &mdash; T\u00fcrk\u00e7e </li>\n<li>\"zh-cn\" &mdash; \u4e2d\u6587 </li>\n<li>\"pt-br\" &mdash; Portugu\u00eas do Brasil </li>\n<li>\"es-mx\" &mdash; Espa\u00f1ol (M\u00e9xico)</li>\n</ul>",
+                    "name": "language",
+                    "type": "string"
+                }
+            ],
+            "realm": "ru",
+            "section": "encyclopedia",
+            "url": "encyclopedia/collections"
+        },
+        "consumables": {
+            "allowed_http_methods": [
+                "GET",
+                "POST"
+            ],
+            "allowed_protocols": [
+                "http",
+                "https"
+            ],
+            "api_url": "api.worldofwarships.ru/wows/",
+            "available_display_indices": [
+                "asia",
+                "eu",
+                "na",
+                "ru"
+            ],
+            "description": "<p>Method returns information about consumables: camouflages, flags and upgrades.</p>",
+            "display_index": "ru",
+            "fields": [
+                {
+                    "description": "<p>Consumable ID</p>",
+                    "name": [
+                        "consumable_id"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Consumable description</p>",
+                    "name": [
+                        "description"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Link to consumable image</p>",
+                    "name": [
+                        "image"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Consumable name</p>",
+                    "name": [
+                        "name"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Cost in credits</p>",
+                    "name": [
+                        "price_credit"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Cost in doubloons</p>",
+                    "name": [
+                        "price_gold"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Consumable type</p>",
+                    "name": [
+                        "type"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "type": "empty_line"
+                },
+                {
+                    "description": "<p>Consumable characteristics</p>",
+                    "name": [
+                        "profile"
+                    ],
+                    "type": "block_header"
+                },
+                {
+                    "description": "<p>Characteristic description</p>",
+                    "name": [
+                        "profile",
+                        "description"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Characteristic value</p>",
+                    "name": [
+                        "profile",
+                        "value"
+                    ],
+                    "type": "float"
+                }
+            ],
+            "name": "Consumables",
+            "parameters": [
+                {
+                    "description": "<p>Application ID</p>",
+                    "name": "application_id",
+                    "required": true,
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Max limit is 100.</p>",
+                    "name": "fields",
+                    "type": "string, list"
+                },
+                {
+                    "description": "<p>Localization language. Default is \"ru\". Valid values:</p>\n<ul>\n<li>\"cs\" &mdash; \u010ce\u0161tina </li>\n<li>\"de\" &mdash; Deutsch </li>\n<li>\"en\" &mdash; English </li>\n<li>\"es\" &mdash; Espa\u00f1ol </li>\n<li>\"fr\" &mdash; Fran\u00e7ais </li>\n<li>\"ja\" &mdash; \u65e5\u672c\u8a9e </li>\n<li>\"pl\" &mdash; Polski </li>\n<li>\"ru\" &mdash; \u0420\u0443\u0441\u0441\u043a\u0438\u0439 (by default)</li>\n<li>\"th\" &mdash; \u0e44\u0e17\u0e22 </li>\n<li>\"zh-tw\" &mdash; \u7e41\u9ad4\u4e2d\u6587 </li>\n<li>\"tr\" &mdash; T\u00fcrk\u00e7e </li>\n<li>\"zh-cn\" &mdash; \u4e2d\u6587 </li>\n<li>\"pt-br\" &mdash; Portugu\u00eas do Brasil </li>\n<li>\"es-mx\" &mdash; Espa\u00f1ol (M\u00e9xico)</li>\n</ul>",
+                    "name": "language",
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Number of returned entries (fewer can be returned, but not more than 100). If the limit sent exceeds 100, a limit of 100 is applied (by default).</p>",
+                    "name": "limit",
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Consumable ID. Max limit is 100.</p>",
+                    "name": "consumable_id",
+                    "type": "numeric, list"
+                },
+                {
+                    "description": "<p>Consumable type. Valid values:</p>\n<ul>\n<li>\"Camouflage\" &mdash; Camouflages </li>\n<li>\"Flags\" &mdash; Flags </li>\n<li>\"Permoflage\" &mdash; Permanent camouflages </li>\n<li>\"Modernization\" &mdash; Upgrades </li>\n<li>\"Skin\" &mdash; Ship camouflages</li>\n</ul>",
+                    "name": "type",
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Page limit. Number of returned entries (fewer can be returned, but not more than 100). If the limit sent exceeds 100, a limit of 100 is applied (by default). Default is 1.</p>",
+                    "name": "page_no",
+                    "type": "numeric"
+                }
+            ],
+            "realm": "ru",
+            "section": "encyclopedia",
+            "url": "encyclopedia/consumables"
         },
         "crewranks": {
             "allowed_http_methods": [
@@ -8337,7 +9714,7 @@
                     "type": "string, list"
                 },
                 {
-                    "description": "<p>Localization language. Default is ru. Valid values:</p>\n<ul>\n<li>\"cs\" &mdash; \u010ce\u0161tina </li>\n<li>\"de\" &mdash; Deutsch </li>\n<li>\"en\" &mdash; English </li>\n<li>\"es\" &mdash; Espa\u00f1ol </li>\n<li>\"fr\" &mdash; Fran\u00e7ais </li>\n<li>\"ja\" &mdash; \u65e5\u672c\u8a9e </li>\n<li>\"pl\" &mdash; Polski </li>\n<li>\"ru\" &mdash; \u0420\u0443\u0441\u0441\u043a\u0438\u0439 (by default)</li>\n<li>\"th\" &mdash; \u0e44\u0e17\u0e22 </li>\n<li>\"zh-tw\" &mdash; \u7e41\u9ad4\u4e2d\u6587 </li>\n<li>\"tr\" &mdash; T\u00fcrk\u00e7e </li>\n<li>\"zh-cn\" &mdash; \u4e2d\u6587 </li>\n<li>\"pt-br\" &mdash; Portugu\u00eas do Brasil </li>\n<li>\"es-mx\" &mdash; Espa\u00f1ol (M\u00e9xico)</li>\n</ul>",
+                    "description": "<p>Localization language. Default is \"ru\". Valid values:</p>\n<ul>\n<li>\"cs\" &mdash; \u010ce\u0161tina </li>\n<li>\"de\" &mdash; Deutsch </li>\n<li>\"en\" &mdash; English </li>\n<li>\"es\" &mdash; Espa\u00f1ol </li>\n<li>\"fr\" &mdash; Fran\u00e7ais </li>\n<li>\"ja\" &mdash; \u65e5\u672c\u8a9e </li>\n<li>\"pl\" &mdash; Polski </li>\n<li>\"ru\" &mdash; \u0420\u0443\u0441\u0441\u043a\u0438\u0439 (by default)</li>\n<li>\"th\" &mdash; \u0e44\u0e17\u0e22 </li>\n<li>\"zh-tw\" &mdash; \u7e41\u9ad4\u4e2d\u6587 </li>\n<li>\"tr\" &mdash; T\u00fcrk\u00e7e </li>\n<li>\"zh-cn\" &mdash; \u4e2d\u6587 </li>\n<li>\"pt-br\" &mdash; Portugu\u00eas do Brasil </li>\n<li>\"es-mx\" &mdash; Espa\u00f1ol (M\u00e9xico)</li>\n</ul>",
                     "name": "language",
                     "type": "string"
                 },
@@ -8413,7 +9790,7 @@
                     "type": "numeric"
                 },
                 {
-                    "description": "<p>List of Commander's Images.</p>\n<ul>\n<li>1 - image for commander levels 1-7</li>\n<li>8 - image for commander levels 8-13</li>\n<li>14 - image for commander levels 14-20</li>\n</ul>",
+                    "description": "<p>The list of the Commander images:</p>\n<ul>\n<li>1\u2014URL to the image of the Commander with 1\u20137 skill points;</li>\n<li>8\u2014URL to the image of the Commander with 8\u201313 skill points;</li>\n<li>14\u2014URL to the image of the Commander with 14\u201320 skill points;.</li>\n</ul>\n<p>If only the value for the key 1 is specified, the Commander has not earned skill points yet.</p>",
                     "name": [
                         "icons"
                     ],
@@ -8476,7 +9853,7 @@
                     "type": "string, list"
                 },
                 {
-                    "description": "<p>Localization language. Default is ru. Valid values:</p>\n<ul>\n<li>\"cs\" &mdash; \u010ce\u0161tina </li>\n<li>\"de\" &mdash; Deutsch </li>\n<li>\"en\" &mdash; English </li>\n<li>\"es\" &mdash; Espa\u00f1ol </li>\n<li>\"fr\" &mdash; Fran\u00e7ais </li>\n<li>\"ja\" &mdash; \u65e5\u672c\u8a9e </li>\n<li>\"pl\" &mdash; Polski </li>\n<li>\"ru\" &mdash; \u0420\u0443\u0441\u0441\u043a\u0438\u0439 (by default)</li>\n<li>\"th\" &mdash; \u0e44\u0e17\u0e22 </li>\n<li>\"zh-tw\" &mdash; \u7e41\u9ad4\u4e2d\u6587 </li>\n<li>\"tr\" &mdash; T\u00fcrk\u00e7e </li>\n<li>\"zh-cn\" &mdash; \u4e2d\u6587 </li>\n<li>\"pt-br\" &mdash; Portugu\u00eas do Brasil </li>\n<li>\"es-mx\" &mdash; Espa\u00f1ol (M\u00e9xico)</li>\n</ul>",
+                    "description": "<p>Localization language. Default is \"ru\". Valid values:</p>\n<ul>\n<li>\"cs\" &mdash; \u010ce\u0161tina </li>\n<li>\"de\" &mdash; Deutsch </li>\n<li>\"en\" &mdash; English </li>\n<li>\"es\" &mdash; Espa\u00f1ol </li>\n<li>\"fr\" &mdash; Fran\u00e7ais </li>\n<li>\"ja\" &mdash; \u65e5\u672c\u8a9e </li>\n<li>\"pl\" &mdash; Polski </li>\n<li>\"ru\" &mdash; \u0420\u0443\u0441\u0441\u043a\u0438\u0439 (by default)</li>\n<li>\"th\" &mdash; \u0e44\u0e17\u0e22 </li>\n<li>\"zh-tw\" &mdash; \u7e41\u9ad4\u4e2d\u6587 </li>\n<li>\"tr\" &mdash; T\u00fcrk\u00e7e </li>\n<li>\"zh-cn\" &mdash; \u4e2d\u6587 </li>\n<li>\"pt-br\" &mdash; Portugu\u00eas do Brasil </li>\n<li>\"es-mx\" &mdash; Espa\u00f1ol (M\u00e9xico)</li>\n</ul>",
                     "name": "language",
                     "type": "string"
                 },
@@ -8585,7 +9962,7 @@
                     "type": "string, list"
                 },
                 {
-                    "description": "<p>Localization language. Default is ru. Valid values:</p>\n<ul>\n<li>\"cs\" &mdash; \u010ce\u0161tina </li>\n<li>\"de\" &mdash; Deutsch </li>\n<li>\"en\" &mdash; English </li>\n<li>\"es\" &mdash; Espa\u00f1ol </li>\n<li>\"fr\" &mdash; Fran\u00e7ais </li>\n<li>\"ja\" &mdash; \u65e5\u672c\u8a9e </li>\n<li>\"pl\" &mdash; Polski </li>\n<li>\"ru\" &mdash; \u0420\u0443\u0441\u0441\u043a\u0438\u0439 (by default)</li>\n<li>\"th\" &mdash; \u0e44\u0e17\u0e22 </li>\n<li>\"zh-tw\" &mdash; \u7e41\u9ad4\u4e2d\u6587 </li>\n<li>\"tr\" &mdash; T\u00fcrk\u00e7e </li>\n<li>\"zh-cn\" &mdash; \u4e2d\u6587 </li>\n<li>\"pt-br\" &mdash; Portugu\u00eas do Brasil </li>\n<li>\"es-mx\" &mdash; Espa\u00f1ol (M\u00e9xico)</li>\n</ul>",
+                    "description": "<p>Localization language. Default is \"ru\". Valid values:</p>\n<ul>\n<li>\"cs\" &mdash; \u010ce\u0161tina </li>\n<li>\"de\" &mdash; Deutsch </li>\n<li>\"en\" &mdash; English </li>\n<li>\"es\" &mdash; Espa\u00f1ol </li>\n<li>\"fr\" &mdash; Fran\u00e7ais </li>\n<li>\"ja\" &mdash; \u65e5\u672c\u8a9e </li>\n<li>\"pl\" &mdash; Polski </li>\n<li>\"ru\" &mdash; \u0420\u0443\u0441\u0441\u043a\u0438\u0439 (by default)</li>\n<li>\"th\" &mdash; \u0e44\u0e17\u0e22 </li>\n<li>\"zh-tw\" &mdash; \u7e41\u9ad4\u4e2d\u6587 </li>\n<li>\"tr\" &mdash; T\u00fcrk\u00e7e </li>\n<li>\"zh-cn\" &mdash; \u4e2d\u6587 </li>\n<li>\"pt-br\" &mdash; Portugu\u00eas do Brasil </li>\n<li>\"es-mx\" &mdash; Espa\u00f1ol (M\u00e9xico)</li>\n</ul>",
                     "name": "language",
                     "type": "string"
                 },
@@ -8598,313 +9975,6 @@
             "realm": "ru",
             "section": "encyclopedia",
             "url": "encyclopedia/crewskills"
-        },
-        "exterior": {
-            "allowed_http_methods": [
-                "GET",
-                "POST"
-            ],
-            "allowed_protocols": [
-                "http",
-                "https"
-            ],
-            "api_url": "api.worldofwarships.ru/wows/",
-            "available_display_indices": [
-                "asia",
-                "eu",
-                "na",
-                "ru"
-            ],
-            "description": "<p>Method returns information about signals &amp; camouflages.</p>",
-            "display_index": "ru",
-            "fields": [
-                {
-                    "description": "<p>Exterior item description</p>",
-                    "name": [
-                        "description"
-                    ],
-                    "type": "string"
-                },
-                {
-                    "description": "<p>Exterior item ID</p>",
-                    "name": [
-                        "exterior_id"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Exterior item name</p>",
-                    "name": [
-                        "name"
-                    ],
-                    "type": "string"
-                },
-                {
-                    "description": "<p>Exterior item cost in credits</p>",
-                    "name": [
-                        "price_credit"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Exterior item cost in doubloons</p>",
-                    "name": [
-                        "price_gold"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Exterior item type</p>",
-                    "name": [
-                        "type"
-                    ],
-                    "type": "string"
-                },
-                {
-                    "type": "empty_line"
-                },
-                {
-                    "description": "<p>Exterior items icons</p>",
-                    "name": [
-                        "image"
-                    ],
-                    "type": "block_header"
-                },
-                {
-                    "description": "<p>URL to exterior item small icon</p>",
-                    "name": [
-                        "image",
-                        "small"
-                    ],
-                    "type": "string"
-                },
-                {
-                    "type": "empty_line"
-                },
-                {
-                    "description": "<p>Exterior item parameters. Only parameters affected by Exterior item are returned in response.</p>",
-                    "name": [
-                        "ttc_coef"
-                    ],
-                    "type": "block_header"
-                },
-                {
-                    "description": "<p>Firing accuracy</p>",
-                    "name": [
-                        "ttc_coef",
-                        "accuracy_coef"
-                    ],
-                    "type": "float"
-                },
-                {
-                    "description": "<p>Effectiveness of torpedo bomber and dive bomber self-defense armaments</p>",
-                    "name": [
-                        "ttc_coef",
-                        "aircraft_passive_defence_coef"
-                    ],
-                    "type": "float"
-                },
-                {
-                    "description": "<p>Risk of magazine detonation</p>",
-                    "name": [
-                        "ttc_coef",
-                        "ammo_detonation_chance_coef"
-                    ],
-                    "type": "float"
-                },
-                {
-                    "description": "<p>Effectiveness of AA defenses</p>",
-                    "name": [
-                        "ttc_coef",
-                        "anti_aircraft_defence_coef"
-                    ],
-                    "type": "float"
-                },
-                {
-                    "description": "<p>Chance of setting an enemy ship on fire with bombs and shells of a caliber below 160 mm</p>",
-                    "name": [
-                        "ttc_coef",
-                        "burn_chance_big_coef"
-                    ],
-                    "type": "float"
-                },
-                {
-                    "description": "<p>Chance of setting an enemy ship on fire with bombs and shells of a caliber above 160 mm (total)</p>",
-                    "name": [
-                        "ttc_coef",
-                        "burn_chance_small_coef"
-                    ],
-                    "type": "float"
-                },
-                {
-                    "description": "<p>Time of fire extinguishing</p>",
-                    "name": [
-                        "ttc_coef",
-                        "burning_time_coef"
-                    ],
-                    "type": "float"
-                },
-                {
-                    "description": "<p>Coefficient for the normal reload time of consumables</p>",
-                    "name": [
-                        "ttc_coef",
-                        "consumables_reload_time_coef"
-                    ],
-                    "type": "float"
-                },
-                {
-                    "description": "<p>Credits earned per battle</p>",
-                    "name": [
-                        "ttc_coef",
-                        "credits_coef"
-                    ],
-                    "type": "float"
-                },
-                {
-                    "description": "<p>Detectability by enemy aircraft</p>",
-                    "name": [
-                        "ttc_coef",
-                        "detect_distance_by_plane_coef"
-                    ],
-                    "type": "float"
-                },
-                {
-                    "description": "<p>Detectability by enemy ships</p>",
-                    "name": [
-                        "ttc_coef",
-                        "detect_distance_coef"
-                    ],
-                    "type": "float"
-                },
-                {
-                    "description": "<p>Maximum firing range</p>",
-                    "name": [
-                        "ttc_coef",
-                        "distance_coef"
-                    ],
-                    "type": "float"
-                },
-                {
-                    "description": "<p>Firing accuracy of the enemy attacking your ship</p>",
-                    "name": [
-                        "ttc_coef",
-                        "enemy_accuracy_coef"
-                    ],
-                    "type": "float"
-                },
-                {
-                    "description": "<p>Risk of a player's ship being flooded</p>",
-                    "name": [
-                        "ttc_coef",
-                        "flood_chance_coef"
-                    ],
-                    "type": "float"
-                },
-                {
-                    "description": "<p>Flooding recovery time</p>",
-                    "name": [
-                        "ttc_coef",
-                        "flooding_time_coef"
-                    ],
-                    "type": "float"
-                },
-                {
-                    "description": "<p>HP recovery speed when the Repair Party consumable is used</p>",
-                    "name": [
-                        "ttc_coef",
-                        "health_regeneration_speed"
-                    ],
-                    "type": "float"
-                },
-                {
-                    "description": "<p>Maximum speed (in knots)</p>",
-                    "name": [
-                        "ttc_coef",
-                        "max_speed_coef"
-                    ],
-                    "type": "float"
-                },
-                {
-                    "description": "<p>Damage caused by ramming</p>",
-                    "name": [
-                        "ttc_coef",
-                        "ram_damage_caused_coef"
-                    ],
-                    "type": "float"
-                },
-                {
-                    "description": "<p>Damage received when ramming the enemy</p>",
-                    "name": [
-                        "ttc_coef",
-                        "ram_damage_received_coef"
-                    ],
-                    "type": "float"
-                },
-                {
-                    "description": "<p>Reload time</p>",
-                    "name": [
-                        "ttc_coef",
-                        "reload_time_coef"
-                    ],
-                    "type": "float"
-                },
-                {
-                    "description": "<p>Cost of the ship's post-battle repair</p>",
-                    "name": [
-                        "ttc_coef",
-                        "repair_cost_coef"
-                    ],
-                    "type": "float"
-                },
-                {
-                    "description": "<p>Top speed</p>",
-                    "name": [
-                        "ttc_coef",
-                        "speed_coef"
-                    ],
-                    "type": "float"
-                },
-                {
-                    "description": "<p>Experience Points earned per battle</p>",
-                    "name": [
-                        "ttc_coef",
-                        "xp_coef"
-                    ],
-                    "type": "float"
-                }
-            ],
-            "name": "Exterior items",
-            "parameters": [
-                {
-                    "description": "<p>Application ID</p>",
-                    "name": "application_id",
-                    "required": true,
-                    "type": "string"
-                },
-                {
-                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Max limit is 100.</p>",
-                    "name": "fields",
-                    "type": "string, list"
-                },
-                {
-                    "description": "<p>Localization language. Default is ru. Valid values:</p>\n<ul>\n<li>\"cs\" &mdash; \u010ce\u0161tina </li>\n<li>\"de\" &mdash; Deutsch </li>\n<li>\"en\" &mdash; English </li>\n<li>\"es\" &mdash; Espa\u00f1ol </li>\n<li>\"fr\" &mdash; Fran\u00e7ais </li>\n<li>\"ja\" &mdash; \u65e5\u672c\u8a9e </li>\n<li>\"pl\" &mdash; Polski </li>\n<li>\"ru\" &mdash; \u0420\u0443\u0441\u0441\u043a\u0438\u0439 (by default)</li>\n<li>\"th\" &mdash; \u0e44\u0e17\u0e22 </li>\n<li>\"zh-tw\" &mdash; \u7e41\u9ad4\u4e2d\u6587 </li>\n<li>\"tr\" &mdash; T\u00fcrk\u00e7e </li>\n<li>\"zh-cn\" &mdash; \u4e2d\u6587 </li>\n<li>\"pt-br\" &mdash; Portugu\u00eas do Brasil </li>\n<li>\"es-mx\" &mdash; Espa\u00f1ol (M\u00e9xico)</li>\n</ul>",
-                    "name": "language",
-                    "type": "string"
-                },
-                {
-                    "description": "<p>Exterior item ID</p>",
-                    "name": "exterior_id",
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Exterior item type</p>",
-                    "name": "type",
-                    "type": "string"
-                }
-            ],
-            "realm": "ru",
-            "section": "encyclopedia",
-            "url": "encyclopedia/exterior"
         },
         "info": {
             "allowed_http_methods": [
@@ -9023,7 +10093,7 @@
                     "type": "string, list"
                 },
                 {
-                    "description": "<p>Localization language. Default is ru. Valid values:</p>\n<ul>\n<li>\"cs\" &mdash; \u010ce\u0161tina </li>\n<li>\"de\" &mdash; Deutsch </li>\n<li>\"en\" &mdash; English </li>\n<li>\"es\" &mdash; Espa\u00f1ol </li>\n<li>\"fr\" &mdash; Fran\u00e7ais </li>\n<li>\"ja\" &mdash; \u65e5\u672c\u8a9e </li>\n<li>\"pl\" &mdash; Polski </li>\n<li>\"ru\" &mdash; \u0420\u0443\u0441\u0441\u043a\u0438\u0439 (by default)</li>\n<li>\"th\" &mdash; \u0e44\u0e17\u0e22 </li>\n<li>\"zh-tw\" &mdash; \u7e41\u9ad4\u4e2d\u6587 </li>\n<li>\"tr\" &mdash; T\u00fcrk\u00e7e </li>\n<li>\"zh-cn\" &mdash; \u4e2d\u6587 </li>\n<li>\"pt-br\" &mdash; Portugu\u00eas do Brasil </li>\n<li>\"es-mx\" &mdash; Espa\u00f1ol (M\u00e9xico)</li>\n</ul>",
+                    "description": "<p>Localization language. Default is \"ru\". Valid values:</p>\n<ul>\n<li>\"cs\" &mdash; \u010ce\u0161tina </li>\n<li>\"de\" &mdash; Deutsch </li>\n<li>\"en\" &mdash; English </li>\n<li>\"es\" &mdash; Espa\u00f1ol </li>\n<li>\"fr\" &mdash; Fran\u00e7ais </li>\n<li>\"ja\" &mdash; \u65e5\u672c\u8a9e </li>\n<li>\"pl\" &mdash; Polski </li>\n<li>\"ru\" &mdash; \u0420\u0443\u0441\u0441\u043a\u0438\u0439 (by default)</li>\n<li>\"th\" &mdash; \u0e44\u0e17\u0e22 </li>\n<li>\"zh-tw\" &mdash; \u7e41\u9ad4\u4e2d\u6587 </li>\n<li>\"tr\" &mdash; T\u00fcrk\u00e7e </li>\n<li>\"zh-cn\" &mdash; \u4e2d\u6587 </li>\n<li>\"pt-br\" &mdash; Portugu\u00eas do Brasil </li>\n<li>\"es-mx\" &mdash; Espa\u00f1ol (M\u00e9xico)</li>\n</ul>",
                     "name": "language",
                     "type": "string"
                 }
@@ -9048,7 +10118,7 @@
                 "na",
                 "ru"
             ],
-            "description": "<p>Method returns the list of available modules that can be installed on ships, such as hulls, engines, etc. At least one input filter parameter (module_id, type) is required to be indicated.</p>",
+            "description": "<p>Method returns the list of available modules that can be mounted on a ship (hull, engines, etc.).</p>",
             "display_index": "ru",
             "fields": [
                 {
@@ -9603,17 +10673,27 @@
                     "type": "string, list"
                 },
                 {
-                    "description": "<p>Localization language. Default is ru. Valid values:</p>\n<ul>\n<li>\"cs\" &mdash; \u010ce\u0161tina </li>\n<li>\"de\" &mdash; Deutsch </li>\n<li>\"en\" &mdash; English </li>\n<li>\"es\" &mdash; Espa\u00f1ol </li>\n<li>\"fr\" &mdash; Fran\u00e7ais </li>\n<li>\"ja\" &mdash; \u65e5\u672c\u8a9e </li>\n<li>\"pl\" &mdash; Polski </li>\n<li>\"ru\" &mdash; \u0420\u0443\u0441\u0441\u043a\u0438\u0439 (by default)</li>\n<li>\"th\" &mdash; \u0e44\u0e17\u0e22 </li>\n<li>\"zh-tw\" &mdash; \u7e41\u9ad4\u4e2d\u6587 </li>\n<li>\"tr\" &mdash; T\u00fcrk\u00e7e </li>\n<li>\"zh-cn\" &mdash; \u4e2d\u6587 </li>\n<li>\"pt-br\" &mdash; Portugu\u00eas do Brasil </li>\n<li>\"es-mx\" &mdash; Espa\u00f1ol (M\u00e9xico)</li>\n</ul>",
+                    "description": "<p>Localization language. Default is \"ru\". Valid values:</p>\n<ul>\n<li>\"cs\" &mdash; \u010ce\u0161tina </li>\n<li>\"de\" &mdash; Deutsch </li>\n<li>\"en\" &mdash; English </li>\n<li>\"es\" &mdash; Espa\u00f1ol </li>\n<li>\"fr\" &mdash; Fran\u00e7ais </li>\n<li>\"ja\" &mdash; \u65e5\u672c\u8a9e </li>\n<li>\"pl\" &mdash; Polski </li>\n<li>\"ru\" &mdash; \u0420\u0443\u0441\u0441\u043a\u0438\u0439 (by default)</li>\n<li>\"th\" &mdash; \u0e44\u0e17\u0e22 </li>\n<li>\"zh-tw\" &mdash; \u7e41\u9ad4\u4e2d\u6587 </li>\n<li>\"tr\" &mdash; T\u00fcrk\u00e7e </li>\n<li>\"zh-cn\" &mdash; \u4e2d\u6587 </li>\n<li>\"pt-br\" &mdash; Portugu\u00eas do Brasil </li>\n<li>\"es-mx\" &mdash; Espa\u00f1ol (M\u00e9xico)</li>\n</ul>",
                     "name": "language",
                     "type": "string"
                 },
                 {
-                    "description": "<p>Module ID</p>",
-                    "name": "module_id",
+                    "description": "<p>Result page number. Default is 1. Min value is 1.</p>",
+                    "name": "page_no",
                     "type": "numeric"
                 },
                 {
-                    "description": "<p>Module type</p>",
+                    "description": "<p>Number of returned entries (fewer can be returned, but not more than 100). If the limit sent exceeds 100, a limit of 100 is applied (by default).</p>",
+                    "name": "limit",
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Module ID. Max limit is 100.</p>",
+                    "name": "module_id",
+                    "type": "numeric, list"
+                },
+                {
+                    "description": "<p>Module type. Valid values:</p>\n<ul>\n<li>\"Artillery\" &mdash; Main battery </li>\n<li>\"Torpedoes\" &mdash; Torpedo tubes </li>\n<li>\"Suo\" &mdash; Gun Fire Control System </li>\n<li>\"FlightControl\" &mdash; Flight Control </li>\n<li>\"Hull\" &mdash; Hull </li>\n<li>\"Engine\" &mdash; Engine </li>\n<li>\"Fighter\" &mdash; Fighters </li>\n<li>\"TorpedoBomber\" &mdash; Torpedo Bombers </li>\n<li>\"DiveBomber\" &mdash; Dive bombers</li>\n</ul>",
                     "name": "type",
                     "type": "string"
                 }
@@ -9659,6 +10739,13 @@
                     "description": "<p>Minimum battle tier for a random battle</p>",
                     "name": [
                         "battle_level_range_min"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Ship ID</p>",
+                    "name": [
+                        "ship_id"
                     ],
                     "type": "numeric"
                 },
@@ -11142,7 +12229,7 @@
                     "type": "string, list"
                 },
                 {
-                    "description": "<p>Localization language. Default is ru. Valid values:</p>\n<ul>\n<li>\"cs\" &mdash; \u010ce\u0161tina </li>\n<li>\"de\" &mdash; Deutsch </li>\n<li>\"en\" &mdash; English </li>\n<li>\"es\" &mdash; Espa\u00f1ol </li>\n<li>\"fr\" &mdash; Fran\u00e7ais </li>\n<li>\"ja\" &mdash; \u65e5\u672c\u8a9e </li>\n<li>\"pl\" &mdash; Polski </li>\n<li>\"ru\" &mdash; \u0420\u0443\u0441\u0441\u043a\u0438\u0439 (by default)</li>\n<li>\"th\" &mdash; \u0e44\u0e17\u0e22 </li>\n<li>\"zh-tw\" &mdash; \u7e41\u9ad4\u4e2d\u6587 </li>\n<li>\"tr\" &mdash; T\u00fcrk\u00e7e </li>\n<li>\"zh-cn\" &mdash; \u4e2d\u6587 </li>\n<li>\"pt-br\" &mdash; Portugu\u00eas do Brasil </li>\n<li>\"es-mx\" &mdash; Espa\u00f1ol (M\u00e9xico)</li>\n</ul>",
+                    "description": "<p>Localization language. Default is \"ru\". Valid values:</p>\n<ul>\n<li>\"cs\" &mdash; \u010ce\u0161tina </li>\n<li>\"de\" &mdash; Deutsch </li>\n<li>\"en\" &mdash; English </li>\n<li>\"es\" &mdash; Espa\u00f1ol </li>\n<li>\"fr\" &mdash; Fran\u00e7ais </li>\n<li>\"ja\" &mdash; \u65e5\u672c\u8a9e </li>\n<li>\"pl\" &mdash; Polski </li>\n<li>\"ru\" &mdash; \u0420\u0443\u0441\u0441\u043a\u0438\u0439 (by default)</li>\n<li>\"th\" &mdash; \u0e44\u0e17\u0e22 </li>\n<li>\"zh-tw\" &mdash; \u7e41\u9ad4\u4e2d\u6587 </li>\n<li>\"tr\" &mdash; T\u00fcrk\u00e7e </li>\n<li>\"zh-cn\" &mdash; \u4e2d\u6587 </li>\n<li>\"pt-br\" &mdash; Portugu\u00eas do Brasil </li>\n<li>\"es-mx\" &mdash; Espa\u00f1ol (M\u00e9xico)</li>\n</ul>",
                     "name": "language",
                     "type": "string"
                 },
@@ -11229,9 +12316,23 @@
                     "type": "string"
                 },
                 {
+                    "description": "<p>Indicates that ship characteristics are used for illustration, and may be changed.</p>",
+                    "name": [
+                        "has_demo_profile"
+                    ],
+                    "type": "boolean"
+                },
+                {
                     "description": "<p>Indicates if the ship is Premium ship</p>",
                     "name": [
                         "is_premium"
+                    ],
+                    "type": "boolean"
+                },
+                {
+                    "description": "<p>Indicates if the ship is on a special offer</p>",
+                    "name": [
+                        "is_special"
                     ],
                     "type": "boolean"
                 },
@@ -13192,9 +14293,19 @@
                     "type": "string, list"
                 },
                 {
-                    "description": "<p>Localization language. Default is ru. Valid values:</p>\n<ul>\n<li>\"cs\" &mdash; \u010ce\u0161tina </li>\n<li>\"de\" &mdash; Deutsch </li>\n<li>\"en\" &mdash; English </li>\n<li>\"es\" &mdash; Espa\u00f1ol </li>\n<li>\"fr\" &mdash; Fran\u00e7ais </li>\n<li>\"ja\" &mdash; \u65e5\u672c\u8a9e </li>\n<li>\"pl\" &mdash; Polski </li>\n<li>\"ru\" &mdash; \u0420\u0443\u0441\u0441\u043a\u0438\u0439 (by default)</li>\n<li>\"th\" &mdash; \u0e44\u0e17\u0e22 </li>\n<li>\"zh-tw\" &mdash; \u7e41\u9ad4\u4e2d\u6587 </li>\n<li>\"tr\" &mdash; T\u00fcrk\u00e7e </li>\n<li>\"zh-cn\" &mdash; \u4e2d\u6587 </li>\n<li>\"pt-br\" &mdash; Portugu\u00eas do Brasil </li>\n<li>\"es-mx\" &mdash; Espa\u00f1ol (M\u00e9xico)</li>\n</ul>",
+                    "description": "<p>Localization language. Default is \"ru\". Valid values:</p>\n<ul>\n<li>\"cs\" &mdash; \u010ce\u0161tina </li>\n<li>\"de\" &mdash; Deutsch </li>\n<li>\"en\" &mdash; English </li>\n<li>\"es\" &mdash; Espa\u00f1ol </li>\n<li>\"fr\" &mdash; Fran\u00e7ais </li>\n<li>\"ja\" &mdash; \u65e5\u672c\u8a9e </li>\n<li>\"pl\" &mdash; Polski </li>\n<li>\"ru\" &mdash; \u0420\u0443\u0441\u0441\u043a\u0438\u0439 (by default)</li>\n<li>\"th\" &mdash; \u0e44\u0e17\u0e22 </li>\n<li>\"zh-tw\" &mdash; \u7e41\u9ad4\u4e2d\u6587 </li>\n<li>\"tr\" &mdash; T\u00fcrk\u00e7e </li>\n<li>\"zh-cn\" &mdash; \u4e2d\u6587 </li>\n<li>\"pt-br\" &mdash; Portugu\u00eas do Brasil </li>\n<li>\"es-mx\" &mdash; Espa\u00f1ol (M\u00e9xico)</li>\n</ul>",
                     "name": "language",
                     "type": "string"
+                },
+                {
+                    "description": "<p>Result page number. Default is 1. Min value is 1.</p>",
+                    "name": "page_no",
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Number of returned entries (fewer can be returned, but not more than 100). If the limit sent exceeds 100, a limit of 100 is applied (by default).</p>",
+                    "name": "limit",
+                    "type": "numeric"
                 },
                 {
                     "description": "<p>Ship ID. Max limit is 100.</p>",
@@ -13207,7 +14318,7 @@
                     "type": "string, list"
                 },
                 {
-                    "description": "<p>Ship type. To get accurate values, use the <a href=\"/reference/all/wows/encyclopedia/info/\">Information about encyclopedia</a> method. Max limit is 100.</p>",
+                    "description": "<p>Ship type. Max limit is 100. Valid values:</p>\n<ul>\n<li>\"AirCarrier\" &mdash; Aircraft carrier </li>\n<li>\"Battleship\" &mdash; Battleship </li>\n<li>\"Destroyer\" &mdash; Destroyer </li>\n<li>\"Cruiser\" &mdash; Cruiser</li>\n</ul>",
                     "name": "type",
                     "type": "string, list"
                 }
@@ -13215,757 +14326,6 @@
             "realm": "ru",
             "section": "encyclopedia",
             "url": "encyclopedia/ships"
-        },
-        "upgrades": {
-            "allowed_http_methods": [
-                "GET",
-                "POST"
-            ],
-            "allowed_protocols": [
-                "http",
-                "https"
-            ],
-            "api_url": "api.worldofwarships.ru/wows/",
-            "available_display_indices": [
-                "asia",
-                "eu",
-                "na",
-                "ru"
-            ],
-            "description": "<p>Method returns the list of available ship upgrades.</p>",
-            "display_index": "ru",
-            "fields": [
-                {
-                    "description": "<p>Description</p>",
-                    "name": [
-                        "description"
-                    ],
-                    "type": "string"
-                },
-                {
-                    "description": "<p>Image link</p>",
-                    "name": [
-                        "image"
-                    ],
-                    "type": "string"
-                },
-                {
-                    "description": "<p>Name</p>",
-                    "name": [
-                        "name"
-                    ],
-                    "type": "string"
-                },
-                {
-                    "description": "<p>Cost in credits</p>",
-                    "name": [
-                        "price_credit"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Tag</p>",
-                    "name": [
-                        "tag"
-                    ],
-                    "type": "string"
-                },
-                {
-                    "description": "<p>Upgrade type</p>",
-                    "name": [
-                        "type"
-                    ],
-                    "type": "string"
-                },
-                {
-                    "description": "<p>Upgrade ID</p>",
-                    "name": [
-                        "upgrade_id"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "type": "empty_line"
-                },
-                {
-                    "description": "<p>Upgrade parameters, values related to upgrade type</p>",
-                    "name": [
-                        "profile"
-                    ],
-                    "type": "block_header"
-                },
-                {
-                    "type": "empty_line"
-                },
-                {
-                    "description": "<p>AA Guns</p>",
-                    "name": [
-                        "profile",
-                        "anti_aircraft"
-                    ],
-                    "type": "block_header"
-                },
-                {
-                    "description": "<p>Firing range extension coefficient</p>",
-                    "name": [
-                        "profile",
-                        "anti_aircraft",
-                        "distance_coef"
-                    ],
-                    "type": "float"
-                },
-                {
-                    "description": "<p>Armament effectiveness increase coeficient</p>",
-                    "name": [
-                        "profile",
-                        "anti_aircraft",
-                        "efficiency_coef"
-                    ],
-                    "type": "float"
-                },
-                {
-                    "description": "<p>AA mounts survivability increase coeficient</p>",
-                    "name": [
-                        "profile",
-                        "anti_aircraft",
-                        "health_coef"
-                    ],
-                    "type": "float"
-                },
-                {
-                    "type": "empty_line"
-                },
-                {
-                    "description": "<p>Main battery</p>",
-                    "name": [
-                        "profile",
-                        "artillery"
-                    ],
-                    "type": "block_header"
-                },
-                {
-                    "description": "<p>Magazine critical damage chance reduction coefficient</p>",
-                    "name": [
-                        "profile",
-                        "artillery",
-                        "ammo_critical_damage_chance_coef"
-                    ],
-                    "type": "float"
-                },
-                {
-                    "description": "<p>Magazine detonation risk reduction coefficient</p>",
-                    "name": [
-                        "profile",
-                        "artillery",
-                        "ammo_detonation_chance_coef"
-                    ],
-                    "type": "float"
-                },
-                {
-                    "description": "<p>Magazine repair acceleration coefficient</p>",
-                    "name": [
-                        "profile",
-                        "artillery",
-                        "ammo_repair_time_coef"
-                    ],
-                    "type": "float"
-                },
-                {
-                    "description": "<p>Main battery critical damage chance reduction coefficient</p>",
-                    "name": [
-                        "profile",
-                        "artillery",
-                        "critical_damage_chance_coef"
-                    ],
-                    "type": "float"
-                },
-                {
-                    "description": "<p>Main battery reload time reduction coefficient</p>",
-                    "name": [
-                        "profile",
-                        "artillery",
-                        "reload_time_coef"
-                    ],
-                    "type": "float"
-                },
-                {
-                    "description": "<p>Main battery repair acceleration coefficient</p>",
-                    "name": [
-                        "profile",
-                        "artillery",
-                        "repair_time_coef"
-                    ],
-                    "type": "float"
-                },
-                {
-                    "description": "<p>Main battery traverse speed reduction coefficient</p>",
-                    "name": [
-                        "profile",
-                        "artillery",
-                        "rotation_time_coef"
-                    ],
-                    "type": "float"
-                },
-                {
-                    "type": "empty_line"
-                },
-                {
-                    "description": "<p>Secondary battery</p>",
-                    "name": [
-                        "profile",
-                        "atba"
-                    ],
-                    "type": "block_header"
-                },
-                {
-                    "description": "<p>Firing accuracy increase coefficient</p>",
-                    "name": [
-                        "profile",
-                        "atba",
-                        "accuracy_coef"
-                    ],
-                    "type": "float"
-                },
-                {
-                    "description": "<p>Firing range extension coefficient</p>",
-                    "name": [
-                        "profile",
-                        "atba",
-                        "distance_coef"
-                    ],
-                    "type": "float"
-                },
-                {
-                    "description": "<p>Secondary battery survivability increase coefficient</p>",
-                    "name": [
-                        "profile",
-                        "atba",
-                        "health_coef"
-                    ],
-                    "type": "float"
-                },
-                {
-                    "description": "<p>Reload time reduction coefficient</p>",
-                    "name": [
-                        "profile",
-                        "atba",
-                        "reload_time_coef"
-                    ],
-                    "type": "float"
-                },
-                {
-                    "type": "empty_line"
-                },
-                {
-                    "description": "<p>Concealment System</p>",
-                    "name": [
-                        "profile",
-                        "concealment"
-                    ],
-                    "type": "block_header"
-                },
-                {
-                    "description": "<p>Detectability reduction coefficient</p>",
-                    "name": [
-                        "profile",
-                        "concealment",
-                        "detect_distance_coef"
-                    ],
-                    "type": "float"
-                },
-                {
-                    "type": "empty_line"
-                },
-                {
-                    "description": "<p>Damage Control System</p>",
-                    "name": [
-                        "profile",
-                        "damage_control"
-                    ],
-                    "type": "block_header"
-                },
-                {
-                    "description": "<p>Fire extinguishing acceleration coefficient</p>",
-                    "name": [
-                        "profile",
-                        "damage_control",
-                        "burning_time_coef"
-                    ],
-                    "type": "float"
-                },
-                {
-                    "description": "<p>Fire risk reduction coefficient</p>",
-                    "name": [
-                        "profile",
-                        "damage_control",
-                        "fire_starting_chance_coef"
-                    ],
-                    "type": "float"
-                },
-                {
-                    "description": "<p>Flooding risk reduction coefficient</p>",
-                    "name": [
-                        "profile",
-                        "damage_control",
-                        "flood_starting_chance_coef"
-                    ],
-                    "type": "float"
-                },
-                {
-                    "description": "<p>Flooding recovery acceleration coefficient</p>",
-                    "name": [
-                        "profile",
-                        "damage_control",
-                        "flooding_time_coef"
-                    ],
-                    "type": "float"
-                },
-                {
-                    "type": "empty_line"
-                },
-                {
-                    "description": "<p>Propulsion</p>",
-                    "name": [
-                        "profile",
-                        "engine"
-                    ],
-                    "type": "block_header"
-                },
-                {
-                    "description": "<p>Critical damage chance reduction coefficient</p>",
-                    "name": [
-                        "profile",
-                        "engine",
-                        "critical_damage_chance_coef"
-                    ],
-                    "type": "float"
-                },
-                {
-                    "description": "<p>Coefficient of top reverse speed acceleration time reduction</p>",
-                    "name": [
-                        "profile",
-                        "engine",
-                        "max_backward_power_coef"
-                    ],
-                    "type": "float"
-                },
-                {
-                    "description": "<p>Coefficient of top forward speed acceleration time reduction</p>",
-                    "name": [
-                        "profile",
-                        "engine",
-                        "max_forward_power_coef"
-                    ],
-                    "type": "float"
-                },
-                {
-                    "description": "<p>Repair time reduction coefficient</p>",
-                    "name": [
-                        "profile",
-                        "engine",
-                        "repair_time_coef"
-                    ],
-                    "type": "float"
-                },
-                {
-                    "type": "empty_line"
-                },
-                {
-                    "description": "<p>Gun Fire Control System</p>",
-                    "name": [
-                        "profile",
-                        "fire_control"
-                    ],
-                    "type": "block_header"
-                },
-                {
-                    "description": "<p>Firing accuracy increase coefficient</p>",
-                    "name": [
-                        "profile",
-                        "fire_control",
-                        "accuracy_coef"
-                    ],
-                    "type": "float"
-                },
-                {
-                    "description": "<p>Firing range extension coefficient</p>",
-                    "name": [
-                        "profile",
-                        "fire_control",
-                        "distance_coef"
-                    ],
-                    "type": "float"
-                },
-                {
-                    "type": "empty_line"
-                },
-                {
-                    "description": "<p>Flight Control</p>",
-                    "name": [
-                        "profile",
-                        "flight_control"
-                    ],
-                    "type": "block_header"
-                },
-                {
-                    "description": "<p>Aircraft servicing acceleration coefficient</p>",
-                    "name": [
-                        "profile",
-                        "flight_control",
-                        "prepare_time_coef"
-                    ],
-                    "type": "float"
-                },
-                {
-                    "description": "<p>Aircraft speed increase coefficient</p>",
-                    "name": [
-                        "profile",
-                        "flight_control",
-                        "speed_coef"
-                    ],
-                    "type": "float"
-                },
-                {
-                    "type": "empty_line"
-                },
-                {
-                    "description": "<p>Aiming systems</p>",
-                    "name": [
-                        "profile",
-                        "guidance"
-                    ],
-                    "type": "block_header"
-                },
-                {
-                    "description": "<p>Traverse speed of main battery mounts</p>",
-                    "name": [
-                        "profile",
-                        "guidance",
-                        "artillery_rotation_speed"
-                    ],
-                    "type": "float"
-                },
-                {
-                    "description": "<p>Improving the firing accuracy of the main battery mount</p>",
-                    "name": [
-                        "profile",
-                        "guidance",
-                        "artillery_shoot_accuracy"
-                    ],
-                    "type": "float"
-                },
-                {
-                    "description": "<p>Secondary battery firing range</p>",
-                    "name": [
-                        "profile",
-                        "guidance",
-                        "atba_max_dist"
-                    ],
-                    "type": "float"
-                },
-                {
-                    "description": "<p>Traverse speed of secondary battery guns</p>",
-                    "name": [
-                        "profile",
-                        "guidance",
-                        "atba_rotation_speed"
-                    ],
-                    "type": "float"
-                },
-                {
-                    "description": "<p>Improving the firing accuracy of secondary battery guns</p>",
-                    "name": [
-                        "profile",
-                        "guidance",
-                        "atba_shoot_accuracy"
-                    ],
-                    "type": "float"
-                },
-                {
-                    "type": "empty_line"
-                },
-                {
-                    "description": "<p>Main battery</p>",
-                    "name": [
-                        "profile",
-                        "mainweapon"
-                    ],
-                    "type": "block_header"
-                },
-                {
-                    "description": "<p>Probability of critical damage to main battery</p>",
-                    "name": [
-                        "profile",
-                        "mainweapon",
-                        "artillery_damage_prob"
-                    ],
-                    "type": "float"
-                },
-                {
-                    "description": "<p>Maximum number of main battery mount hit points</p>",
-                    "name": [
-                        "profile",
-                        "mainweapon",
-                        "artillery_max_hp"
-                    ],
-                    "type": "float"
-                },
-                {
-                    "description": "<p>Repair time for main battery</p>",
-                    "name": [
-                        "profile",
-                        "mainweapon",
-                        "artillery_repair_time"
-                    ],
-                    "type": "float"
-                },
-                {
-                    "description": "<p>Probability of critical damage to torpedo tubes</p>",
-                    "name": [
-                        "profile",
-                        "mainweapon",
-                        "tpd_damage_prob"
-                    ],
-                    "type": "float"
-                },
-                {
-                    "description": "<p>Maximum number of torpedo tube hit points</p>",
-                    "name": [
-                        "profile",
-                        "mainweapon",
-                        "tpd_max_hp"
-                    ],
-                    "type": "float"
-                },
-                {
-                    "description": "<p>Repair time for torpedo tubes</p>",
-                    "name": [
-                        "profile",
-                        "mainweapon",
-                        "tpd_repair_time"
-                    ],
-                    "type": "float"
-                },
-                {
-                    "type": "empty_line"
-                },
-                {
-                    "description": "<p>Air Groups</p>",
-                    "name": [
-                        "profile",
-                        "planes"
-                    ],
-                    "type": "block_header"
-                },
-                {
-                    "description": "<p>Bombers' survivability increase coefficient</p>",
-                    "name": [
-                        "profile",
-                        "planes",
-                        "bomber_health_coef"
-                    ],
-                    "type": "float"
-                },
-                {
-                    "description": "<p>Aircraft guns effectiveness increase coefficient</p>",
-                    "name": [
-                        "profile",
-                        "planes",
-                        "efficiency_coef"
-                    ],
-                    "type": "float"
-                },
-                {
-                    "description": "<p>Fighters' survivability increase coefficient</p>",
-                    "name": [
-                        "profile",
-                        "planes",
-                        "fighter_health_coef"
-                    ],
-                    "type": "float"
-                },
-                {
-                    "type": "empty_line"
-                },
-                {
-                    "description": "<p>Magazine</p>",
-                    "name": [
-                        "profile",
-                        "powder"
-                    ],
-                    "type": "block_header"
-                },
-                {
-                    "description": "<p>Probability of magazine detonation</p>",
-                    "name": [
-                        "profile",
-                        "powder",
-                        "detonation_prob"
-                    ],
-                    "type": "float"
-                },
-                {
-                    "type": "empty_line"
-                },
-                {
-                    "description": "<p>Secondary battery</p>",
-                    "name": [
-                        "profile",
-                        "secondweapon"
-                    ],
-                    "type": "block_header"
-                },
-                {
-                    "description": "<p>Maximum number of AA mount hit points</p>",
-                    "name": [
-                        "profile",
-                        "secondweapon",
-                        "air_defense_max_hp"
-                    ],
-                    "type": "float"
-                },
-                {
-                    "description": "<p>Maximum number of secondary battery mount hit points</p>",
-                    "name": [
-                        "profile",
-                        "secondweapon",
-                        "atba_max_hp"
-                    ],
-                    "type": "float"
-                },
-                {
-                    "type": "empty_line"
-                },
-                {
-                    "description": "<p>Target Acquisition System</p>",
-                    "name": [
-                        "profile",
-                        "spotting"
-                    ],
-                    "type": "block_header"
-                },
-                {
-                    "description": "<p>Acquisition range extension coefficient</p>",
-                    "name": [
-                        "profile",
-                        "spotting",
-                        "spot_distance_coef"
-                    ],
-                    "type": "float"
-                },
-                {
-                    "type": "empty_line"
-                },
-                {
-                    "description": "<p>Steering Gears</p>",
-                    "name": [
-                        "profile",
-                        "steering"
-                    ],
-                    "type": "block_header"
-                },
-                {
-                    "description": "<p>Critical damage chance reduction coefficient</p>",
-                    "name": [
-                        "profile",
-                        "steering",
-                        "critical_damage_chance_coef"
-                    ],
-                    "type": "float"
-                },
-                {
-                    "description": "<p>Repair time reduction coefficient</p>",
-                    "name": [
-                        "profile",
-                        "steering",
-                        "repair_time_coef"
-                    ],
-                    "type": "float"
-                },
-                {
-                    "description": "<p>Rudder shift time reduction coefficient</p>",
-                    "name": [
-                        "profile",
-                        "steering",
-                        "rudder_time_coef"
-                    ],
-                    "type": "float"
-                },
-                {
-                    "type": "empty_line"
-                },
-                {
-                    "description": "<p>Torpedo tubes</p>",
-                    "name": [
-                        "profile",
-                        "torpedoes"
-                    ],
-                    "type": "block_header"
-                },
-                {
-                    "description": "<p>Critical damage chance reduction coefficient</p>",
-                    "name": [
-                        "profile",
-                        "torpedoes",
-                        "critical_damage_chance_coef"
-                    ],
-                    "type": "float"
-                },
-                {
-                    "description": "<p>Reload time reduction coefficient</p>",
-                    "name": [
-                        "profile",
-                        "torpedoes",
-                        "reload_time_coef"
-                    ],
-                    "type": "float"
-                },
-                {
-                    "description": "<p>Repair time reduction coefficient</p>",
-                    "name": [
-                        "profile",
-                        "torpedoes",
-                        "repair_time_coef"
-                    ],
-                    "type": "float"
-                },
-                {
-                    "description": "<p>Traverse speed increase coefficient</p>",
-                    "name": [
-                        "profile",
-                        "torpedoes",
-                        "rotation_time_coef"
-                    ],
-                    "type": "float"
-                }
-            ],
-            "name": "Upgrades",
-            "parameters": [
-                {
-                    "description": "<p>Application ID</p>",
-                    "name": "application_id",
-                    "required": true,
-                    "type": "string"
-                },
-                {
-                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Max limit is 100.</p>",
-                    "name": "fields",
-                    "type": "string, list"
-                },
-                {
-                    "description": "<p>Localization language. Default is ru. Valid values:</p>\n<ul>\n<li>\"cs\" &mdash; \u010ce\u0161tina </li>\n<li>\"de\" &mdash; Deutsch </li>\n<li>\"en\" &mdash; English </li>\n<li>\"es\" &mdash; Espa\u00f1ol </li>\n<li>\"fr\" &mdash; Fran\u00e7ais </li>\n<li>\"ja\" &mdash; \u65e5\u672c\u8a9e </li>\n<li>\"pl\" &mdash; Polski </li>\n<li>\"ru\" &mdash; \u0420\u0443\u0441\u0441\u043a\u0438\u0439 (by default)</li>\n<li>\"th\" &mdash; \u0e44\u0e17\u0e22 </li>\n<li>\"zh-tw\" &mdash; \u7e41\u9ad4\u4e2d\u6587 </li>\n<li>\"tr\" &mdash; T\u00fcrk\u00e7e </li>\n<li>\"zh-cn\" &mdash; \u4e2d\u6587 </li>\n<li>\"pt-br\" &mdash; Portugu\u00eas do Brasil </li>\n<li>\"es-mx\" &mdash; Espa\u00f1ol (M\u00e9xico)</li>\n</ul>",
-                    "name": "language",
-                    "type": "string"
-                },
-                {
-                    "description": "<p>Upgrade ID. Max limit is 100.</p>",
-                    "name": "upgrade_id",
-                    "type": "numeric, list"
-                }
-            ],
-            "realm": "ru",
-            "section": "encyclopedia",
-            "url": "encyclopedia/upgrades"
         }
     },
     "seasons": {
@@ -15142,7 +15502,7 @@
                     "type": "string"
                 },
                 {
-                    "description": "<p>Application ID. Default is ru. Valid values:</p>\n<ul>\n<li>\"cs\" &mdash; \u010ce\u0161tina </li>\n<li>\"de\" &mdash; Deutsch </li>\n<li>\"en\" &mdash; English </li>\n<li>\"es\" &mdash; Espa\u00f1ol </li>\n<li>\"fr\" &mdash; Fran\u00e7ais </li>\n<li>\"ja\" &mdash; \u65e5\u672c\u8a9e </li>\n<li>\"pl\" &mdash; Polski </li>\n<li>\"ru\" &mdash; \u0420\u0443\u0441\u0441\u043a\u0438\u0439 (by default)</li>\n<li>\"th\" &mdash; \u0e44\u0e17\u0e22 </li>\n<li>\"zh-tw\" &mdash; \u7e41\u9ad4\u4e2d\u6587</li>\n</ul>",
+                    "description": "<p>Localization language. Default is \"ru\". Valid values:</p>\n<ul>\n<li>\"cs\" &mdash; \u010ce\u0161tina </li>\n<li>\"de\" &mdash; Deutsch </li>\n<li>\"en\" &mdash; English </li>\n<li>\"es\" &mdash; Espa\u00f1ol </li>\n<li>\"fr\" &mdash; Fran\u00e7ais </li>\n<li>\"ja\" &mdash; \u65e5\u672c\u8a9e </li>\n<li>\"pl\" &mdash; Polski </li>\n<li>\"ru\" &mdash; \u0420\u0443\u0441\u0441\u043a\u0438\u0439 (by default)</li>\n<li>\"th\" &mdash; \u0e44\u0e17\u0e22 </li>\n<li>\"zh-tw\" &mdash; \u7e41\u9ad4\u4e2d\u6587</li>\n</ul>",
                     "name": "language",
                     "type": "string"
                 },
@@ -15302,7 +15662,7 @@
                     "type": "string, list"
                 },
                 {
-                    "description": "<p>Localization language. Default is ru. Valid values:</p>\n<ul>\n<li>\"cs\" &mdash; \u010ce\u0161tina </li>\n<li>\"de\" &mdash; Deutsch </li>\n<li>\"en\" &mdash; English </li>\n<li>\"es\" &mdash; Espa\u00f1ol </li>\n<li>\"fr\" &mdash; Fran\u00e7ais </li>\n<li>\"ja\" &mdash; \u65e5\u672c\u8a9e </li>\n<li>\"pl\" &mdash; Polski </li>\n<li>\"ru\" &mdash; \u0420\u0443\u0441\u0441\u043a\u0438\u0439 (by default)</li>\n<li>\"th\" &mdash; \u0e44\u0e17\u0e22 </li>\n<li>\"zh-tw\" &mdash; \u7e41\u9ad4\u4e2d\u6587 </li>\n<li>\"tr\" &mdash; T\u00fcrk\u00e7e </li>\n<li>\"zh-cn\" &mdash; \u4e2d\u6587 </li>\n<li>\"pt-br\" &mdash; Portugu\u00eas do Brasil </li>\n<li>\"es-mx\" &mdash; Espa\u00f1ol (M\u00e9xico)</li>\n</ul>",
+                    "description": "<p>Localization language. Default is \"ru\". Valid values:</p>\n<ul>\n<li>\"cs\" &mdash; \u010ce\u0161tina </li>\n<li>\"de\" &mdash; Deutsch </li>\n<li>\"en\" &mdash; English </li>\n<li>\"es\" &mdash; Espa\u00f1ol </li>\n<li>\"fr\" &mdash; Fran\u00e7ais </li>\n<li>\"ja\" &mdash; \u65e5\u672c\u8a9e </li>\n<li>\"pl\" &mdash; Polski </li>\n<li>\"ru\" &mdash; \u0420\u0443\u0441\u0441\u043a\u0438\u0439 (by default)</li>\n<li>\"th\" &mdash; \u0e44\u0e17\u0e22 </li>\n<li>\"zh-tw\" &mdash; \u7e41\u9ad4\u4e2d\u6587 </li>\n<li>\"tr\" &mdash; T\u00fcrk\u00e7e </li>\n<li>\"zh-cn\" &mdash; \u4e2d\u6587 </li>\n<li>\"pt-br\" &mdash; Portugu\u00eas do Brasil </li>\n<li>\"es-mx\" &mdash; Espa\u00f1ol (M\u00e9xico)</li>\n</ul>",
                     "name": "language",
                     "type": "string"
                 },
@@ -16440,7 +16800,7 @@
                     "type": "string"
                 },
                 {
-                    "description": "<p>Application ID. Default is ru. Valid values:</p>\n<ul>\n<li>\"cs\" &mdash; \u010ce\u0161tina </li>\n<li>\"de\" &mdash; Deutsch </li>\n<li>\"en\" &mdash; English </li>\n<li>\"es\" &mdash; Espa\u00f1ol </li>\n<li>\"fr\" &mdash; Fran\u00e7ais </li>\n<li>\"ja\" &mdash; \u65e5\u672c\u8a9e </li>\n<li>\"pl\" &mdash; Polski </li>\n<li>\"ru\" &mdash; \u0420\u0443\u0441\u0441\u043a\u0438\u0439 (by default)</li>\n<li>\"th\" &mdash; \u0e44\u0e17\u0e22 </li>\n<li>\"zh-tw\" &mdash; \u7e41\u9ad4\u4e2d\u6587</li>\n</ul>",
+                    "description": "<p>Localization language. Default is \"ru\". Valid values:</p>\n<ul>\n<li>\"cs\" &mdash; \u010ce\u0161tina </li>\n<li>\"de\" &mdash; Deutsch </li>\n<li>\"en\" &mdash; English </li>\n<li>\"es\" &mdash; Espa\u00f1ol </li>\n<li>\"fr\" &mdash; Fran\u00e7ais </li>\n<li>\"ja\" &mdash; \u65e5\u672c\u8a9e </li>\n<li>\"pl\" &mdash; Polski </li>\n<li>\"ru\" &mdash; \u0420\u0443\u0441\u0441\u043a\u0438\u0439 (by default)</li>\n<li>\"th\" &mdash; \u0e44\u0e17\u0e22 </li>\n<li>\"zh-tw\" &mdash; \u7e41\u9ad4\u4e2d\u6587</li>\n</ul>",
                     "name": "language",
                     "type": "string"
                 },
@@ -16944,6 +17304,204 @@
                         "club",
                         "torpedoes",
                         "shots"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "type": "empty_line"
+                },
+                {
+                    "description": "<p>Player's statistics for playing the Operation mode, normal difficulty, in a Division..</p>\n<p><strong>An extra field.</strong></p>",
+                    "name": [
+                        "oper_div"
+                    ],
+                    "type": "block_header"
+                },
+                {
+                    "description": "<p>Battles fought</p>",
+                    "name": [
+                        "oper_div",
+                        "battles"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Defeats</p>",
+                    "name": [
+                        "oper_div",
+                        "losses"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Battles survived</p>",
+                    "name": [
+                        "oper_div",
+                        "survived_battles"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Victories in battles survived</p>",
+                    "name": [
+                        "oper_div",
+                        "survived_wins"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Victories</p>",
+                    "name": [
+                        "oper_div",
+                        "wins"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Victories for completing missions. The key is a number of completed missions, and the value is a number of victories.</p>",
+                    "name": [
+                        "oper_div",
+                        "wins_by_tasks"
+                    ],
+                    "type": "associative array"
+                },
+                {
+                    "description": "<p>Total Experience Points , including XP earned with Premium Account</p>",
+                    "name": [
+                        "oper_div",
+                        "xp"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "type": "empty_line"
+                },
+                {
+                    "description": "<p>Player's statistics for playing the Operation mode, hard difficulty, in a Division..</p>\n<p><strong>An extra field.</strong></p>",
+                    "name": [
+                        "oper_div_hard"
+                    ],
+                    "type": "block_header"
+                },
+                {
+                    "description": "<p>Battles fought</p>",
+                    "name": [
+                        "oper_div_hard",
+                        "battles"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Defeats</p>",
+                    "name": [
+                        "oper_div_hard",
+                        "losses"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Battles survived</p>",
+                    "name": [
+                        "oper_div_hard",
+                        "survived_battles"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Victories in battles survived</p>",
+                    "name": [
+                        "oper_div_hard",
+                        "survived_wins"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Victories</p>",
+                    "name": [
+                        "oper_div_hard",
+                        "wins"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Victories for completing missions. The key is a number of completed missions, and the value is a number of victories.</p>",
+                    "name": [
+                        "oper_div_hard",
+                        "wins_by_tasks"
+                    ],
+                    "type": "associative array"
+                },
+                {
+                    "description": "<p>Total Experience Points , including XP earned with Premium Account</p>",
+                    "name": [
+                        "oper_div_hard",
+                        "xp"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "type": "empty_line"
+                },
+                {
+                    "description": "<p>Player's statistics for playing solo the Operation mode, normal difficulty..</p>\n<p><strong>An extra field.</strong></p>",
+                    "name": [
+                        "oper_solo"
+                    ],
+                    "type": "block_header"
+                },
+                {
+                    "description": "<p>Battles fought</p>",
+                    "name": [
+                        "oper_solo",
+                        "battles"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Defeats</p>",
+                    "name": [
+                        "oper_solo",
+                        "losses"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Battles survived</p>",
+                    "name": [
+                        "oper_solo",
+                        "survived_battles"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Victories in battles survived</p>",
+                    "name": [
+                        "oper_solo",
+                        "survived_wins"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Victories</p>",
+                    "name": [
+                        "oper_solo",
+                        "wins"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Victories for completing missions. The key is a number of completed missions, and the value is a number of victories.</p>",
+                    "name": [
+                        "oper_solo",
+                        "wins_by_tasks"
+                    ],
+                    "type": "associative array"
+                },
+                {
+                    "description": "<p>Total Experience Points , including XP earned with Premium Account</p>",
+                    "name": [
+                        "oper_solo",
+                        "xp"
                     ],
                     "type": "numeric"
                 },
@@ -21594,7 +22152,7 @@
                     "type": "string"
                 },
                 {
-                    "description": "<p>Application ID. Default is ru. Valid values:</p>\n<ul>\n<li>\"cs\" &mdash; \u010ce\u0161tina </li>\n<li>\"de\" &mdash; Deutsch </li>\n<li>\"en\" &mdash; English </li>\n<li>\"es\" &mdash; Espa\u00f1ol </li>\n<li>\"fr\" &mdash; Fran\u00e7ais </li>\n<li>\"ja\" &mdash; \u65e5\u672c\u8a9e </li>\n<li>\"pl\" &mdash; Polski </li>\n<li>\"ru\" &mdash; \u0420\u0443\u0441\u0441\u043a\u0438\u0439 (by default)</li>\n<li>\"th\" &mdash; \u0e44\u0e17\u0e22 </li>\n<li>\"zh-tw\" &mdash; \u7e41\u9ad4\u4e2d\u6587</li>\n</ul>",
+                    "description": "<p>Localization language. Default is \"ru\". Valid values:</p>\n<ul>\n<li>\"cs\" &mdash; \u010ce\u0161tina </li>\n<li>\"de\" &mdash; Deutsch </li>\n<li>\"en\" &mdash; English </li>\n<li>\"es\" &mdash; Espa\u00f1ol </li>\n<li>\"fr\" &mdash; Fran\u00e7ais </li>\n<li>\"ja\" &mdash; \u65e5\u672c\u8a9e </li>\n<li>\"pl\" &mdash; Polski </li>\n<li>\"ru\" &mdash; \u0420\u0443\u0441\u0441\u043a\u0438\u0439 (by default)</li>\n<li>\"th\" &mdash; \u0e44\u0e17\u0e22 </li>\n<li>\"zh-tw\" &mdash; \u7e41\u9ad4\u4e2d\u6587</li>\n</ul>",
                     "name": "language",
                     "type": "string"
                 },
@@ -21609,7 +22167,7 @@
                     "type": "string"
                 },
                 {
-                    "description": "<p>Extra fields that will be added to the response. Valid values:</p>\n<ul>\n<li>\"club\" </li>\n<li>\"pve\" </li>\n<li>\"pve_div2\" </li>\n<li>\"pve_div3\" </li>\n<li>\"pve_solo\" </li>\n<li>\"pvp_div2\" </li>\n<li>\"pvp_div3\" </li>\n<li>\"pvp_solo\" </li>\n<li>\"rank_div2\" </li>\n<li>\"rank_div3\" </li>\n<li>\"rank_solo\"</li>\n</ul>",
+                    "description": "<p>Extra fields that will be added to the response. Valid values:</p>\n<ul>\n<li>\"club\" </li>\n<li>\"oper_div\" </li>\n<li>\"oper_div_hard\" </li>\n<li>\"oper_solo\" </li>\n<li>\"pve\" </li>\n<li>\"pve_div2\" </li>\n<li>\"pve_div3\" </li>\n<li>\"pve_solo\" </li>\n<li>\"pvp_div2\" </li>\n<li>\"pvp_div3\" </li>\n<li>\"pvp_solo\" </li>\n<li>\"rank_div2\" </li>\n<li>\"rank_div3\" </li>\n<li>\"rank_solo\"</li>\n</ul>",
                     "name": "extra",
                     "type": "string, list"
                 },
