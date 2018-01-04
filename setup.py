@@ -36,7 +36,7 @@ with open(os.path.join(here, 'README.rst'), encoding='utf-8') as f:
 
 setup(
     name='wargaming',
-    version='2018.1.0',
+    version='2018.1.1',
     author='svartalf',
     author_email='self@svartalf.info',
     url='https://github.com/svartalf/python-wargaming',

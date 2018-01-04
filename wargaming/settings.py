@@ -12,7 +12,7 @@ REGION_TLD_MAP = {
 }
 
 GAME_API_ENDPOINTS = {
-    'wgn': 'https://api.worldoftanks.{region}/wgn',
+    'wgn': 'https://api.worldoftanks.{region}/wgn/',
     'wot': 'https://api.worldoftanks.{region}/wot/',
     'wotb': 'https://api.wotblitz.{region}/wotb/',
     'wotx': 'https://api-{region}-console.worldoftanks.com/wotx/',
