@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 import os
+from codecs import open
 
 from setuptools import setup, find_packages
 from setuptools.command.test import test as TestCommand
-
 
 class PyTest(TestCommand):
 
@@ -28,6 +28,12 @@ install_requires = lines('requirements.txt')
 
 test_requires = lines('requirements_test.txt')
 
+here = os.path.abspath(os.path.dirname(__file__))
+
+# Get the long description from the README file
+with open(os.path.join(here, 'README.rst'), encoding='utf-8') as f:
+    long_description = f.read()
+
 setup(
     name='wargaming',
     version='2018.1.0',
@@ -35,14 +41,14 @@ setup(
     author_email='self@svartalf.info',
     url='https://github.com/svartalf/python-wargaming',
     description='API library for Wargaming.net',
-    long_description=__doc__,
+    long_description=long_description,
     license='MIT',
     packages=find_packages(exclude=['tests', 'docs']),
     package_data={'wargaming': ['schema/*.json']},
     install_requires=install_requires,
     tests_require=install_requires + test_requires,
     cmdclass={'test': PyTest},
-    classifiers=(
+    classifiers=[
         'Development Status :: 3 - Alpha',
         'Intended Audience :: Developers',
         'License :: OSI Approved :: MIT License',
@@ -54,6 +60,6 @@ setup(
         'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: Implementation :: PyPy',
         'Topic :: Software Development :: Libraries',
-    ),
+    ],
     zip_safe=False,
 )

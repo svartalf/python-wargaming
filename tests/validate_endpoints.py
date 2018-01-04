@@ -1,4 +1,4 @@
-from wargaming import *
+from wargaming import WoT, WoTB, WoWS, WoWP, WoTX
 
 
 def main():
