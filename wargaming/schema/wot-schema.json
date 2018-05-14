@@ -55,12 +55,12 @@
                     "type": "string"
                 },
                 {
-                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Max limit is 100.</p>",
+                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Maximum limit: 100.</p>",
                     "name": "fields",
                     "type": "string, list"
                 },
                 {
-                    "description": "<p>Player account ID. Max limit is 100.</p>",
+                    "description": "<p>Player account ID. Maximum limit: 100.</p>",
                     "name": "account_id",
                     "required": true,
                     "type": "numeric, list"
@@ -1966,7 +1966,7 @@
                     "type": "numeric"
                 },
                 {
-                    "description": "<p>Maximum Victory points earned in Fallout</p>",
+                    "description": "<p>Maximum Victory Points earned in Fallout</p>",
                     "name": [
                         "statistics",
                         "fallout",
@@ -2083,7 +2083,7 @@
                     "type": "float"
                 },
                 {
-                    "description": "<p>Victory points</p>",
+                    "description": "<p>Victory Points</p>",
                     "name": [
                         "statistics",
                         "fallout",
@@ -5857,7 +5857,7 @@
                     "type": "string"
                 },
                 {
-                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Max limit is 100.</p>",
+                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Maximum limit: 100.</p>",
                     "name": "fields",
                     "type": "string, list"
                 },
@@ -5872,7 +5872,7 @@
                     "type": "string, list"
                 },
                 {
-                    "description": "<p>Player account ID. Max limit is 100.</p>",
+                    "description": "<p>Player account ID. Maximum limit: 100.</p>",
                     "name": "account_id",
                     "required": true,
                     "type": "numeric, list"
@@ -5947,7 +5947,7 @@
                     "type": "string"
                 },
                 {
-                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Max limit is 100.</p>",
+                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Maximum limit: 100.</p>",
                     "name": "fields",
                     "type": "string, list"
                 },
@@ -6046,7 +6046,7 @@
                     "type": "string"
                 },
                 {
-                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Max limit is 100.</p>",
+                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Maximum limit: 100.</p>",
                     "name": "fields",
                     "type": "string, list"
                 },
@@ -6056,13 +6056,13 @@
                     "type": "string"
                 },
                 {
-                    "description": "<p>Player account ID. Max limit is 100.</p>",
+                    "description": "<p>Player account ID. Maximum limit: 100.</p>",
                     "name": "account_id",
                     "required": true,
                     "type": "numeric, list"
                 },
                 {
-                    "description": "<p>Player's vehicle ID. Max limit is 100.</p>",
+                    "description": "<p>Player's vehicle ID. Maximum limit: 100.</p>",
                     "name": "tank_id",
                     "type": "numeric, list"
                 }
@@ -6140,7 +6140,7 @@
                     "type": "string"
                 },
                 {
-                    "description": "<p>If parameter <strong>nofollow=1</strong> is passed in, the user is not redirected. URL is returned in response. Default is 0. Min value is 0. Max value is 1.</p>",
+                    "description": "<p>If parameter <strong>nofollow=1</strong> is passed in, the user is not redirected. URL is returned in response. Default is 0. Min value is 0. Maximum value: 1.</p>",
                     "name": "nofollow",
                     "type": "numeric"
                 }
@@ -6862,7 +6862,7 @@
                     "type": "string"
                 },
                 {
-                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Max limit is 100.</p>",
+                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Maximum limit: 100.</p>",
                     "name": "fields",
                     "type": "string, list"
                 },
@@ -6872,7 +6872,7 @@
                     "type": "timestamp/date"
                 },
                 {
-                    "description": "<p>Clan IDs. Max limit is 100.</p>",
+                    "description": "<p>Clan IDs. Maximum limit: 100.</p>",
                     "name": "clan_id",
                     "required": true,
                     "type": "numeric, list"
@@ -7540,7 +7540,7 @@
                     "type": "string"
                 },
                 {
-                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Max limit is 100.</p>",
+                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Maximum limit: 100.</p>",
                     "name": "fields",
                     "type": "string, list"
                 },
@@ -8184,7 +8184,7 @@
                     "type": "string"
                 },
                 {
-                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Max limit is 100.</p>",
+                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Maximum limit: 100.</p>",
                     "name": "fields",
                     "type": "string, list"
                 },
@@ -8456,7 +8456,7 @@
                     "type": "string"
                 },
                 {
-                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Max limit is 100.</p>",
+                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Maximum limit: 100.</p>",
                     "name": "fields",
                     "type": "string, list"
                 },
@@ -8527,7 +8527,7 @@
                     "type": "string"
                 },
                 {
-                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Max limit is 100.</p>",
+                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Maximum limit: 100.</p>",
                     "name": "fields",
                     "type": "string, list"
                 },
@@ -8557,7 +8557,7 @@
                 "na",
                 "ru"
             ],
-            "description": "<p>The method returns the list of available badges a player can gain in Ranked Battles.</p>",
+            "description": "<p>Method returns list of available badges a player can gain in Ranked Battles.</p>",
             "display_index": "ru",
             "fields": [
                 {
@@ -8625,7 +8625,7 @@
                     "type": "string"
                 },
                 {
-                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Max limit is 100.</p>",
+                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Maximum limit: 100.</p>",
                     "name": "fields",
                     "type": "string, list"
                 },
@@ -8655,7 +8655,7 @@
                 "na",
                 "ru"
             ],
-            "description": "<p>Method returns information about Personal Reserves</p>",
+            "description": "<p>Method returns information about Personal Reserves.</p>",
             "display_index": "ru",
             "fields": [
                 {
@@ -8687,7 +8687,7 @@
                     "type": "boolean"
                 },
                 {
-                    "description": "<p>Personal Reserve lifetime in seconds</p>",
+                    "description": "<p>Personal Reserve duration in seconds</p>",
                     "name": [
                         "lifetime"
                     ],
@@ -8757,7 +8757,7 @@
                     "type": "string"
                 },
                 {
-                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Max limit is 100.</p>",
+                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Maximum limit: 100.</p>",
                     "name": "fields",
                     "type": "string, list"
                 },
@@ -8770,6 +8770,182 @@
             "realm": "ru",
             "section": "encyclopedia",
             "url": "encyclopedia/boosters"
+        },
+        "crewroles": {
+            "allowed_http_methods": [
+                "GET",
+                "POST"
+            ],
+            "allowed_protocols": [
+                "http",
+                "https"
+            ],
+            "api_url": "api.worldoftanks.ru/wot/",
+            "available_display_indices": [
+                "asia",
+                "eu",
+                "na",
+                "ru"
+            ],
+            "description": "<p>Method returns full description of all crew qualifications.</p>",
+            "display_index": "ru",
+            "fields": [
+                {
+                    "description": "<p>\u0421rew qualification name</p>",
+                    "name": [
+                        "name"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>\u0421rew qualification ID</p>",
+                    "name": [
+                        "role"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>List of crew member qualifications</p>",
+                    "name": [
+                        "skills"
+                    ],
+                    "type": "list of strings"
+                }
+            ],
+            "name": "Crew qualifications",
+            "parameters": [
+                {
+                    "description": "<p>Application ID</p>",
+                    "name": "application_id",
+                    "required": true,
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Maximum limit: 100.</p>",
+                    "name": "fields",
+                    "type": "string, list"
+                },
+                {
+                    "description": "<p>Localization language. Default is \"ru\". Valid values:</p>\n<ul>\n<li>\"en\" &mdash; English </li>\n<li>\"ru\" &mdash; \u0420\u0443\u0441\u0441\u043a\u0438\u0439 (by default)</li>\n<li>\"pl\" &mdash; Polski </li>\n<li>\"de\" &mdash; Deutsch </li>\n<li>\"fr\" &mdash; Fran\u00e7ais </li>\n<li>\"es\" &mdash; Espa\u00f1ol </li>\n<li>\"zh-cn\" &mdash; \u7b80\u4f53\u4e2d\u6587 </li>\n<li>\"zh-tw\" &mdash; \u7e41\u9ad4\u4e2d\u6587 </li>\n<li>\"tr\" &mdash; T\u00fcrk\u00e7e </li>\n<li>\"cs\" &mdash; \u010ce\u0161tina </li>\n<li>\"th\" &mdash; \u0e44\u0e17\u0e22 </li>\n<li>\"vi\" &mdash; Ti\u1ebfng Vi\u1ec7t </li>\n<li>\"ko\" &mdash; \ud55c\uad6d\uc5b4</li>\n</ul>",
+                    "name": "language",
+                    "type": "string"
+                },
+                {
+                    "description": "<p>\u0421rew qualification ID. Maximum limit: 100.</p>",
+                    "name": "role",
+                    "type": "string, list"
+                }
+            ],
+            "realm": "ru",
+            "section": "encyclopedia",
+            "url": "encyclopedia/crewroles"
+        },
+        "crewskills": {
+            "allowed_http_methods": [
+                "GET",
+                "POST"
+            ],
+            "allowed_protocols": [
+                "http",
+                "https"
+            ],
+            "api_url": "api.worldoftanks.ru/wot/",
+            "available_display_indices": [
+                "asia",
+                "eu",
+                "na",
+                "ru"
+            ],
+            "description": "<p>Method returns full description of all crew skills.</p>",
+            "display_index": "ru",
+            "fields": [
+                {
+                    "description": "<p>Skill description</p>",
+                    "name": [
+                        "description"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Indicates if it is a perk</p>",
+                    "name": [
+                        "is_perk"
+                    ],
+                    "type": "boolean"
+                },
+                {
+                    "description": "<p>Skill name</p>",
+                    "name": [
+                        "name"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Skill ID</p>",
+                    "name": [
+                        "skill"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "type": "empty_line"
+                },
+                {
+                    "description": "<p>URL to skill icon</p>",
+                    "name": [
+                        "image_url"
+                    ],
+                    "type": "block_header"
+                },
+                {
+                    "description": "<p>URL to large image</p>",
+                    "name": [
+                        "image_url",
+                        "big_icon"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>URL to small image</p>",
+                    "name": [
+                        "image_url",
+                        "small_icon"
+                    ],
+                    "type": "string"
+                }
+            ],
+            "name": "Crew skills",
+            "parameters": [
+                {
+                    "description": "<p>Application ID</p>",
+                    "name": "application_id",
+                    "required": true,
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Maximum limit: 100.</p>",
+                    "name": "fields",
+                    "type": "string, list"
+                },
+                {
+                    "description": "<p>Localization language. Default is \"ru\". Valid values:</p>\n<ul>\n<li>\"en\" &mdash; English </li>\n<li>\"ru\" &mdash; \u0420\u0443\u0441\u0441\u043a\u0438\u0439 (by default)</li>\n<li>\"pl\" &mdash; Polski </li>\n<li>\"de\" &mdash; Deutsch </li>\n<li>\"fr\" &mdash; Fran\u00e7ais </li>\n<li>\"es\" &mdash; Espa\u00f1ol </li>\n<li>\"zh-cn\" &mdash; \u7b80\u4f53\u4e2d\u6587 </li>\n<li>\"zh-tw\" &mdash; \u7e41\u9ad4\u4e2d\u6587 </li>\n<li>\"tr\" &mdash; T\u00fcrk\u00e7e </li>\n<li>\"cs\" &mdash; \u010ce\u0161tina </li>\n<li>\"th\" &mdash; \u0e44\u0e17\u0e22 </li>\n<li>\"vi\" &mdash; Ti\u1ebfng Vi\u1ec7t </li>\n<li>\"ko\" &mdash; \ud55c\uad6d\uc5b4</li>\n</ul>",
+                    "name": "language",
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Skill ID. Maximum limit: 100.</p>",
+                    "name": "skill",
+                    "type": "string, list"
+                },
+                {
+                    "description": "<p>\u0421rew qualification ID</p>",
+                    "name": "role",
+                    "type": "string"
+                }
+            ],
+            "realm": "ru",
+            "section": "encyclopedia",
+            "url": "encyclopedia/crewskills"
         },
         "info": {
             "allowed_http_methods": [
@@ -8868,7 +9044,7 @@
                     "type": "string"
                 },
                 {
-                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Max limit is 100.</p>",
+                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Maximum limit: 100.</p>",
                     "name": "fields",
                     "type": "string, list"
                 },
@@ -8898,7 +9074,7 @@
                 "na",
                 "ru"
             ],
-            "description": "<p>Method returns the list of available modules that can be installed on vehicles, such as engines, turrets, etc. At least one input filter parameter (module ID, type) is required to be indicated.</p>",
+            "description": "<p>Method returns list of available modules that can be installed on vehicles, such as engines, turrets, etc. At least one input filter parameter (module ID, type) is required to be indicated.</p>",
             "display_index": "ru",
             "fields": [
                 {
@@ -9276,7 +9452,7 @@
                     "type": "string"
                 },
                 {
-                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Max limit is 100.</p>",
+                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Maximum limit: 100.</p>",
                     "name": "fields",
                     "type": "string, list"
                 },
@@ -9301,17 +9477,17 @@
                     "type": "numeric"
                 },
                 {
-                    "description": "<p>Module ID. Max limit is 100.</p>",
+                    "description": "<p>Module ID. Maximum limit: 100.</p>",
                     "name": "module_id",
                     "type": "numeric, list"
                 },
                 {
-                    "description": "<p>Module type. Max limit is 100. Valid values:</p>\n<ul>\n<li>\"vehicleRadio\" &mdash; Radio </li>\n<li>\"vehicleEngine\" &mdash; Engines </li>\n<li>\"vehicleGun\" &mdash; Gun </li>\n<li>\"vehicleChassis\" &mdash; Suspension </li>\n<li>\"vehicleTurret\" &mdash; Turret</li>\n</ul>",
+                    "description": "<p>Module type. Maximum limit: 100. Valid values:</p>\n<ul>\n<li>\"vehicleRadio\" &mdash; Radio </li>\n<li>\"vehicleEngine\" &mdash; Engines </li>\n<li>\"vehicleGun\" &mdash; Gun </li>\n<li>\"vehicleChassis\" &mdash; Suspension </li>\n<li>\"vehicleTurret\" &mdash; Turret</li>\n</ul>",
                     "name": "type",
                     "type": "string, list"
                 },
                 {
-                    "description": "<p>Nation. Max limit is 100.</p>",
+                    "description": "<p>Nation. Maximum limit: 100.</p>",
                     "name": "nation",
                     "type": "string, list"
                 }
@@ -9648,7 +9824,7 @@
                     "type": "string"
                 },
                 {
-                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Max limit is 100.</p>",
+                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Maximum limit: 100.</p>",
                     "name": "fields",
                     "type": "string, list"
                 },
@@ -9658,22 +9834,22 @@
                     "type": "string"
                 },
                 {
-                    "description": "<p>Campaign ID. Max limit is 100.</p>",
+                    "description": "<p>Campaign ID. Maximum limit: 100.</p>",
                     "name": "campaign_id",
                     "type": "numeric, list"
                 },
                 {
-                    "description": "<p>Operation ID. Max limit is 100.</p>",
+                    "description": "<p>Operation ID. Maximum limit: 100.</p>",
                     "name": "operation_id",
                     "type": "numeric, list"
                 },
                 {
-                    "description": "<p>Mission branch ID. Max limit is 100.</p>",
+                    "description": "<p>Mission branch ID. Maximum limit: 100.</p>",
                     "name": "set_id",
                     "type": "numeric, list"
                 },
                 {
-                    "description": "<p>Mission tag. Max limit is 100.</p>",
+                    "description": "<p>Mission tag. Maximum limit: 100.</p>",
                     "name": "tag",
                     "type": "string, list"
                 }
@@ -9774,7 +9950,7 @@
                     "type": "string"
                 },
                 {
-                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Max limit is 100.</p>",
+                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Maximum limit: 100.</p>",
                     "name": "fields",
                     "type": "string, list"
                 },
@@ -9794,12 +9970,12 @@
                     "type": "numeric"
                 },
                 {
-                    "description": "<p>Type. Default is \"equipment, optionalDevice\". Max limit is 100. Valid values:</p>\n<ul>\n<li>\"equipment\" &mdash; Consumables </li>\n<li>\"optionalDevice\" &mdash; Equipment</li>\n</ul>",
+                    "description": "<p>Type. Default is \"equipment, optionalDevice\". Maximum limit: 100. Valid values:</p>\n<ul>\n<li>\"equipment\" &mdash; Consumables </li>\n<li>\"optionalDevice\" &mdash; Equipment</li>\n</ul>",
                     "name": "type",
                     "type": "string, list"
                 },
                 {
-                    "description": "<p>Equipment or consumables ID. Max limit is 100.</p>",
+                    "description": "<p>Equipment or consumables ID. Maximum limit: 100.</p>",
                     "name": "provision_id",
                     "type": "numeric, list"
                 }
@@ -9920,17 +10096,17 @@
                     "type": "string"
                 },
                 {
-                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Max limit is 100.</p>",
+                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Maximum limit: 100.</p>",
                     "name": "fields",
                     "type": "string, list"
                 },
                 {
-                    "description": "<p>Module ID. Max limit is 1000.</p>",
+                    "description": "<p>Module ID. Maximum limit: 1000.</p>",
                     "name": "module_id",
                     "type": "numeric, list"
                 },
                 {
-                    "description": "<p>Nation. Max limit is 100.</p>",
+                    "description": "<p>Nation. Maximum limit: 100.</p>",
                     "name": "nation",
                     "type": "string, list"
                 }
@@ -10051,17 +10227,17 @@
                     "type": "string"
                 },
                 {
-                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Max limit is 100.</p>",
+                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Maximum limit: 100.</p>",
                     "name": "fields",
                     "type": "string, list"
                 },
                 {
-                    "description": "<p>Module ID. Max limit is 1000.</p>",
+                    "description": "<p>Module ID. Maximum limit: 1000.</p>",
                     "name": "module_id",
                     "type": "numeric, list"
                 },
                 {
-                    "description": "<p>Nation. Max limit is 100.</p>",
+                    "description": "<p>Nation. Maximum limit: 100.</p>",
                     "name": "nation",
                     "type": "string, list"
                 }
@@ -10196,17 +10372,17 @@
                     "type": "string"
                 },
                 {
-                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Max limit is 100.</p>",
+                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Maximum limit: 100.</p>",
                     "name": "fields",
                     "type": "string, list"
                 },
                 {
-                    "description": "<p>Module ID. Max limit is 1000.</p>",
+                    "description": "<p>Module ID. Maximum limit: 1000.</p>",
                     "name": "module_id",
                     "type": "numeric, list"
                 },
                 {
-                    "description": "<p>Nation. Max limit is 100.</p>",
+                    "description": "<p>Nation. Maximum limit: 100.</p>",
                     "name": "nation",
                     "type": "string, list"
                 },
@@ -10744,12 +10920,12 @@
                     "type": "string"
                 },
                 {
-                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Max limit is 100.</p>",
+                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Maximum limit: 100.</p>",
                     "name": "fields",
                     "type": "string, list"
                 },
                 {
-                    "description": "<p>Vehicle ID. Max limit is 1000.</p>",
+                    "description": "<p>Vehicle ID. Maximum limit: 1000.</p>",
                     "name": "tank_id",
                     "required": true,
                     "type": "numeric, list"
@@ -10864,17 +11040,17 @@
                     "type": "string"
                 },
                 {
-                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Max limit is 100.</p>",
+                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Maximum limit: 100.</p>",
                     "name": "fields",
                     "type": "string, list"
                 },
                 {
-                    "description": "<p>Module ID. Max limit is 1000.</p>",
+                    "description": "<p>Module ID. Maximum limit: 1000.</p>",
                     "name": "module_id",
                     "type": "numeric, list"
                 },
                 {
-                    "description": "<p>Nation. Max limit is 100.</p>",
+                    "description": "<p>Nation. Maximum limit: 100.</p>",
                     "name": "nation",
                     "type": "string, list"
                 }
@@ -11009,7 +11185,7 @@
                     "type": "string"
                 },
                 {
-                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Max limit is 100.</p>",
+                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Maximum limit: 100.</p>",
                     "name": "fields",
                     "type": "string, list"
                 }
@@ -11151,17 +11327,17 @@
                     "type": "string"
                 },
                 {
-                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Max limit is 100.</p>",
+                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Maximum limit: 100.</p>",
                     "name": "fields",
                     "type": "string, list"
                 },
                 {
-                    "description": "<p>Module ID. Max limit is 1000.</p>",
+                    "description": "<p>Module ID. Maximum limit: 1000.</p>",
                     "name": "module_id",
                     "type": "numeric, list"
                 },
                 {
-                    "description": "<p>Nation. Max limit is 100.</p>",
+                    "description": "<p>Nation. Maximum limit: 100.</p>",
                     "name": "nation",
                     "type": "string, list"
                 }
@@ -11914,7 +12090,7 @@
                     "type": "string"
                 },
                 {
-                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Max limit is 100.</p>",
+                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Maximum limit: 100.</p>",
                     "name": "fields",
                     "type": "string, list"
                 },
@@ -12021,7 +12197,7 @@
                     "type": "string"
                 },
                 {
-                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Max limit is 100.</p>",
+                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Maximum limit: 100.</p>",
                     "name": "fields",
                     "type": "string, list"
                 },
@@ -13131,7 +13307,7 @@
                     "type": "string"
                 },
                 {
-                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Max limit is 100.</p>",
+                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Maximum limit: 100.</p>",
                     "name": "fields",
                     "type": "string, list"
                 },
@@ -13151,22 +13327,22 @@
                     "type": "numeric"
                 },
                 {
-                    "description": "<p>Vehicle ID. Max limit is 100.</p>",
+                    "description": "<p>Vehicle ID. Maximum limit: 100.</p>",
                     "name": "tank_id",
                     "type": "numeric, list"
                 },
                 {
-                    "description": "<p>Nation. Max limit is 100.</p>",
+                    "description": "<p>Nation. Maximum limit: 100.</p>",
                     "name": "nation",
                     "type": "string, list"
                 },
                 {
-                    "description": "<p>Vehicle type. Max limit is 100. Valid values:</p>\n<ul>\n<li>\"heavyTank\" &mdash; Heavy Tank </li>\n<li>\"AT-SPG\" &mdash; Tank Destroyer </li>\n<li>\"mediumTank\" &mdash; Medium Tank </li>\n<li>\"lightTank\" &mdash; Light Tank </li>\n<li>\"SPG\" &mdash; SPG</li>\n</ul>",
+                    "description": "<p>Vehicle type. Maximum limit: 100. Valid values:</p>\n<ul>\n<li>\"heavyTank\" &mdash; Heavy Tank </li>\n<li>\"AT-SPG\" &mdash; Tank Destroyer </li>\n<li>\"mediumTank\" &mdash; Medium Tank </li>\n<li>\"lightTank\" &mdash; Light Tank </li>\n<li>\"SPG\" &mdash; SPG</li>\n</ul>",
                     "name": "type",
                     "type": "string, list"
                 },
                 {
-                    "description": "<p>Tier. Max limit is 100.</p>",
+                    "description": "<p>Tier. Maximum limit: 100.</p>",
                     "name": "tier",
                     "type": "numeric, list"
                 }
@@ -13269,7 +13445,7 @@
                     "type": "string"
                 },
                 {
-                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Max limit is 100.</p>",
+                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Maximum limit: 100.</p>",
                     "name": "fields",
                     "type": "string, list"
                 },
@@ -13515,7 +13691,7 @@
                     "type": "string"
                 },
                 {
-                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Max limit is 100.</p>",
+                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Maximum limit: 100.</p>",
                     "name": "fields",
                     "type": "string, list"
                 },
@@ -13525,7 +13701,7 @@
                     "type": "string"
                 },
                 {
-                    "description": "<p>Clan ID. To get a clan ID, use the <a href=\"/reference/all/wgn/clans/list\">Clans</a> method. Max limit is 10.</p>",
+                    "description": "<p>Clan ID. To get a clan ID, use the <a href=\"/reference/all/wgn/clans/list\">Clans</a> method. Maximum limit: 10.</p>",
                     "name": "clan_id",
                     "required": true,
                     "type": "numeric, list"
@@ -13688,7 +13864,7 @@
                     "type": "string"
                 },
                 {
-                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Max limit is 100.</p>",
+                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Maximum limit: 100.</p>",
                     "name": "fields",
                     "type": "string, list"
                 },
@@ -13703,7 +13879,7 @@
                     "type": "string"
                 },
                 {
-                    "description": "<p>List of clan IDs. To get a clan ID, use the <a href=\"/reference/all/wgn/clans/list\">Clans</a> method. Max limit is 10.</p>",
+                    "description": "<p>List of clan IDs. To get a clan ID, use the <a href=\"/reference/all/wgn/clans/list\">Clans</a> method. Maximum limit: 10.</p>",
                     "name": "clan_id",
                     "required": true,
                     "type": "numeric, list"
@@ -13819,7 +13995,7 @@
                     "type": "numeric"
                 },
                 {
-                    "description": "<p>Change of Fame points since last turn calculation</p>",
+                    "description": "<p>Change of Fame Points since last turn calculation</p>",
                     "name": [
                         "events",
                         "fame_points_since_turn"
@@ -13827,7 +14003,7 @@
                     "type": "numeric"
                 },
                 {
-                    "description": "<p>Amount of Fame points needed to improve personal award</p>",
+                    "description": "<p>Amount of Fame Points needed to improve personal award</p>",
                     "name": [
                         "events",
                         "fame_points_to_improve_award"
@@ -13884,7 +14060,7 @@
                     "type": "string"
                 },
                 {
-                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Max limit is 100.</p>",
+                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Maximum limit: 100.</p>",
                     "name": "fields",
                     "type": "string, list"
                 },
@@ -13895,7 +14071,7 @@
                     "type": "string"
                 },
                 {
-                    "description": "<p>Front ID. To get a front ID, use the <a href=\"/reference/all/wot/globalmap/fronts\">Fronts</a> method. Max limit is 10.</p>",
+                    "description": "<p>Front ID. To get a front ID, use the <a href=\"/reference/all/wot/globalmap/fronts\">Fronts</a> method. Maximum limit: 10.</p>",
                     "name": "front_id",
                     "required": true,
                     "type": "string, list"
@@ -13999,7 +14175,7 @@
                     "type": "numeric"
                 },
                 {
-                    "description": "<p>Amount of Fame points needed to improve personal award</p>",
+                    "description": "<p>Amount of Fame Points needed to improve personal award</p>",
                     "name": [
                         "fame_points_to_improve_award"
                     ],
@@ -14050,7 +14226,7 @@
                     "type": "string"
                 },
                 {
-                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Max limit is 100.</p>",
+                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Maximum limit: 100.</p>",
                     "name": "fields",
                     "type": "string, list"
                 },
@@ -14078,12 +14254,12 @@
                     "type": "numeric"
                 },
                 {
-                    "description": "<p>Clans limit. Default is 20. Min value is 10. Max value is 100.</p>",
+                    "description": "<p>Clans limit. Default is 20. Min value is 10. Maximum value: 100.</p>",
                     "name": "limit",
                     "type": "numeric"
                 },
                 {
-                    "description": "<p>How many neighbors to show next to the account. Default is 3. Min value is 1. Max value is 99.</p>",
+                    "description": "<p>How many neighbors to show next to the account. Default is 3. Min value is 1. Maximum value: 99.</p>",
                     "name": "neighbours_count",
                     "type": "numeric"
                 }
@@ -14175,7 +14351,7 @@
                     "type": "numeric"
                 },
                 {
-                    "description": "<p>Amount of Fame points needed to improve personal award</p>",
+                    "description": "<p>Amount of Fame Points needed to improve personal award</p>",
                     "name": [
                         "fame_points_to_improve_award"
                     ],
@@ -14226,7 +14402,7 @@
                     "type": "string"
                 },
                 {
-                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Max limit is 100.</p>",
+                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Maximum limit: 100.</p>",
                     "name": "fields",
                     "type": "string, list"
                 },
@@ -14248,7 +14424,7 @@
                     "type": "string"
                 },
                 {
-                    "description": "<p>Accounts limit. Default is 20. Min value is 10. Max value is 100.</p>",
+                    "description": "<p>Accounts limit. Default is 20. Min value is 10. Maximum value: 100.</p>",
                     "name": "limit",
                     "type": "numeric"
                 },
@@ -14299,7 +14475,7 @@
                     "type": "block_header"
                 },
                 {
-                    "description": "<p>Battle Fame points</p>",
+                    "description": "<p>Battle Fame Points</p>",
                     "name": [
                         "events",
                         "battle_fame_points"
@@ -14331,7 +14507,7 @@
                     "type": "numeric"
                 },
                 {
-                    "description": "<p>Change of Fame points since last turn calculation</p>",
+                    "description": "<p>Change of Fame Points since last turn calculation</p>",
                     "name": [
                         "events",
                         "fame_points_since_turn"
@@ -14396,7 +14572,7 @@
                     "type": "string"
                 },
                 {
-                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Max limit is 100.</p>",
+                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Maximum limit: 100.</p>",
                     "name": "fields",
                     "type": "string, list"
                 },
@@ -14407,7 +14583,7 @@
                     "type": "string"
                 },
                 {
-                    "description": "<p>Front ID. To get a front ID, use the <a href=\"/reference/all/wot/globalmap/fronts\">Fronts</a> method. Max limit is 10.</p>",
+                    "description": "<p>Front ID. To get a front ID, use the <a href=\"/reference/all/wot/globalmap/fronts\">Fronts</a> method. Maximum limit: 10.</p>",
                     "name": "front_id",
                     "required": true,
                     "type": "string, list"
@@ -14457,7 +14633,7 @@
                     "type": "string"
                 },
                 {
-                    "description": "<p>Battle Fame points</p>",
+                    "description": "<p>Battle Fame Points</p>",
                     "name": [
                         "battle_fame_points"
                     ],
@@ -14478,7 +14654,7 @@
                     "type": "string"
                 },
                 {
-                    "description": "<p>Amount of Fame points needed to improve personal award</p>",
+                    "description": "<p>Amount of Fame Points needed to improve personal award</p>",
                     "name": [
                         "fame_points_to_improve_award"
                     ],
@@ -14543,7 +14719,7 @@
                     "type": "string"
                 },
                 {
-                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Max limit is 100.</p>",
+                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Maximum limit: 100.</p>",
                     "name": "fields",
                     "type": "string, list"
                 },
@@ -14553,7 +14729,7 @@
                     "type": "numeric"
                 },
                 {
-                    "description": "<p>Clans limit. Default is 10. Min value is 1. Max value is 100.</p>",
+                    "description": "<p>Clans limit. Default is 10. Min value is 1. Maximum value: 100.</p>",
                     "name": "limit",
                     "type": "numeric"
                 },
@@ -14608,7 +14784,7 @@
                     "type": "string"
                 },
                 {
-                    "description": "<p>Battle Fame points</p>",
+                    "description": "<p>Battle Fame Points</p>",
                     "name": [
                         "battle_fame_points"
                     ],
@@ -14629,7 +14805,7 @@
                     "type": "string"
                 },
                 {
-                    "description": "<p>Amount of Fame points needed to improve personal award</p>",
+                    "description": "<p>Amount of Fame Points needed to improve personal award</p>",
                     "name": [
                         "fame_points_to_improve_award"
                     ],
@@ -14694,7 +14870,7 @@
                     "type": "string"
                 },
                 {
-                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Max limit is 100.</p>",
+                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Maximum limit: 100.</p>",
                     "name": "fields",
                     "type": "string, list"
                 },
@@ -14717,7 +14893,7 @@
                     "type": "numeric"
                 },
                 {
-                    "description": "<p>Neighbors limit. Default is 10. Min value is 1. Max value is 99.</p>",
+                    "description": "<p>Neighbors limit. Default is 10. Min value is 1. Maximum value: 99.</p>",
                     "name": "limit",
                     "type": "numeric"
                 }
@@ -14831,7 +15007,7 @@
                     "type": "string"
                 },
                 {
-                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Max limit is 100.</p>",
+                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Maximum limit: 100.</p>",
                     "name": "fields",
                     "type": "string, list"
                 },
@@ -14851,7 +15027,7 @@
                     "type": "string"
                 },
                 {
-                    "description": "<p>Page limit. Default is 5. Min value is 1. Max value is 20.</p>",
+                    "description": "<p>Page limit. Default is 5. Min value is 1. Maximum value: 20.</p>",
                     "name": "limit",
                     "type": "numeric"
                 },
@@ -15064,7 +15240,7 @@
                     "type": "string"
                 },
                 {
-                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Max limit is 100.</p>",
+                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Maximum limit: 100.</p>",
                     "name": "fields",
                     "type": "string, list"
                 },
@@ -15084,7 +15260,7 @@
                     "type": "numeric"
                 },
                 {
-                    "description": "<p>List of Front IDs, to specify what fronts need to be returned. Max limit is 100.</p>",
+                    "description": "<p>List of Front IDs, to specify what fronts need to be returned. Maximum limit: 100.</p>",
                     "name": "front_id",
                     "type": "string, list"
                 }
@@ -15150,7 +15326,7 @@
                     "type": "string"
                 },
                 {
-                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Max limit is 100.</p>",
+                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Maximum limit: 100.</p>",
                     "name": "fields",
                     "type": "string, list"
                 }
@@ -15492,7 +15668,7 @@
                     "type": "string"
                 },
                 {
-                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Max limit is 100.</p>",
+                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Maximum limit: 100.</p>",
                     "name": "fields",
                     "type": "string, list"
                 },
@@ -15518,7 +15694,7 @@
                     "type": "string"
                 },
                 {
-                    "description": "<p>Search for provinces with the value of Prime Time start hour. Values available: from 0 to 23. Max value is 23.</p>",
+                    "description": "<p>Search for provinces with the value of Prime Time start hour. Values available: from 0 to 23. Maximum value: 23.</p>",
                     "name": "prime_hour",
                     "type": "numeric"
                 },
@@ -15548,7 +15724,7 @@
                     "type": "string"
                 },
                 {
-                    "description": "<p>Filter by the list of province IDs. Max limit is 100.</p>",
+                    "description": "<p>Filter by the list of province IDs. Maximum limit: 100.</p>",
                     "name": "province_id",
                     "type": "string, list"
                 }
@@ -15675,7 +15851,7 @@
                     "type": "string"
                 },
                 {
-                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Max limit is 100.</p>",
+                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Maximum limit: 100.</p>",
                     "name": "fields",
                     "type": "string, list"
                 },
@@ -15686,7 +15862,7 @@
                     "type": "string"
                 },
                 {
-                    "description": "<p>List of vehicle Tiers. Max limit is 100. Valid values:</p>\n<ul>\n<li>\"6\" &mdash; Vehicles of Tier 6 </li>\n<li>\"8\" &mdash; Vehicles of Tier 8 </li>\n<li>\"10\" &mdash; Vehicles of Tier 10</li>\n</ul>",
+                    "description": "<p>List of vehicle Tiers. Maximum limit: 100. Valid values:</p>\n<ul>\n<li>\"6\" &mdash; Vehicles of Tier 6 </li>\n<li>\"8\" &mdash; Vehicles of Tier 8 </li>\n<li>\"10\" &mdash; Vehicles of Tier 10</li>\n</ul>",
                     "name": "vehicle_level",
                     "required": true,
                     "type": "string, list"
@@ -15779,7 +15955,7 @@
                     "type": "numeric"
                 },
                 {
-                    "description": "<p>Victory points</p>",
+                    "description": "<p>Victory Points</p>",
                     "name": [
                         "seasons",
                         "victory_points"
@@ -15787,7 +15963,7 @@
                     "type": "numeric"
                 },
                 {
-                    "description": "<p>Change of Victory points since last turn calculation</p>",
+                    "description": "<p>Change of Victory Points since last turn calculation</p>",
                     "name": [
                         "seasons",
                         "victory_points_since_turn"
@@ -15812,7 +15988,7 @@
                     "type": "string"
                 },
                 {
-                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Max limit is 100.</p>",
+                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Maximum limit: 100.</p>",
                     "name": "fields",
                     "type": "string, list"
                 },
@@ -15823,7 +15999,7 @@
                     "type": "string"
                 },
                 {
-                    "description": "<p>List of vehicle Tiers. Max limit is 100. Valid values:</p>\n<ul>\n<li>\"6\" &mdash; Vehicles of Tier 6 </li>\n<li>\"8\" &mdash; Vehicles of Tier 8 </li>\n<li>\"10\" &mdash; Vehicles of Tier 10</li>\n</ul>",
+                    "description": "<p>List of vehicle Tiers. Maximum limit: 100. Valid values:</p>\n<ul>\n<li>\"6\" &mdash; Vehicles of Tier 6 </li>\n<li>\"8\" &mdash; Vehicles of Tier 8 </li>\n<li>\"10\" &mdash; Vehicles of Tier 10</li>\n</ul>",
                     "name": "vehicle_level",
                     "required": true,
                     "type": "string, list"
@@ -15922,14 +16098,14 @@
                     "type": "timestamp"
                 },
                 {
-                    "description": "<p>Victory points</p>",
+                    "description": "<p>Victory Points</p>",
                     "name": [
                         "victory_points"
                     ],
                     "type": "numeric"
                 },
                 {
-                    "description": "<p>Victory points to get the next award</p>",
+                    "description": "<p>Victory Points to get the next award</p>",
                     "name": [
                         "victory_points_to_next_award"
                     ],
@@ -15945,7 +16121,7 @@
                     "type": "string"
                 },
                 {
-                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Max limit is 100.</p>",
+                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Maximum limit: 100.</p>",
                     "name": "fields",
                     "type": "string, list"
                 },
@@ -15955,7 +16131,7 @@
                     "type": "numeric"
                 },
                 {
-                    "description": "<p>Clans limit. Default is 10. Min value is 1. Max value is 100.</p>",
+                    "description": "<p>Clans limit. Default is 10. Min value is 1. Maximum value: 100.</p>",
                     "name": "limit",
                     "type": "numeric"
                 },
@@ -16059,14 +16235,14 @@
                     "type": "timestamp"
                 },
                 {
-                    "description": "<p>Victory points</p>",
+                    "description": "<p>Victory Points</p>",
                     "name": [
                         "victory_points"
                     ],
                     "type": "numeric"
                 },
                 {
-                    "description": "<p>Victory points to get the next award</p>",
+                    "description": "<p>Victory Points to get the next award</p>",
                     "name": [
                         "victory_points_to_next_award"
                     ],
@@ -16082,7 +16258,7 @@
                     "type": "string"
                 },
                 {
-                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Max limit is 100.</p>",
+                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Maximum limit: 100.</p>",
                     "name": "fields",
                     "type": "string, list"
                 },
@@ -16105,7 +16281,7 @@
                     "type": "numeric"
                 },
                 {
-                    "description": "<p>Neighbors limit. Default is 10. Min value is 1. Max value is 99.</p>",
+                    "description": "<p>Neighbors limit. Default is 10. Min value is 1. Maximum value: 99.</p>",
                     "name": "limit",
                     "type": "numeric"
                 }
@@ -16219,7 +16395,7 @@
                     "type": "string"
                 },
                 {
-                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Max limit is 100.</p>",
+                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Maximum limit: 100.</p>",
                     "name": "fields",
                     "type": "string, list"
                 },
@@ -16239,7 +16415,7 @@
                     "type": "string"
                 },
                 {
-                    "description": "<p>Page limit. Default is 5. Min value is 1. Max value is 20.</p>",
+                    "description": "<p>Page limit. Default is 5. Min value is 1. Maximum value: 20.</p>",
                     "name": "limit",
                     "type": "numeric"
                 },
@@ -16821,7 +16997,7 @@
                     "type": "string"
                 },
                 {
-                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Max limit is 100.</p>",
+                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Maximum limit: 100.</p>",
                     "name": "fields",
                     "type": "string, list"
                 },
@@ -16842,7 +17018,7 @@
                     "type": "timestamp/date"
                 },
                 {
-                    "description": "<p>IDs of player accounts. Max limit is 100.</p>",
+                    "description": "<p>IDs of player accounts. Maximum limit: 100.</p>",
                     "name": "account_id",
                     "required": true,
                     "type": "numeric, list"
@@ -16901,7 +17077,7 @@
                     "type": "string"
                 },
                 {
-                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Max limit is 100.</p>",
+                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Maximum limit: 100.</p>",
                     "name": "fields",
                     "type": "string, list"
                 },
@@ -16917,7 +17093,7 @@
                     "type": "string"
                 },
                 {
-                    "description": "<p>Player account ID. Max limit is 100.</p>",
+                    "description": "<p>Player account ID. Maximum limit: 100.</p>",
                     "name": "account_id",
                     "type": "numeric, list"
                 }
@@ -17492,7 +17668,7 @@
                     "type": "string"
                 },
                 {
-                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Max limit is 100.</p>",
+                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Maximum limit: 100.</p>",
                     "name": "fields",
                     "type": "string, list"
                 },
@@ -17525,7 +17701,7 @@
                     "type": "string"
                 },
                 {
-                    "description": "<p>Number of returned entries. Default is 5. Min value is 1. Max value is 50.</p>",
+                    "description": "<p>Number of returned entries. Default is 5. Min value is 1. Maximum value: 50.</p>",
                     "name": "limit",
                     "type": "numeric"
                 }
@@ -17551,7 +17727,7 @@
                 "ru"
             ],
             "deprecated": true,
-            "description": "<p>Method returns the list of top players by specified parameter.</p>",
+            "description": "<p>Method returns list of top players by specified parameter.</p>",
             "display_index": "ru",
             "errors": [
                 {
@@ -18100,7 +18276,7 @@
                     "type": "string"
                 },
                 {
-                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Max limit is 100.</p>",
+                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Maximum limit: 100.</p>",
                     "name": "fields",
                     "type": "string, list"
                 },
@@ -18127,7 +18303,7 @@
                     "type": "string"
                 },
                 {
-                    "description": "<p>Number of returned entries. Default is 10. Min value is 1. Max value is 1000.</p>",
+                    "description": "<p>Number of returned entries. Default is 10. Min value is 1. Maximum value: 1000.</p>",
                     "name": "limit",
                     "type": "numeric"
                 },
@@ -18204,7 +18380,7 @@
                     "type": "string"
                 },
                 {
-                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Max limit is 100.</p>",
+                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Maximum limit: 100.</p>",
                     "name": "fields",
                     "type": "string, list"
                 },
@@ -18611,7 +18787,7 @@
                     "type": "string"
                 },
                 {
-                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Max limit is 100.</p>",
+                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Maximum limit: 100.</p>",
                     "name": "fields",
                     "type": "string, list"
                 },
@@ -18621,7 +18797,7 @@
                     "type": "string"
                 },
                 {
-                    "description": "<p>Clan ID. To get a clan ID, use the <a href=\"/reference/all/wgn/clans/list\">Clans</a> method. Max limit is 10.</p>",
+                    "description": "<p>Clan ID. To get a clan ID, use the <a href=\"/reference/all/wgn/clans/list\">Clans</a> method. Maximum limit: 10.</p>",
                     "name": "clan_id",
                     "required": true,
                     "type": "numeric, list"
@@ -18630,6 +18806,185 @@
             "realm": "ru",
             "section": "stronghold",
             "url": "stronghold/claninfo"
+        },
+        "clanreserves": {
+            "allowed_http_methods": [
+                "GET",
+                "POST"
+            ],
+            "allowed_protocols": [
+                "http",
+                "https"
+            ],
+            "api_url": "api.worldoftanks.ru/wot/",
+            "available_display_indices": [
+                "asia",
+                "eu",
+                "na",
+                "ru"
+            ],
+            "description": "<p>Method returns information about available Reserves and their current status.</p>",
+            "display_index": "ru",
+            "fields": [
+                {
+                    "description": "<p>Reserve efficiency type</p>",
+                    "name": [
+                        "bonus_type"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Indicates if the Reserve is a One-Time-Effect Reserve</p>",
+                    "name": [
+                        "disposable"
+                    ],
+                    "type": "boolean"
+                },
+                {
+                    "description": "<p>URL to icon</p>",
+                    "name": [
+                        "icon"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Reserve name</p>",
+                    "name": [
+                        "name"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Reserve type</p>",
+                    "name": [
+                        "type"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "type": "empty_line"
+                },
+                {
+                    "description": "<p>Available clan Reserves and their status</p>",
+                    "name": [
+                        "in_stock"
+                    ],
+                    "type": "block_header"
+                },
+                {
+                    "description": "<p>Duration of clan Reserves of each level</p>",
+                    "name": [
+                        "in_stock",
+                        "action_time"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Activation time of clan Reserves of each level</p>",
+                    "name": [
+                        "in_stock",
+                        "activated_at"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Expiration time of clan Reserves of each level</p>",
+                    "name": [
+                        "in_stock",
+                        "active_till"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Number of clan Reserves of each level</p>",
+                    "name": [
+                        "in_stock",
+                        "amount"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Level of available clan Reserves</p>",
+                    "name": [
+                        "in_stock",
+                        "level"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Status of clan Reserves of each level</p>",
+                    "name": [
+                        "in_stock",
+                        "status"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Indicates if the Reserve is only for Tier X vehicles</p>",
+                    "name": [
+                        "in_stock",
+                        "x_level_only"
+                    ],
+                    "type": "boolean"
+                },
+                {
+                    "type": "empty_line"
+                },
+                {
+                    "description": "<p>Reserve efficiencies</p>",
+                    "name": [
+                        "in_stock",
+                        "bonus_values"
+                    ],
+                    "type": "block_header"
+                },
+                {
+                    "description": "<p>Battle type</p>",
+                    "name": [
+                        "in_stock",
+                        "bonus_values",
+                        "battle_type"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Reserve efficiency for each battle type</p>",
+                    "name": [
+                        "in_stock",
+                        "bonus_values",
+                        "value"
+                    ],
+                    "type": "float"
+                }
+            ],
+            "name": "Clan Reserves",
+            "parameters": [
+                {
+                    "description": "<p>Application ID</p>",
+                    "name": "application_id",
+                    "required": true,
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Maximum limit: 100.</p>",
+                    "name": "fields",
+                    "type": "string, list"
+                },
+                {
+                    "description": "<p><a href=\"/documentation/guide/principles/#access_token\">Access token</a> for the private data of a user's account; can be received via the authorization method; valid within a stated time period</p>",
+                    "name": "access_token",
+                    "required": true,
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Localization language. Default is \"ru\". Valid values:</p>\n<ul>\n<li>\"ru\" &mdash; Russian (by default)</li>\n<li>\"be\" &mdash; Belarusian </li>\n<li>\"uk\" &mdash; Ukrainian </li>\n<li>\"kk\" &mdash; Kazakh</li>\n</ul>",
+                    "name": "language",
+                    "type": "string"
+                }
+            ],
+            "realm": "ru",
+            "section": "stronghold",
+            "url": "stronghold/clanreserves"
         }
     },
     "tanks": {
@@ -18702,7 +19057,7 @@
                     "type": "string"
                 },
                 {
-                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Max limit is 100.</p>",
+                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Maximum limit: 100.</p>",
                     "name": "fields",
                     "type": "string, list"
                 },
@@ -18718,7 +19073,7 @@
                     "type": "numeric"
                 },
                 {
-                    "description": "<p>Player's vehicle ID. Max limit is 100.</p>",
+                    "description": "<p>Player's vehicle ID. Maximum limit: 100.</p>",
                     "name": "tank_id",
                     "type": "numeric, list"
                 },
@@ -19795,7 +20150,7 @@
                     "type": "numeric"
                 },
                 {
-                    "description": "<p>Maximum Victory points earned in Fallout</p>",
+                    "description": "<p>Maximum Victory Points earned in Fallout</p>",
                     "name": [
                         "fallout",
                         "max_win_points"
@@ -19891,7 +20246,7 @@
                     "type": "float"
                 },
                 {
-                    "description": "<p>Victory points</p>",
+                    "description": "<p>Victory Points</p>",
                     "name": [
                         "fallout",
                         "win_points"
@@ -20354,6 +20709,7 @@
                     "type": "empty_line"
                 },
                 {
+                    "deprecated": true,
                     "description": "<p>Statistics in Ranked Battles.</p>\n<p><strong>An extra field.</strong></p>",
                     "name": [
                         "ranked"
@@ -20532,6 +20888,192 @@
                     "description": "<p>Total experience</p>",
                     "name": [
                         "ranked",
+                        "xp"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "type": "empty_line"
+                },
+                {
+                    "description": "<p>Statistics in Ranked Battles.</p>\n<p><strong>An extra field.</strong></p>",
+                    "name": [
+                        "ranked_battles"
+                    ],
+                    "type": "block_header"
+                },
+                {
+                    "description": "<p>Average experience per battle</p>",
+                    "name": [
+                        "ranked_battles",
+                        "battle_avg_xp"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Battles fought</p>",
+                    "name": [
+                        "ranked_battles",
+                        "battles"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Number of battles on vehicles that cause the stun effect</p>",
+                    "name": [
+                        "ranked_battles",
+                        "battles_on_stunning_vehicles"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Base capture points</p>",
+                    "name": [
+                        "ranked_battles",
+                        "capture_points"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Damage caused</p>",
+                    "name": [
+                        "ranked_battles",
+                        "damage_dealt"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Damage received</p>",
+                    "name": [
+                        "ranked_battles",
+                        "damage_received"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Draws</p>",
+                    "name": [
+                        "ranked_battles",
+                        "draws"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Base defense points</p>",
+                    "name": [
+                        "ranked_battles",
+                        "dropped_capture_points"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Vehicles destroyed</p>",
+                    "name": [
+                        "ranked_battles",
+                        "frags"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Hits</p>",
+                    "name": [
+                        "ranked_battles",
+                        "hits"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Hit ratio</p>",
+                    "name": [
+                        "ranked_battles",
+                        "hits_percents"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Defeats</p>",
+                    "name": [
+                        "ranked_battles",
+                        "losses"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Maximum Damage caused per battle</p>",
+                    "name": [
+                        "ranked_battles",
+                        "max_damage"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Maximum destroyed in battle</p>",
+                    "name": [
+                        "ranked_battles",
+                        "max_frags"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Maximum experience per battle</p>",
+                    "name": [
+                        "ranked_battles",
+                        "max_xp"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Shots fired</p>",
+                    "name": [
+                        "ranked_battles",
+                        "shots"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Enemies spotted</p>",
+                    "name": [
+                        "ranked_battles",
+                        "spotted"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Damage to enemy vehicles stunned by you</p>",
+                    "name": [
+                        "ranked_battles",
+                        "stun_assisted_damage"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Number of times an enemy was stunned by you</p>",
+                    "name": [
+                        "ranked_battles",
+                        "stun_number"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Battles survived</p>",
+                    "name": [
+                        "ranked_battles",
+                        "survived_battles"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Victories</p>",
+                    "name": [
+                        "ranked_battles",
+                        "wins"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Total experience</p>",
+                    "name": [
+                        "ranked_battles",
                         "xp"
                     ],
                     "type": "numeric"
@@ -21407,7 +21949,7 @@
                     "type": "string"
                 },
                 {
-                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Max limit is 100.</p>",
+                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Maximum limit: 100.</p>",
                     "name": "fields",
                     "type": "string, list"
                 },
@@ -21417,7 +21959,7 @@
                     "type": "string"
                 },
                 {
-                    "description": "<p>Extra fields that will be added to the response. Valid values:</p>\n<ul>\n<li>\"epic\" </li>\n<li>\"fallout\" </li>\n<li>\"random\" </li>\n<li>\"ranked\"</li>\n</ul>",
+                    "description": "<p>Extra fields that will be added to the response. Valid values:</p>\n<ul>\n<li>\"epic\" </li>\n<li>\"fallout\" </li>\n<li>\"random\" </li>\n<li>\"ranked\" </li>\n<li>\"ranked_battles\"</li>\n</ul>",
                     "name": "extra",
                     "type": "string, list"
                 },
@@ -21428,7 +21970,7 @@
                     "type": "numeric"
                 },
                 {
-                    "description": "<p>Player's vehicle ID. Max limit is 100.</p>",
+                    "description": "<p>Player's vehicle ID. Maximum limit: 100.</p>",
                     "name": "tank_id",
                     "type": "numeric, list"
                 },

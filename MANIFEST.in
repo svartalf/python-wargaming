@@ -1,4 +1,7 @@
-include README.md requirements.txt requirements_test.txt
+# Include the license file
+include LICENSE.txt
+
+include README.rst requirements.txt requirements_test.txt
 recursive-include wargaming *.py
 prune tests
 global-exclude . *__pycache__* *.pyc

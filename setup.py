@@ -5,6 +5,8 @@ from codecs import open
 from setuptools import setup, find_packages
 from setuptools.command.test import test as TestCommand
 
+from wargaming.version import VERSION
+
 class PyTest(TestCommand):
 
     def finalize_options(self):
@@ -36,12 +38,13 @@ with open(os.path.join(here, 'README.rst'), encoding='utf-8') as f:
 
 setup(
     name='wargaming',
-    version='2018.1.1',
+    version='%s.%s.%s' % VERSION,
     author='svartalf',
     author_email='self@svartalf.info',
     url='https://github.com/svartalf/python-wargaming',
     description='API library for Wargaming.net',
     long_description=long_description,
+    long_description_content_type='text/x-rst',
     license='MIT',
     packages=find_packages(exclude=['tests', 'docs']),
     package_data={'wargaming': ['schema/*.json']},
@@ -61,5 +64,6 @@ setup(
         'Programming Language :: Python :: Implementation :: PyPy',
         'Topic :: Software Development :: Libraries',
     ],
+    keywords='wargaming wot',
     zip_safe=False,
 )
