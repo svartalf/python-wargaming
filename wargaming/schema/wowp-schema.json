@@ -82,12 +82,12 @@
                     "type": "string"
                 },
                 {
-                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Max limit is 100.</p>",
+                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Maximum limit: 100.</p>",
                     "name": "fields",
                     "type": "string, list"
                 },
                 {
-                    "description": "<p>Player account ID. Max limit is 100.</p>",
+                    "description": "<p>Player account ID. Maximum limit: 100.</p>",
                     "name": "account_id",
                     "required": true,
                     "type": "numeric, list"
@@ -749,7 +749,7 @@
                     "type": "string"
                 },
                 {
-                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Max limit is 100.</p>",
+                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Maximum limit: 100.</p>",
                     "name": "fields",
                     "type": "string, list"
                 },
@@ -759,7 +759,7 @@
                     "type": "string"
                 },
                 {
-                    "description": "<p>Player account ID. Max limit is 100.</p>",
+                    "description": "<p>Player account ID. Maximum limit: 100.</p>",
                     "name": "account_id",
                     "required": true,
                     "type": "numeric, list"
@@ -833,7 +833,7 @@
                     "type": "string"
                 },
                 {
-                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Max limit is 100.</p>",
+                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Maximum limit: 100.</p>",
                     "name": "fields",
                     "type": "string, list"
                 },
@@ -857,6 +857,512 @@
             "realm": "ru",
             "section": "account",
             "url": "account/list"
+        }
+    },
+    "clans": {
+        "accountinfo": {
+            "allowed_http_methods": [
+                "GET",
+                "POST"
+            ],
+            "allowed_protocols": [
+                "http",
+                "https"
+            ],
+            "api_url": "api.worldofwarplanes.ru/wowp/",
+            "available_display_indices": [
+                "eu",
+                "na",
+                "ru"
+            ],
+            "description": "<p>Method returns player clan data. Player clan data exist only for accounts, that were participating in clan activities: sent join requests, were clan members etc.</p>",
+            "display_index": "ru",
+            "fields": [
+                {
+                    "description": "<p>User ID</p>",
+                    "name": [
+                        "account_id"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Player name</p>",
+                    "name": [
+                        "account_name"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Clan ID</p>",
+                    "name": [
+                        "clan_id"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Date when player joined clan</p>",
+                    "name": [
+                        "joined_at"
+                    ],
+                    "type": "timestamp"
+                },
+                {
+                    "description": "<p>Technical position name</p>",
+                    "name": [
+                        "role"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "type": "empty_line"
+                },
+                {
+                    "description": "<p>Short info about clan.</p>\n<p><strong>An extra field.</strong></p>",
+                    "name": [
+                        "clan"
+                    ],
+                    "type": "block_header"
+                },
+                {
+                    "description": "<p>Clan ID</p>",
+                    "name": [
+                        "clan",
+                        "clan_id"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Clan creation date</p>",
+                    "name": [
+                        "clan",
+                        "created_at"
+                    ],
+                    "type": "timestamp"
+                },
+                {
+                    "description": "<p>Number of clan members</p>",
+                    "name": [
+                        "clan",
+                        "members_count"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Clan Name</p>",
+                    "name": [
+                        "clan",
+                        "name"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Clan Tag</p>",
+                    "name": [
+                        "clan",
+                        "tag"
+                    ],
+                    "type": "string"
+                }
+            ],
+            "name": "Account clan profile",
+            "parameters": [
+                {
+                    "description": "<p>Application ID</p>",
+                    "name": "application_id",
+                    "required": true,
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Localization language. Default is \"ru\". Valid values:</p>\n<ul>\n<li>\"en\" &mdash; English </li>\n<li>\"ru\" &mdash; \u0420\u0443\u0441\u0441\u043a\u0438\u0439 (by default)</li>\n<li>\"pl\" &mdash; Polski </li>\n<li>\"de\" &mdash; Deutsch </li>\n<li>\"fr\" &mdash; Fran\u00e7ais </li>\n<li>\"es\" &mdash; Espa\u00f1ol </li>\n<li>\"zh-cn\" &mdash; \u7b80\u4f53\u4e2d\u6587 </li>\n<li>\"tr\" &mdash; T\u00fcrk\u00e7e </li>\n<li>\"cs\" &mdash; \u010ce\u0161tina </li>\n<li>\"th\" &mdash; \u0e44\u0e17\u0e22 </li>\n<li>\"vi\" &mdash; Ti\u1ebfng Vi\u1ec7t </li>\n<li>\"ko\" &mdash; \ud55c\uad6d\uc5b4</li>\n</ul>",
+                    "name": "language",
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Maximum limit: 100.</p>",
+                    "name": "fields",
+                    "type": "string, list"
+                },
+                {
+                    "description": "<p>Extra fields that will be added to the response. Valid values:</p>\n<ul>\n<li>\"clan\"</li>\n</ul>",
+                    "name": "extra",
+                    "type": "string, list"
+                },
+                {
+                    "description": "<p>Account ID. Maximum limit: 100. Min value is 1.</p>",
+                    "name": "account_id",
+                    "required": true,
+                    "type": "numeric, list"
+                }
+            ],
+            "realm": "ru",
+            "section": "clans",
+            "url": "clans/accountinfo"
+        },
+        "glossary": {
+            "allowed_http_methods": [
+                "GET",
+                "POST"
+            ],
+            "allowed_protocols": [
+                "http",
+                "https"
+            ],
+            "api_url": "api.worldofwarplanes.ru/wowp/",
+            "available_display_indices": [
+                "eu",
+                "na",
+                "ru"
+            ],
+            "description": "<p>Method returns information on clan entities.</p>",
+            "display_index": "ru",
+            "fields": [
+                {
+                    "description": "<p>Available clan positions</p>",
+                    "name": [
+                        "clans_roles"
+                    ],
+                    "type": "associative array"
+                },
+                {
+                    "type": "empty_line"
+                },
+                {
+                    "description": "<p>Clan settings</p>",
+                    "name": [
+                        "settings"
+                    ],
+                    "type": "block_header"
+                },
+                {
+                    "description": "<p>Maximum clan members</p>",
+                    "name": [
+                        "settings",
+                        "max_members_count"
+                    ],
+                    "type": "numeric"
+                }
+            ],
+            "name": "Clan glossary",
+            "parameters": [
+                {
+                    "description": "<p>Application ID</p>",
+                    "name": "application_id",
+                    "required": true,
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Localization language. Default is \"ru\". Valid values:</p>\n<ul>\n<li>\"en\" &mdash; English </li>\n<li>\"ru\" &mdash; \u0420\u0443\u0441\u0441\u043a\u0438\u0439 (by default)</li>\n<li>\"pl\" &mdash; Polski </li>\n<li>\"de\" &mdash; Deutsch </li>\n<li>\"fr\" &mdash; Fran\u00e7ais </li>\n<li>\"es\" &mdash; Espa\u00f1ol </li>\n<li>\"zh-cn\" &mdash; \u7b80\u4f53\u4e2d\u6587 </li>\n<li>\"tr\" &mdash; T\u00fcrk\u00e7e </li>\n<li>\"cs\" &mdash; \u010ce\u0161tina </li>\n<li>\"th\" &mdash; \u0e44\u0e17\u0e22 </li>\n<li>\"vi\" &mdash; Ti\u1ebfng Vi\u1ec7t </li>\n<li>\"ko\" &mdash; \ud55c\uad6d\uc5b4</li>\n</ul>",
+                    "name": "language",
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Maximum limit: 100.</p>",
+                    "name": "fields",
+                    "type": "string, list"
+                }
+            ],
+            "realm": "ru",
+            "section": "clans",
+            "url": "clans/glossary"
+        },
+        "info": {
+            "allowed_http_methods": [
+                "GET",
+                "POST"
+            ],
+            "allowed_protocols": [
+                "http",
+                "https"
+            ],
+            "api_url": "api.worldofwarplanes.ru/wowp/",
+            "available_display_indices": [
+                "eu",
+                "na",
+                "ru"
+            ],
+            "description": "<p>Method returns detailed clan information.</p>",
+            "display_index": "ru",
+            "fields": [
+                {
+                    "description": "<p>Clan ID</p>",
+                    "name": [
+                        "clan_id"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Clan creation date</p>",
+                    "name": [
+                        "created_at"
+                    ],
+                    "type": "timestamp"
+                },
+                {
+                    "description": "<p>Clan creator ID</p>",
+                    "name": [
+                        "creator_id"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Clan creator's name</p>",
+                    "name": [
+                        "creator_name"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Clan Description</p>",
+                    "name": [
+                        "description"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Clan has been deleted. The deleted clan data contains valid values for the following fields only: <strong>clan_id</strong>, <strong>is_clan_disbanded</strong>, <strong>updated_at</strong>.</p>",
+                    "name": [
+                        "is_clan_disbanded"
+                    ],
+                    "type": "boolean"
+                },
+                {
+                    "description": "<p>Commander ID</p>",
+                    "name": [
+                        "leader_id"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Commander's name</p>",
+                    "name": [
+                        "leader_name"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Number of clan members</p>",
+                    "name": [
+                        "members_count"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>List of clan players' IDs</p>",
+                    "name": [
+                        "members_ids"
+                    ],
+                    "type": "list of integers"
+                },
+                {
+                    "description": "<p>Clan Name</p>",
+                    "name": [
+                        "name"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Old clan name</p>",
+                    "name": [
+                        "old_name"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Old clan tag</p>",
+                    "name": [
+                        "old_tag"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Time (UTC) when clan name was changed</p>",
+                    "name": [
+                        "renamed_at"
+                    ],
+                    "type": "timestamp"
+                },
+                {
+                    "description": "<p>Clan Tag</p>",
+                    "name": [
+                        "tag"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Time when clan details were updated</p>",
+                    "name": [
+                        "updated_at"
+                    ],
+                    "type": "timestamp"
+                },
+                {
+                    "type": "empty_line"
+                },
+                {
+                    "description": "<p>Clan members.</p>\n<p><strong>An extra field.</strong></p>",
+                    "name": [
+                        "members"
+                    ],
+                    "type": "block_header"
+                },
+                {
+                    "description": "<p>User ID</p>",
+                    "name": [
+                        "members",
+                        "account_id"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Player name</p>",
+                    "name": [
+                        "members",
+                        "account_name"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Date when player joined clan</p>",
+                    "name": [
+                        "members",
+                        "joined_at"
+                    ],
+                    "type": "timestamp"
+                },
+                {
+                    "description": "<p>Technical position name</p>",
+                    "name": [
+                        "members",
+                        "role"
+                    ],
+                    "type": "string"
+                }
+            ],
+            "name": "Clan details",
+            "parameters": [
+                {
+                    "description": "<p>Application ID</p>",
+                    "name": "application_id",
+                    "required": true,
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Localization language. Default is \"ru\". Valid values:</p>\n<ul>\n<li>\"en\" &mdash; English </li>\n<li>\"ru\" &mdash; \u0420\u0443\u0441\u0441\u043a\u0438\u0439 (by default)</li>\n<li>\"pl\" &mdash; Polski </li>\n<li>\"de\" &mdash; Deutsch </li>\n<li>\"fr\" &mdash; Fran\u00e7ais </li>\n<li>\"es\" &mdash; Espa\u00f1ol </li>\n<li>\"zh-cn\" &mdash; \u7b80\u4f53\u4e2d\u6587 </li>\n<li>\"tr\" &mdash; T\u00fcrk\u00e7e </li>\n<li>\"cs\" &mdash; \u010ce\u0161tina </li>\n<li>\"th\" &mdash; \u0e44\u0e17\u0e22 </li>\n<li>\"vi\" &mdash; Ti\u1ebfng Vi\u1ec7t </li>\n<li>\"ko\" &mdash; \ud55c\uad6d\uc5b4</li>\n</ul>",
+                    "name": "language",
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Maximum limit: 100.</p>",
+                    "name": "fields",
+                    "type": "string, list"
+                },
+                {
+                    "description": "<p>Extra fields that will be added to the response. Valid values:</p>\n<ul>\n<li>\"members\"</li>\n</ul>",
+                    "name": "extra",
+                    "type": "string, list"
+                },
+                {
+                    "description": "<p>Clan ID. Maximum limit: 100. Min value is 1.</p>",
+                    "name": "clan_id",
+                    "required": true,
+                    "type": "numeric, list"
+                }
+            ],
+            "realm": "ru",
+            "section": "clans",
+            "url": "clans/info"
+        },
+        "list": {
+            "allowed_http_methods": [
+                "GET",
+                "POST"
+            ],
+            "allowed_protocols": [
+                "http",
+                "https"
+            ],
+            "api_url": "api.worldofwarplanes.ru/wowp/",
+            "available_display_indices": [
+                "eu",
+                "na",
+                "ru"
+            ],
+            "description": "<p>Method searches through clans and sorts them in a specified order.</p>",
+            "display_index": "ru",
+            "fields": [
+                {
+                    "description": "<p>Clan ID</p>",
+                    "name": [
+                        "clan_id"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Clan creation date</p>",
+                    "name": [
+                        "created_at"
+                    ],
+                    "type": "timestamp"
+                },
+                {
+                    "description": "<p>Number of clan members</p>",
+                    "name": [
+                        "members_count"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Clan Name</p>",
+                    "name": [
+                        "name"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Clan Tag</p>",
+                    "name": [
+                        "tag"
+                    ],
+                    "type": "string"
+                }
+            ],
+            "name": "Clans",
+            "parameters": [
+                {
+                    "description": "<p>Application ID</p>",
+                    "name": "application_id",
+                    "required": true,
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Localization language. Default is \"ru\". Valid values:</p>\n<ul>\n<li>\"en\" &mdash; English </li>\n<li>\"ru\" &mdash; \u0420\u0443\u0441\u0441\u043a\u0438\u0439 (by default)</li>\n<li>\"pl\" &mdash; Polski </li>\n<li>\"de\" &mdash; Deutsch </li>\n<li>\"fr\" &mdash; Fran\u00e7ais </li>\n<li>\"es\" &mdash; Espa\u00f1ol </li>\n<li>\"zh-cn\" &mdash; \u7b80\u4f53\u4e2d\u6587 </li>\n<li>\"tr\" &mdash; T\u00fcrk\u00e7e </li>\n<li>\"cs\" &mdash; \u010ce\u0161tina </li>\n<li>\"th\" &mdash; \u0e44\u0e17\u0e22 </li>\n<li>\"vi\" &mdash; Ti\u1ebfng Vi\u1ec7t </li>\n<li>\"ko\" &mdash; \ud55c\uad6d\uc5b4</li>\n</ul>",
+                    "name": "language",
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Maximum limit: 100.</p>",
+                    "name": "fields",
+                    "type": "string, list"
+                },
+                {
+                    "description": "<p>Part of name or tag by which clan is searched for. Minimum 2 characters</p>",
+                    "name": "search",
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Number of returned entries (fewer can be returned, but not more than 100). If the limit sent exceeds 100, a limit of 100 is applied (by default).</p>",
+                    "name": "limit",
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Page number. Default is 1. Min value is 1.</p>",
+                    "name": "page_no",
+                    "type": "numeric"
+                }
+            ],
+            "realm": "ru",
+            "section": "clans",
+            "url": "clans/list"
         }
     },
     "encyclopedia": {
@@ -965,7 +1471,7 @@
                     "type": "string"
                 },
                 {
-                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Max limit is 100.</p>",
+                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Maximum limit: 100.</p>",
                     "name": "fields",
                     "type": "string, list"
                 }
@@ -1365,12 +1871,12 @@
                     "type": "string"
                 },
                 {
-                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Max limit is 100.</p>",
+                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Maximum limit: 100.</p>",
                     "name": "fields",
                     "type": "string, list"
                 },
                 {
-                    "description": "<p>Aircraft ID. Max limit is 1000.</p>",
+                    "description": "<p>Aircraft ID. Maximum limit: 1000.</p>",
                     "name": "plane_id",
                     "required": true,
                     "type": "numeric, list"
@@ -2113,18 +2619,18 @@
                     "type": "string"
                 },
                 {
-                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Max limit is 100.</p>",
+                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Maximum limit: 100.</p>",
                     "name": "fields",
                     "type": "string, list"
                 },
                 {
-                    "description": "<p>Aircraft ID. Max limit is 1000.</p>",
+                    "description": "<p>Aircraft ID. Maximum limit: 1000.</p>",
                     "name": "plane_id",
                     "required": true,
                     "type": "numeric, list"
                 },
                 {
-                    "description": "<p>Configuration. Default is \"engine, bomb, rocket, turret, gun, construction\". Max limit is 100. Valid values:</p>\n<ul>\n<li>\"engine\" &mdash; engine </li>\n<li>\"bomb\" &mdash; bomb </li>\n<li>\"rocket\" &mdash; rocket </li>\n<li>\"turret\" &mdash; rear gun </li>\n<li>\"gun\" &mdash; autocannon </li>\n<li>\"construction\" &mdash; airframe</li>\n</ul>",
+                    "description": "<p>Configuration. Default is \"engine, bomb, rocket, turret, turretfront, turretupper, turretlower, gun, construction\". Maximum limit: 100. Valid values:</p>\n<ul>\n<li>\"engine\" &mdash; engine </li>\n<li>\"bomb\" &mdash; bomb </li>\n<li>\"rocket\" &mdash; rocket </li>\n<li>\"turret\" &mdash; rear gun </li>\n<li>\"turretfront\" &mdash; \u041f\u0435\u0440\u0435\u0434\u043d\u044f\u044f \u0442\u0443\u0440\u0435\u043b\u044c </li>\n<li>\"turretupper\" &mdash; \u0412\u0435\u0440\u0445\u043d\u044f\u044f \u0442\u0443\u0440\u0435\u043b\u044c </li>\n<li>\"turretlower\" &mdash; \u041d\u0438\u0436\u043d\u044f\u044f \u0442\u0443\u0440\u0435\u043b\u044c </li>\n<li>\"gun\" &mdash; autocannon </li>\n<li>\"construction\" &mdash; airframe</li>\n</ul>",
                     "name": "type",
                     "type": "string, list"
                 }
@@ -2263,17 +2769,17 @@
                     "type": "string"
                 },
                 {
-                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Max limit is 100.</p>",
+                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Maximum limit: 100.</p>",
                     "name": "fields",
                     "type": "string, list"
                 },
                 {
-                    "description": "<p>Type. Max limit is 100. Valid values:</p>\n<ul>\n<li>\"fighter\" &mdash; Fighter </li>\n<li>\"fighterHeavy\" &mdash; Heavy Fighter </li>\n<li>\"assault\" &mdash; Attack Aircraft </li>\n<li>\"navy\" &mdash; Multirole Fighter </li>\n<li>\"bomber\" &mdash; Bomber</li>\n</ul>",
+                    "description": "<p>Type. Maximum limit: 100. Valid values:</p>\n<ul>\n<li>\"fighter\" &mdash; Fighter </li>\n<li>\"fighterHeavy\" &mdash; Heavy Fighter </li>\n<li>\"assault\" &mdash; Attack Aircraft </li>\n<li>\"navy\" &mdash; Multirole Fighter </li>\n<li>\"bomber\" &mdash; Bomber</li>\n</ul>",
                     "name": "type",
                     "type": "string, list"
                 },
                 {
-                    "description": "<p>Nation. Max limit is 100. Valid values:</p>\n<ul>\n<li>\"ussr\" &mdash; U.S.S.R. </li>\n<li>\"germany\" &mdash; Germany </li>\n<li>\"usa\" &mdash; U.S.A. </li>\n<li>\"france\" &mdash; France </li>\n<li>\"uk\" &mdash; U.K. </li>\n<li>\"china\" &mdash; China </li>\n<li>\"japan\" &mdash; Japan</li>\n</ul>",
+                    "description": "<p>Nation. Maximum limit: 100. Valid values:</p>\n<ul>\n<li>\"ussr\" &mdash; U.S.S.R. </li>\n<li>\"germany\" &mdash; Germany </li>\n<li>\"usa\" &mdash; U.S.A. </li>\n<li>\"france\" &mdash; France </li>\n<li>\"uk\" &mdash; U.K. </li>\n<li>\"china\" &mdash; China </li>\n<li>\"japan\" &mdash; Japan</li>\n</ul>",
                     "name": "nation",
                     "type": "string, list"
                 }
@@ -2496,7 +3002,7 @@
                     "type": "string"
                 },
                 {
-                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Max limit is 100.</p>",
+                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Maximum limit: 100.</p>",
                     "name": "fields",
                     "type": "string, list"
                 },
@@ -2507,12 +3013,12 @@
                     "type": "numeric"
                 },
                 {
-                    "description": "<p>Module ID. Max limit is 100.</p>",
+                    "description": "<p>Module ID. Maximum limit: 100.</p>",
                     "name": "module_id",
                     "type": "numeric, list"
                 },
                 {
-                    "description": "<p>ID of unique bind of slot and module. Max limit is 100.</p>",
+                    "description": "<p>ID of unique bind of slot and module. Maximum limit: 100.</p>",
                     "name": "bind_id",
                     "type": "numeric, list"
                 }
@@ -2661,12 +3167,12 @@
                     "type": "string"
                 },
                 {
-                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Max limit is 100.</p>",
+                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Maximum limit: 100.</p>",
                     "name": "fields",
                     "type": "string, list"
                 },
                 {
-                    "description": "<p>Aircraft ID. Max limit is 100.</p>",
+                    "description": "<p>Aircraft ID. Maximum limit: 100.</p>",
                     "name": "plane_id",
                     "required": true,
                     "type": "numeric, list"
@@ -2767,7 +3273,7 @@
                     "type": "string"
                 },
                 {
-                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Max limit is 100.</p>",
+                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Maximum limit: 100.</p>",
                     "name": "fields",
                     "type": "string, list"
                 },
@@ -2778,7 +3284,7 @@
                     "type": "numeric"
                 },
                 {
-                    "description": "<p>Aircraft ID. Max limit is 100.</p>",
+                    "description": "<p>Aircraft ID. Maximum limit: 100.</p>",
                     "name": "plane_id",
                     "type": "numeric, list"
                 }
@@ -3369,7 +3875,7 @@
                     "type": "string"
                 },
                 {
-                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Max limit is 100.</p>",
+                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Maximum limit: 100.</p>",
                     "name": "fields",
                     "type": "string, list"
                 },
@@ -3385,7 +3891,7 @@
                     "type": "numeric"
                 },
                 {
-                    "description": "<p>Aircraft ID. Max limit is 100.</p>",
+                    "description": "<p>Aircraft ID. Maximum limit: 100.</p>",
                     "name": "plane_id",
                     "type": "numeric, list"
                 },
@@ -3720,7 +4226,7 @@
                     "type": "string"
                 },
                 {
-                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Max limit is 100.</p>",
+                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Maximum limit: 100.</p>",
                     "name": "fields",
                     "type": "string, list"
                 },
@@ -3736,7 +4242,7 @@
                     "type": "timestamp/date"
                 },
                 {
-                    "description": "<p>Player account ID. Max limit is 100.</p>",
+                    "description": "<p>Player account ID. Maximum limit: 100.</p>",
                     "name": "account_id",
                     "required": true,
                     "type": "numeric, list"
@@ -3793,7 +4299,7 @@
                     "type": "string"
                 },
                 {
-                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Max limit is 100.</p>",
+                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Maximum limit: 100.</p>",
                     "name": "fields",
                     "type": "string, list"
                 },
@@ -3804,7 +4310,7 @@
                     "type": "string"
                 },
                 {
-                    "description": "<p>Player account ID. Max limit is 100.</p>",
+                    "description": "<p>Player account ID. Maximum limit: 100.</p>",
                     "name": "account_id",
                     "type": "numeric, list"
                 }
@@ -4132,7 +4638,7 @@
                     "type": "string"
                 },
                 {
-                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Max limit is 100.</p>",
+                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Maximum limit: 100.</p>",
                     "name": "fields",
                     "type": "string, list"
                 },
@@ -4160,7 +4666,7 @@
                     "type": "timestamp/date"
                 },
                 {
-                    "description": "<p>Maximum number of adjacent positions in rating. Default is 5. Min value is 1. Max value is 50.</p>",
+                    "description": "<p>Maximum number of adjacent positions in rating. Default is 5. Min value is 1. Maximum value: 50.</p>",
                     "name": "limit",
                     "type": "numeric"
                 }
@@ -4184,7 +4690,7 @@
                 "na",
                 "ru"
             ],
-            "description": "<p>Method returns the list of top players by specified parameter.</p>",
+            "description": "<p>Method returns list of top players by specified parameter.</p>",
             "display_index": "ru",
             "errors": [
                 {
@@ -4488,7 +4994,7 @@
                     "type": "string"
                 },
                 {
-                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Max limit is 100.</p>",
+                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Maximum limit: 100.</p>",
                     "name": "fields",
                     "type": "string, list"
                 },
@@ -4510,7 +5016,7 @@
                     "type": "timestamp/date"
                 },
                 {
-                    "description": "<p>Maximum number of top players on the list. Default is 10. Min value is 1. Max value is 1000.</p>",
+                    "description": "<p>Maximum number of top players on the list. Default is 10. Min value is 1. Maximum value: 1000.</p>",
                     "name": "limit",
                     "type": "numeric"
                 },
@@ -4578,7 +5084,7 @@
                     "type": "string"
                 },
                 {
-                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Max limit is 100.</p>",
+                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Maximum limit: 100.</p>",
                     "name": "fields",
                     "type": "string, list"
                 }
