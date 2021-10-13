@@ -242,7 +242,8 @@
                 "na",
                 "ru"
             ],
-            "description": "<p>Method returns information on clan entities in World of Tanks and World of Warplanes.</p>",
+            "deprecated": true,
+            "description": "<p>Method returns information on clan entities in World of Tanks and World of Warplanes.<p/>This method will be removed. Use method <a href=\"/developers/api_reference/wot/clans/glossary/\">Clan glossary (World of Tanks)</a></p>",
             "display_index": "ru",
             "fields": [
                 {
@@ -304,7 +305,8 @@
                 "na",
                 "ru"
             ],
-            "description": "<p>Method returns detailed clan information. Information is available for World of Tanks and World of Warplanes clans.</p>",
+            "deprecated": true,
+            "description": "<p>Method returns detailed clan information. Information is available for World of Tanks and World of Warplanes clans.<p/>This method will be removed. Use method <a href=\"/developers/api_reference/wot/clans/info/\">Clan details (World of Tanks)</a></p>",
             "display_index": "ru",
             "fields": [
                 {
@@ -566,10 +568,49 @@
                     "type": "list of integers"
                 },
                 {
-                    "description": "<p>Gold in clan treasury</p>",
+                    "deprecated": true,
+                    "description": "<p>Amount of gold in the \u0441lan Treasury</p>",
                     "name": [
                         "private",
                         "treasury"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "type": "empty_line"
+                },
+                {
+                    "description": "<p>Clan Treasury</p>",
+                    "name": [
+                        "private",
+                        "clan_treasury"
+                    ],
+                    "type": "block_header"
+                },
+                {
+                    "description": "<p>Amount of credits in the \u0441lan Treasury</p>",
+                    "name": [
+                        "private",
+                        "clan_treasury",
+                        "credits"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Number of bonds in the \u0441lan Treasury</p>",
+                    "name": [
+                        "private",
+                        "clan_treasury",
+                        "crystal"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Amount of gold in the \u0441lan Treasury</p>",
+                    "name": [
+                        "private",
+                        "clan_treasury",
+                        "gold"
                     ],
                     "type": "numeric"
                 }
@@ -639,7 +680,8 @@
                 "na",
                 "ru"
             ],
-            "description": "<p>Method searches and sorts clans by the following logic:</p>\n<ul>\n<li>exact match of clan tag placed first</li>\n<li>exact match of clan name placed second</li>\n<li>name or tag matches are placed next</li>\n<li>all comparisons are performed case insensitive</li>\n<li>expression [wg] is converted to wg and considered as the clan tag</li>\n<li>search for expression \"[wg] clan\" is performed by exact match of clan name and tag</li>\n</ul>\n<p>Disbanded, NPC and technically frozen clans are excluded from response. Search is executed across World of Tanks and World of Warplanes.</p>",
+            "deprecated": true,
+            "description": "<p>Method searches and sorts clans by the following logic:</p>\n<ul>\n<li>exact match of clan tag placed first</li>\n<li>exact match of clan name placed second</li>\n<li>name or tag matches are placed next</li>\n<li>all comparisons are performed case insensitive</li>\n<li>expression [wg] is converted to wg and considered as the clan tag</li>\n<li>search for expression \"[wg] clan\" is performed by exact match of clan name and tag</li>\n</ul>\n<p>Disbanded, NPC and technically frozen clans are excluded from response. Search is executed across World of Tanks and World of Warplanes.<p/>This method will be removed. Use method <a href=\"/developers/api_reference/wot/clans/list/\">Clans (World of Tanks)</a></p>",
             "display_index": "ru",
             "fields": [
                 {
@@ -801,7 +843,8 @@
                 "na",
                 "ru"
             ],
-            "description": "<p>Method returns information about player's clan history. Data on 10 last clan memberships are presented in the response.</p>",
+            "deprecated": true,
+            "description": "<p>Method returns information about player's clan history. Data on 10 last clan memberships are presented in the response.<p/>This method will be removed. Use method <a href=\"/developers/api_reference/wot/clans/memberhistory/\">Player's clan history (World of Tanks)</a></p>",
             "display_index": "ru",
             "fields": [
                 {
@@ -890,7 +933,8 @@
                 "na",
                 "ru"
             ],
-            "description": "<p>Method returns clan member info and short info on the clan. Information is available for World of Tanks and World of Warplanes clans.</p>",
+            "deprecated": true,
+            "description": "<p>Method returns detailed clan member information and brief clan details. Information is available for World of Tanks and World of Warplanes clans.<p/>This method will be removed. Use method <a href=\"/developers/api_reference/wot/clans/accountinfo/\">Clan member details (World of Tanks)</a></p>",
             "display_index": "ru",
             "fields": [
                 {
@@ -1101,7 +1145,8 @@
                 "na",
                 "ru"
             ],
-            "description": "<p>Method returns messages of clan message board.</p>",
+            "deprecated": true,
+            "description": "<p>Method returns messages of clan message board.<p/>This method will be removed. Use method <a href=\"/developers/api_reference/wot/clans/messageboard/\">Message board (World of Tanks)</a></p>",
             "display_index": "ru",
             "errors": [
                 {

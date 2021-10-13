@@ -111,6 +111,7 @@
                     "type": "numeric"
                 },
                 {
+                    "deprecated": true,
                     "description": "<p>Language selected in the game client</p>",
                     "name": [
                         "client_language"
@@ -635,7 +636,7 @@
                     "type": "numeric"
                 },
                 {
-                    "description": "<p>Maximum Damage caused per battle</p>",
+                    "description": "<p>Maximum damage caused in a battle</p>",
                     "name": [
                         "statistics",
                         "all",
@@ -1532,7 +1533,7 @@
                     "type": "numeric"
                 },
                 {
-                    "description": "<p>Maximum Damage caused per battle</p>",
+                    "description": "<p>Maximum damage caused in a battle</p>",
                     "name": [
                         "statistics",
                         "epic",
@@ -1912,7 +1913,7 @@
                     "type": "numeric"
                 },
                 {
-                    "description": "<p>Maximum Damage caused per battle</p>",
+                    "description": "<p>Maximum damage caused in a battle</p>",
                     "name": [
                         "statistics",
                         "fallout",
@@ -3135,7 +3136,7 @@
                     "type": "numeric"
                 },
                 {
-                    "description": "<p>Maximum Damage caused per battle</p>",
+                    "description": "<p>Maximum damage caused in a battle</p>",
                     "name": [
                         "statistics",
                         "historical",
@@ -3572,6 +3573,677 @@
                     "type": "empty_line"
                 },
                 {
+                    "description": "<p>Archive of statistics for ranked 10x10 battles.</p>\n<p><strong>An extra field.</strong></p>",
+                    "name": [
+                        "statistics",
+                        "ranked_10x10"
+                    ],
+                    "type": "block_header"
+                },
+                {
+                    "description": "<p>Average damage caused with your assistance</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_10x10",
+                        "avg_damage_assisted"
+                    ],
+                    "type": "float"
+                },
+                {
+                    "description": "<p>Average damage upon your spotting</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_10x10",
+                        "avg_damage_assisted_radio"
+                    ],
+                    "type": "float"
+                },
+                {
+                    "description": "<p>Average damage upon your shooting the track</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_10x10",
+                        "avg_damage_assisted_track"
+                    ],
+                    "type": "float"
+                },
+                {
+                    "description": "<p>Average damage blocked by armor per battle. Damage blocked by armor is damage received from shells (AP, HEAT and APCR) that hit a vehicle but caused no damage.\nValue is calculated starting from version 9.0.</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_10x10",
+                        "avg_damage_blocked"
+                    ],
+                    "type": "float"
+                },
+                {
+                    "description": "<p>Average experience per battle</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_10x10",
+                        "battle_avg_xp"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Battles fought</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_10x10",
+                        "battles"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Number of battles on vehicles that cause the stun effect</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_10x10",
+                        "battles_on_stunning_vehicles"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Base capture points</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_10x10",
+                        "capture_points"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Damage caused</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_10x10",
+                        "damage_dealt"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Damage received</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_10x10",
+                        "damage_received"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Direct hits received</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_10x10",
+                        "direct_hits_received"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Draws</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_10x10",
+                        "draws"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Base defense points</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_10x10",
+                        "dropped_capture_points"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Hits on enemy as a result of splash damage</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_10x10",
+                        "explosion_hits"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Hits received as a result of splash damage</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_10x10",
+                        "explosion_hits_received"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Vehicles destroyed</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_10x10",
+                        "frags"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Hits</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_10x10",
+                        "hits"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Hit ratio</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_10x10",
+                        "hits_percents"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Defeats</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_10x10",
+                        "losses"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Maximum damage caused in a battle</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_10x10",
+                        "max_damage"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Vehicle used to cause maximum damage</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_10x10",
+                        "max_damage_tank_id"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Maximum destroyed in battle</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_10x10",
+                        "max_frags"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Vehicle, in which maximum number of enemy vehicles was destroyed</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_10x10",
+                        "max_frags_tank_id"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Maximum experience per battle</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_10x10",
+                        "max_xp"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Vehicle used to gain maximum experience per battle</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_10x10",
+                        "max_xp_tank_id"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Direct hits received that caused no damage</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_10x10",
+                        "no_damage_direct_hits_received"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Penetrations</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_10x10",
+                        "piercings"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Penetrations received</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_10x10",
+                        "piercings_received"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Shots fired</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_10x10",
+                        "shots"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Enemies spotted</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_10x10",
+                        "spotted"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Damage to enemy vehicles stunned by you</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_10x10",
+                        "stun_assisted_damage"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Number of times an enemy was stunned by you</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_10x10",
+                        "stun_number"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Battles survived</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_10x10",
+                        "survived_battles"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Ratio of damage blocked by armor from AP, HEAT, and APCR shells to damage received from these types of shells.\nValue is calculated starting from version 9.0.</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_10x10",
+                        "tanking_factor"
+                    ],
+                    "type": "float"
+                },
+                {
+                    "description": "<p>Victories</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_10x10",
+                        "wins"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Total experience</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_10x10",
+                        "xp"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "type": "empty_line"
+                },
+                {
+                    "description": "<p>Archive of statistics for ranked 15x15 battles.</p>\n<p><strong>An extra field.</strong></p>",
+                    "name": [
+                        "statistics",
+                        "ranked_15x15"
+                    ],
+                    "type": "block_header"
+                },
+                {
+                    "description": "<p>Average damage caused with your assistance</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_15x15",
+                        "avg_damage_assisted"
+                    ],
+                    "type": "float"
+                },
+                {
+                    "description": "<p>Average damage upon your spotting</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_15x15",
+                        "avg_damage_assisted_radio"
+                    ],
+                    "type": "float"
+                },
+                {
+                    "description": "<p>Average damage upon your shooting the track</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_15x15",
+                        "avg_damage_assisted_track"
+                    ],
+                    "type": "float"
+                },
+                {
+                    "description": "<p>Average damage blocked by armor per battle. Damage blocked by armor is damage received from shells (AP, HEAT and APCR) that hit a vehicle but caused no damage.\nValue is calculated starting from version 9.0.</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_15x15",
+                        "avg_damage_blocked"
+                    ],
+                    "type": "float"
+                },
+                {
+                    "description": "<p>Average experience per battle</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_15x15",
+                        "battle_avg_xp"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Battles fought</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_15x15",
+                        "battles"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Number of battles on vehicles that cause the stun effect</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_15x15",
+                        "battles_on_stunning_vehicles"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Base capture points</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_15x15",
+                        "capture_points"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Damage caused</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_15x15",
+                        "damage_dealt"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Damage received</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_15x15",
+                        "damage_received"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Direct hits received</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_15x15",
+                        "direct_hits_received"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Draws</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_15x15",
+                        "draws"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Base defense points</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_15x15",
+                        "dropped_capture_points"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Hits on enemy as a result of splash damage</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_15x15",
+                        "explosion_hits"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Hits received as a result of splash damage</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_15x15",
+                        "explosion_hits_received"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Vehicles destroyed</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_15x15",
+                        "frags"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Hits</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_15x15",
+                        "hits"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Hit ratio</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_15x15",
+                        "hits_percents"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Defeats</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_15x15",
+                        "losses"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Maximum damage caused in a battle</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_15x15",
+                        "max_damage"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Vehicle used to cause maximum damage</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_15x15",
+                        "max_damage_tank_id"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Maximum destroyed in battle</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_15x15",
+                        "max_frags"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Vehicle, in which maximum number of enemy vehicles was destroyed</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_15x15",
+                        "max_frags_tank_id"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Maximum experience per battle</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_15x15",
+                        "max_xp"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Vehicle used to gain maximum experience per battle</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_15x15",
+                        "max_xp_tank_id"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Direct hits received that caused no damage</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_15x15",
+                        "no_damage_direct_hits_received"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Penetrations</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_15x15",
+                        "piercings"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Penetrations received</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_15x15",
+                        "piercings_received"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Shots fired</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_15x15",
+                        "shots"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Enemies spotted</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_15x15",
+                        "spotted"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Damage to enemy vehicles stunned by you</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_15x15",
+                        "stun_assisted_damage"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Number of times an enemy was stunned by you</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_15x15",
+                        "stun_number"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Battles survived</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_15x15",
+                        "survived_battles"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Ratio of damage blocked by armor from AP, HEAT, and APCR shells to damage received from these types of shells.\nValue is calculated starting from version 9.0.</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_15x15",
+                        "tanking_factor"
+                    ],
+                    "type": "float"
+                },
+                {
+                    "description": "<p>Victories</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_15x15",
+                        "wins"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Total experience</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_15x15",
+                        "xp"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "type": "empty_line"
+                },
+                {
+                    "deprecated": true,
                     "description": "<p>Ranked Battles statistics.</p>\n<p><strong>An extra field.</strong></p>",
                     "name": [
                         "statistics",
@@ -3751,7 +4423,7 @@
                     "type": "numeric"
                 },
                 {
-                    "description": "<p>Maximum Damage caused per battle</p>",
+                    "description": "<p>Maximum damage caused in a battle</p>",
                     "name": [
                         "statistics",
                         "ranked_battles",
@@ -3907,6 +4579,7 @@
                     "type": "empty_line"
                 },
                 {
+                    "deprecated": true,
                     "description": "<p>Current Ranked Battles statistics.</p>\n<p><strong>An extra field.</strong></p>",
                     "name": [
                         "statistics",
@@ -4086,7 +4759,7 @@
                     "type": "numeric"
                 },
                 {
-                    "description": "<p>Maximum Damage caused per battle</p>",
+                    "description": "<p>Maximum damage caused in a battle</p>",
                     "name": [
                         "statistics",
                         "ranked_battles_current",
@@ -4242,6 +4915,7 @@
                     "type": "empty_line"
                 },
                 {
+                    "deprecated": true,
                     "description": "<p>Previous Ranked Battles statistics.</p>\n<p><strong>An extra field.</strong></p>",
                     "name": [
                         "statistics",
@@ -4421,7 +5095,7 @@
                     "type": "numeric"
                 },
                 {
-                    "description": "<p>Maximum Damage caused per battle</p>",
+                    "description": "<p>Maximum damage caused in a battle</p>",
                     "name": [
                         "statistics",
                         "ranked_battles_previous",
@@ -4569,6 +5243,1011 @@
                     "name": [
                         "statistics",
                         "ranked_battles_previous",
+                        "xp"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "type": "empty_line"
+                },
+                {
+                    "description": "<p>Statistics of ranked battles for the first season of the year. Updated with every battle this season, data is reseted at the end of the year..</p>\n<p><strong>An extra field.</strong></p>",
+                    "name": [
+                        "statistics",
+                        "ranked_season_1"
+                    ],
+                    "type": "block_header"
+                },
+                {
+                    "description": "<p>Average damage caused with your assistance</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_season_1",
+                        "avg_damage_assisted"
+                    ],
+                    "type": "float"
+                },
+                {
+                    "description": "<p>Average damage upon your spotting</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_season_1",
+                        "avg_damage_assisted_radio"
+                    ],
+                    "type": "float"
+                },
+                {
+                    "description": "<p>Average damage upon your shooting the track</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_season_1",
+                        "avg_damage_assisted_track"
+                    ],
+                    "type": "float"
+                },
+                {
+                    "description": "<p>Average damage blocked by armor per battle. Damage blocked by armor is damage received from shells (AP, HEAT and APCR) that hit a vehicle but caused no damage.\nValue is calculated starting from version 9.0.</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_season_1",
+                        "avg_damage_blocked"
+                    ],
+                    "type": "float"
+                },
+                {
+                    "description": "<p>Average experience per battle</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_season_1",
+                        "battle_avg_xp"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Battles fought</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_season_1",
+                        "battles"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Number of battles on vehicles that cause the stun effect</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_season_1",
+                        "battles_on_stunning_vehicles"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Base capture points</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_season_1",
+                        "capture_points"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Damage caused</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_season_1",
+                        "damage_dealt"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Damage received</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_season_1",
+                        "damage_received"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Direct hits received</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_season_1",
+                        "direct_hits_received"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Draws</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_season_1",
+                        "draws"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Base defense points</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_season_1",
+                        "dropped_capture_points"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Hits on enemy as a result of splash damage</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_season_1",
+                        "explosion_hits"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Hits received as a result of splash damage</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_season_1",
+                        "explosion_hits_received"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Vehicles destroyed</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_season_1",
+                        "frags"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Hits</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_season_1",
+                        "hits"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Hit ratio</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_season_1",
+                        "hits_percents"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Defeats</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_season_1",
+                        "losses"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Maximum damage caused in a battle</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_season_1",
+                        "max_damage"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Vehicle used to cause maximum damage</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_season_1",
+                        "max_damage_tank_id"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Maximum destroyed in battle</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_season_1",
+                        "max_frags"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Vehicle, in which maximum number of enemy vehicles was destroyed</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_season_1",
+                        "max_frags_tank_id"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Maximum experience per battle</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_season_1",
+                        "max_xp"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Vehicle used to gain maximum experience per battle</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_season_1",
+                        "max_xp_tank_id"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Direct hits received that caused no damage</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_season_1",
+                        "no_damage_direct_hits_received"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Penetrations</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_season_1",
+                        "piercings"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Penetrations received</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_season_1",
+                        "piercings_received"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Shots fired</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_season_1",
+                        "shots"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Enemies spotted</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_season_1",
+                        "spotted"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Damage to enemy vehicles stunned by you</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_season_1",
+                        "stun_assisted_damage"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Number of times an enemy was stunned by you</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_season_1",
+                        "stun_number"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Battles survived</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_season_1",
+                        "survived_battles"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Ratio of damage blocked by armor from AP, HEAT, and APCR shells to damage received from these types of shells.\nValue is calculated starting from version 9.0.</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_season_1",
+                        "tanking_factor"
+                    ],
+                    "type": "float"
+                },
+                {
+                    "description": "<p>Victories</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_season_1",
+                        "wins"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Total experience</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_season_1",
+                        "xp"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "type": "empty_line"
+                },
+                {
+                    "description": "<p>Statistics of ranked battles for the second season of the year. Updated with every battle this season, data is reseted at the end of the year..</p>\n<p><strong>An extra field.</strong></p>",
+                    "name": [
+                        "statistics",
+                        "ranked_season_2"
+                    ],
+                    "type": "block_header"
+                },
+                {
+                    "description": "<p>Average damage caused with your assistance</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_season_2",
+                        "avg_damage_assisted"
+                    ],
+                    "type": "float"
+                },
+                {
+                    "description": "<p>Average damage upon your spotting</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_season_2",
+                        "avg_damage_assisted_radio"
+                    ],
+                    "type": "float"
+                },
+                {
+                    "description": "<p>Average damage upon your shooting the track</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_season_2",
+                        "avg_damage_assisted_track"
+                    ],
+                    "type": "float"
+                },
+                {
+                    "description": "<p>Average damage blocked by armor per battle. Damage blocked by armor is damage received from shells (AP, HEAT and APCR) that hit a vehicle but caused no damage.\nValue is calculated starting from version 9.0.</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_season_2",
+                        "avg_damage_blocked"
+                    ],
+                    "type": "float"
+                },
+                {
+                    "description": "<p>Average experience per battle</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_season_2",
+                        "battle_avg_xp"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Battles fought</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_season_2",
+                        "battles"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Number of battles on vehicles that cause the stun effect</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_season_2",
+                        "battles_on_stunning_vehicles"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Base capture points</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_season_2",
+                        "capture_points"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Damage caused</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_season_2",
+                        "damage_dealt"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Damage received</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_season_2",
+                        "damage_received"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Direct hits received</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_season_2",
+                        "direct_hits_received"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Draws</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_season_2",
+                        "draws"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Base defense points</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_season_2",
+                        "dropped_capture_points"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Hits on enemy as a result of splash damage</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_season_2",
+                        "explosion_hits"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Hits received as a result of splash damage</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_season_2",
+                        "explosion_hits_received"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Vehicles destroyed</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_season_2",
+                        "frags"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Hits</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_season_2",
+                        "hits"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Hit ratio</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_season_2",
+                        "hits_percents"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Defeats</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_season_2",
+                        "losses"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Maximum damage caused in a battle</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_season_2",
+                        "max_damage"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Vehicle used to cause maximum damage</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_season_2",
+                        "max_damage_tank_id"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Maximum destroyed in battle</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_season_2",
+                        "max_frags"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Vehicle, in which maximum number of enemy vehicles was destroyed</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_season_2",
+                        "max_frags_tank_id"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Maximum experience per battle</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_season_2",
+                        "max_xp"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Vehicle used to gain maximum experience per battle</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_season_2",
+                        "max_xp_tank_id"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Direct hits received that caused no damage</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_season_2",
+                        "no_damage_direct_hits_received"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Penetrations</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_season_2",
+                        "piercings"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Penetrations received</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_season_2",
+                        "piercings_received"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Shots fired</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_season_2",
+                        "shots"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Enemies spotted</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_season_2",
+                        "spotted"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Damage to enemy vehicles stunned by you</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_season_2",
+                        "stun_assisted_damage"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Number of times an enemy was stunned by you</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_season_2",
+                        "stun_number"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Battles survived</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_season_2",
+                        "survived_battles"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Ratio of damage blocked by armor from AP, HEAT, and APCR shells to damage received from these types of shells.\nValue is calculated starting from version 9.0.</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_season_2",
+                        "tanking_factor"
+                    ],
+                    "type": "float"
+                },
+                {
+                    "description": "<p>Victories</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_season_2",
+                        "wins"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Total experience</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_season_2",
+                        "xp"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "type": "empty_line"
+                },
+                {
+                    "description": "<p>Statistics of ranked battles for the third season of the year. Updated with every battle this season, data is reseted at the end of the year..</p>\n<p><strong>An extra field.</strong></p>",
+                    "name": [
+                        "statistics",
+                        "ranked_season_3"
+                    ],
+                    "type": "block_header"
+                },
+                {
+                    "description": "<p>Average damage caused with your assistance</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_season_3",
+                        "avg_damage_assisted"
+                    ],
+                    "type": "float"
+                },
+                {
+                    "description": "<p>Average damage upon your spotting</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_season_3",
+                        "avg_damage_assisted_radio"
+                    ],
+                    "type": "float"
+                },
+                {
+                    "description": "<p>Average damage upon your shooting the track</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_season_3",
+                        "avg_damage_assisted_track"
+                    ],
+                    "type": "float"
+                },
+                {
+                    "description": "<p>Average damage blocked by armor per battle. Damage blocked by armor is damage received from shells (AP, HEAT and APCR) that hit a vehicle but caused no damage.\nValue is calculated starting from version 9.0.</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_season_3",
+                        "avg_damage_blocked"
+                    ],
+                    "type": "float"
+                },
+                {
+                    "description": "<p>Average experience per battle</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_season_3",
+                        "battle_avg_xp"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Battles fought</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_season_3",
+                        "battles"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Number of battles on vehicles that cause the stun effect</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_season_3",
+                        "battles_on_stunning_vehicles"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Base capture points</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_season_3",
+                        "capture_points"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Damage caused</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_season_3",
+                        "damage_dealt"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Damage received</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_season_3",
+                        "damage_received"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Direct hits received</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_season_3",
+                        "direct_hits_received"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Draws</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_season_3",
+                        "draws"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Base defense points</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_season_3",
+                        "dropped_capture_points"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Hits on enemy as a result of splash damage</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_season_3",
+                        "explosion_hits"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Hits received as a result of splash damage</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_season_3",
+                        "explosion_hits_received"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Vehicles destroyed</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_season_3",
+                        "frags"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Hits</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_season_3",
+                        "hits"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Hit ratio</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_season_3",
+                        "hits_percents"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Defeats</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_season_3",
+                        "losses"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Maximum damage caused in a battle</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_season_3",
+                        "max_damage"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Vehicle used to cause maximum damage</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_season_3",
+                        "max_damage_tank_id"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Maximum destroyed in battle</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_season_3",
+                        "max_frags"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Vehicle, in which maximum number of enemy vehicles was destroyed</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_season_3",
+                        "max_frags_tank_id"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Maximum experience per battle</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_season_3",
+                        "max_xp"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Vehicle used to gain maximum experience per battle</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_season_3",
+                        "max_xp_tank_id"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Direct hits received that caused no damage</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_season_3",
+                        "no_damage_direct_hits_received"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Penetrations</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_season_3",
+                        "piercings"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Penetrations received</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_season_3",
+                        "piercings_received"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Shots fired</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_season_3",
+                        "shots"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Enemies spotted</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_season_3",
+                        "spotted"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Damage to enemy vehicles stunned by you</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_season_3",
+                        "stun_assisted_damage"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Number of times an enemy was stunned by you</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_season_3",
+                        "stun_number"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Battles survived</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_season_3",
+                        "survived_battles"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Ratio of damage blocked by armor from AP, HEAT, and APCR shells to damage received from these types of shells.\nValue is calculated starting from version 9.0.</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_season_3",
+                        "tanking_factor"
+                    ],
+                    "type": "float"
+                },
+                {
+                    "description": "<p>Victories</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_season_3",
+                        "wins"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Total experience</p>",
+                    "name": [
+                        "statistics",
+                        "ranked_season_3",
                         "xp"
                     ],
                     "type": "numeric"
@@ -4757,7 +6436,7 @@
                     "type": "numeric"
                 },
                 {
-                    "description": "<p>Maximum Damage caused per battle</p>",
+                    "description": "<p>Maximum damage caused in a battle</p>",
                     "name": [
                         "statistics",
                         "regular_team",
@@ -5056,7 +6735,7 @@
                     "type": "numeric"
                 },
                 {
-                    "description": "<p>Maximum Damage caused per battle</p>",
+                    "description": "<p>Maximum damage caused in a battle</p>",
                     "name": [
                         "statistics",
                         "stronghold_defense",
@@ -5355,7 +7034,7 @@
                     "type": "numeric"
                 },
                 {
-                    "description": "<p>Maximum Damage caused per battle</p>",
+                    "description": "<p>Maximum damage caused in a battle</p>",
                     "name": [
                         "statistics",
                         "stronghold_skirmish",
@@ -5690,7 +7369,7 @@
                     "type": "numeric"
                 },
                 {
-                    "description": "<p>Maximum Damage caused per battle</p>",
+                    "description": "<p>Maximum damage caused in a battle</p>",
                     "name": [
                         "statistics",
                         "team",
@@ -5867,7 +7546,7 @@
                     "type": "string"
                 },
                 {
-                    "description": "<p>Extra fields that will be added to the response. Valid values:</p>\n<ul>\n<li>\"private.boosters\" </li>\n<li>\"private.garage\" </li>\n<li>\"private.grouped_contacts\" </li>\n<li>\"private.personal_missions\" </li>\n<li>\"private.rented\" </li>\n<li>\"statistics.epic\" </li>\n<li>\"statistics.fallout\" </li>\n<li>\"statistics.globalmap_absolute\" </li>\n<li>\"statistics.globalmap_champion\" </li>\n<li>\"statistics.globalmap_middle\" </li>\n<li>\"statistics.random\" </li>\n<li>\"statistics.ranked_battles\" </li>\n<li>\"statistics.ranked_battles_current\" </li>\n<li>\"statistics.ranked_battles_previous\"</li>\n</ul>",
+                    "description": "<p>Extra fields that will be added to the response. Valid values:</p>\n<ul>\n<li>\"private.boosters\" </li>\n<li>\"private.garage\" </li>\n<li>\"private.grouped_contacts\" </li>\n<li>\"private.personal_missions\" </li>\n<li>\"private.rented\" </li>\n<li>\"statistics.epic\" </li>\n<li>\"statistics.fallout\" </li>\n<li>\"statistics.globalmap_absolute\" </li>\n<li>\"statistics.globalmap_champion\" </li>\n<li>\"statistics.globalmap_middle\" </li>\n<li>\"statistics.random\" </li>\n<li>\"statistics.ranked_10x10\" </li>\n<li>\"statistics.ranked_15x15\" </li>\n<li>\"statistics.ranked_battles\" </li>\n<li>\"statistics.ranked_battles_current\" </li>\n<li>\"statistics.ranked_battles_previous\" </li>\n<li>\"statistics.ranked_season_1\" </li>\n<li>\"statistics.ranked_season_2\" </li>\n<li>\"statistics.ranked_season_3\"</li>\n</ul>",
                     "name": "extra",
                     "type": "string, list"
                 },
@@ -6290,7 +7969,7 @@
                     "type": "string"
                 },
                 {
-                    "description": "<p>Clan Tag</p>",
+                    "description": "<p>Clan tag</p>",
                     "name": [
                         "clan_tag"
                     ],
@@ -6968,7 +8647,7 @@
                     "type": "string"
                 },
                 {
-                    "description": "<p>Clan Tag</p>",
+                    "description": "<p>Clan tag</p>",
                     "name": [
                         "clan_tag"
                     ],
@@ -7612,7 +9291,7 @@
                     "type": "string"
                 },
                 {
-                    "description": "<p>Clan Tag</p>",
+                    "description": "<p>Clan tag</p>",
                     "name": [
                         "clan_tag"
                     ],
@@ -8260,6 +9939,945 @@
             "realm": "ru",
             "section": "clanratings",
             "url": "clanratings/types"
+        }
+    },
+    "clans": {
+        "accountinfo": {
+            "allowed_http_methods": [
+                "GET",
+                "POST"
+            ],
+            "allowed_protocols": [
+                "http",
+                "https"
+            ],
+            "api_url": "api.worldoftanks.ru/wot/",
+            "available_display_indices": [
+                "asia",
+                "eu",
+                "na",
+                "ru"
+            ],
+            "description": "<p>Method returns detailed clan member information and brief clan details.</p>",
+            "display_index": "ru",
+            "fields": [
+                {
+                    "description": "<p>Player account ID</p>",
+                    "name": [
+                        "account_id"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Player name</p>",
+                    "name": [
+                        "account_name"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Date when player joined clan</p>",
+                    "name": [
+                        "joined_at"
+                    ],
+                    "type": "timestamp"
+                },
+                {
+                    "description": "<p>Technical position name</p>",
+                    "name": [
+                        "role"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Position</p>",
+                    "name": [
+                        "role_i18n"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "type": "empty_line"
+                },
+                {
+                    "description": "<p>Short clan info</p>",
+                    "name": [
+                        "clan"
+                    ],
+                    "type": "block_header"
+                },
+                {
+                    "description": "<p>Clan ID</p>",
+                    "name": [
+                        "clan",
+                        "clan_id"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Clan color in HEX #RRGGBB</p>",
+                    "name": [
+                        "clan",
+                        "color"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Clan creation date</p>",
+                    "name": [
+                        "clan",
+                        "created_at"
+                    ],
+                    "type": "timestamp"
+                },
+                {
+                    "description": "<p>Number of clan members</p>",
+                    "name": [
+                        "clan",
+                        "members_count"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Clan name</p>",
+                    "name": [
+                        "clan",
+                        "name"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Clan tag</p>",
+                    "name": [
+                        "clan",
+                        "tag"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "type": "empty_line"
+                },
+                {
+                    "description": "<p>Information on clan emblems in games and on clan portal</p>",
+                    "name": [
+                        "clan",
+                        "emblems"
+                    ],
+                    "type": "block_header"
+                },
+                {
+                    "description": "<p>List of links to 195x195 px emblems</p>",
+                    "name": [
+                        "clan",
+                        "emblems",
+                        "x195"
+                    ],
+                    "type": "associative array"
+                },
+                {
+                    "description": "<p>List of links to 24x24 px emblems</p>",
+                    "name": [
+                        "clan",
+                        "emblems",
+                        "x24"
+                    ],
+                    "type": "associative array"
+                },
+                {
+                    "description": "<p>List of links to 256x256 px emblems</p>",
+                    "name": [
+                        "clan",
+                        "emblems",
+                        "x256"
+                    ],
+                    "type": "associative array"
+                },
+                {
+                    "description": "<p>List of links to 32x32 px emblems</p>",
+                    "name": [
+                        "clan",
+                        "emblems",
+                        "x32"
+                    ],
+                    "type": "associative array"
+                },
+                {
+                    "description": "<p>List of links to 64x64 px emblems</p>",
+                    "name": [
+                        "clan",
+                        "emblems",
+                        "x64"
+                    ],
+                    "type": "associative array"
+                }
+            ],
+            "name": "Clan member details",
+            "parameters": [
+                {
+                    "description": "<p>Application ID</p>",
+                    "name": "application_id",
+                    "required": true,
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Localization language. Default is \"ru\". Valid values:</p>\n<ul>\n<li>\"en\" &mdash; English </li>\n<li>\"ru\" &mdash; \u0420\u0443\u0441\u0441\u043a\u0438\u0439 (by default)</li>\n<li>\"pl\" &mdash; Polski </li>\n<li>\"de\" &mdash; Deutsch </li>\n<li>\"fr\" &mdash; Fran\u00e7ais </li>\n<li>\"es\" &mdash; Espa\u00f1ol </li>\n<li>\"zh-cn\" &mdash; \u7b80\u4f53\u4e2d\u6587 </li>\n<li>\"zh-tw\" &mdash; \u7e41\u9ad4\u4e2d\u6587 </li>\n<li>\"tr\" &mdash; T\u00fcrk\u00e7e </li>\n<li>\"cs\" &mdash; \u010ce\u0161tina </li>\n<li>\"th\" &mdash; \u0e44\u0e17\u0e22 </li>\n<li>\"vi\" &mdash; Ti\u1ebfng Vi\u1ec7t </li>\n<li>\"ko\" &mdash; \ud55c\uad6d\uc5b4</li>\n</ul>",
+                    "name": "language",
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Maximum limit: 100.</p>",
+                    "name": "fields",
+                    "type": "string, list"
+                },
+                {
+                    "description": "<p>Account ID. Maximum limit: 100. Min value is 1.</p>",
+                    "name": "account_id",
+                    "required": true,
+                    "type": "numeric, list"
+                }
+            ],
+            "realm": "ru",
+            "section": "clans",
+            "url": "clans/accountinfo"
+        },
+        "glossary": {
+            "allowed_http_methods": [
+                "GET",
+                "POST"
+            ],
+            "allowed_protocols": [
+                "http",
+                "https"
+            ],
+            "api_url": "api.worldoftanks.ru/wot/",
+            "available_display_indices": [
+                "asia",
+                "eu",
+                "na",
+                "ru"
+            ],
+            "description": "<p>Method returns information on clan entities.</p>",
+            "display_index": "ru",
+            "fields": [
+                {
+                    "description": "<p>Available clan positions</p>",
+                    "name": [
+                        "clans_roles"
+                    ],
+                    "type": "associative array"
+                }
+            ],
+            "name": "Clan glossary",
+            "parameters": [
+                {
+                    "description": "<p>Application ID</p>",
+                    "name": "application_id",
+                    "required": true,
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Localization language. Default is \"ru\". Valid values:</p>\n<ul>\n<li>\"en\" &mdash; English </li>\n<li>\"ru\" &mdash; \u0420\u0443\u0441\u0441\u043a\u0438\u0439 (by default)</li>\n<li>\"pl\" &mdash; Polski </li>\n<li>\"de\" &mdash; Deutsch </li>\n<li>\"fr\" &mdash; Fran\u00e7ais </li>\n<li>\"es\" &mdash; Espa\u00f1ol </li>\n<li>\"zh-cn\" &mdash; \u7b80\u4f53\u4e2d\u6587 </li>\n<li>\"zh-tw\" &mdash; \u7e41\u9ad4\u4e2d\u6587 </li>\n<li>\"tr\" &mdash; T\u00fcrk\u00e7e </li>\n<li>\"cs\" &mdash; \u010ce\u0161tina </li>\n<li>\"th\" &mdash; \u0e44\u0e17\u0e22 </li>\n<li>\"vi\" &mdash; Ti\u1ebfng Vi\u1ec7t </li>\n<li>\"ko\" &mdash; \ud55c\uad6d\uc5b4</li>\n</ul>",
+                    "name": "language",
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Maximum limit: 100.</p>",
+                    "name": "fields",
+                    "type": "string, list"
+                }
+            ],
+            "realm": "ru",
+            "section": "clans",
+            "url": "clans/glossary"
+        },
+        "info": {
+            "allowed_http_methods": [
+                "GET",
+                "POST"
+            ],
+            "allowed_protocols": [
+                "http",
+                "https"
+            ],
+            "api_url": "api.worldoftanks.ru/wot/",
+            "available_display_indices": [
+                "asia",
+                "eu",
+                "na",
+                "ru"
+            ],
+            "description": "<p>Method returns detailed clan information.</p>",
+            "display_index": "ru",
+            "fields": [
+                {
+                    "description": "<p>Clan can invite players</p>",
+                    "name": [
+                        "accepts_join_requests"
+                    ],
+                    "type": "boolean"
+                },
+                {
+                    "description": "<p>Clan ID</p>",
+                    "name": [
+                        "clan_id"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Clan color in HEX #RRGGBB</p>",
+                    "name": [
+                        "color"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Clan creation date</p>",
+                    "name": [
+                        "created_at"
+                    ],
+                    "type": "timestamp"
+                },
+                {
+                    "description": "<p>Clan creator ID</p>",
+                    "name": [
+                        "creator_id"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Clan creator's name</p>",
+                    "name": [
+                        "creator_name"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Clan description</p>",
+                    "name": [
+                        "description"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Clan description in HTML</p>",
+                    "name": [
+                        "description_html"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Clan has been deleted. The deleted clan data contains valid values for the following fields only: <strong>clan_id</strong>, <strong>is_clan_disbanded</strong>, <strong>updated_at</strong>.</p>",
+                    "name": [
+                        "is_clan_disbanded"
+                    ],
+                    "type": "boolean"
+                },
+                {
+                    "description": "<p>Clan Commander ID</p>",
+                    "name": [
+                        "leader_id"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Commander's name</p>",
+                    "name": [
+                        "leader_name"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Number of clan members</p>",
+                    "name": [
+                        "members_count"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Clan motto</p>",
+                    "name": [
+                        "motto"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Clan name</p>",
+                    "name": [
+                        "name"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Old clan name</p>",
+                    "name": [
+                        "old_name"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Old clan tag</p>",
+                    "name": [
+                        "old_tag"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Time (UTC) when clan name was changed</p>",
+                    "name": [
+                        "renamed_at"
+                    ],
+                    "type": "timestamp"
+                },
+                {
+                    "description": "<p>Clan tag</p>",
+                    "name": [
+                        "tag"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Time when clan details were updated</p>",
+                    "name": [
+                        "updated_at"
+                    ],
+                    "type": "timestamp"
+                },
+                {
+                    "type": "empty_line"
+                },
+                {
+                    "description": "<p>Information on clan emblems in games and on clan portal</p>",
+                    "name": [
+                        "emblems"
+                    ],
+                    "type": "block_header"
+                },
+                {
+                    "description": "<p>List of links to 195x195 px emblems</p>",
+                    "name": [
+                        "emblems",
+                        "x195"
+                    ],
+                    "type": "associative array"
+                },
+                {
+                    "description": "<p>List of links to 24x24 px emblems</p>",
+                    "name": [
+                        "emblems",
+                        "x24"
+                    ],
+                    "type": "associative array"
+                },
+                {
+                    "description": "<p>List of links to 256x256 px emblems</p>",
+                    "name": [
+                        "emblems",
+                        "x256"
+                    ],
+                    "type": "associative array"
+                },
+                {
+                    "description": "<p>List of links to 32x32 px emblems</p>",
+                    "name": [
+                        "emblems",
+                        "x32"
+                    ],
+                    "type": "associative array"
+                },
+                {
+                    "description": "<p>List of links to 64x64 px emblems</p>",
+                    "name": [
+                        "emblems",
+                        "x64"
+                    ],
+                    "type": "associative array"
+                },
+                {
+                    "type": "empty_line"
+                },
+                {
+                    "description": "<p>Information on clan members. Field format depends on members_key input parameter.</p>",
+                    "name": [
+                        "members"
+                    ],
+                    "type": "block_header"
+                },
+                {
+                    "description": "<p>Player account ID</p>",
+                    "name": [
+                        "members",
+                        "account_id"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Player name</p>",
+                    "name": [
+                        "members",
+                        "account_name"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Date when player joined clan</p>",
+                    "name": [
+                        "members",
+                        "joined_at"
+                    ],
+                    "type": "timestamp"
+                },
+                {
+                    "description": "<p>Technical position name</p>",
+                    "name": [
+                        "members",
+                        "role"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Position</p>",
+                    "name": [
+                        "members",
+                        "role_i18n"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "type": "empty_line"
+                },
+                {
+                    "description": "<p>Restricted clan information</p>",
+                    "name": [
+                        "private"
+                    ],
+                    "type": "block_header"
+                },
+                {
+                    "description": "<p>List of clan members with an active game session in World of Tanks.</p>\n<p><strong>An extra field.</strong></p>",
+                    "name": [
+                        "private",
+                        "online_members"
+                    ],
+                    "type": "list of integers"
+                },
+                {
+                    "deprecated": true,
+                    "description": "<p>Amount of gold in the \u0441lan Treasury</p>",
+                    "name": [
+                        "private",
+                        "treasury"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "type": "empty_line"
+                },
+                {
+                    "description": "<p>Clan Treasury</p>",
+                    "name": [
+                        "private",
+                        "clan_treasury"
+                    ],
+                    "type": "block_header"
+                },
+                {
+                    "description": "<p>Amount of credits in the \u0441lan Treasury</p>",
+                    "name": [
+                        "private",
+                        "clan_treasury",
+                        "credits"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Number of bonds in the \u0441lan Treasury</p>",
+                    "name": [
+                        "private",
+                        "clan_treasury",
+                        "crystal"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Amount of gold in the \u0441lan Treasury</p>",
+                    "name": [
+                        "private",
+                        "clan_treasury",
+                        "gold"
+                    ],
+                    "type": "numeric"
+                }
+            ],
+            "name": "Clan details",
+            "parameters": [
+                {
+                    "description": "<p>Application ID</p>",
+                    "name": "application_id",
+                    "required": true,
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Localization language. Default is \"ru\". Valid values:</p>\n<ul>\n<li>\"en\" &mdash; English </li>\n<li>\"ru\" &mdash; \u0420\u0443\u0441\u0441\u043a\u0438\u0439 (by default)</li>\n<li>\"pl\" &mdash; Polski </li>\n<li>\"de\" &mdash; Deutsch </li>\n<li>\"fr\" &mdash; Fran\u00e7ais </li>\n<li>\"es\" &mdash; Espa\u00f1ol </li>\n<li>\"zh-cn\" &mdash; \u7b80\u4f53\u4e2d\u6587 </li>\n<li>\"zh-tw\" &mdash; \u7e41\u9ad4\u4e2d\u6587 </li>\n<li>\"tr\" &mdash; T\u00fcrk\u00e7e </li>\n<li>\"cs\" &mdash; \u010ce\u0161tina </li>\n<li>\"th\" &mdash; \u0e44\u0e17\u0e22 </li>\n<li>\"vi\" &mdash; Ti\u1ebfng Vi\u1ec7t </li>\n<li>\"ko\" &mdash; \ud55c\uad6d\uc5b4</li>\n</ul>",
+                    "name": "language",
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Maximum limit: 100.</p>",
+                    "name": "fields",
+                    "type": "string, list"
+                },
+                {
+                    "description": "<p><a href=\"/documentation/guide/principles/#access_token\">Access token</a> for the private data of a user's account; can be received via the authorization method; valid within a stated time period</p>",
+                    "name": "access_token",
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Extra fields that will be added to the response. Valid values:</p>\n<ul>\n<li>\"private.online_members\"</li>\n</ul>",
+                    "name": "extra",
+                    "type": "string, list"
+                },
+                {
+                    "description": "<p>Clan ID. Maximum limit: 100.</p>",
+                    "name": "clan_id",
+                    "required": true,
+                    "type": "numeric, list"
+                },
+                {
+                    "description": "<p>This parameter changes members field type. Valid values:</p>\n<ul>\n<li>\"id\" &mdash; Members field will contain associative array with account_id indexing in response</li>\n</ul>",
+                    "name": "members_key",
+                    "type": "string"
+                }
+            ],
+            "realm": "ru",
+            "section": "clans",
+            "url": "clans/info"
+        },
+        "list": {
+            "allowed_http_methods": [
+                "GET",
+                "POST"
+            ],
+            "allowed_protocols": [
+                "http",
+                "https"
+            ],
+            "api_url": "api.worldoftanks.ru/wot/",
+            "available_display_indices": [
+                "asia",
+                "eu",
+                "na",
+                "ru"
+            ],
+            "description": "<p>Method searches through clans and sorts them in a specified order.</p>",
+            "display_index": "ru",
+            "fields": [
+                {
+                    "description": "<p>Clan ID</p>",
+                    "name": [
+                        "clan_id"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Clan color in HEX #RRGGBB</p>",
+                    "name": [
+                        "color"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Clan creation date</p>",
+                    "name": [
+                        "created_at"
+                    ],
+                    "type": "timestamp"
+                },
+                {
+                    "description": "<p>Number of clan members</p>",
+                    "name": [
+                        "members_count"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Clan name</p>",
+                    "name": [
+                        "name"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Clan tag</p>",
+                    "name": [
+                        "tag"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "type": "empty_line"
+                },
+                {
+                    "description": "<p>Information on clan emblems in games and on clan portal</p>",
+                    "name": [
+                        "emblems"
+                    ],
+                    "type": "block_header"
+                },
+                {
+                    "description": "<p>List of links to 195x195 px emblems</p>",
+                    "name": [
+                        "emblems",
+                        "x195"
+                    ],
+                    "type": "associative array"
+                },
+                {
+                    "description": "<p>List of links to 24x24 px emblems</p>",
+                    "name": [
+                        "emblems",
+                        "x24"
+                    ],
+                    "type": "associative array"
+                },
+                {
+                    "description": "<p>List of links to 256x256 px emblems</p>",
+                    "name": [
+                        "emblems",
+                        "x256"
+                    ],
+                    "type": "associative array"
+                },
+                {
+                    "description": "<p>List of links to 32x32 px emblems</p>",
+                    "name": [
+                        "emblems",
+                        "x32"
+                    ],
+                    "type": "associative array"
+                },
+                {
+                    "description": "<p>List of links to 64x64 px emblems</p>",
+                    "name": [
+                        "emblems",
+                        "x64"
+                    ],
+                    "type": "associative array"
+                }
+            ],
+            "name": "Clans",
+            "parameters": [
+                {
+                    "description": "<p>Application ID</p>",
+                    "name": "application_id",
+                    "required": true,
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Localization language. Default is \"ru\". Valid values:</p>\n<ul>\n<li>\"en\" &mdash; English </li>\n<li>\"ru\" &mdash; \u0420\u0443\u0441\u0441\u043a\u0438\u0439 (by default)</li>\n<li>\"pl\" &mdash; Polski </li>\n<li>\"de\" &mdash; Deutsch </li>\n<li>\"fr\" &mdash; Fran\u00e7ais </li>\n<li>\"es\" &mdash; Espa\u00f1ol </li>\n<li>\"zh-cn\" &mdash; \u7b80\u4f53\u4e2d\u6587 </li>\n<li>\"zh-tw\" &mdash; \u7e41\u9ad4\u4e2d\u6587 </li>\n<li>\"tr\" &mdash; T\u00fcrk\u00e7e </li>\n<li>\"cs\" &mdash; \u010ce\u0161tina </li>\n<li>\"th\" &mdash; \u0e44\u0e17\u0e22 </li>\n<li>\"vi\" &mdash; Ti\u1ebfng Vi\u1ec7t </li>\n<li>\"ko\" &mdash; \ud55c\uad6d\uc5b4</li>\n</ul>",
+                    "name": "language",
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Maximum limit: 100.</p>",
+                    "name": "fields",
+                    "type": "string, list"
+                },
+                {
+                    "description": "<p>Part of name or tag for clan search. Minimum 2 characters</p>",
+                    "name": "search",
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Number of returned entries (fewer can be returned, but not more than 100). If the limit sent exceeds 100, a limit of 100 is applied (by default).</p>",
+                    "name": "limit",
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Page number. Default is 1. Min value is 1.</p>",
+                    "name": "page_no",
+                    "type": "numeric"
+                }
+            ],
+            "realm": "ru",
+            "section": "clans",
+            "url": "clans/list"
+        },
+        "memberhistory": {
+            "allowed_http_methods": [
+                "GET",
+                "POST"
+            ],
+            "allowed_protocols": [
+                "http",
+                "https"
+            ],
+            "api_url": "api.worldoftanks.ru/wot/",
+            "available_display_indices": [
+                "asia",
+                "eu",
+                "na",
+                "ru"
+            ],
+            "description": "<p>Method returns information about player's clan history. Data on 10 last clan memberships are presented in the response.<p/>This method will be removed. Use method <a href=\"/reference/all/wot/clans/memberhistory/\">Player's clan history (World of Tanks)</a></p>",
+            "display_index": "ru",
+            "fields": [
+                {
+                    "description": "<p>Player account ID</p>",
+                    "name": [
+                        "account_id"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Clan ID</p>",
+                    "name": [
+                        "clan_id"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Date when player joined clan</p>",
+                    "name": [
+                        "joined_at"
+                    ],
+                    "type": "timestamp"
+                },
+                {
+                    "description": "<p>Date when player left clan</p>",
+                    "name": [
+                        "left_at"
+                    ],
+                    "type": "timestamp"
+                },
+                {
+                    "description": "<p>Last position in clan</p>",
+                    "name": [
+                        "role"
+                    ],
+                    "type": "string"
+                }
+            ],
+            "name": "Player&#39;s clan history",
+            "parameters": [
+                {
+                    "description": "<p>Application ID</p>",
+                    "name": "application_id",
+                    "required": true,
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Localization language. Default is \"ru\". Valid values:</p>\n<ul>\n<li>\"en\" &mdash; English </li>\n<li>\"ru\" &mdash; \u0420\u0443\u0441\u0441\u043a\u0438\u0439 (by default)</li>\n<li>\"pl\" &mdash; Polski </li>\n<li>\"de\" &mdash; Deutsch </li>\n<li>\"fr\" &mdash; Fran\u00e7ais </li>\n<li>\"es\" &mdash; Espa\u00f1ol </li>\n<li>\"zh-cn\" &mdash; \u7b80\u4f53\u4e2d\u6587 </li>\n<li>\"zh-tw\" &mdash; \u7e41\u9ad4\u4e2d\u6587 </li>\n<li>\"tr\" &mdash; T\u00fcrk\u00e7e </li>\n<li>\"cs\" &mdash; \u010ce\u0161tina </li>\n<li>\"th\" &mdash; \u0e44\u0e17\u0e22 </li>\n<li>\"vi\" &mdash; Ti\u1ebfng Vi\u1ec7t </li>\n<li>\"ko\" &mdash; \ud55c\uad6d\uc5b4</li>\n</ul>",
+                    "name": "language",
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Maximum limit: 100.</p>",
+                    "name": "fields",
+                    "type": "string, list"
+                },
+                {
+                    "description": "<p>Account ID. Min value is 1.</p>",
+                    "name": "account_id",
+                    "required": true,
+                    "type": "numeric"
+                }
+            ],
+            "realm": "ru",
+            "section": "clans",
+            "url": "clans/memberhistory"
+        },
+        "messageboard": {
+            "allowed_http_methods": [
+                "GET",
+                "POST"
+            ],
+            "allowed_protocols": [
+                "http",
+                "https"
+            ],
+            "api_url": "api.worldoftanks.ru/wot/",
+            "available_display_indices": [
+                "asia",
+                "eu",
+                "na",
+                "ru"
+            ],
+            "description": "<p>Method returns messages of clan message board.<p/>This method will be removed. Use method <a href=\"/reference/all/wot/clans/messageboard/\">Message board (World of Tanks)</a></p>",
+            "display_index": "ru",
+            "errors": [
+                {
+                    "code": 404,
+                    "description": "<p>Player is not a clan member</p>",
+                    "message": "CLAN_NOT_FOUND"
+                }
+            ],
+            "fields": [
+                {
+                    "description": "<p>Message author ID</p>",
+                    "name": [
+                        "author_id"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Message creation date</p>",
+                    "name": [
+                        "created_at"
+                    ],
+                    "type": "timestamp"
+                },
+                {
+                    "description": "<p>ID of a player who has changed the message</p>",
+                    "name": [
+                        "editor_id"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Indicates if the message has been read</p>",
+                    "name": [
+                        "is_read"
+                    ],
+                    "type": "boolean"
+                },
+                {
+                    "description": "<p>Message text</p>",
+                    "name": [
+                        "message"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Date when message was updated</p>",
+                    "name": [
+                        "updated_at"
+                    ],
+                    "type": "timestamp"
+                }
+            ],
+            "name": "Message board",
+            "parameters": [
+                {
+                    "description": "<p>Application ID</p>",
+                    "name": "application_id",
+                    "required": true,
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Maximum limit: 100.</p>",
+                    "name": "fields",
+                    "type": "string, list"
+                },
+                {
+                    "description": "<p><a href=\"/documentation/guide/principles/#access_token\">Access token</a> for the private data of a user's account; can be received via the authorization method; valid within a stated time period</p>",
+                    "name": "access_token",
+                    "required": true,
+                    "type": "string"
+                }
+            ],
+            "realm": "ru",
+            "section": "clans",
+            "url": "clans/messageboard"
         }
     },
     "encyclopedia": {
@@ -11862,7 +14480,57 @@
                     "type": "empty_line"
                 },
                 {
-                    "description": "<p>Vehicle characteristics in the Siege mode</p>",
+                    "description": "<p>Vehicle characteristics in Rapid mode (for wheeled vehicles)</p>",
+                    "name": [
+                        "rapid"
+                    ],
+                    "type": "block_header"
+                },
+                {
+                    "description": "<p>Top reverse speed (km/h)</p>",
+                    "name": [
+                        "rapid",
+                        "speed_backward"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Top speed (km/h)</p>",
+                    "name": [
+                        "rapid",
+                        "speed_forward"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Maximum wheel turning angle</p>",
+                    "name": [
+                        "rapid",
+                        "suspension_steering_lock_angle"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Time required to switch to Cruise mode</p>",
+                    "name": [
+                        "rapid",
+                        "switch_off_time"
+                    ],
+                    "type": "float"
+                },
+                {
+                    "description": "<p>Time required to switch to Rapid mode</p>",
+                    "name": [
+                        "rapid",
+                        "switch_on_time"
+                    ],
+                    "type": "float"
+                },
+                {
+                    "type": "empty_line"
+                },
+                {
+                    "description": "<p>Vehicle characteristics in Siege mode</p>",
                     "name": [
                         "siege"
                     ],
@@ -11933,7 +14601,7 @@
                     "type": "float"
                 },
                 {
-                    "description": "<p>Time needed to switch off the Siege mode</p>",
+                    "description": "<p>Time required to switch to Siege mode</p>",
                     "name": [
                         "siege",
                         "switch_on_time"
@@ -11965,6 +14633,14 @@
                         "name"
                     ],
                     "type": "string"
+                },
+                {
+                    "description": "<p>Maximum wheel turning angle (for wheeled vehicles)</p>",
+                    "name": [
+                        "suspension",
+                        "steering_lock_angle"
+                    ],
+                    "type": "numeric"
                 },
                 {
                     "description": "<p>Module tag</p>",
@@ -12281,6 +14957,13 @@
                     "description": "<p>Indicates the IGR vehicle. Active only for Korea realm</p>",
                     "name": [
                         "is_premium_igr"
+                    ],
+                    "type": "boolean"
+                },
+                {
+                    "description": "<p>Indicates if the vehicle is a wheeled vehicle</p>",
+                    "name": [
+                        "is_wheeled"
                     ],
                     "type": "boolean"
                 },
@@ -12944,7 +15627,63 @@
                     "type": "empty_line"
                 },
                 {
-                    "description": "<p>Vehicle characteristics in the Siege mode</p>",
+                    "description": "<p>Vehicle characteristics in Rapid mode (for wheeled vehicles)</p>",
+                    "name": [
+                        "default_profile",
+                        "rapid"
+                    ],
+                    "type": "block_header"
+                },
+                {
+                    "description": "<p>Top reverse speed (km/h)</p>",
+                    "name": [
+                        "default_profile",
+                        "rapid",
+                        "speed_backward"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Top speed (km/h)</p>",
+                    "name": [
+                        "default_profile",
+                        "rapid",
+                        "speed_forward"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Maximum wheel turning angle</p>",
+                    "name": [
+                        "default_profile",
+                        "rapid",
+                        "suspension_steering_lock_angle"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Time required to switch to Cruise mode</p>",
+                    "name": [
+                        "default_profile",
+                        "rapid",
+                        "switch_off_time"
+                    ],
+                    "type": "float"
+                },
+                {
+                    "description": "<p>Time required to switch to Rapid mode</p>",
+                    "name": [
+                        "default_profile",
+                        "rapid",
+                        "switch_on_time"
+                    ],
+                    "type": "float"
+                },
+                {
+                    "type": "empty_line"
+                },
+                {
+                    "description": "<p>Vehicle characteristics in Siege mode</p>",
                     "name": [
                         "default_profile",
                         "siege"
@@ -13024,7 +15763,7 @@
                     "type": "float"
                 },
                 {
-                    "description": "<p>Time needed to switch off the Siege mode</p>",
+                    "description": "<p>Time required to switch to Siege mode</p>",
                     "name": [
                         "default_profile",
                         "siege",
@@ -13060,6 +15799,15 @@
                         "name"
                     ],
                     "type": "string"
+                },
+                {
+                    "description": "<p>Maximum wheel turning angle (for wheeled vehicles)</p>",
+                    "name": [
+                        "default_profile",
+                        "suspension",
+                        "steering_lock_angle"
+                    ],
+                    "type": "numeric"
                 },
                 {
                     "description": "<p>Module tag</p>",
@@ -13296,6 +16044,32 @@
                         "type"
                     ],
                     "type": "string"
+                },
+                {
+                    "type": "empty_line"
+                },
+                {
+                    "description": "<p>\u0418\u043d\u0444\u043e\u0440\u043c\u0430\u0446\u0438\u044f \u043e\u0431 \u043c\u0443\u043b\u044c\u0442\u0438\u043d\u0430\u0446\u0438\u0438</p>",
+                    "name": [
+                        "multination"
+                    ],
+                    "type": "block_header"
+                },
+                {
+                    "description": "<p>\u041f\u0440\u0438\u0437\u043d\u0430\u043a \u043d\u0430\u0446\u0438\u0438 \u043f\u043e-\u0443\u043c\u043e\u043b\u0447\u0430\u043d\u0438\u044e</p>",
+                    "name": [
+                        "multination",
+                        "is_default"
+                    ],
+                    "type": "boolean"
+                },
+                {
+                    "description": "<p>Vehicle ID</p>",
+                    "name": [
+                        "multination",
+                        "tank_id"
+                    ],
+                    "type": "numeric"
                 }
             ],
             "name": "Vehicles",
@@ -13509,7 +16283,7 @@
                     "type": "string"
                 },
                 {
-                    "description": "<p>Clan Tag</p>",
+                    "description": "<p>Clan tag</p>",
                     "name": [
                         "tag"
                     ],
@@ -18396,6 +21170,80 @@
         }
     },
     "stronghold": {
+        "activateclanreserve": {
+            "allowed_http_methods": [
+                "POST"
+            ],
+            "allowed_protocols": [
+                "http",
+                "https"
+            ],
+            "api_url": "api.worldoftanks.ru/wot/",
+            "available_display_indices": [
+                "asia",
+                "eu",
+                "na",
+                "ru"
+            ],
+            "description": "<p>This method activates an available clan Reserve. A clan Reserve can be activated only by a clan member with the required permission.</p>",
+            "display_index": "ru",
+            "errors": [
+                {
+                    "code": 409,
+                    "description": "<p>Account is not in a clan or the wrong Reserve is selected</p>",
+                    "message": "RESERVE_ACTIVATION_ERROR"
+                }
+            ],
+            "fields": [
+                {
+                    "description": "<p>Activation time of a clan Reserve</p>",
+                    "name": [
+                        "activated_at"
+                    ],
+                    "type": "timestamp"
+                }
+            ],
+            "name": "Activate available clan Reserve",
+            "parameters": [
+                {
+                    "description": "<p>Application ID</p>",
+                    "name": "application_id",
+                    "required": true,
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Maximum limit: 100.</p>",
+                    "name": "fields",
+                    "type": "string, list"
+                },
+                {
+                    "description": "<p><a href=\"/documentation/guide/principles/#access_token\">Access token</a> for the private data of a user's account; can be received via the authorization method; valid within a stated time period</p>",
+                    "name": "access_token",
+                    "required": true,
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Localization language. Default is \"ru\". Valid values:</p>\n<ul>\n<li>\"ru\" &mdash; Russian (by default)</li>\n<li>\"be\" &mdash; Belarusian </li>\n<li>\"uk\" &mdash; Ukrainian </li>\n<li>\"kk\" &mdash; Kazakh</li>\n</ul>",
+                    "name": "language",
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Type of clan Reserve to be activated</p>",
+                    "name": "reserve_type",
+                    "required": true,
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Level of clan Reserve to be activated</p>",
+                    "name": "reserve_level",
+                    "required": true,
+                    "type": "numeric"
+                }
+            ],
+            "realm": "ru",
+            "section": "stronghold",
+            "url": "stronghold/activateclanreserve"
+        },
         "claninfo": {
             "allowed_http_methods": [
                 "GET",
@@ -18825,6 +21673,13 @@
             ],
             "description": "<p>Method returns information about available Reserves and their current status.</p>",
             "display_index": "ru",
+            "errors": [
+                {
+                    "code": 409,
+                    "description": "<p>Account is not in clan</p>",
+                    "message": "ACCOUNT_NOT_IN_CLAN"
+                }
+            ],
             "fields": [
                 {
                     "description": "<p>Reserve efficiency type</p>",
@@ -19086,6 +21941,80 @@
             "realm": "ru",
             "section": "tanks",
             "url": "tanks/achievements"
+        },
+        "mastery": {
+            "allowed_http_methods": [
+                "GET",
+                "POST"
+            ],
+            "allowed_protocols": [
+                "http",
+                "https"
+            ],
+            "api_url": "api.worldoftanks.ru/wot/",
+            "available_display_indices": [
+                "asia",
+                "eu",
+                "na",
+                "ru"
+            ],
+            "description": "<p>The method returns percentiles of the distribution of average damage or experience values for each piece of equipment</p>",
+            "display_index": "ru",
+            "fields": [
+                {
+                    "description": "<p>Values of these percentiles for each piece of equipment</p>",
+                    "name": [
+                        "distribution"
+                    ],
+                    "type": "associative array"
+                },
+                {
+                    "description": "<p>Date of data update</p>",
+                    "name": [
+                        "updated_at"
+                    ],
+                    "type": "timestamp"
+                }
+            ],
+            "name": "Vehicle mastery distribution",
+            "parameters": [
+                {
+                    "description": "<p>Application ID</p>",
+                    "name": "application_id",
+                    "required": true,
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Localization language. Default is \"ru\". Valid values:</p>\n<ul>\n<li>\"en\" &mdash; English </li>\n<li>\"ru\" &mdash; \u0420\u0443\u0441\u0441\u043a\u0438\u0439 (by default)</li>\n<li>\"pl\" &mdash; Polski </li>\n<li>\"de\" &mdash; Deutsch </li>\n<li>\"fr\" &mdash; Fran\u00e7ais </li>\n<li>\"es\" &mdash; Espa\u00f1ol </li>\n<li>\"zh-cn\" &mdash; \u7b80\u4f53\u4e2d\u6587 </li>\n<li>\"zh-tw\" &mdash; \u7e41\u9ad4\u4e2d\u6587 </li>\n<li>\"tr\" &mdash; T\u00fcrk\u00e7e </li>\n<li>\"cs\" &mdash; \u010ce\u0161tina </li>\n<li>\"th\" &mdash; \u0e44\u0e17\u0e22 </li>\n<li>\"vi\" &mdash; Ti\u1ebfng Vi\u1ec7t </li>\n<li>\"ko\" &mdash; \ud55c\uad6d\uc5b4</li>\n</ul>",
+                    "name": "language",
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Maximum limit: 100.</p>",
+                    "name": "fields",
+                    "type": "string, list"
+                },
+                {
+                    "description": "<p>Type of data. Valid values:</p>\n<ul>\n<li>\"damage\" &mdash; Use damage distribution </li>\n<li>\"xp\" &mdash; Use a distribution based on experience</li>\n</ul>",
+                    "name": "distribution",
+                    "required": true,
+                    "type": "string"
+                },
+                {
+                    "description": "<p>A list of percentiles to be included in the response. Maximum limit: 10. Min value is 1. Maximum value: 100.</p>",
+                    "name": "percentile",
+                    "required": true,
+                    "type": "numeric, list"
+                },
+                {
+                    "description": "<p>Player's vehicle ID. Maximum limit: 100.</p>",
+                    "name": "tank_id",
+                    "type": "numeric, list"
+                }
+            ],
+            "realm": "ru",
+            "section": "tanks",
+            "url": "tanks/mastery"
         },
         "stats": {
             "allowed_http_methods": [
@@ -19488,7 +22417,7 @@
                     "type": "numeric"
                 },
                 {
-                    "description": "<p>Maximum Damage caused per battle</p>",
+                    "description": "<p>Maximum damage caused in a battle</p>",
                     "name": [
                         "clan",
                         "max_damage"
@@ -19836,7 +22765,7 @@
                     "type": "numeric"
                 },
                 {
-                    "description": "<p>Maximum Damage caused per battle</p>",
+                    "description": "<p>Maximum damage caused in a battle</p>",
                     "name": [
                         "epic",
                         "max_damage"
@@ -20118,7 +23047,7 @@
                     "type": "numeric"
                 },
                 {
-                    "description": "<p>Maximum Damage caused per battle</p>",
+                    "description": "<p>Maximum damage caused in a battle</p>",
                     "name": [
                         "fallout",
                         "max_damage"
@@ -20626,7 +23555,7 @@
                     "type": "numeric"
                 },
                 {
-                    "description": "<p>Maximum Damage caused per battle</p>",
+                    "description": "<p>Maximum damage caused in a battle</p>",
                     "name": [
                         "random",
                         "max_damage"
@@ -20701,6 +23630,192 @@
                     "description": "<p>Total experience</p>",
                     "name": [
                         "random",
+                        "xp"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "type": "empty_line"
+                },
+                {
+                    "description": "<p>Archive of statistics for ranked 10x10 battles.</p>\n<p><strong>An extra field.</strong></p>",
+                    "name": [
+                        "ranked_10x10"
+                    ],
+                    "type": "block_header"
+                },
+                {
+                    "description": "<p>Average experience per battle</p>",
+                    "name": [
+                        "ranked_10x10",
+                        "battle_avg_xp"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Battles fought</p>",
+                    "name": [
+                        "ranked_10x10",
+                        "battles"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Number of battles on vehicles that cause the stun effect</p>",
+                    "name": [
+                        "ranked_10x10",
+                        "battles_on_stunning_vehicles"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Base capture points</p>",
+                    "name": [
+                        "ranked_10x10",
+                        "capture_points"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Damage caused</p>",
+                    "name": [
+                        "ranked_10x10",
+                        "damage_dealt"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Damage received</p>",
+                    "name": [
+                        "ranked_10x10",
+                        "damage_received"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Draws</p>",
+                    "name": [
+                        "ranked_10x10",
+                        "draws"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Base defense points</p>",
+                    "name": [
+                        "ranked_10x10",
+                        "dropped_capture_points"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Vehicles destroyed</p>",
+                    "name": [
+                        "ranked_10x10",
+                        "frags"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Hits</p>",
+                    "name": [
+                        "ranked_10x10",
+                        "hits"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Hit ratio</p>",
+                    "name": [
+                        "ranked_10x10",
+                        "hits_percents"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Defeats</p>",
+                    "name": [
+                        "ranked_10x10",
+                        "losses"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Maximum damage caused in a battle</p>",
+                    "name": [
+                        "ranked_10x10",
+                        "max_damage"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Maximum destroyed in battle</p>",
+                    "name": [
+                        "ranked_10x10",
+                        "max_frags"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Maximum experience per battle</p>",
+                    "name": [
+                        "ranked_10x10",
+                        "max_xp"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Shots fired</p>",
+                    "name": [
+                        "ranked_10x10",
+                        "shots"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Enemies spotted</p>",
+                    "name": [
+                        "ranked_10x10",
+                        "spotted"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Damage to enemy vehicles stunned by you</p>",
+                    "name": [
+                        "ranked_10x10",
+                        "stun_assisted_damage"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Number of times an enemy was stunned by you</p>",
+                    "name": [
+                        "ranked_10x10",
+                        "stun_number"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Battles survived</p>",
+                    "name": [
+                        "ranked_10x10",
+                        "survived_battles"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Victories</p>",
+                    "name": [
+                        "ranked_10x10",
+                        "wins"
+                    ],
+                    "type": "numeric"
+                },
+                {
+                    "description": "<p>Total experience</p>",
+                    "name": [
+                        "ranked_10x10",
                         "xp"
                     ],
                     "type": "numeric"
@@ -20710,192 +23825,6 @@
                 },
                 {
                     "deprecated": true,
-                    "description": "<p>Statistics in Ranked Battles.</p>\n<p><strong>An extra field.</strong></p>",
-                    "name": [
-                        "ranked"
-                    ],
-                    "type": "block_header"
-                },
-                {
-                    "description": "<p>Average experience per battle</p>",
-                    "name": [
-                        "ranked",
-                        "battle_avg_xp"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Battles fought</p>",
-                    "name": [
-                        "ranked",
-                        "battles"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Number of battles on vehicles that cause the stun effect</p>",
-                    "name": [
-                        "ranked",
-                        "battles_on_stunning_vehicles"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Base capture points</p>",
-                    "name": [
-                        "ranked",
-                        "capture_points"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Damage caused</p>",
-                    "name": [
-                        "ranked",
-                        "damage_dealt"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Damage received</p>",
-                    "name": [
-                        "ranked",
-                        "damage_received"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Draws</p>",
-                    "name": [
-                        "ranked",
-                        "draws"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Base defense points</p>",
-                    "name": [
-                        "ranked",
-                        "dropped_capture_points"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Vehicles destroyed</p>",
-                    "name": [
-                        "ranked",
-                        "frags"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Hits</p>",
-                    "name": [
-                        "ranked",
-                        "hits"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Hit ratio</p>",
-                    "name": [
-                        "ranked",
-                        "hits_percents"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Defeats</p>",
-                    "name": [
-                        "ranked",
-                        "losses"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Maximum Damage caused per battle</p>",
-                    "name": [
-                        "ranked",
-                        "max_damage"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Maximum destroyed in battle</p>",
-                    "name": [
-                        "ranked",
-                        "max_frags"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Maximum experience per battle</p>",
-                    "name": [
-                        "ranked",
-                        "max_xp"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Shots fired</p>",
-                    "name": [
-                        "ranked",
-                        "shots"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Enemies spotted</p>",
-                    "name": [
-                        "ranked",
-                        "spotted"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Damage to enemy vehicles stunned by you</p>",
-                    "name": [
-                        "ranked",
-                        "stun_assisted_damage"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Number of times an enemy was stunned by you</p>",
-                    "name": [
-                        "ranked",
-                        "stun_number"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Battles survived</p>",
-                    "name": [
-                        "ranked",
-                        "survived_battles"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Victories</p>",
-                    "name": [
-                        "ranked",
-                        "wins"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Total experience</p>",
-                    "name": [
-                        "ranked",
-                        "xp"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "type": "empty_line"
-                },
-                {
                     "description": "<p>Statistics in Ranked Battles.</p>\n<p><strong>An extra field.</strong></p>",
                     "name": [
                         "ranked_battles"
@@ -20999,7 +23928,7 @@
                     "type": "numeric"
                 },
                 {
-                    "description": "<p>Maximum Damage caused per battle</p>",
+                    "description": "<p>Maximum damage caused in a battle</p>",
                     "name": [
                         "ranked_battles",
                         "max_damage"
@@ -21185,7 +24114,7 @@
                     "type": "numeric"
                 },
                 {
-                    "description": "<p>Maximum Damage caused per battle</p>",
+                    "description": "<p>Maximum damage caused in a battle</p>",
                     "name": [
                         "regular_team",
                         "max_damage"
@@ -21395,7 +24324,7 @@
                     "type": "numeric"
                 },
                 {
-                    "description": "<p>Maximum Damage caused per battle</p>",
+                    "description": "<p>Maximum damage caused in a battle</p>",
                     "name": [
                         "stronghold_defense",
                         "max_damage"
@@ -21637,7 +24566,7 @@
                     "type": "numeric"
                 },
                 {
-                    "description": "<p>Maximum Damage caused per battle</p>",
+                    "description": "<p>Maximum damage caused in a battle</p>",
                     "name": [
                         "stronghold_skirmish",
                         "max_damage"
@@ -21855,7 +24784,7 @@
                     "type": "numeric"
                 },
                 {
-                    "description": "<p>Maximum Damage caused per battle</p>",
+                    "description": "<p>Maximum damage caused in a battle</p>",
                     "name": [
                         "team",
                         "max_damage"
@@ -21959,7 +24888,7 @@
                     "type": "string"
                 },
                 {
-                    "description": "<p>Extra fields that will be added to the response. Valid values:</p>\n<ul>\n<li>\"epic\" </li>\n<li>\"fallout\" </li>\n<li>\"random\" </li>\n<li>\"ranked\" </li>\n<li>\"ranked_battles\"</li>\n</ul>",
+                    "description": "<p>Extra fields that will be added to the response. Valid values:</p>\n<ul>\n<li>\"epic\" </li>\n<li>\"fallout\" </li>\n<li>\"random\" </li>\n<li>\"ranked_10x10\" </li>\n<li>\"ranked_battles\"</li>\n</ul>",
                     "name": "extra",
                     "type": "string, list"
                 },

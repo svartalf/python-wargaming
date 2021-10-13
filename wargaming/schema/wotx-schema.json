@@ -9,13 +9,12 @@
                 "http",
                 "https"
             ],
-            "api_url": "api-ps4-console.worldoftanks.com/wotx/",
+            "api_url": "api-console.worldoftanks.com/wotx/",
             "available_display_indices": [
-                "ps4",
-                "xbox"
+                "wgcb"
             ],
             "description": "<p>Method returns players' achievement details.</p>\n<p>Achievement properties define the <strong>achievements</strong> field values</p>\n<ul>\n<li>1-4 for Mastery Badges and Stage Achievements (type: \"class\");</li>\n<li>maximum value of Achievement series (type: \"series\");</li>\n<li>number of achievements earned from sections: Battle Hero, Epic Achievements, Group Achievements, Special Achievements, etc. (type: \"repeatable, single, custom\").</li>\n</ul>",
-            "display_index": "ps4",
+            "display_index": "wgcb",
             "fields": [
                 {
                     "description": "<p>Achievements earned</p>",
@@ -53,18 +52,18 @@
                     "type": "string"
                 },
                 {
-                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Max limit is 100.</p>",
+                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Maximum limit: 100.</p>",
                     "name": "fields",
                     "type": "string, list"
                 },
                 {
-                    "description": "<p>Player account ID. Max limit is 100.</p>",
+                    "description": "<p>Player account ID. Maximum limit: 100.</p>",
                     "name": "account_id",
                     "required": true,
                     "type": "numeric, list"
                 }
             ],
-            "realm": "ps4",
+            "realm": "wgcb",
             "section": "account",
             "url": "account/achievements"
         },
@@ -77,13 +76,12 @@
                 "http",
                 "https"
             ],
-            "api_url": "api-ps4-console.worldoftanks.com/wotx/",
+            "api_url": "api-console.worldoftanks.com/wotx/",
             "available_display_indices": [
-                "ps4",
-                "xbox"
+                "wgcb"
             ],
             "description": "<p>Method returns player details.</p>",
-            "display_index": "ps4",
+            "display_index": "wgcb",
             "errors": [
                 {
                     "code": 407,
@@ -303,7 +301,7 @@
                     "type": "associative array"
                 },
                 {
-                    "description": "<p>Maximum Damage caused per battle</p>",
+                    "description": "<p>Maximum damage caused in a battle</p>",
                     "name": [
                         "statistics",
                         "max_damage"
@@ -653,7 +651,7 @@
                     "type": "string"
                 },
                 {
-                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Max limit is 100.</p>",
+                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Maximum limit: 100.</p>",
                     "name": "fields",
                     "type": "string, list"
                 },
@@ -663,13 +661,13 @@
                     "type": "string"
                 },
                 {
-                    "description": "<p>Player account ID. Max limit is 100.</p>",
+                    "description": "<p>Player account ID. Maximum limit: 100.</p>",
                     "name": "account_id",
                     "required": true,
                     "type": "numeric, list"
                 }
             ],
-            "realm": "ps4",
+            "realm": "wgcb",
             "section": "account",
             "url": "account/info"
         },
@@ -682,13 +680,12 @@
                 "http",
                 "https"
             ],
-            "api_url": "api-ps4-console.worldoftanks.com/wotx/",
+            "api_url": "api-console.worldoftanks.com/wotx/",
             "available_display_indices": [
-                "ps4",
-                "xbox"
+                "wgcb"
             ],
             "description": "<p>Method returns partial list of players. The list is filtered by initial characters of user name and sorted alphabetically.</p>",
-            "display_index": "ps4",
+            "display_index": "wgcb",
             "errors": [
                 {
                     "code": 402,
@@ -736,17 +733,17 @@
                     "type": "string"
                 },
                 {
-                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Max limit is 100.</p>",
+                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Maximum limit: 100.</p>",
                     "name": "fields",
                     "type": "string, list"
                 },
                 {
-                    "description": "<p>Search type. Default is \"startswith\". Valid values:</p>\n<ul>\n<li>\"startswith\" &mdash; Search by initial characters of player name. Minimum length: 3 characters. Maximum length: 16 characters. (by default)</li>\n<li>\"exact\" &mdash; Search by exact match of player name. Case insensitive. You can enter several names, separated with commas (up to 100).</li>\n</ul>",
+                    "description": "<p>Search type. Default is \"startswith\". Valid values:</p>\n<ul>\n<li>\"startswith\" &mdash; Search by initial characters of player name. Minimum length: 3 characters. Maximum length: 24 characters. (by default)</li>\n<li>\"exact\" &mdash; Search by exact match of player name. Case insensitive. You can enter several names, separated with commas (up to 100).</li>\n</ul>",
                     "name": "type",
                     "type": "string"
                 },
                 {
-                    "description": "<p>Player name search string. Parameter \"type\" defines minimum length and type of search. Using the exact search type, you can enter several names, separated with commas. Maximum length: 16.</p>",
+                    "description": "<p>Player name search string. Parameter \"type\" defines minimum length and type of search. Using the exact search type, you can enter several names, separated with commas. Maximum length: 24.</p>",
                     "name": "search",
                     "required": true,
                     "type": "string"
@@ -757,7 +754,7 @@
                     "type": "numeric"
                 }
             ],
-            "realm": "ps4",
+            "realm": "wgcb",
             "section": "account",
             "url": "account/list"
         },
@@ -770,12 +767,12 @@
                 "http",
                 "https"
             ],
-            "api_url": "api-ps4-console.worldoftanks.com/wotx/",
+            "api_url": "api-console.worldoftanks.com/wotx/",
             "available_display_indices": [
-                "ps4"
+                "wgcb"
             ],
             "description": "<p>Method returns player data based on Play Station UID</p>",
-            "display_index": "ps4",
+            "display_index": "wgcb",
             "fields": [
                 {
                     "description": "<p>Account ID</p>",
@@ -801,13 +798,13 @@
                     "type": "string"
                 },
                 {
-                    "description": "<p>Play Station UID. Max limit is 100.</p>",
+                    "description": "<p>Play Station UID. Maximum limit: 100.</p>",
                     "name": "psnid",
                     "required": true,
                     "type": "string, list"
                 }
             ],
-            "realm": "ps4",
+            "realm": "wgcb",
             "section": "account",
             "url": "account/psninfo"
         },
@@ -820,12 +817,12 @@
                 "http",
                 "https"
             ],
-            "api_url": "api-xbox-console.worldoftanks.com/wotx/",
+            "api_url": "api-console.worldoftanks.com/wotx/",
             "available_display_indices": [
-                "xbox"
+                "wgcb"
             ],
             "description": "<p>Method returns player details based on the player Microsoft XUID.</p>",
-            "display_index": "xbox",
+            "display_index": "wgcb",
             "fields": [
                 {
                     "description": "<p>Player account ID</p>",
@@ -851,13 +848,13 @@
                     "type": "string"
                 },
                 {
-                    "description": "<p>Player Microsoft XUID. Max limit is 100.</p>",
+                    "description": "<p>Player Microsoft XUID. Maximum limit: 100.</p>",
                     "name": "xuid",
                     "required": true,
                     "type": "numeric, list"
                 }
             ],
-            "realm": "xbox",
+            "realm": "wgcb",
             "section": "account",
             "url": "account/xuidinfo"
         }
@@ -871,13 +868,12 @@
             "allowed_protocols": [
                 "https"
             ],
-            "api_url": "api-ps4-console.worldoftanks.com/wotx/",
+            "api_url": "api-console.worldoftanks.com/wotx/",
             "available_display_indices": [
-                "ps4",
-                "xbox"
+                "wgcb"
             ],
             "description": "<p>Method authenticates user based on PlayStation Network ID which is used in World of Tanks PlayStation 4. To log in, player must enter PlayStation Network ID and password.</p>\n<p>Information on authorization status is sent to URL specified in <strong>redirect_uri</strong> parameter.</p>\n<p>If authentication is successful, the following parameters are sent to <strong>redirect_uri</strong>:</p>\n<ul>\n<li><strong>status: ok</strong> \u2014 successful authentication</li>\n<li><strong>access_token</strong> \u2014 access token is passed in to all methods that require authentication</li>\n<li><strong>expires_at</strong> \u2014 expiration date of <strong>access_token</strong></li>\n<li><strong>account_id</strong> \u2014 user ID</li>\n<li><strong>nickname</strong> \u2014 user name</li>\n<li><strong>psn_access_token</strong> \u2014 PlayStation Network access token</li>\n<li><strong>psn_access_token_expires_at</strong> \u2014 expiration date of <strong>psn_access_token</strong>.</li>\n</ul>\n<p>If authentication fails, the following parameters are sent to <strong>redirect_uri</strong>:</p>\n<ul>\n<li><strong>status: error</strong> \u2014 authentication error</li>\n<li><strong>code</strong> \u2014 error code</li>\n<li><strong>message</strong> \u2014 error message.</li>\n</ul>",
-            "display_index": "ps4",
+            "display_index": "wgcb",
             "errors": [
                 {
                     "code": 401,
@@ -918,7 +914,7 @@
                     "type": "numeric"
                 },
                 {
-                    "description": "<p>URL where user is redirected after authentication.</p>\n<p>By default: <a href=\"https://api-ps4-console.worldoftanks.com/wotx//blank/\">api-ps4-console.worldoftanks.com/wotx//blank/</a></p>",
+                    "description": "<p>URL where user is redirected after authentication.</p>\n<p>By default: <a href=\"https://api-console.worldoftanks.com/wotx//blank/\">api-console.worldoftanks.com/wotx//blank/</a></p>",
                     "name": "redirect_uri",
                     "type": "string"
                 },
@@ -928,17 +924,17 @@
                     "type": "string"
                 },
                 {
-                    "description": "<p>If parameter <strong>nofollow=1</strong> is passed in, the user is not redirected. URL is returned in response. Default is 0. Min value is 0. Max value is 1.</p>",
+                    "description": "<p>If parameter <strong>nofollow=1</strong> is passed in, the user is not redirected. URL is returned in response. Default is 0. Min value is 0. Maximum value: 1.</p>",
                     "name": "nofollow",
                     "type": "numeric"
                 },
                 {
-                    "description": "<p>Authentication form localization language. Default is \"en\". Valid values:</p>\n<ul>\n<li>\"cs\" &mdash; Czech </li>\n<li>\"de\" &mdash; German </li>\n<li>\"en\" &mdash; English (by default)</li>\n<li>\"es\" &mdash; Spanish </li>\n<li>\"es-ar\" &mdash; Argentinian Spanish </li>\n<li>\"fr\" &mdash; French </li>\n<li>\"ja\" &mdash; Japanese </li>\n<li>\"pl\" &mdash; Polish </li>\n<li>\"pt-br\" &mdash; Brazilian Portuguese </li>\n<li>\"ru\" &mdash; Russian </li>\n<li>\"th\" &mdash; Thai </li>\n<li>\"tr\" &mdash; Turkish </li>\n<li>\"vi\" &mdash; Vietnamese </li>\n<li>\"zh-tw\" &mdash; Traditional Chinese</li>\n</ul>",
+                    "description": "<p>Authentication form localization language. Default is \"en\". Valid values:</p>\n<ul>\n<li>\"cs\" &mdash; Czech </li>\n<li>\"de\" &mdash; German </li>\n<li>\"en\" &mdash; English (by default)</li>\n<li>\"es\" &mdash; Spanish </li>\n<li>\"es-ar\" &mdash; Argentinian Spanish </li>\n<li>\"fr\" &mdash; French </li>\n<li>\"ja\" &mdash; Japanese </li>\n<li>\"pl\" &mdash; Polish </li>\n<li>\"pt-br\" &mdash; Brazilian Portuguese </li>\n<li>\"ru\" &mdash; Russian </li>\n<li>\"th\" &mdash; Thai </li>\n<li>\"tr\" &mdash; Turkish </li>\n<li>\"vi\" &mdash; Vietnamese </li>\n<li>\"zh-tw\" &mdash; Traditional Chinese </li>\n<li>\"zh-cn\" &mdash; Simplified Chinese</li>\n</ul>",
                     "name": "language",
                     "type": "string"
                 }
             ],
-            "realm": "ps4",
+            "realm": "wgcb",
             "section": "auth",
             "url": "auth/login"
         },
@@ -949,13 +945,12 @@
             "allowed_protocols": [
                 "https"
             ],
-            "api_url": "api-ps4-console.worldoftanks.com/wotx/",
+            "api_url": "api-console.worldoftanks.com/wotx/",
             "available_display_indices": [
-                "ps4",
-                "xbox"
+                "wgcb"
             ],
             "description": "<p>Method deletes user's <strong>access_token</strong>.</p>\n<p>After this method is called, <strong>access_token</strong> becomes invalid.</p>",
-            "display_index": "ps4",
+            "display_index": "wgcb",
             "name": "Log out",
             "parameters": [
                 {
@@ -971,7 +966,7 @@
                     "type": "string"
                 }
             ],
-            "realm": "ps4",
+            "realm": "wgcb",
             "section": "auth",
             "url": "auth/logout"
         },
@@ -982,13 +977,12 @@
             "allowed_protocols": [
                 "https"
             ],
-            "api_url": "api-ps4-console.worldoftanks.com/wotx/",
+            "api_url": "api-console.worldoftanks.com/wotx/",
             "available_display_indices": [
-                "ps4",
-                "xbox"
+                "wgcb"
             ],
             "description": "<p>Method generates new <strong>access_token</strong> based on the current token.</p>\n<p>This method is used when the player is still using the application but the current <strong>access_token</strong> is about to expire.</p>",
-            "display_index": "ps4",
+            "display_index": "wgcb",
             "fields": [
                 {
                     "description": "<p>Access token is passed to all methods requiring authorization.</p>",
@@ -1032,7 +1026,7 @@
                     "type": "numeric"
                 }
             ],
-            "realm": "ps4",
+            "realm": "wgcb",
             "section": "auth",
             "url": "auth/prolongate"
         }
@@ -1047,13 +1041,12 @@
                 "http",
                 "https"
             ],
-            "api_url": "api-ps4-console.worldoftanks.com/wotx/",
+            "api_url": "api-console.worldoftanks.com/wotx/",
             "available_display_indices": [
-                "ps4",
-                "xbox"
+                "wgcb"
             ],
             "description": "<p>Method returns player clan data. Player clan data exist only for accounts, that were clan members at least once.</p>",
-            "display_index": "ps4",
+            "display_index": "wgcb",
             "fields": [
                 {
                     "description": "<p>User ID</p>",
@@ -1101,7 +1094,7 @@
                     "type": "empty_line"
                 },
                 {
-                    "description": "<p>Short info about clan.</p>\n<p><strong>An extra field.</strong></p>",
+                    "description": "<p>Brief clan details.</p>\n<p><strong>An extra field.</strong></p>",
                     "name": [
                         "clan"
                     ],
@@ -1178,7 +1171,7 @@
                     "type": "string"
                 },
                 {
-                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Max limit is 100.</p>",
+                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Maximum limit: 100.</p>",
                     "name": "fields",
                     "type": "string, list"
                 },
@@ -1188,13 +1181,13 @@
                     "type": "string, list"
                 },
                 {
-                    "description": "<p>Account ID. Max limit is 100. Min value is 1.</p>",
+                    "description": "<p>Account ID. Maximum limit: 100. Min value is 1.</p>",
                     "name": "account_id",
                     "required": true,
                     "type": "numeric, list"
                 }
             ],
-            "realm": "ps4",
+            "realm": "wgcb",
             "section": "clans",
             "url": "clans/accountinfo"
         },
@@ -1207,13 +1200,12 @@
                 "http",
                 "https"
             ],
-            "api_url": "api-ps4-console.worldoftanks.com/wotx/",
+            "api_url": "api-console.worldoftanks.com/wotx/",
             "available_display_indices": [
-                "ps4",
-                "xbox"
+                "wgcb"
             ],
             "description": "<p>Method returns general information about clans.</p>",
-            "display_index": "ps4",
+            "display_index": "wgcb",
             "fields": [
                 {
                     "description": "<p>Available clan positions</p>",
@@ -1393,12 +1385,12 @@
                     "type": "string"
                 },
                 {
-                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Max limit is 100.</p>",
+                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Maximum limit: 100.</p>",
                     "name": "fields",
                     "type": "string, list"
                 }
             ],
-            "realm": "ps4",
+            "realm": "wgcb",
             "section": "clans",
             "url": "clans/glossary"
         },
@@ -1411,13 +1403,12 @@
                 "http",
                 "https"
             ],
-            "api_url": "api-ps4-console.worldoftanks.com/wotx/",
+            "api_url": "api-console.worldoftanks.com/wotx/",
             "available_display_indices": [
-                "ps4",
-                "xbox"
+                "wgcb"
             ],
             "description": "<p>Method returns detailed clan information.</p>",
-            "display_index": "ps4",
+            "display_index": "wgcb",
             "fields": [
                 {
                     "description": "<p>Clan ID</p>",
@@ -1682,7 +1673,7 @@
                     "type": "string"
                 },
                 {
-                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Max limit is 100.</p>",
+                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Maximum limit: 100.</p>",
                     "name": "fields",
                     "type": "string, list"
                 },
@@ -1692,13 +1683,13 @@
                     "type": "string, list"
                 },
                 {
-                    "description": "<p>Clan ID. Max limit is 100. Min value is 1.</p>",
+                    "description": "<p>Clan ID. Maximum limit: 100. Min value is 1.</p>",
                     "name": "clan_id",
                     "required": true,
                     "type": "numeric, list"
                 }
             ],
-            "realm": "ps4",
+            "realm": "wgcb",
             "section": "clans",
             "url": "clans/info"
         },
@@ -1711,13 +1702,12 @@
                 "http",
                 "https"
             ],
-            "api_url": "api-ps4-console.worldoftanks.com/wotx/",
+            "api_url": "api-console.worldoftanks.com/wotx/",
             "available_display_indices": [
-                "ps4",
-                "xbox"
+                "wgcb"
             ],
-            "description": "<p>Method returns a partial list of clans in alphabetical order by clan name or tag.</p>",
-            "display_index": "ps4",
+            "description": "<p>Method returns partial list of clans in alphabetical order by clan name or tag.</p>",
+            "display_index": "wgcb",
             "fields": [
                 {
                     "description": "<p>Clan ID</p>",
@@ -1783,7 +1773,7 @@
                     "type": "string"
                 },
                 {
-                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Max limit is 100.</p>",
+                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Maximum limit: 100.</p>",
                     "name": "fields",
                     "type": "string, list"
                 },
@@ -1803,7 +1793,7 @@
                     "type": "numeric"
                 }
             ],
-            "realm": "ps4",
+            "realm": "wgcb",
             "section": "clans",
             "url": "clans/list"
         }
@@ -1818,13 +1808,12 @@
                 "http",
                 "https"
             ],
-            "api_url": "api-ps4-console.worldoftanks.com/wotx/",
+            "api_url": "api-console.worldoftanks.com/wotx/",
             "available_display_indices": [
-                "ps4",
-                "xbox"
+                "wgcb"
             ],
             "description": "<p>Method returns list of awards, medals, ribbons.</p>",
-            "display_index": "ps4",
+            "display_index": "wgcb",
             "fields": [
                 {
                     "description": "<p>Award category</p>",
@@ -1930,17 +1919,17 @@
                     "type": "string"
                 },
                 {
-                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Max limit is 100.</p>",
+                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Maximum limit: 100.</p>",
                     "name": "fields",
                     "type": "string, list"
                 },
                 {
-                    "description": "<p>Filter by award category. Max limit is 100. Valid values:</p>\n<ul>\n<li>\"achievements\" &mdash; Achievements </li>\n<li>\"ribbons\" &mdash; Ribbons</li>\n</ul>",
+                    "description": "<p>Filter by award category. Maximum limit: 100. Valid values:</p>\n<ul>\n<li>\"achievements\" &mdash; Achievements </li>\n<li>\"ribbons\" &mdash; Ribbons</li>\n</ul>",
                     "name": "category",
                     "type": "string, list"
                 }
             ],
-            "realm": "ps4",
+            "realm": "wgcb",
             "section": "encyclopedia",
             "url": "encyclopedia/achievements"
         },
@@ -1953,13 +1942,12 @@
                 "http",
                 "https"
             ],
-            "api_url": "api-ps4-console.worldoftanks.com/wotx/",
+            "api_url": "api-console.worldoftanks.com/wotx/",
             "available_display_indices": [
-                "ps4",
-                "xbox"
+                "wgcb"
             ],
             "description": "<p>Method returns information about crews.</p>",
-            "display_index": "ps4",
+            "display_index": "wgcb",
             "fields": [
                 {
                     "description": "<p>Crew member qualification</p>",
@@ -2037,12 +2025,12 @@
                     "type": "string"
                 },
                 {
-                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Max limit is 100.</p>",
+                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Maximum limit: 100.</p>",
                     "name": "fields",
                     "type": "string, list"
                 }
             ],
-            "realm": "ps4",
+            "realm": "wgcb",
             "section": "encyclopedia",
             "url": "encyclopedia/crewroles"
         },
@@ -2055,13 +2043,12 @@
                 "http",
                 "https"
             ],
-            "api_url": "api-ps4-console.worldoftanks.com/wotx/",
+            "api_url": "api-console.worldoftanks.com/wotx/",
             "available_display_indices": [
-                "ps4",
-                "xbox"
+                "wgcb"
             ],
             "description": "<p>Method returns information about Tankopedia.</p>",
-            "display_index": "ps4",
+            "display_index": "wgcb",
             "fields": [
                 {
                     "description": "<p>Game client version</p>",
@@ -2125,697 +2112,14 @@
                     "type": "string"
                 },
                 {
-                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Max limit is 100.</p>",
+                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Maximum limit: 100.</p>",
                     "name": "fields",
                     "type": "string, list"
                 }
             ],
-            "realm": "ps4",
+            "realm": "wgcb",
             "section": "encyclopedia",
             "url": "encyclopedia/info"
-        },
-        "vehiclepackages": {
-            "allowed_http_methods": [
-                "GET",
-                "POST"
-            ],
-            "allowed_protocols": [
-                "http",
-                "https"
-            ],
-            "api_url": "api-ps4-console.worldoftanks.com/wotx/",
-            "available_display_indices": [
-                "ps4",
-                "xbox"
-            ],
-            "description": "<p>Method returns list of package characteristics and their interdependence.</p>",
-            "display_index": "ps4",
-            "fields": [
-                {
-                    "description": "<p>Standard package ID</p>",
-                    "name": [
-                        "default_package_id"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "type": "empty_line"
-                },
-                {
-                    "description": "<p>Technical characteristics of each package</p>",
-                    "name": [
-                        "packages"
-                    ],
-                    "type": "block_header"
-                },
-                {
-                    "description": "<p>Hit points</p>",
-                    "name": [
-                        "packages",
-                        "hp"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Hull HP</p>",
-                    "name": [
-                        "packages",
-                        "hull_hp"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Hull weight</p>",
-                    "name": [
-                        "packages",
-                        "hull_weight"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Standard configuration</p>",
-                    "name": [
-                        "packages",
-                        "is_default"
-                    ],
-                    "type": "boolean"
-                },
-                {
-                    "description": "<p>Ammunition</p>",
-                    "name": [
-                        "packages",
-                        "max_ammo"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Load limit</p>",
-                    "name": [
-                        "packages",
-                        "max_weight"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Package ID</p>",
-                    "name": [
-                        "packages",
-                        "package_id"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Signal range</p>",
-                    "name": [
-                        "packages",
-                        "signal_range"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Top reverse speed</p>",
-                    "name": [
-                        "packages",
-                        "speed_backward"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Top speed</p>",
-                    "name": [
-                        "packages",
-                        "speed_forward"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Weight</p>",
-                    "name": [
-                        "packages",
-                        "weight"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "type": "empty_line"
-                },
-                {
-                    "description": "<p>Armor</p>",
-                    "name": [
-                        "packages",
-                        "armor"
-                    ],
-                    "type": "block_header"
-                },
-                {
-                    "type": "empty_line"
-                },
-                {
-                    "description": "<p>Hull armor</p>",
-                    "name": [
-                        "packages",
-                        "armor",
-                        "hull"
-                    ],
-                    "type": "block_header"
-                },
-                {
-                    "description": "<p>Front (mm)</p>",
-                    "name": [
-                        "packages",
-                        "armor",
-                        "hull",
-                        "front"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Rear (mm)</p>",
-                    "name": [
-                        "packages",
-                        "armor",
-                        "hull",
-                        "rear"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Sides (mm)</p>",
-                    "name": [
-                        "packages",
-                        "armor",
-                        "hull",
-                        "sides"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "type": "empty_line"
-                },
-                {
-                    "description": "<p>Turret armor</p>",
-                    "name": [
-                        "packages",
-                        "armor",
-                        "turret"
-                    ],
-                    "type": "block_header"
-                },
-                {
-                    "description": "<p>Front (mm)</p>",
-                    "name": [
-                        "packages",
-                        "armor",
-                        "turret",
-                        "front"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Rear (mm)</p>",
-                    "name": [
-                        "packages",
-                        "armor",
-                        "turret",
-                        "rear"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Sides (mm)</p>",
-                    "name": [
-                        "packages",
-                        "armor",
-                        "turret",
-                        "sides"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "type": "empty_line"
-                },
-                {
-                    "description": "<p>Engine characteristics</p>",
-                    "name": [
-                        "packages",
-                        "engine"
-                    ],
-                    "type": "block_header"
-                },
-                {
-                    "description": "<p>Chance of engine fire</p>",
-                    "name": [
-                        "packages",
-                        "engine",
-                        "fire_chance"
-                    ],
-                    "type": "float"
-                },
-                {
-                    "description": "<p>Vehicle name</p>",
-                    "name": [
-                        "packages",
-                        "engine",
-                        "name"
-                    ],
-                    "type": "string"
-                },
-                {
-                    "description": "<p>Power (hp)</p>",
-                    "name": [
-                        "packages",
-                        "engine",
-                        "power"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Module tag</p>",
-                    "name": [
-                        "packages",
-                        "engine",
-                        "tag"
-                    ],
-                    "type": "string"
-                },
-                {
-                    "description": "<p>Tier</p>",
-                    "name": [
-                        "packages",
-                        "engine",
-                        "tier"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Weight (kg)</p>",
-                    "name": [
-                        "packages",
-                        "engine",
-                        "weight"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "type": "empty_line"
-                },
-                {
-                    "description": "<p>Gun characteristics</p>",
-                    "name": [
-                        "packages",
-                        "gun"
-                    ],
-                    "type": "block_header"
-                },
-                {
-                    "description": "<p>Aiming time (s)</p>",
-                    "name": [
-                        "packages",
-                        "gun",
-                        "aim_time"
-                    ],
-                    "type": "float"
-                },
-                {
-                    "description": "<p>Caliber (mm)</p>",
-                    "name": [
-                        "packages",
-                        "gun",
-                        "caliber"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Dispersion at 100 m (m)</p>",
-                    "name": [
-                        "packages",
-                        "gun",
-                        "dispersion"
-                    ],
-                    "type": "float"
-                },
-                {
-                    "description": "<p>Rate of fire (rounds/min)</p>",
-                    "name": [
-                        "packages",
-                        "gun",
-                        "fire_rate"
-                    ],
-                    "type": "float"
-                },
-                {
-                    "description": "<p>Gun depression angle (deg)</p>",
-                    "name": [
-                        "packages",
-                        "gun",
-                        "move_down_arc"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Gun elevation angle (deg)</p>",
-                    "name": [
-                        "packages",
-                        "gun",
-                        "move_up_arc"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Vehicle name</p>",
-                    "name": [
-                        "packages",
-                        "gun",
-                        "name"
-                    ],
-                    "type": "string"
-                },
-                {
-                    "description": "<p>Reload time (s)</p>",
-                    "name": [
-                        "packages",
-                        "gun",
-                        "reload_time"
-                    ],
-                    "type": "float"
-                },
-                {
-                    "description": "<p>Module tag</p>",
-                    "name": [
-                        "packages",
-                        "gun",
-                        "tag"
-                    ],
-                    "type": "string"
-                },
-                {
-                    "description": "<p>Tier</p>",
-                    "name": [
-                        "packages",
-                        "gun",
-                        "tier"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Weight (kg)</p>",
-                    "name": [
-                        "packages",
-                        "gun",
-                        "weight"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "type": "empty_line"
-                },
-                {
-                    "description": "<p>Gun shells characteristics</p>",
-                    "name": [
-                        "packages",
-                        "shells"
-                    ],
-                    "type": "block_header"
-                },
-                {
-                    "description": "<p>Average damage (HP)</p>",
-                    "name": [
-                        "packages",
-                        "shells",
-                        "damage"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Average penetration (mm)</p>",
-                    "name": [
-                        "packages",
-                        "shells",
-                        "penetration"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Type</p>",
-                    "name": [
-                        "packages",
-                        "shells",
-                        "type"
-                    ],
-                    "type": "string"
-                },
-                {
-                    "type": "empty_line"
-                },
-                {
-                    "description": "<p>Suspension characteristics</p>",
-                    "name": [
-                        "packages",
-                        "suspension"
-                    ],
-                    "type": "block_header"
-                },
-                {
-                    "description": "<p>Load limit (kg)</p>",
-                    "name": [
-                        "packages",
-                        "suspension",
-                        "load_limit"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Vehicle name</p>",
-                    "name": [
-                        "packages",
-                        "suspension",
-                        "name"
-                    ],
-                    "type": "string"
-                },
-                {
-                    "description": "<p>Module tag</p>",
-                    "name": [
-                        "packages",
-                        "suspension",
-                        "tag"
-                    ],
-                    "type": "string"
-                },
-                {
-                    "description": "<p>Tier</p>",
-                    "name": [
-                        "packages",
-                        "suspension",
-                        "tier"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Traverse speed (deg/s)</p>",
-                    "name": [
-                        "packages",
-                        "suspension",
-                        "traverse_speed"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Weight (kg)</p>",
-                    "name": [
-                        "packages",
-                        "suspension",
-                        "weight"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "type": "empty_line"
-                },
-                {
-                    "description": "<p>Turret characteristics</p>",
-                    "name": [
-                        "packages",
-                        "turret"
-                    ],
-                    "type": "block_header"
-                },
-                {
-                    "description": "<p>Hit points</p>",
-                    "name": [
-                        "packages",
-                        "turret",
-                        "hp"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Vehicle name</p>",
-                    "name": [
-                        "packages",
-                        "turret",
-                        "name"
-                    ],
-                    "type": "string"
-                },
-                {
-                    "description": "<p>Module tag</p>",
-                    "name": [
-                        "packages",
-                        "turret",
-                        "tag"
-                    ],
-                    "type": "string"
-                },
-                {
-                    "description": "<p>Tier</p>",
-                    "name": [
-                        "packages",
-                        "turret",
-                        "tier"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Traverse angle, left (deg)</p>",
-                    "name": [
-                        "packages",
-                        "turret",
-                        "traverse_left_arc"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Traverse angle, right (deg)</p>",
-                    "name": [
-                        "packages",
-                        "turret",
-                        "traverse_right_arc"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Traverse speed (deg/s)</p>",
-                    "name": [
-                        "packages",
-                        "turret",
-                        "traverse_speed"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>View range (m)</p>",
-                    "name": [
-                        "packages",
-                        "turret",
-                        "view_range"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Weight (kg)</p>",
-                    "name": [
-                        "packages",
-                        "turret",
-                        "weight"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "type": "empty_line"
-                },
-                {
-                    "description": "<p>Tech tree</p>",
-                    "name": [
-                        "packages_tree"
-                    ],
-                    "type": "block_header"
-                },
-                {
-                    "description": "<p>Package name</p>",
-                    "name": [
-                        "packages_tree",
-                        "name"
-                    ],
-                    "type": "string"
-                },
-                {
-                    "description": "<p>List of package IDs available after research of current package</p>",
-                    "name": [
-                        "packages_tree",
-                        "next_packages"
-                    ],
-                    "type": "list of integers"
-                },
-                {
-                    "description": "<p>List of vehicle IDs available after research of current package</p>",
-                    "name": [
-                        "packages_tree",
-                        "next_tanks"
-                    ],
-                    "type": "list of integers"
-                },
-                {
-                    "description": "<p>Package ID</p>",
-                    "name": [
-                        "packages_tree",
-                        "package_id"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Purchase cost in credits in case of empty tech tree</p>",
-                    "name": [
-                        "packages_tree",
-                        "price_credit"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Research cost in experience in case of empty tech tree</p>",
-                    "name": [
-                        "packages_tree",
-                        "price_xp"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Package type</p>",
-                    "name": [
-                        "packages_tree",
-                        "type"
-                    ],
-                    "type": "string"
-                }
-            ],
-            "name": "Packages",
-            "parameters": [
-                {
-                    "description": "<p>Application ID</p>",
-                    "name": "application_id",
-                    "required": true,
-                    "type": "string"
-                },
-                {
-                    "description": "<p>Localization language. Default is \"en\". Valid values:</p>\n<ul>\n<li>\"en\" &mdash; English (by default)</li>\n<li>\"ru\" &mdash; \u0420\u0443\u0441\u0441\u043a\u0438\u0439 </li>\n<li>\"pl\" &mdash; Polski </li>\n<li>\"de\" &mdash; Deutsch </li>\n<li>\"fr\" &mdash; Fran\u00e7ais </li>\n<li>\"es\" &mdash; Espa\u00f1ol </li>\n<li>\"tr\" &mdash; T\u00fcrk\u00e7e</li>\n</ul>",
-                    "name": "language",
-                    "type": "string"
-                },
-                {
-                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Max limit is 100.</p>",
-                    "name": "fields",
-                    "type": "string, list"
-                },
-                {
-                    "description": "<p>Vehicle ID. Max limit is 100.</p>",
-                    "name": "tank_id",
-                    "required": true,
-                    "type": "numeric, list"
-                }
-            ],
-            "realm": "ps4",
-            "section": "encyclopedia",
-            "url": "encyclopedia/vehiclepackages"
         },
         "vehicles": {
             "allowed_http_methods": [
@@ -2826,18 +2130,24 @@
                 "http",
                 "https"
             ],
-            "api_url": "api-ps4-console.worldoftanks.com/wotx/",
+            "api_url": "api-console.worldoftanks.com/wotx/",
             "available_display_indices": [
-                "ps4",
-                "xbox"
+                "wgcb"
             ],
             "description": "<p>Method returns list of available vehicles.</p>",
-            "display_index": "ps4",
+            "display_index": "wgcb",
             "fields": [
                 {
                     "description": "<p>Vehicle description</p>",
                     "name": [
                         "description"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "description": "<p>Era</p>",
+                    "name": [
+                        "era"
                     ],
                     "type": "string"
                 },
@@ -2958,27 +2268,27 @@
                     "type": "string"
                 },
                 {
-                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Max limit is 100.</p>",
+                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Maximum limit: 100.</p>",
                     "name": "fields",
                     "type": "string, list"
                 },
                 {
-                    "description": "<p>Vehicle ID. Max limit is 100.</p>",
+                    "description": "<p>Vehicle ID. Maximum limit: 100.</p>",
                     "name": "tank_id",
                     "type": "numeric, list"
                 },
                 {
-                    "description": "<p>Nation. Max limit is 100.</p>",
+                    "description": "<p>Nation. Maximum limit: 100.</p>",
                     "name": "nation",
                     "type": "string, list"
                 },
                 {
-                    "description": "<p>Tier. Max limit is 100.</p>",
+                    "description": "<p>Tier. Maximum limit: 100.</p>",
                     "name": "tier",
                     "type": "numeric, list"
                 }
             ],
-            "realm": "ps4",
+            "realm": "wgcb",
             "section": "encyclopedia",
             "url": "encyclopedia/vehicles"
         },
@@ -2991,13 +2301,12 @@
                 "http",
                 "https"
             ],
-            "api_url": "api-ps4-console.worldoftanks.com/wotx/",
+            "api_url": "api-console.worldoftanks.com/wotx/",
             "available_display_indices": [
-                "ps4",
-                "xbox"
+                "wgcb"
             ],
             "description": "<p>Method returns list of vehicle equipment and consumables.</p>",
-            "display_index": "ps4",
+            "display_index": "wgcb",
             "fields": [
                 {
                     "type": "empty_line"
@@ -3026,7 +2335,7 @@
                     "type": "string"
                 },
                 {
-                    "description": "<p>Image URL</p>",
+                    "description": "<p>URL to image</p>",
                     "name": [
                         "consumables",
                         "image"
@@ -3084,7 +2393,7 @@
                     "type": "numeric"
                 },
                 {
-                    "description": "<p>Image URL</p>",
+                    "description": "<p>URL to image</p>",
                     "name": [
                         "equipment",
                         "image"
@@ -3130,1991 +2439,20 @@
                     "type": "string"
                 },
                 {
-                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Max limit is 100.</p>",
+                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Maximum limit: 100.</p>",
                     "name": "fields",
                     "type": "string, list"
                 },
                 {
-                    "description": "<p>Vehicle ID. Max limit is 100.</p>",
+                    "description": "<p>Vehicle ID. Maximum limit: 100.</p>",
                     "name": "tank_id",
                     "required": true,
                     "type": "numeric, list"
                 }
             ],
-            "realm": "ps4",
+            "realm": "wgcb",
             "section": "encyclopedia",
             "url": "encyclopedia/vehicleupgrades"
-        }
-    },
-    "ratings": {
-        "accounts": {
-            "allowed_http_methods": [
-                "GET",
-                "POST"
-            ],
-            "allowed_protocols": [
-                "http",
-                "https"
-            ],
-            "api_url": "api-ps4-console.worldoftanks.com/wotx/",
-            "available_display_indices": [
-                "ps4",
-                "xbox"
-            ],
-            "description": "<p>Method returns player ratings by specified IDs.</p>",
-            "display_index": "ps4",
-            "errors": [
-                {
-                    "code": 404,
-                    "description": "<p>No rating details for specified date</p>",
-                    "message": "RATINGS_NOT_FOUND"
-                }
-            ],
-            "fields": [
-                {
-                    "description": "<p>Player account ID</p>",
-                    "name": [
-                        "account_id"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Number of battles left to be included in ratings</p>",
-                    "name": [
-                        "battles_to_play"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Console platform</p>",
-                    "name": [
-                        "platform"
-                    ],
-                    "type": "string"
-                },
-                {
-                    "type": "empty_line"
-                },
-                {
-                    "description": "<p>Battles fought</p>",
-                    "name": [
-                        "battles_count"
-                    ],
-                    "type": "block_header"
-                },
-                {
-                    "description": "<p>Position</p>",
-                    "name": [
-                        "battles_count",
-                        "rank"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Change of position in rating</p>",
-                    "name": [
-                        "battles_count",
-                        "rank_delta"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Absolute value</p>",
-                    "name": [
-                        "battles_count",
-                        "value"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "type": "empty_line"
-                },
-                {
-                    "description": "<p>Base capture points</p>",
-                    "name": [
-                        "capture_points"
-                    ],
-                    "type": "block_header"
-                },
-                {
-                    "description": "<p>Position</p>",
-                    "name": [
-                        "capture_points",
-                        "rank"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Change of position in rating</p>",
-                    "name": [
-                        "capture_points",
-                        "rank_delta"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Absolute value</p>",
-                    "name": [
-                        "capture_points",
-                        "value"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "type": "empty_line"
-                },
-                {
-                    "description": "<p>Average damage caused per battle</p>",
-                    "name": [
-                        "damage_avg"
-                    ],
-                    "type": "block_header"
-                },
-                {
-                    "description": "<p>Position</p>",
-                    "name": [
-                        "damage_avg",
-                        "rank"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Change of position in rating</p>",
-                    "name": [
-                        "damage_avg",
-                        "rank_delta"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Absolute value</p>",
-                    "name": [
-                        "damage_avg",
-                        "value"
-                    ],
-                    "type": "float"
-                },
-                {
-                    "type": "empty_line"
-                },
-                {
-                    "description": "<p>Total damage caused</p>",
-                    "name": [
-                        "damage_dealt"
-                    ],
-                    "type": "block_header"
-                },
-                {
-                    "description": "<p>Position</p>",
-                    "name": [
-                        "damage_dealt",
-                        "rank"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Change of position in rating</p>",
-                    "name": [
-                        "damage_dealt",
-                        "rank_delta"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Absolute value</p>",
-                    "name": [
-                        "damage_dealt",
-                        "value"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "type": "empty_line"
-                },
-                {
-                    "description": "<p>Average number of vehicles destroyed per battle</p>",
-                    "name": [
-                        "frags_avg"
-                    ],
-                    "type": "block_header"
-                },
-                {
-                    "description": "<p>Position</p>",
-                    "name": [
-                        "frags_avg",
-                        "rank"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Change of position in rating</p>",
-                    "name": [
-                        "frags_avg",
-                        "rank_delta"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Absolute value</p>",
-                    "name": [
-                        "frags_avg",
-                        "value"
-                    ],
-                    "type": "float"
-                },
-                {
-                    "type": "empty_line"
-                },
-                {
-                    "description": "<p>Vehicles destroyed</p>",
-                    "name": [
-                        "frags_count"
-                    ],
-                    "type": "block_header"
-                },
-                {
-                    "description": "<p>Position</p>",
-                    "name": [
-                        "frags_count",
-                        "rank"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Change of position in rating</p>",
-                    "name": [
-                        "frags_count",
-                        "rank_delta"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Absolute value</p>",
-                    "name": [
-                        "frags_count",
-                        "value"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "type": "empty_line"
-                },
-                {
-                    "description": "<p>Personal rating</p>",
-                    "name": [
-                        "global_rating"
-                    ],
-                    "type": "block_header"
-                },
-                {
-                    "description": "<p>Position</p>",
-                    "name": [
-                        "global_rating",
-                        "rank"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Change of position in rating</p>",
-                    "name": [
-                        "global_rating",
-                        "rank_delta"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Absolute value</p>",
-                    "name": [
-                        "global_rating",
-                        "value"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "type": "empty_line"
-                },
-                {
-                    "description": "<p>Hit ratio</p>",
-                    "name": [
-                        "hits_ratio"
-                    ],
-                    "type": "block_header"
-                },
-                {
-                    "description": "<p>Position</p>",
-                    "name": [
-                        "hits_ratio",
-                        "rank"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Change of position in rating</p>",
-                    "name": [
-                        "hits_ratio",
-                        "rank_delta"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Absolute value</p>",
-                    "name": [
-                        "hits_ratio",
-                        "value"
-                    ],
-                    "type": "float"
-                },
-                {
-                    "type": "empty_line"
-                },
-                {
-                    "description": "<p>Average number of vehicles spotted per battle</p>",
-                    "name": [
-                        "spotted_avg"
-                    ],
-                    "type": "block_header"
-                },
-                {
-                    "description": "<p>Position</p>",
-                    "name": [
-                        "spotted_avg",
-                        "rank"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Change of position in rating</p>",
-                    "name": [
-                        "spotted_avg",
-                        "rank_delta"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Absolute value</p>",
-                    "name": [
-                        "spotted_avg",
-                        "value"
-                    ],
-                    "type": "float"
-                },
-                {
-                    "type": "empty_line"
-                },
-                {
-                    "description": "<p>Vehicles spotted</p>",
-                    "name": [
-                        "spotted_count"
-                    ],
-                    "type": "block_header"
-                },
-                {
-                    "description": "<p>Position</p>",
-                    "name": [
-                        "spotted_count",
-                        "rank"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Change of position in rating</p>",
-                    "name": [
-                        "spotted_count",
-                        "rank_delta"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Absolute value</p>",
-                    "name": [
-                        "spotted_count",
-                        "value"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "type": "empty_line"
-                },
-                {
-                    "description": "<p>Survive ratio</p>",
-                    "name": [
-                        "survived_ratio"
-                    ],
-                    "type": "block_header"
-                },
-                {
-                    "description": "<p>Position</p>",
-                    "name": [
-                        "survived_ratio",
-                        "rank"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Change of position in rating</p>",
-                    "name": [
-                        "survived_ratio",
-                        "rank_delta"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Absolute value</p>",
-                    "name": [
-                        "survived_ratio",
-                        "value"
-                    ],
-                    "type": "float"
-                },
-                {
-                    "type": "empty_line"
-                },
-                {
-                    "description": "<p>Victories/Battles ratio</p>",
-                    "name": [
-                        "wins_ratio"
-                    ],
-                    "type": "block_header"
-                },
-                {
-                    "description": "<p>Position</p>",
-                    "name": [
-                        "wins_ratio",
-                        "rank"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Change of position in rating</p>",
-                    "name": [
-                        "wins_ratio",
-                        "rank_delta"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Absolute value</p>",
-                    "name": [
-                        "wins_ratio",
-                        "value"
-                    ],
-                    "type": "float"
-                },
-                {
-                    "type": "empty_line"
-                },
-                {
-                    "description": "<p>Total experience</p>",
-                    "name": [
-                        "xp_amount"
-                    ],
-                    "type": "block_header"
-                },
-                {
-                    "description": "<p>Position</p>",
-                    "name": [
-                        "xp_amount",
-                        "rank"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Change of position in rating</p>",
-                    "name": [
-                        "xp_amount",
-                        "rank_delta"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Absolute value</p>",
-                    "name": [
-                        "xp_amount",
-                        "value"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "type": "empty_line"
-                },
-                {
-                    "description": "<p>Average experience per battle</p>",
-                    "name": [
-                        "xp_avg"
-                    ],
-                    "type": "block_header"
-                },
-                {
-                    "description": "<p>Position</p>",
-                    "name": [
-                        "xp_avg",
-                        "rank"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Change of position in rating</p>",
-                    "name": [
-                        "xp_avg",
-                        "rank_delta"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Absolute value</p>",
-                    "name": [
-                        "xp_avg",
-                        "value"
-                    ],
-                    "type": "float"
-                },
-                {
-                    "type": "empty_line"
-                },
-                {
-                    "description": "<p>Maximum experience per battle</p>",
-                    "name": [
-                        "xp_max"
-                    ],
-                    "type": "block_header"
-                },
-                {
-                    "description": "<p>Position</p>",
-                    "name": [
-                        "xp_max",
-                        "rank"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Change of position in rating</p>",
-                    "name": [
-                        "xp_max",
-                        "rank_delta"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Absolute value</p>",
-                    "name": [
-                        "xp_max",
-                        "value"
-                    ],
-                    "type": "numeric"
-                }
-            ],
-            "name": "Player ratings",
-            "parameters": [
-                {
-                    "description": "<p>Application ID</p>",
-                    "name": "application_id",
-                    "required": true,
-                    "type": "string"
-                },
-                {
-                    "description": "<p>Localization language. Default is \"en\". Valid values:</p>\n<ul>\n<li>\"en\" &mdash; English (by default)</li>\n<li>\"ru\" &mdash; \u0420\u0443\u0441\u0441\u043a\u0438\u0439 </li>\n<li>\"pl\" &mdash; Polski </li>\n<li>\"de\" &mdash; Deutsch </li>\n<li>\"fr\" &mdash; Fran\u00e7ais </li>\n<li>\"es\" &mdash; Espa\u00f1ol </li>\n<li>\"tr\" &mdash; T\u00fcrk\u00e7e</li>\n</ul>",
-                    "name": "language",
-                    "type": "string"
-                },
-                {
-                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Max limit is 100.</p>",
-                    "name": "fields",
-                    "type": "string, list"
-                },
-                {
-                    "description": "<p>Console platform. Default is \"default\". Valid values:</p>\n<ul>\n<li>\"default\" &mdash; All console platforms (by default)</li>\n<li>\"xbox\" &mdash; XBOX </li>\n<li>\"ps4\" &mdash; PlayStation 4</li>\n</ul>",
-                    "name": "platform",
-                    "type": "string"
-                },
-                {
-                    "description": "<p>Rating period. For valid values, check the <a href=\"/reference/all/wot/ratings/types/\">Types of ratings</a> method.</p>",
-                    "name": "type",
-                    "required": true,
-                    "type": "string"
-                },
-                {
-                    "description": "<p>Ratings calculation date. Up to 7 days before the current date; default value: yesterday. Date in UNIX timestamp or ISO 8601 format. E.g.: 1376542800 or 2013-08-15T00:00:00</p>",
-                    "name": "date",
-                    "type": "timestamp/date"
-                },
-                {
-                    "description": "<p>IDs of player accounts. Max limit is 100.</p>",
-                    "name": "account_id",
-                    "required": true,
-                    "type": "numeric, list"
-                }
-            ],
-            "realm": "ps4",
-            "section": "ratings",
-            "url": "ratings/accounts"
-        },
-        "dates": {
-            "allowed_http_methods": [
-                "GET",
-                "POST"
-            ],
-            "allowed_protocols": [
-                "http",
-                "https"
-            ],
-            "api_url": "api-ps4-console.worldoftanks.com/wotx/",
-            "available_display_indices": [
-                "ps4",
-                "xbox"
-            ],
-            "description": "<p>Method returns dates with available rating data.</p>",
-            "display_index": "ps4",
-            "errors": [
-                {
-                    "code": 404,
-                    "description": "<p>No rating details for specified date</p>",
-                    "message": "RATINGS_NOT_FOUND"
-                }
-            ],
-            "fields": [
-                {
-                    "description": "<p>Dates with available ratings</p>",
-                    "name": [
-                        "dates"
-                    ],
-                    "type": "list of timestamps"
-                }
-            ],
-            "name": "Dates with available ratings",
-            "parameters": [
-                {
-                    "description": "<p>Application ID</p>",
-                    "name": "application_id",
-                    "required": true,
-                    "type": "string"
-                },
-                {
-                    "description": "<p>Localization language. Default is \"en\". Valid values:</p>\n<ul>\n<li>\"en\" &mdash; English (by default)</li>\n<li>\"ru\" &mdash; \u0420\u0443\u0441\u0441\u043a\u0438\u0439 </li>\n<li>\"pl\" &mdash; Polski </li>\n<li>\"de\" &mdash; Deutsch </li>\n<li>\"fr\" &mdash; Fran\u00e7ais </li>\n<li>\"es\" &mdash; Espa\u00f1ol </li>\n<li>\"tr\" &mdash; T\u00fcrk\u00e7e</li>\n</ul>",
-                    "name": "language",
-                    "type": "string"
-                },
-                {
-                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Max limit is 100.</p>",
-                    "name": "fields",
-                    "type": "string, list"
-                },
-                {
-                    "description": "<p>Console platform. Default is \"default\". Valid values:</p>\n<ul>\n<li>\"default\" &mdash; All console platforms (by default)</li>\n<li>\"xbox\" &mdash; XBOX </li>\n<li>\"ps4\" &mdash; PlayStation 4</li>\n</ul>",
-                    "name": "platform",
-                    "type": "string"
-                },
-                {
-                    "description": "<p>Rating period. For valid values, check the <a href=\"/reference/all/wot/ratings/types/\">Types of ratings</a> method.</p>",
-                    "name": "type",
-                    "required": true,
-                    "type": "string"
-                },
-                {
-                    "description": "<p>Player account ID. Max limit is 100.</p>",
-                    "name": "account_id",
-                    "type": "numeric, list"
-                }
-            ],
-            "realm": "ps4",
-            "section": "ratings",
-            "url": "ratings/dates"
-        },
-        "neighbors": {
-            "allowed_http_methods": [
-                "GET",
-                "POST"
-            ],
-            "allowed_protocols": [
-                "http",
-                "https"
-            ],
-            "api_url": "api-ps4-console.worldoftanks.com/wotx/",
-            "available_display_indices": [
-                "ps4",
-                "xbox"
-            ],
-            "description": "<p>Method returns list of adjacent positions in specified rating.</p>",
-            "display_index": "ps4",
-            "errors": [
-                {
-                    "code": 404,
-                    "description": "<p>No rating details for specified date</p>",
-                    "message": "RATINGS_NOT_FOUND"
-                }
-            ],
-            "fields": [
-                {
-                    "description": "<p>Player account ID</p>",
-                    "name": [
-                        "account_id"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Number of battles left to be included in ratings</p>",
-                    "name": [
-                        "battles_to_play"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Console platform</p>",
-                    "name": [
-                        "platform"
-                    ],
-                    "type": "string"
-                },
-                {
-                    "type": "empty_line"
-                },
-                {
-                    "description": "<p>Battles fought</p>",
-                    "name": [
-                        "battles_count"
-                    ],
-                    "type": "block_header"
-                },
-                {
-                    "description": "<p>Position</p>",
-                    "name": [
-                        "battles_count",
-                        "rank"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Change of position in rating</p>",
-                    "name": [
-                        "battles_count",
-                        "rank_delta"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Absolute value</p>",
-                    "name": [
-                        "battles_count",
-                        "value"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "type": "empty_line"
-                },
-                {
-                    "description": "<p>Base capture points</p>",
-                    "name": [
-                        "capture_points"
-                    ],
-                    "type": "block_header"
-                },
-                {
-                    "description": "<p>Position</p>",
-                    "name": [
-                        "capture_points",
-                        "rank"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Change of position in rating</p>",
-                    "name": [
-                        "capture_points",
-                        "rank_delta"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Absolute value</p>",
-                    "name": [
-                        "capture_points",
-                        "value"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "type": "empty_line"
-                },
-                {
-                    "description": "<p>Average damage caused per battle</p>",
-                    "name": [
-                        "damage_avg"
-                    ],
-                    "type": "block_header"
-                },
-                {
-                    "description": "<p>Position</p>",
-                    "name": [
-                        "damage_avg",
-                        "rank"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Change of position in rating</p>",
-                    "name": [
-                        "damage_avg",
-                        "rank_delta"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Absolute value</p>",
-                    "name": [
-                        "damage_avg",
-                        "value"
-                    ],
-                    "type": "float"
-                },
-                {
-                    "type": "empty_line"
-                },
-                {
-                    "description": "<p>Total damage caused</p>",
-                    "name": [
-                        "damage_dealt"
-                    ],
-                    "type": "block_header"
-                },
-                {
-                    "description": "<p>Position</p>",
-                    "name": [
-                        "damage_dealt",
-                        "rank"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Change of position in rating</p>",
-                    "name": [
-                        "damage_dealt",
-                        "rank_delta"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Absolute value</p>",
-                    "name": [
-                        "damage_dealt",
-                        "value"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "type": "empty_line"
-                },
-                {
-                    "description": "<p>Average number of vehicles destroyed per battle</p>",
-                    "name": [
-                        "frags_avg"
-                    ],
-                    "type": "block_header"
-                },
-                {
-                    "description": "<p>Position</p>",
-                    "name": [
-                        "frags_avg",
-                        "rank"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Change of position in rating</p>",
-                    "name": [
-                        "frags_avg",
-                        "rank_delta"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Absolute value</p>",
-                    "name": [
-                        "frags_avg",
-                        "value"
-                    ],
-                    "type": "float"
-                },
-                {
-                    "type": "empty_line"
-                },
-                {
-                    "description": "<p>Vehicles destroyed</p>",
-                    "name": [
-                        "frags_count"
-                    ],
-                    "type": "block_header"
-                },
-                {
-                    "description": "<p>Position</p>",
-                    "name": [
-                        "frags_count",
-                        "rank"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Change of position in rating</p>",
-                    "name": [
-                        "frags_count",
-                        "rank_delta"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Absolute value</p>",
-                    "name": [
-                        "frags_count",
-                        "value"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "type": "empty_line"
-                },
-                {
-                    "description": "<p>Personal rating</p>",
-                    "name": [
-                        "global_rating"
-                    ],
-                    "type": "block_header"
-                },
-                {
-                    "description": "<p>Position</p>",
-                    "name": [
-                        "global_rating",
-                        "rank"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Change of position in rating</p>",
-                    "name": [
-                        "global_rating",
-                        "rank_delta"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Absolute value</p>",
-                    "name": [
-                        "global_rating",
-                        "value"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "type": "empty_line"
-                },
-                {
-                    "description": "<p>Hit ratio</p>",
-                    "name": [
-                        "hits_ratio"
-                    ],
-                    "type": "block_header"
-                },
-                {
-                    "description": "<p>Position</p>",
-                    "name": [
-                        "hits_ratio",
-                        "rank"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Change of position in rating</p>",
-                    "name": [
-                        "hits_ratio",
-                        "rank_delta"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Absolute value</p>",
-                    "name": [
-                        "hits_ratio",
-                        "value"
-                    ],
-                    "type": "float"
-                },
-                {
-                    "type": "empty_line"
-                },
-                {
-                    "description": "<p>Average number of vehicles spotted per battle</p>",
-                    "name": [
-                        "spotted_avg"
-                    ],
-                    "type": "block_header"
-                },
-                {
-                    "description": "<p>Position</p>",
-                    "name": [
-                        "spotted_avg",
-                        "rank"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Change of position in rating</p>",
-                    "name": [
-                        "spotted_avg",
-                        "rank_delta"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Absolute value</p>",
-                    "name": [
-                        "spotted_avg",
-                        "value"
-                    ],
-                    "type": "float"
-                },
-                {
-                    "type": "empty_line"
-                },
-                {
-                    "description": "<p>Vehicles spotted</p>",
-                    "name": [
-                        "spotted_count"
-                    ],
-                    "type": "block_header"
-                },
-                {
-                    "description": "<p>Position</p>",
-                    "name": [
-                        "spotted_count",
-                        "rank"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Change of position in rating</p>",
-                    "name": [
-                        "spotted_count",
-                        "rank_delta"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Absolute value</p>",
-                    "name": [
-                        "spotted_count",
-                        "value"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "type": "empty_line"
-                },
-                {
-                    "description": "<p>Survive ratio</p>",
-                    "name": [
-                        "survived_ratio"
-                    ],
-                    "type": "block_header"
-                },
-                {
-                    "description": "<p>Position</p>",
-                    "name": [
-                        "survived_ratio",
-                        "rank"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Change of position in rating</p>",
-                    "name": [
-                        "survived_ratio",
-                        "rank_delta"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Absolute value</p>",
-                    "name": [
-                        "survived_ratio",
-                        "value"
-                    ],
-                    "type": "float"
-                },
-                {
-                    "type": "empty_line"
-                },
-                {
-                    "description": "<p>Victories/Battles ratio</p>",
-                    "name": [
-                        "wins_ratio"
-                    ],
-                    "type": "block_header"
-                },
-                {
-                    "description": "<p>Position</p>",
-                    "name": [
-                        "wins_ratio",
-                        "rank"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Change of position in rating</p>",
-                    "name": [
-                        "wins_ratio",
-                        "rank_delta"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Absolute value</p>",
-                    "name": [
-                        "wins_ratio",
-                        "value"
-                    ],
-                    "type": "float"
-                },
-                {
-                    "type": "empty_line"
-                },
-                {
-                    "description": "<p>Total experience</p>",
-                    "name": [
-                        "xp_amount"
-                    ],
-                    "type": "block_header"
-                },
-                {
-                    "description": "<p>Position</p>",
-                    "name": [
-                        "xp_amount",
-                        "rank"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Change of position in rating</p>",
-                    "name": [
-                        "xp_amount",
-                        "rank_delta"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Absolute value</p>",
-                    "name": [
-                        "xp_amount",
-                        "value"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "type": "empty_line"
-                },
-                {
-                    "description": "<p>Average experience per battle</p>",
-                    "name": [
-                        "xp_avg"
-                    ],
-                    "type": "block_header"
-                },
-                {
-                    "description": "<p>Position</p>",
-                    "name": [
-                        "xp_avg",
-                        "rank"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Change of position in rating</p>",
-                    "name": [
-                        "xp_avg",
-                        "rank_delta"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Absolute value</p>",
-                    "name": [
-                        "xp_avg",
-                        "value"
-                    ],
-                    "type": "float"
-                },
-                {
-                    "type": "empty_line"
-                },
-                {
-                    "description": "<p>Maximum experience per battle</p>",
-                    "name": [
-                        "xp_max"
-                    ],
-                    "type": "block_header"
-                },
-                {
-                    "description": "<p>Position</p>",
-                    "name": [
-                        "xp_max",
-                        "rank"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Change of position in rating</p>",
-                    "name": [
-                        "xp_max",
-                        "rank_delta"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Absolute value</p>",
-                    "name": [
-                        "xp_max",
-                        "value"
-                    ],
-                    "type": "numeric"
-                }
-            ],
-            "name": "Adjacent positions in rating",
-            "parameters": [
-                {
-                    "description": "<p>Application ID</p>",
-                    "name": "application_id",
-                    "required": true,
-                    "type": "string"
-                },
-                {
-                    "description": "<p>Localization language. Default is \"en\". Valid values:</p>\n<ul>\n<li>\"en\" &mdash; English (by default)</li>\n<li>\"ru\" &mdash; \u0420\u0443\u0441\u0441\u043a\u0438\u0439 </li>\n<li>\"pl\" &mdash; Polski </li>\n<li>\"de\" &mdash; Deutsch </li>\n<li>\"fr\" &mdash; Fran\u00e7ais </li>\n<li>\"es\" &mdash; Espa\u00f1ol </li>\n<li>\"tr\" &mdash; T\u00fcrk\u00e7e</li>\n</ul>",
-                    "name": "language",
-                    "type": "string"
-                },
-                {
-                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Max limit is 100.</p>",
-                    "name": "fields",
-                    "type": "string, list"
-                },
-                {
-                    "description": "<p>Console platform. Default is \"default\". Valid values:</p>\n<ul>\n<li>\"default\" &mdash; All console platforms (by default)</li>\n<li>\"xbox\" &mdash; XBOX </li>\n<li>\"ps4\" &mdash; PlayStation 4</li>\n</ul>",
-                    "name": "platform",
-                    "type": "string"
-                },
-                {
-                    "description": "<p>Rating period. For valid values, check the <a href=\"/reference/all/wot/ratings/types/\">Types of ratings</a> method.</p>",
-                    "name": "type",
-                    "required": true,
-                    "type": "string"
-                },
-                {
-                    "description": "<p>Ratings calculation date. Up to 7 days before the current date; default value: yesterday. Date in UNIX timestamp or ISO 8601 format. E.g.: 1376542800 or 2013-08-15T00:00:00</p>",
-                    "name": "date",
-                    "type": "timestamp/date"
-                },
-                {
-                    "description": "<p>Player account ID</p>",
-                    "name": "account_id",
-                    "required": true,
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Rating category</p>",
-                    "name": "rank_field",
-                    "required": true,
-                    "type": "string"
-                },
-                {
-                    "description": "<p>Number of returned entries. Default is 5. Min value is 1. Max value is 50.</p>",
-                    "name": "limit",
-                    "type": "numeric"
-                }
-            ],
-            "realm": "ps4",
-            "section": "ratings",
-            "url": "ratings/neighbors"
-        },
-        "top": {
-            "allowed_http_methods": [
-                "GET",
-                "POST"
-            ],
-            "allowed_protocols": [
-                "http",
-                "https"
-            ],
-            "api_url": "api-ps4-console.worldoftanks.com/wotx/",
-            "available_display_indices": [
-                "ps4",
-                "xbox"
-            ],
-            "description": "<p>Method returns the list of top players by specified parameter.</p>",
-            "display_index": "ps4",
-            "errors": [
-                {
-                    "code": 404,
-                    "description": "<p>No rating details for specified date</p>",
-                    "message": "RATINGS_NOT_FOUND"
-                }
-            ],
-            "fields": [
-                {
-                    "description": "<p>Player account ID</p>",
-                    "name": [
-                        "account_id"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Number of battles left to be included in ratings</p>",
-                    "name": [
-                        "battles_to_play"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Console platform</p>",
-                    "name": [
-                        "platform"
-                    ],
-                    "type": "string"
-                },
-                {
-                    "type": "empty_line"
-                },
-                {
-                    "description": "<p>Battles fought</p>",
-                    "name": [
-                        "battles_count"
-                    ],
-                    "type": "block_header"
-                },
-                {
-                    "description": "<p>Position</p>",
-                    "name": [
-                        "battles_count",
-                        "rank"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Change of position in rating</p>",
-                    "name": [
-                        "battles_count",
-                        "rank_delta"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Absolute value</p>",
-                    "name": [
-                        "battles_count",
-                        "value"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "type": "empty_line"
-                },
-                {
-                    "description": "<p>Base capture points</p>",
-                    "name": [
-                        "capture_points"
-                    ],
-                    "type": "block_header"
-                },
-                {
-                    "description": "<p>Position</p>",
-                    "name": [
-                        "capture_points",
-                        "rank"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Change of position in rating</p>",
-                    "name": [
-                        "capture_points",
-                        "rank_delta"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Absolute value</p>",
-                    "name": [
-                        "capture_points",
-                        "value"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "type": "empty_line"
-                },
-                {
-                    "description": "<p>Average damage caused per battle</p>",
-                    "name": [
-                        "damage_avg"
-                    ],
-                    "type": "block_header"
-                },
-                {
-                    "description": "<p>Position</p>",
-                    "name": [
-                        "damage_avg",
-                        "rank"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Change of position in rating</p>",
-                    "name": [
-                        "damage_avg",
-                        "rank_delta"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Absolute value</p>",
-                    "name": [
-                        "damage_avg",
-                        "value"
-                    ],
-                    "type": "float"
-                },
-                {
-                    "type": "empty_line"
-                },
-                {
-                    "description": "<p>Total damage caused</p>",
-                    "name": [
-                        "damage_dealt"
-                    ],
-                    "type": "block_header"
-                },
-                {
-                    "description": "<p>Position</p>",
-                    "name": [
-                        "damage_dealt",
-                        "rank"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Change of position in rating</p>",
-                    "name": [
-                        "damage_dealt",
-                        "rank_delta"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Absolute value</p>",
-                    "name": [
-                        "damage_dealt",
-                        "value"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "type": "empty_line"
-                },
-                {
-                    "description": "<p>Average number of vehicles destroyed per battle</p>",
-                    "name": [
-                        "frags_avg"
-                    ],
-                    "type": "block_header"
-                },
-                {
-                    "description": "<p>Position</p>",
-                    "name": [
-                        "frags_avg",
-                        "rank"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Change of position in rating</p>",
-                    "name": [
-                        "frags_avg",
-                        "rank_delta"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Absolute value</p>",
-                    "name": [
-                        "frags_avg",
-                        "value"
-                    ],
-                    "type": "float"
-                },
-                {
-                    "type": "empty_line"
-                },
-                {
-                    "description": "<p>Vehicles destroyed</p>",
-                    "name": [
-                        "frags_count"
-                    ],
-                    "type": "block_header"
-                },
-                {
-                    "description": "<p>Position</p>",
-                    "name": [
-                        "frags_count",
-                        "rank"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Change of position in rating</p>",
-                    "name": [
-                        "frags_count",
-                        "rank_delta"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Absolute value</p>",
-                    "name": [
-                        "frags_count",
-                        "value"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "type": "empty_line"
-                },
-                {
-                    "description": "<p>Personal rating</p>",
-                    "name": [
-                        "global_rating"
-                    ],
-                    "type": "block_header"
-                },
-                {
-                    "description": "<p>Position</p>",
-                    "name": [
-                        "global_rating",
-                        "rank"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Change of position in rating</p>",
-                    "name": [
-                        "global_rating",
-                        "rank_delta"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Absolute value</p>",
-                    "name": [
-                        "global_rating",
-                        "value"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "type": "empty_line"
-                },
-                {
-                    "description": "<p>Hit ratio</p>",
-                    "name": [
-                        "hits_ratio"
-                    ],
-                    "type": "block_header"
-                },
-                {
-                    "description": "<p>Position</p>",
-                    "name": [
-                        "hits_ratio",
-                        "rank"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Change of position in rating</p>",
-                    "name": [
-                        "hits_ratio",
-                        "rank_delta"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Absolute value</p>",
-                    "name": [
-                        "hits_ratio",
-                        "value"
-                    ],
-                    "type": "float"
-                },
-                {
-                    "type": "empty_line"
-                },
-                {
-                    "description": "<p>Average number of vehicles spotted per battle</p>",
-                    "name": [
-                        "spotted_avg"
-                    ],
-                    "type": "block_header"
-                },
-                {
-                    "description": "<p>Position</p>",
-                    "name": [
-                        "spotted_avg",
-                        "rank"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Change of position in rating</p>",
-                    "name": [
-                        "spotted_avg",
-                        "rank_delta"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Absolute value</p>",
-                    "name": [
-                        "spotted_avg",
-                        "value"
-                    ],
-                    "type": "float"
-                },
-                {
-                    "type": "empty_line"
-                },
-                {
-                    "description": "<p>Vehicles spotted</p>",
-                    "name": [
-                        "spotted_count"
-                    ],
-                    "type": "block_header"
-                },
-                {
-                    "description": "<p>Position</p>",
-                    "name": [
-                        "spotted_count",
-                        "rank"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Change of position in rating</p>",
-                    "name": [
-                        "spotted_count",
-                        "rank_delta"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Absolute value</p>",
-                    "name": [
-                        "spotted_count",
-                        "value"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "type": "empty_line"
-                },
-                {
-                    "description": "<p>Survive ratio</p>",
-                    "name": [
-                        "survived_ratio"
-                    ],
-                    "type": "block_header"
-                },
-                {
-                    "description": "<p>Position</p>",
-                    "name": [
-                        "survived_ratio",
-                        "rank"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Change of position in rating</p>",
-                    "name": [
-                        "survived_ratio",
-                        "rank_delta"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Absolute value</p>",
-                    "name": [
-                        "survived_ratio",
-                        "value"
-                    ],
-                    "type": "float"
-                },
-                {
-                    "type": "empty_line"
-                },
-                {
-                    "description": "<p>Victories/Battles ratio</p>",
-                    "name": [
-                        "wins_ratio"
-                    ],
-                    "type": "block_header"
-                },
-                {
-                    "description": "<p>Position</p>",
-                    "name": [
-                        "wins_ratio",
-                        "rank"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Change of position in rating</p>",
-                    "name": [
-                        "wins_ratio",
-                        "rank_delta"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Absolute value</p>",
-                    "name": [
-                        "wins_ratio",
-                        "value"
-                    ],
-                    "type": "float"
-                },
-                {
-                    "type": "empty_line"
-                },
-                {
-                    "description": "<p>Total experience</p>",
-                    "name": [
-                        "xp_amount"
-                    ],
-                    "type": "block_header"
-                },
-                {
-                    "description": "<p>Position</p>",
-                    "name": [
-                        "xp_amount",
-                        "rank"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Change of position in rating</p>",
-                    "name": [
-                        "xp_amount",
-                        "rank_delta"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Absolute value</p>",
-                    "name": [
-                        "xp_amount",
-                        "value"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "type": "empty_line"
-                },
-                {
-                    "description": "<p>Average experience per battle</p>",
-                    "name": [
-                        "xp_avg"
-                    ],
-                    "type": "block_header"
-                },
-                {
-                    "description": "<p>Position</p>",
-                    "name": [
-                        "xp_avg",
-                        "rank"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Change of position in rating</p>",
-                    "name": [
-                        "xp_avg",
-                        "rank_delta"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Absolute value</p>",
-                    "name": [
-                        "xp_avg",
-                        "value"
-                    ],
-                    "type": "float"
-                },
-                {
-                    "type": "empty_line"
-                },
-                {
-                    "description": "<p>Maximum experience per battle</p>",
-                    "name": [
-                        "xp_max"
-                    ],
-                    "type": "block_header"
-                },
-                {
-                    "description": "<p>Position</p>",
-                    "name": [
-                        "xp_max",
-                        "rank"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Change of position in rating</p>",
-                    "name": [
-                        "xp_max",
-                        "rank_delta"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Absolute value</p>",
-                    "name": [
-                        "xp_max",
-                        "value"
-                    ],
-                    "type": "numeric"
-                }
-            ],
-            "name": "Top players",
-            "parameters": [
-                {
-                    "description": "<p>Application ID</p>",
-                    "name": "application_id",
-                    "required": true,
-                    "type": "string"
-                },
-                {
-                    "description": "<p>Localization language. Default is \"en\". Valid values:</p>\n<ul>\n<li>\"en\" &mdash; English (by default)</li>\n<li>\"ru\" &mdash; \u0420\u0443\u0441\u0441\u043a\u0438\u0439 </li>\n<li>\"pl\" &mdash; Polski </li>\n<li>\"de\" &mdash; Deutsch </li>\n<li>\"fr\" &mdash; Fran\u00e7ais </li>\n<li>\"es\" &mdash; Espa\u00f1ol </li>\n<li>\"tr\" &mdash; T\u00fcrk\u00e7e</li>\n</ul>",
-                    "name": "language",
-                    "type": "string"
-                },
-                {
-                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Max limit is 100.</p>",
-                    "name": "fields",
-                    "type": "string, list"
-                },
-                {
-                    "description": "<p>Console platform. Default is \"default\". Valid values:</p>\n<ul>\n<li>\"default\" &mdash; All console platforms (by default)</li>\n<li>\"xbox\" &mdash; XBOX </li>\n<li>\"ps4\" &mdash; PlayStation 4</li>\n</ul>",
-                    "name": "platform",
-                    "type": "string"
-                },
-                {
-                    "description": "<p>Rating period. For valid values, check the <a href=\"/reference/all/wot/ratings/types/\">Types of ratings</a> method.</p>",
-                    "name": "type",
-                    "required": true,
-                    "type": "string"
-                },
-                {
-                    "description": "<p>Ratings calculation date. Up to 7 days before the current date; default value: yesterday. Date in UNIX timestamp or ISO 8601 format. E.g.: 1376542800 or 2013-08-15T00:00:00</p>",
-                    "name": "date",
-                    "type": "timestamp/date"
-                },
-                {
-                    "description": "<p>Rating category</p>",
-                    "name": "rank_field",
-                    "required": true,
-                    "type": "string"
-                },
-                {
-                    "description": "<p>Number of returned entries. Default is 10. Min value is 1. Max value is 1000.</p>",
-                    "name": "limit",
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Result page number. Default is 1. Min value is 1.</p>",
-                    "name": "page_no",
-                    "type": "numeric"
-                }
-            ],
-            "realm": "ps4",
-            "section": "ratings",
-            "url": "ratings/top"
-        },
-        "types": {
-            "allowed_http_methods": [
-                "GET",
-                "POST"
-            ],
-            "allowed_protocols": [
-                "http",
-                "https"
-            ],
-            "api_url": "api-ps4-console.worldoftanks.com/wotx/",
-            "available_display_indices": [
-                "ps4",
-                "xbox"
-            ],
-            "description": "<p>Method returns dictionary of rating periods and ratings details.</p>",
-            "display_index": "ps4",
-            "errors": [
-                {
-                    "code": 404,
-                    "description": "<p>No rating details for specified date</p>",
-                    "message": "RATINGS_NOT_FOUND"
-                }
-            ],
-            "fields": [
-                {
-                    "description": "<p>Rating categories</p>",
-                    "name": [
-                        "rank_fields"
-                    ],
-                    "type": "list of strings"
-                },
-                {
-                    "description": "<p>Rating threshold</p>",
-                    "name": [
-                        "threshold"
-                    ],
-                    "type": "numeric"
-                },
-                {
-                    "description": "<p>Rating period</p>",
-                    "name": [
-                        "type"
-                    ],
-                    "type": "string"
-                }
-            ],
-            "name": "Types of ratings",
-            "parameters": [
-                {
-                    "description": "<p>Application ID</p>",
-                    "name": "application_id",
-                    "required": true,
-                    "type": "string"
-                },
-                {
-                    "description": "<p>Localization language. Default is \"en\". Valid values:</p>\n<ul>\n<li>\"en\" &mdash; English (by default)</li>\n<li>\"ru\" &mdash; \u0420\u0443\u0441\u0441\u043a\u0438\u0439 </li>\n<li>\"pl\" &mdash; Polski </li>\n<li>\"de\" &mdash; Deutsch </li>\n<li>\"fr\" &mdash; Fran\u00e7ais </li>\n<li>\"es\" &mdash; Espa\u00f1ol </li>\n<li>\"tr\" &mdash; T\u00fcrk\u00e7e</li>\n</ul>",
-                    "name": "language",
-                    "type": "string"
-                },
-                {
-                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Max limit is 100.</p>",
-                    "name": "fields",
-                    "type": "string, list"
-                },
-                {
-                    "description": "<p>Console platform. Default is \"default\". Valid values:</p>\n<ul>\n<li>\"default\" &mdash; All console platforms (by default)</li>\n<li>\"xbox\" &mdash; XBOX </li>\n<li>\"ps4\" &mdash; PlayStation 4</li>\n</ul>",
-                    "name": "platform",
-                    "type": "string"
-                }
-            ],
-            "realm": "ps4",
-            "section": "ratings",
-            "url": "ratings/types"
         }
     },
     "tanks": {
@@ -5127,13 +2465,12 @@
                 "http",
                 "https"
             ],
-            "api_url": "api-ps4-console.worldoftanks.com/wotx/",
+            "api_url": "api-console.worldoftanks.com/wotx/",
             "available_display_indices": [
-                "ps4",
-                "xbox"
+                "wgcb"
             ],
             "description": "<p>Method returns players' achievement details.</p>\n<p>Achievement properties define the <strong>achievements</strong> field values</p>\n<ul>\n<li>1-4 for Mastery Badges and Stage Achievements (type: \"class\");</li>\n<li>maximum value of Achievement series (type: \"series\");</li>\n<li>number of achievements earned from sections: Battle Hero, Epic Achievements, Group Achievements, Special Achievements, etc. (type: \"repeatable, single, custom\").</li>\n</ul>",
-            "display_index": "ps4",
+            "display_index": "wgcb",
             "fields": [
                 {
                     "description": "<p>Player account ID</p>",
@@ -5192,7 +2529,7 @@
                     "type": "string"
                 },
                 {
-                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Max limit is 100.</p>",
+                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Maximum limit: 100.</p>",
                     "name": "fields",
                     "type": "string, list"
                 },
@@ -5208,7 +2545,7 @@
                     "type": "numeric"
                 },
                 {
-                    "description": "<p>Player's vehicle ID. Max limit is 100.</p>",
+                    "description": "<p>Player's vehicle ID. Maximum limit: 100.</p>",
                     "name": "tank_id",
                     "type": "numeric, list"
                 },
@@ -5218,7 +2555,7 @@
                     "type": "string"
                 }
             ],
-            "realm": "ps4",
+            "realm": "wgcb",
             "section": "tanks",
             "url": "tanks/achievements"
         },
@@ -5231,13 +2568,12 @@
                 "http",
                 "https"
             ],
-            "api_url": "api-ps4-console.worldoftanks.com/wotx/",
+            "api_url": "api-console.worldoftanks.com/wotx/",
             "available_display_indices": [
-                "ps4",
-                "xbox"
+                "wgcb"
             ],
             "description": "<p>Method returns overall statistics, Tank Company statistics, and clan statistics per each vehicle for each user.</p>",
-            "display_index": "ps4",
+            "display_index": "wgcb",
             "fields": [
                 {
                     "description": "<p>Player account ID</p>",
@@ -5687,7 +3023,7 @@
                     "type": "string"
                 },
                 {
-                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Max limit is 100.</p>",
+                    "description": "<p>Response field. The fields are separated with commas. Embedded fields are separated with dots. To exclude a field, use \u201c-\u201d in front of its name. In case the parameter is not defined, the method returns all fields. Maximum limit: 100.</p>",
                     "name": "fields",
                     "type": "string, list"
                 },
@@ -5703,7 +3039,7 @@
                     "type": "numeric"
                 },
                 {
-                    "description": "<p>Player's vehicle ID. Max limit is 100.</p>",
+                    "description": "<p>Player's vehicle ID. Maximum limit: 100.</p>",
                     "name": "tank_id",
                     "type": "numeric, list"
                 },
@@ -5713,7 +3049,7 @@
                     "type": "string"
                 }
             ],
-            "realm": "ps4",
+            "realm": "wgcb",
             "section": "tanks",
             "url": "tanks/stats"
         }
